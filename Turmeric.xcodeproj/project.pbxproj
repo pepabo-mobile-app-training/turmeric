@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
+		52B1C6DF1D98EFD2002AB83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DE1D98EFD2002AB83B /* ViewController.swift */; };
+		52B1C6E21D98EFD2002AB83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E01D98EFD2002AB83B /* Main.storyboard */; };
+		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
+		52B1C6E71D98EFD2002AB83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */; };
+		52B1C6F21D98EFD2002AB83B /* TurmericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */; };
+		52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52B1C6EE1D98EFD2002AB83B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B1C6D11D98EFD1002AB83B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B1C6D81D98EFD1002AB83B;
+			remoteInfo = Turmeric;
+		};
+		52B1C6F91D98EFD2002AB83B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B1C6D11D98EFD1002AB83B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B1C6D81D98EFD1002AB83B;
+			remoteInfo = Turmeric;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52B1C6DE1D98EFD2002AB83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B1C6E11D98EFD2002AB83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52B1C6E31D98EFD2002AB83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52B1C6E61D98EFD2002AB83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52B1C6E81D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B1C6ED1D98EFD2002AB83B /* TurmericTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurmericTests.swift; sourceTree = "<group>"; };
+		52B1C6F31D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B1C6F81D98EFD2002AB83B /* TurmericUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurmericUITests.swift; sourceTree = "<group>"; };
+		52B1C6FE1D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B1C6D61D98EFD1002AB83B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6EA1D98EFD2002AB83B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6F51D98EFD2002AB83B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B1C6D01D98EFD1002AB83B = {
+			isa = PBXGroup;
+			children = (
+				52B1C6DB1D98EFD2002AB83B /* Turmeric */,
+				52B1C6F01D98EFD2002AB83B /* TurmericTests */,
+				52B1C6FB1D98EFD2002AB83B /* TurmericUITests */,
+				52B1C6DA1D98EFD2002AB83B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B1C6DA1D98EFD2002AB83B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B1C6D91D98EFD2002AB83B /* Turmeric.app */,
+				52B1C6ED1D98EFD2002AB83B /* TurmericTests.xctest */,
+				52B1C6F81D98EFD2002AB83B /* TurmericUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B1C6DB1D98EFD2002AB83B /* Turmeric */ = {
+			isa = PBXGroup;
+			children = (
+				52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */,
+				52B1C6DE1D98EFD2002AB83B /* ViewController.swift */,
+				52B1C6E01D98EFD2002AB83B /* Main.storyboard */,
+				52B1C6E31D98EFD2002AB83B /* Assets.xcassets */,
+				52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */,
+				52B1C6E81D98EFD2002AB83B /* Info.plist */,
+			);
+			path = Turmeric;
+			sourceTree = "<group>";
+		};
+		52B1C6F01D98EFD2002AB83B /* TurmericTests */ = {
+			isa = PBXGroup;
+			children = (
+				52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */,
+				52B1C6F31D98EFD2002AB83B /* Info.plist */,
+			);
+			path = TurmericTests;
+			sourceTree = "<group>";
+		};
+		52B1C6FB1D98EFD2002AB83B /* TurmericUITests */ = {
+			isa = PBXGroup;
+			children = (
+				52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */,
+				52B1C6FE1D98EFD2002AB83B /* Info.plist */,
+			);
+			path = TurmericUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52B1C6D81D98EFD1002AB83B /* Turmeric */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B1C7011D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "Turmeric" */;
+			buildPhases = (
+				52B1C6D51D98EFD1002AB83B /* Sources */,
+				52B1C6D61D98EFD1002AB83B /* Frameworks */,
+				52B1C6D71D98EFD1002AB83B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Turmeric;
+			productName = Turmeric;
+			productReference = 52B1C6D91D98EFD2002AB83B /* Turmeric.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52B1C6EC1D98EFD2002AB83B /* TurmericTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B1C7041D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericTests" */;
+			buildPhases = (
+				52B1C6E91D98EFD2002AB83B /* Sources */,
+				52B1C6EA1D98EFD2002AB83B /* Frameworks */,
+				52B1C6EB1D98EFD2002AB83B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B1C6EF1D98EFD2002AB83B /* PBXTargetDependency */,
+			);
+			name = TurmericTests;
+			productName = TurmericTests;
+			productReference = 52B1C6ED1D98EFD2002AB83B /* TurmericTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52B1C6F71D98EFD2002AB83B /* TurmericUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B1C7071D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericUITests" */;
+			buildPhases = (
+				52B1C6F41D98EFD2002AB83B /* Sources */,
+				52B1C6F51D98EFD2002AB83B /* Frameworks */,
+				52B1C6F61D98EFD2002AB83B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52B1C6FA1D98EFD2002AB83B /* PBXTargetDependency */,
+			);
+			name = TurmericUITests;
+			productName = TurmericUITests;
+			productReference = 52B1C6F81D98EFD2002AB83B /* TurmericUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B1C6D11D98EFD1002AB83B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "GMO Pepabo";
+				TargetAttributes = {
+					52B1C6D81D98EFD1002AB83B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					52B1C6EC1D98EFD2002AB83B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52B1C6D81D98EFD1002AB83B;
+					};
+					52B1C6F71D98EFD2002AB83B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 52B1C6D81D98EFD1002AB83B;
+					};
+				};
+			};
+			buildConfigurationList = 52B1C6D41D98EFD1002AB83B /* Build configuration list for PBXProject "Turmeric" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52B1C6D01D98EFD1002AB83B;
+			productRefGroup = 52B1C6DA1D98EFD2002AB83B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52B1C6D81D98EFD1002AB83B /* Turmeric */,
+				52B1C6EC1D98EFD2002AB83B /* TurmericTests */,
+				52B1C6F71D98EFD2002AB83B /* TurmericUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52B1C6D71D98EFD1002AB83B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B1C6E71D98EFD2002AB83B /* LaunchScreen.storyboard in Resources */,
+				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
+				52B1C6E21D98EFD2002AB83B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6EB1D98EFD2002AB83B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6F61D98EFD2002AB83B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B1C6D51D98EFD1002AB83B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B1C6DF1D98EFD2002AB83B /* ViewController.swift in Sources */,
+				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6E91D98EFD2002AB83B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B1C6F21D98EFD2002AB83B /* TurmericTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52B1C6F41D98EFD2002AB83B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52B1C6EF1D98EFD2002AB83B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B1C6D81D98EFD1002AB83B /* Turmeric */;
+			targetProxy = 52B1C6EE1D98EFD2002AB83B /* PBXContainerItemProxy */;
+		};
+		52B1C6FA1D98EFD2002AB83B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52B1C6D81D98EFD1002AB83B /* Turmeric */;
+			targetProxy = 52B1C6F91D98EFD2002AB83B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		52B1C6E01D98EFD2002AB83B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B1C6E11D98EFD2002AB83B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52B1C6E61D98EFD2002AB83B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52B1C6FF1D98EFD2002AB83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52B1C7001D98EFD2002AB83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52B1C7021D98EFD2002AB83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Turmeric/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.Turmeric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52B1C7031D98EFD2002AB83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Turmeric/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.Turmeric;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		52B1C7051D98EFD2002AB83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TurmericTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.TurmericTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turmeric.app/Turmeric";
+			};
+			name = Debug;
+		};
+		52B1C7061D98EFD2002AB83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TurmericTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.TurmericTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turmeric.app/Turmeric";
+			};
+			name = Release;
+		};
+		52B1C7081D98EFD2002AB83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TurmericUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.TurmericUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Turmeric;
+			};
+			name = Debug;
+		};
+		52B1C7091D98EFD2002AB83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = TurmericUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pepabo.training.TurmericUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Turmeric;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B1C6D41D98EFD1002AB83B /* Build configuration list for PBXProject "Turmeric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B1C6FF1D98EFD2002AB83B /* Debug */,
+				52B1C7001D98EFD2002AB83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B1C7011D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "Turmeric" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B1C7021D98EFD2002AB83B /* Debug */,
+				52B1C7031D98EFD2002AB83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52B1C7041D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B1C7051D98EFD2002AB83B /* Debug */,
+				52B1C7061D98EFD2002AB83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		52B1C7071D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B1C7081D98EFD2002AB83B /* Debug */,
+				52B1C7091D98EFD2002AB83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B1C6D11D98EFD1002AB83B /* Project object */;
+}
