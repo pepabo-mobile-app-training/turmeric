@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242ABF71D98F1BE0095D4F4 /* ViewController.swift */; };
+		5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */; };
+		5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
-		52B1C6DF1D98EFD2002AB83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DE1D98EFD2002AB83B /* ViewController.swift */; };
-		52B1C6E21D98EFD2002AB83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E01D98EFD2002AB83B /* Main.storyboard */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
-		52B1C6E71D98EFD2002AB83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */; };
 		52B1C6F21D98EFD2002AB83B /* TurmericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */; };
 		52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */; };
 /* End PBXBuildFile section */
@@ -34,12 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5242ABF71D98F1BE0095D4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52B1C6DE1D98EFD2002AB83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52B1C6E11D98EFD2002AB83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B1C6E31D98EFD2002AB83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		52B1C6E61D98EFD2002AB83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52B1C6E81D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B1C6ED1D98EFD2002AB83B /* TurmericTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurmericTests.swift; sourceTree = "<group>"; };
@@ -74,6 +74,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5242ABF01D98F16A0095D4F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5242ABF11D98F16A0095D4F4 /* Controllers */,
+				5242ABF21D98F16A0095D4F4 /* Helpers */,
+				5242ABF31D98F16A0095D4F4 /* Models */,
+				5242ABF41D98F16A0095D4F4 /* Stores */,
+				5242ABF51D98F16A0095D4F4 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5242ABF11D98F16A0095D4F4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5242ABF21D98F16A0095D4F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5242ABF31D98F16A0095D4F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5242ABF41D98F16A0095D4F4 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		5242ABF51D98F16A0095D4F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5242ABF61D98F16A0095D4F4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */,
+				5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		52B1C6D01D98EFD1002AB83B = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +154,10 @@
 		52B1C6DB1D98EFD2002AB83B /* Turmeric */ = {
 			isa = PBXGroup;
 			children = (
+				5242ABF01D98F16A0095D4F4 /* Classes */,
+				5242ABF61D98F16A0095D4F4 /* Storyboards */,
 				52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */,
-				52B1C6DE1D98EFD2002AB83B /* ViewController.swift */,
-				52B1C6E01D98EFD2002AB83B /* Main.storyboard */,
 				52B1C6E31D98EFD2002AB83B /* Assets.xcassets */,
-				52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */,
 				52B1C6E81D98EFD2002AB83B /* Info.plist */,
 			);
 			path = Turmeric;
@@ -232,9 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B1C6E71D98EFD2002AB83B /* LaunchScreen.storyboard in Resources */,
+				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
 				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
-				52B1C6E21D98EFD2002AB83B /* Main.storyboard in Resources */,
+				5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B1C6DF1D98EFD2002AB83B /* ViewController.swift in Sources */,
+				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,25 +350,6 @@
 			targetProxy = 52B1C6F91D98EFD2002AB83B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		52B1C6E01D98EFD2002AB83B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52B1C6E11D98EFD2002AB83B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		52B1C6E51D98EFD2002AB83B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52B1C6E61D98EFD2002AB83B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		52B1C6FF1D98EFD2002AB83B /* Debug */ = {
@@ -503,6 +540,7 @@
 				52B1C7031D98EFD2002AB83B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B1C7041D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +549,7 @@
 				52B1C7061D98EFD2002AB83B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B1C7071D98EFD2002AB83B /* Build configuration list for PBXNativeTarget "TurmericUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +558,7 @@
 				52B1C7091D98EFD2002AB83B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
