@@ -13,7 +13,7 @@ brew install carthage mergepbx
 ```
 git clone https://github.com/pepabo-mobile-app-training/turmeric.git
 cd turmeric
-carthage update --platform iOS
+carthage bootstrap --platform iOS
 ```
 
 `Turmeric.xcodeproj`をXcodeで開き、シミュレーターでアプリが動けば準備完了
