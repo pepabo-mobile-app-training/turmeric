@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import OHHTTPStubs
+import Nimble
 
 @testable import Turmeric
 
@@ -15,20 +17,25 @@ class TurmericTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        stub(condition: isHost("currry.xyz") && isPath("api/users") && isMethodPOST()){_ in
+            return OHHTTPStubsResponse(
+                jsonObject: ["user" : ["name" : "testUser"]],
+                statusCode: 200,
+                headers: nil
+            )
+        }
+        
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        OHHTTPStubs.removeAllStubs()
     }
     
     func testUserCreate (){
-        class MocUser: User {
-            override class func createUser(parameters: [String : Any], handler: @escaping ((User) -> Void)){
-                let user = parameters["user"] as! [String : String]
-                handler(User(id: 1, name: user["name"]!))
-            }
-        }
+       
         let parameters:  [String : Any] = [
             "user": [
                 "name": "testUser",
@@ -37,9 +44,11 @@ class TurmericTests: XCTestCase {
                 "password_confirmation": "hogehoge"
             ]
         ]
-        
-        User.createUser(parameters: parameters){ response in
-            XCTAssertEqual("testUser", response.name)
+        waitUntil { done in
+            User.createUser(parameters: parameters){ response in
+                XCTAssertEqual("testUser", response.name)
+                done()
+            }
         }
     }
     
