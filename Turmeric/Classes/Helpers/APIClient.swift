@@ -6,22 +6,7 @@ import SwiftyJSON
 class APIClient {
     static private let baseUrl = "http://currry.xyz"
     
-    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
-        let method = endpoint.method()
-        let url = fullURL(endpoint: endpoint)
-        
-
-        Alamofire.request(url, method: method, parameters: parameters).validate(statusCode: 200...299).responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                handler(JSON(value))
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-    
-    static func request(endpoint: Endpoint, parameters: Parameters?, headers: HTTPHeaders, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, parameters: Parameters?, headers: HTTPHeaders? = nil, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         
