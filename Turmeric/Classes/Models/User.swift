@@ -20,7 +20,7 @@ class User {
         self.name = name
     }
     
-    static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)){
+    class func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)){
         APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { json in
             handler(User(id: json["user"]["id"].intValue, name: json["user"]["name"].stringValue))
         }
