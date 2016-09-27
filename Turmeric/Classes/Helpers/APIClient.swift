@@ -6,7 +6,7 @@ import SwiftyJSON
 class APIClient {
     static private let baseUrl = "http://currry.xyz"
     
-    static func request(endpoint: Endpoint, parameters: Dictionary<String, String>?, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         
@@ -24,7 +24,6 @@ class APIClient {
     static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void){
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
-    
     static private func fullURL(endpoint: Endpoint) -> String {
         return baseUrl + endpoint.path()
     }
