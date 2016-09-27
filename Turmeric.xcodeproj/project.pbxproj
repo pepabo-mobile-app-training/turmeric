@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5232599F1D9A0D8100476111 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232599E1D9A0D8100476111 /* User.swift */; };
 		5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242ABF71D98F1BE0095D4F4 /* ViewController.swift */; };
 		5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */; };
 		5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5232599E1D9A0D8100476111 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5242ABF71D98F1BE0095D4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		5242ABF31D98F16A0095D4F4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5232599E1D9A0D8100476111 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				52B1C6E91D98EFD2002AB83B /* Sources */,
 				52B1C6EA1D98EFD2002AB83B /* Frameworks */,
 				52B1C6EB1D98EFD2002AB83B /* Resources */,
+				52685A281D992A8F00FEC0A7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -351,6 +355,22 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		52685A281D992A8F00FEC0A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -358,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5232599F1D9A0D8100476111 /* User.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 @testable import Turmeric
 
 class TurmericTests: XCTestCase {
@@ -21,15 +22,24 @@ class TurmericTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testUserCreate (){
+        class MocUser: User {
+            override class func createUser(parameters: [String : Any], handler: @escaping ((User) -> Void)){
+                let user = parameters["user"] as! [String : String]
+                handler(User(id: 1, name: user["name"]!))
+            }
+        }
+        let parameters:  [String : Any] = [
+            "user": [
+                "name": "testUser",
+                "email": "test@test.com",
+                "password": "hogehoge",
+                "password_confirmation": "hogehoge"
+            ]
+        ]
+        
+        User.createUser(parameters: parameters){ response in
+            XCTAssertEqual("testUser", response.name)
         }
     }
     
