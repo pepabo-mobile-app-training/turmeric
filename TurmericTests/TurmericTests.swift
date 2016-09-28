@@ -1,11 +1,3 @@
-//
-//  TurmericTests.swift
-//  TurmericTests
-//
-//  Created by usr0600433 on 2016/09/26.
-//  Copyright © 2016年 GMO Pepabo. All rights reserved.
-//
-
 import XCTest
 import OHHTTPStubs
 import Nimble
