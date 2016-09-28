@@ -31,8 +31,8 @@ class APIClient {
     }
     
     static private func authHeader() -> HTTPHeaders? {
-        if let header = token {
-            return ["Authorization": "Bearer " + header]
+        if let token = self.token {
+            return ["Authorization": "Bearer " + token]
         } else {
             return nil
         }
