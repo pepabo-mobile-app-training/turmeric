@@ -5,10 +5,12 @@ import SwiftyJSON
 class APIClient {
     static private let baseUrl = "https://currry.xyz"
     
-    static func request(endpoint: Endpoint, parameters: Parameters?, headers: HTTPHeaders? = nil, handler: @escaping (_ json: JSON) -> Void) {
+    static private var token: String?
+    
+    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
-        
+        let headers = authHeader()
         
         Alamofire.request(url, method: method, parameters: parameters, headers: headers).validate(statusCode: 200...299).responseJSON { response in
             switch response.result {
@@ -24,12 +26,25 @@ class APIClient {
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
     
-    static func request(endpoint: Endpoint, headers: HTTPHeaders, handler: @escaping (_ json: JSON) -> Void){
-        request(endpoint: endpoint, parameters: nil, headers: headers, handler: handler)
+    static func saveToken(token: String) {
+        self.token = token
+    }
+    
+    static func loadToken() -> String {
+        return self.token!
     }
     
     static private func fullURL(endpoint: Endpoint) -> String {
         return baseUrl + endpoint.path()
+    }
+    
+    static private func authHeader() -> HTTPHeaders? {
+        if (self.token == nil) {
+            return nil
+        } else
+        {
+            return ["Authorization": "Bearer " + self.token!]
+        }
     }
 }
 
