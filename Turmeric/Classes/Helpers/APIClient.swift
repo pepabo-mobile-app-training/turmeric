@@ -5,7 +5,7 @@ import SwiftyJSON
 class APIClient {
     static private let baseUrl = "https://currry.xyz"
     
-    static private var token: String?
+    static var token: String?
     
     static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
         let method = endpoint.method()
@@ -24,14 +24,6 @@ class APIClient {
     
     static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         request(endpoint: endpoint, parameters: nil, handler: handler)
-    }
-    
-    static func saveToken(token: String) {
-        self.token = token
-    }
-    
-    static func loadToken() -> String? {
-        return self.token
     }
     
     static private func fullURL(endpoint: Endpoint) -> String {
