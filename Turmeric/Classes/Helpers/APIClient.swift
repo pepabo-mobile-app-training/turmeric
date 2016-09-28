@@ -30,8 +30,8 @@ class APIClient {
         self.token = token
     }
     
-    static func loadToken() -> String {
-        return self.token!
+    static func loadToken() -> String? {
+        return self.token
     }
     
     static private func fullURL(endpoint: Endpoint) -> String {
