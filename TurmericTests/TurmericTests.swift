@@ -18,7 +18,7 @@ class TurmericTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        stub(condition: isHost("currry.xyz") && isPath("api/users") && isMethodPOST()){_ in
+        stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
             return OHHTTPStubsResponse(
                 jsonObject: ["user" : ["name" : "testUser"]],
                 statusCode: 200,
