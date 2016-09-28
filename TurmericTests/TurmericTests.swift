@@ -51,9 +51,11 @@ class TurmericTests: XCTestCase {
                 done()
             }
         }
-        
+    }
+    
+    func testUserLogin() {
         waitUntil { done in
-            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { res in
+            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
                 XCTAssertEqual("testUser", CurrentUser.name)
                 XCTAssertEqual("test@test.com", CurrentUser.email)
                 XCTAssertEqual("ThisIsAuthToken", CurrentUser.loadToken())
