@@ -7,7 +7,6 @@ class User {
     var id: Int
     var name: String
     var email: String
-    private var token: String? = nil
     
     init(id: Int, name: String, email: String, token: String? = nil) {
         self.id = id
@@ -29,7 +28,7 @@ class User {
     
     static func authenticate(parameters: Parameters, handler: @escaping (Any?) -> Void) {
         APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { json in
-            APIClient.saveToken(token: json["token"].stringValue)
+            APIClient.token = json["token"].stringValue
             handler(nil)
         }
     }
