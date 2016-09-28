@@ -31,6 +31,7 @@
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
 		72C0D6E61D9BB70900D47723 /* ProfileEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */; };
+		72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C0D6E71D9BBC9000D47723 /* LinedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
 		72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileEdit.storyboard; sourceTree = "<group>"; };
+		72C0D6E71D9BBC9000D47723 /* LinedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		5242ABF51D98F16A0095D4F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				72C0D6E71D9BBC9000D47723 /* LinedButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
