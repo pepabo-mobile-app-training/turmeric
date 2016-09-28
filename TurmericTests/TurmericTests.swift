@@ -34,7 +34,7 @@ class TurmericTests: XCTestCase {
         OHHTTPStubs.removeAllStubs()
     }
     
-    func testUserCreate (){
+    func testUserCreate() {
        
         let parameters:  [String : Any] = [
             "user": [
@@ -44,6 +44,7 @@ class TurmericTests: XCTestCase {
                 "password_confirmation": "hogehoge"
             ]
         ]
+        
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
                 XCTAssertEqual("testUser", response.name)
@@ -51,5 +52,4 @@ class TurmericTests: XCTestCase {
             }
         }
     }
-    
 }

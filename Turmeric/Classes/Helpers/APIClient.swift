@@ -21,7 +21,7 @@ class APIClient {
         }
     }
     
-    static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void){
+    static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
     
