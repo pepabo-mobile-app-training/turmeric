@@ -45,6 +45,7 @@ class TurmericTests: XCTestCase {
             ]
         ]
         
+        // リクエスト処理を同期的に実行する
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
                 XCTAssertEqual("testUser", response.name)
