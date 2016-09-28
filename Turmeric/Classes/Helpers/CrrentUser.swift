@@ -14,4 +14,5 @@ class CurrentUser {
     static func loadToken() -> String {
         return self.token!
     }
+    
 }
