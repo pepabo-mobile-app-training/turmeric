@@ -2,7 +2,7 @@ import Foundation
 import SwiftyJSON
 
 class List {
-    private let id: Int
+    public let id: Int
     public var name: String
 
     init (id: Int, name:String) {
