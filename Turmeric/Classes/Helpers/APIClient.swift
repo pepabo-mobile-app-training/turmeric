@@ -94,7 +94,7 @@ enum Endpoint {
         case .MicropostsDelete(let micropostId): return "/api/microposts/\(micropostId)"
         case .Feed: return "api/feed"
             
-        case .MyLists: return "api/lists"
+        case .MyLists: return "/api/lists"
         }
     }
 }
