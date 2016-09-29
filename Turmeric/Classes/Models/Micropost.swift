@@ -11,7 +11,7 @@ class Micropost {
     }
 
     init(json: JSON) {
-        self.id = json["micropost"]["id"].intValue
-        self.content = json["micropost"]["content"].stringValue
+        self.id = json["micropost"]["id"].int!
+        self.content = json["micropost"]["content"].string!
     }
 }
