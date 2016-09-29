@@ -4,9 +4,9 @@ import SwiftyJSON
 
 class User {
     
-    var id: Int
-    var name: String
-    var email: String
+    let id: Int
+    let name: String
+    let email: String
     
     init(id: Int, name: String, email: String, token: String? = nil) {
         self.id = id
@@ -15,9 +15,9 @@ class User {
     }
     
     init(json: JSON) {
-        self.id   = json["user"]["id"].intValue
-        self.name = json["user"]["name"].stringValue
-        self.email = json["user"]["emain"].stringValue
+        self.id   = json["user"]["id"].int!
+        self.name = json["user"]["name"].string!
+        self.email = json["user"]["email"].string!
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
@@ -28,7 +28,7 @@ class User {
     
     static func authenticate(parameters: Parameters, handler: @escaping (Any?) -> Void) {
         APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { json in
-            APIClient.token = json["token"].stringValue
+            APIClient.token = json["token"].string!
             handler(nil)
         }
     }
