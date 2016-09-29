@@ -25,6 +25,19 @@ class UserTests: XCTestCase {
                 headers: nil
             )
         }
+        
+        stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
+            return OHHTTPStubsResponse(
+                jsonObject: [
+                    "lists" : [
+                        ["id" : 1, "name" : "friend"],
+                        ["id" : 2, "name" : "curry"]
+                    ]
+                ],
+                statusCode: 200,
+                headers: nil
+            )
+        }
     }
 
     override func tearDown() {
@@ -57,6 +70,25 @@ class UserTests: XCTestCase {
         waitUntil { done in
             User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
                 XCTAssertEqual("ThisIsAuthToken", APIClient.token)
+                done()
+            }
+        }
+    }
+    
+    func testGetMyLists() {
+        waitUntil { done in
+            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
+                XCTAssertEqual("ThisIsAuthToken", APIClient.token)
+                done()
+            }
+        }
+        
+        waitUntil { done in
+            User.getMyLists { response in
+                response.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.name)
+                }
                 done()
             }
         }
