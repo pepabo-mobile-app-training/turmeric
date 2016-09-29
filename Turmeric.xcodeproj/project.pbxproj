@@ -107,6 +107,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520C41C21D9CDC66004C439C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		520C41C31D9CDC66004C439C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		520C41C41D9CDC66004C439C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		520C41C51D9CDC66004C439C /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		520C41C61D9CDC66004C439C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5242ABF01D98F16A0095D4F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +255,11 @@
 		52B1C6F01D98EFD2002AB83B /* TurmericTests */ = {
 			isa = PBXGroup;
 			children = (
+				520C41C21D9CDC66004C439C /* Controllers */,
+				520C41C31D9CDC66004C439C /* Helpers */,
+				520C41C41D9CDC66004C439C /* Models */,
+				520C41C51D9CDC66004C439C /* Stores */,
+				520C41C61D9CDC66004C439C /* Views */,
 				52B1C6F11D98EFD2002AB83B /* TurmericTests.swift */,
 				52B1C6F31D98EFD2002AB83B /* Info.plist */,
 			);
