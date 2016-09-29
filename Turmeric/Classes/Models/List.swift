@@ -2,8 +2,8 @@ import Foundation
 import SwiftyJSON
 
 class List {
-    public let id: Int
-    public var name: String
+    let id: Int
+    var name: String
 
     init (id: Int, name:String) {
         self.id = id
