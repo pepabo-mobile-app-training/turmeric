@@ -15,10 +15,10 @@ class Micropost {
     }
 
     init(json: JSON) {
-        self.id = json["micropost"]["id"].int!
-        self.userId = json["micropost"]["user_id"].int!
-        self.content = json["micropost"]["content"].string!
-        if let picture = json["micropost"]["picture"].string {
+        self.id = json["id"].int!
+        self.userId = json["user_id"].int!
+        self.content = json["content"].string!
+        if let picture = json["picture"].string {
             self.picture = NSURL(string: picture)
         } else {
             self.picture = nil
