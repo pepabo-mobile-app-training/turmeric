@@ -43,16 +43,16 @@ enum Endpoint {
     case Auth
     case UsersFeed
     case UsersCreate
-    case UsersMicropost
-    case UsersFollowing
-    case UsersFollowers
-    case UsersShow
-    case UsersUpdate
+    case UsersMicropost(Int)
+    case UsersFollowing(Int)
+    case UsersFollowers(Int)
+    case UsersShow(Int)
+    case UsersUpdate(Int)
     
     //Microposts
     case MicropostsPost
-    case MicropostsShow
-    case MicropostsDelete
+    case MicropostsShow(Int)
+    case MicropostsDelete(Int)
     case Feed
     
     
@@ -74,25 +74,21 @@ enum Endpoint {
         }
     }
     
-    func path(id: Int?) -> String {
+    func path() -> String {
         switch self {
         case .Auth: return "/api/auth"
         case .UsersFeed: return "/api/feed"
         case .UsersCreate: return "/api/users"
-        case .UsersMicropost: return "/api/users/\(id)/microposts"
-        case .UsersFollowing: return "/api/users/\(id)/following"
-        case .UsersFollowers: return "/api/users/\(id)/followers"
-        case .UsersShow: return "/api/users/\(id)"
-        case .UsersUpdate: return "/api/users/\(id)"
+        case .UsersMicropost(let userId): return "/api/users/\(userId)/microposts"
+        case .UsersFollowing(let userId): return "/api/users/\(userId)/following"
+        case .UsersFollowers(let userId): return "/api/users/\(userId)/followers"
+        case .UsersShow(let userId): return "/api/users/\(userId)"
+        case .UsersUpdate(let userId): return "/api/users/\(userId)"
             
         case .MicropostsPost: return "/api/microposts"
-        case .MicropostsShow: return "/api/microposts/\(id)"
-        case .MicropostsDelete: return "/api/microposts/\(id)"
+        case .MicropostsShow(let micropostId): return "/api/microposts/\(micropostId)"
+        case .MicropostsDelete(let micropostId): return "/api/microposts/\(micropostId)"
         case .Feed: return "api/feed"
         }
-    }
-    
-    func path() -> String {
-        return path(id: nil)
     }
 }
