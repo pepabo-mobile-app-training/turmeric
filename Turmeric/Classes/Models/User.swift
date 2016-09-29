@@ -28,7 +28,7 @@ class User {
     
     static func authenticate(parameters: Parameters, handler: @escaping (Any?) -> Void) {
         APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { json in
-            APIClient.token = json["token"].stringValue
+            APIClient.token = json["token"].string!
             handler(nil)
         }
     }
