@@ -8,7 +8,7 @@ class ListTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodPOST()){_ in
+        stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
             return OHHTTPStubsResponse(
                 jsonObject: [
                     "lists" :[
@@ -42,6 +42,7 @@ class ListTests: XCTestCase {
                     XCTAssertNotNil($0.id)
                     XCTAssertNotNil($0.name)
                 }
+                done()
             }
         }
     }
