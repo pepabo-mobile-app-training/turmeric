@@ -55,6 +55,8 @@ enum Endpoint {
     case MicropostsDelete(Int)
     case Feed
     
+    //List
+    case MyLists
     
     func method() -> HTTPMethod {
         switch self {
@@ -71,6 +73,8 @@ enum Endpoint {
         case .MicropostsShow: return .get
         case .MicropostsDelete: return .delete
         case .Feed: return .get
+            
+        case .MyLists: return .get
         }
     }
     
@@ -89,6 +93,8 @@ enum Endpoint {
         case .MicropostsShow(let micropostId): return "/api/microposts/\(micropostId)"
         case .MicropostsDelete(let micropostId): return "/api/microposts/\(micropostId)"
         case .Feed: return "api/feed"
+            
+        case .MyLists: return "api/lists"
         }
     }
 }
