@@ -24,10 +24,13 @@ class User {
         self.name = json["name"].string!
         self.email = json["email"].string!
         
-        self.followingCount  = json["following_count"].intValue
-        self.followersCount  = json["followers_count"].intValue
-        self.micropostsCount = json["microposts_count"].intValue
-        self.iconUrl         = NSURL(string: json["icon_url"].stringValue)
+        self.followingCount  = json["following_count"].int
+        self.followersCount  = json["followers_count"].int
+        self.micropostsCount = json["microposts_count"].int
+        
+        if let iconUrl = json["icon_url"].string {
+            self.iconUrl = NSURL(string: iconUrl)
+        }
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
