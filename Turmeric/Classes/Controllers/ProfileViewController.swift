@@ -11,7 +11,6 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var editButton: LinedButton!
     @IBOutlet weak var micropostsLabel: UILabel!
     @IBOutlet weak var followersButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
@@ -22,7 +21,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         User.getMyUser(){ user in
+            self.usernameLabel.text = user.name
             
+            if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
+                self.micropostsLabel.text = micropostCount.description
+                
+                self.followersButton.titleLabel!.text = followersCount.description
+                self.followingButton.titleLabel!.text = followingCount.description
+            }
         }
     }
 
