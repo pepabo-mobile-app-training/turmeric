@@ -11,7 +11,7 @@ class User {
     let followingCount: Int?
     let followersCount: Int?
     let micropostsCount: Int?
-    let iconUrl: NSURL?
+    let iconURL: NSURL?
     
     init(id: Int, name: String, email: String) {
         self.id = id
@@ -22,7 +22,7 @@ class User {
         self.followingCount  = nil
         self.micropostsCount = nil
         
-        self.iconUrl = nil
+        self.iconURL = nil
     }
     
     init(json: JSON) {
@@ -34,10 +34,10 @@ class User {
         self.followersCount  = json["user"]["followers_count"].int
         self.micropostsCount = json["user"]["microposts_count"].int
         
-        if let iconUrl = json["user"]["icon_url"].string {
-            self.iconUrl = NSURL(string: iconUrl)
+        if let iconURL = json["user"]["icon_url"].string {
+            self.iconURL = NSURL(string: iconURL)
         } else {
-            self.iconUrl = nil
+            self.iconURL = nil
         }
         
     }
