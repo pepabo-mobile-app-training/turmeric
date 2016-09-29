@@ -1,4 +1,3 @@
-
 import Foundation
 import SwiftyJSON
 
@@ -15,5 +14,4 @@ class List {
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
     }
-    
 }
