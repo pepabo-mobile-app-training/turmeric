@@ -18,6 +18,13 @@ class TurmericTests: XCTestCase {
             )
         }
         
+        stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
+            return OHHTTPStubsResponse(
+                jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com"], "token" : "ThisIsAuthToken"],
+                statusCode: 200,
+                headers: nil
+            )
+        }
     }
     
     override func tearDown() {
@@ -41,6 +48,15 @@ class TurmericTests: XCTestCase {
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
                 XCTAssertEqual("testUser", response.name)
+                done()
+            }
+        }
+    }
+    
+    func testUserLogin() {
+        waitUntil { done in
+            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
+                XCTAssertEqual("ThisIsAuthToken", APIClient.token)
                 done()
             }
         }
