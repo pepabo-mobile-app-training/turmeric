@@ -3,7 +3,7 @@ import SwiftyJSON
 
 class Micropost {
     let id: Int
-    var content: String
+    let content: String
 
     init(id: Int, content: String) {
         self.id = id
