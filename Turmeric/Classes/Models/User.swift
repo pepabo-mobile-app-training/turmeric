@@ -8,15 +8,21 @@ class User {
     let name: String
     let email: String
     
-    var followingCount: Int?
-    var followersCount: Int?
-    var micropostsCount: Int?
-    var iconUrl: NSURL?
+    let followingCount: Int?
+    let followersCount: Int?
+    let micropostsCount: Int?
+    let iconUrl: NSURL?
     
     init(id: Int, name: String, email: String) {
         self.id = id
         self.name = name
         self.email = email
+        
+        self.followersCount  = nil
+        self.followingCount  = nil
+        self.micropostsCount = nil
+        
+        self.iconUrl = nil
     }
     
     init(json: JSON) {
@@ -30,7 +36,10 @@ class User {
         
         if let iconUrl = json["user"]["icon_url"].string {
             self.iconUrl = NSURL(string: iconUrl)
+        } else {
+            self.iconUrl = nil
         }
+        
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
