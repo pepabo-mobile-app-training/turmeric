@@ -11,7 +11,7 @@ class List {
     }
     
     init (json: JSON) {
-        self.id = json["id"].intValue
-        self.name = json["name"].stringValue
+        self.id = json["id"].int!
+        self.name = json["name"].string
     }
 }
