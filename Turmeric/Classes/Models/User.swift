@@ -1,5 +1,6 @@
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class User {
     
@@ -11,9 +12,14 @@ class User {
         self.name = name
     }
     
+    init(json: JSON) {
+        self.id   = json["user"]["id"].intValue
+        self.name = json["user"]["name"].stringValue
+    }
+
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
         APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { json in
-            handler(User(id: json["user"]["id"].intValue, name: json["user"]["name"].stringValue))
+            handler(User(json: json))
         }
     }
 }
