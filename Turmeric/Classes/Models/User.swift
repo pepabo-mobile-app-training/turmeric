@@ -4,9 +4,9 @@ import SwiftyJSON
 
 class User {
     
-    var id: Int
-    var name: String
-    var email: String
+    let id: Int
+    let name: String
+    let email: String
     
     init(id: Int, name: String, email: String, token: String? = nil) {
         self.id = id
