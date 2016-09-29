@@ -15,9 +15,9 @@ class User {
     }
     
     init(json: JSON) {
-        self.id   = json["user"]["id"].intValue
-        self.name = json["user"]["name"].stringValue
-        self.email = json["user"]["emain"].stringValue
+        self.id   = json["user"]["id"].int!
+        self.name = json["user"]["name"].string!
+        self.email = json["user"]["email"].string!
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {

@@ -12,7 +12,7 @@ class UserTests: XCTestCase {
 
         stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
             return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["name" : "testUser"]],
+                jsonObject: ["user" : ["id": 1, "name" : "testUser", "email": "test@test.com"]],
                 statusCode: 200,
                 headers: nil
             )
