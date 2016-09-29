@@ -44,6 +44,7 @@ class UserTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
         OHHTTPStubs.removeAllStubs()
+        APIClient.token = nil
     }
 
     func testUserCreate() {
@@ -76,12 +77,9 @@ class UserTests: XCTestCase {
     }
     
     func testGetMyLists() {
-        waitUntil { done in
-            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
-                XCTAssertEqual("ThisIsAuthToken", APIClient.token)
-                done()
-            }
-        }
+        
+        let userParameters: [String : Any?] = ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]
+        login(parameters: userParameters)
         
         waitUntil { done in
             User.getMyLists { response in
