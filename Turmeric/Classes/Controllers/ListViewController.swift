@@ -14,6 +14,7 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         User.getMyLists { lists in
             self.lists = lists
             self.tableView.reloadData()
@@ -37,6 +38,10 @@ class ListViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath as IndexPath)
         cell.textLabel?.text = self.lists?[indexPath.row].name
         return cell
+    }
+    
+    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goEdit", sender: nil)
     }
 }
 
