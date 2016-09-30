@@ -113,6 +113,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520654681D9E515E00FD0BBE /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		520C41C21D9CDC66004C439C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +271,7 @@
 		52B1C6F01D98EFD2002AB83B /* TurmericTests */ = {
 			isa = PBXGroup;
 			children = (
+				520654681D9E515E00FD0BBE /* Fixtures */,
 				520C41C21D9CDC66004C439C /* Controllers */,
 				520C41C31D9CDC66004C439C /* Helpers */,
 				520C41C41D9CDC66004C439C /* Models */,
