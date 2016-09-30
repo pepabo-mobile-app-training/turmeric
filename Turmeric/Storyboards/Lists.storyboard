@@ -57,11 +57,13 @@
             </objects>
             <point key="canvasLocation" x="867" y="-67"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--リスト-->
         <scene sceneID="dTI-Zc-Zzf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jay-tI-oGy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="リスト" id="pmo-cF-mVQ" userLabel="リスト"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E4u-eV-myb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
