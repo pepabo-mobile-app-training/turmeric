@@ -33,11 +33,11 @@ class User {
         }
     }
     
-    static func getMyLists(handler: @escaping ([List]) -> Void) {
+    static func getMyLists(handler: @escaping ([List]?) -> Void) {
         APIClient.request(endpoint: Endpoint.MyLists) { json in
-            let lists: [List] = json["lists"].arrayValue.map {
+            let lists: [List]? = (json["lists"].array?.map {
                 List(json: $0)
-            }
+                })
             handler(lists)
         }
     }
