@@ -3,9 +3,9 @@ import Nimble
 
 @testable import Turmeric
 
-func login(parameters : [String : Any?]){
+func login(){
     waitUntil { done in
-        User.authenticate(parameters: parameters) { response in
+        User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
             done()
         }
     }

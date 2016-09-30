@@ -61,7 +61,7 @@ class UserTests: XCTestCase {
         // リクエスト処理を同期的に実行する
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
-                XCTAssertEqual("testUser", response.name)
+                XCTAssertEqual("ogidow", response.name)
                 done()
             }
         }
@@ -77,9 +77,7 @@ class UserTests: XCTestCase {
     }
     
     func testGetMyLists() {
-        
-        let userParameters: [String : Any?] = ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]
-        login(parameters: userParameters)
+        login()
         
         waitUntil { done in
             User.getMyLists { response in
