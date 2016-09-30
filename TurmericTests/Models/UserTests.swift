@@ -81,7 +81,7 @@ class UserTests: XCTestCase {
         
         waitUntil { done in
             User.getMyLists { response in
-                response.forEach {
+                response!.forEach {
                     XCTAssertNotNil($0.id)
                     XCTAssertNotNil($0.name)
                 }
