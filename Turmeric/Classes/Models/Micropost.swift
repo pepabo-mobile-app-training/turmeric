@@ -24,4 +24,10 @@ class Micropost {
             self.picture = nil
         }
     }
+
+    static func getMicropost(id: Int, handler: @escaping ((Micropost) -> Void)) {
+        APIClient.request(endpoint: Endpoint.MicropostsShow(id)) { json in
+            handler(Micropost(json: json["micropost"]))
+        }
+    }
 }
