@@ -42,7 +42,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="リスト" id="QgN-AV-nMy">
-                        <barButtonItem key="rightBarButtonItem" title="編集" id="Qki-tn-NeD"/>
+                        <barButtonItem key="rightBarButtonItem" title="追加・削除(仮  )" id="Qki-tn-NeD"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiT-oQ-rR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
