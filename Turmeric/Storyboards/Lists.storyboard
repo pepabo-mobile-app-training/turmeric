@@ -38,7 +38,9 @@
                             <outlet property="delegate" destination="vDV-Im-vlK" id="f0q-WX-ls6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="リスト" id="QgN-AV-nMy"/>
+                    <navigationItem key="navigationItem" title="リスト" id="QgN-AV-nMy">
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="Qki-tn-NeD"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiT-oQ-rR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
