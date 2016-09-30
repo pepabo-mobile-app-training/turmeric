@@ -44,7 +44,7 @@ class UserTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
         OHHTTPStubs.removeAllStubs()
-        APIClient.token = nil
+        logout()
     }
 
     func testUserCreate() {
