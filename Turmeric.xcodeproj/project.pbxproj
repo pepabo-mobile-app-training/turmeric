@@ -21,7 +21,8 @@
 		525B707D1D98F985004D72BD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B707A1D98F985004D72BD /* SwiftyJSON.framework */; };
 		52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52685A261D990E4400FEC0A7 /* APIClient.swift */; };
 		52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A7A1D9E304500DE76FD /* ListViewController.swift */; };
-		52A44A871D9E465800DE76FD /* ListEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A44A861D9E465800DE76FD /* ListEdit.storyboard */; };
+		52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A44A861D9E465800DE76FD /* ListDetail.storyboard */; };
+		52A44A891D9E512600DE76FD /* ListDtailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A881D9E512600DE76FD /* ListDtailViewController.swift */; };
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
@@ -65,7 +66,8 @@
 		525B707A1D98F985004D72BD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		52685A261D990E4400FEC0A7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		52A44A7A1D9E304500DE76FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		52A44A861D9E465800DE76FD /* ListEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEdit.storyboard; sourceTree = "<group>"; };
+		52A44A861D9E465800DE76FD /* ListDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListDetail.storyboard; sourceTree = "<group>"; };
+		52A44A881D9E512600DE76FD /* ListDtailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDtailViewController.swift; sourceTree = "<group>"; };
 		52A635D21D9CD9FE00646119 /* Micropost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Micropost.swift; sourceTree = "<group>"; };
 		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 				52A44A7A1D9E304500DE76FD /* ListViewController.swift */,
+				52A44A881D9E512600DE76FD /* ListDtailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,7 +217,7 @@
 				724DB9161D99274A00008C25 /* Profile.storyboard */,
 				724DB9181D99275300008C25 /* Lists.storyboard */,
 				7231C3D81D9A0BA90086D60F /* Mention.storyboard */,
-				52A44A861D9E465800DE76FD /* ListEdit.storyboard */,
+				52A44A861D9E465800DE76FD /* ListDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -400,7 +403,7 @@
 				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
 				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
 				7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */,
-				52A44A871D9E465800DE76FD /* ListEdit.storyboard in Resources */,
+				52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */,
 				5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */,
 				724DB9151D99271B00008C25 /* Post.storyboard in Resources */,
 				724DB9131D9926FB00008C25 /* Home.storyboard in Resources */,
@@ -467,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A44A891D9E512600DE76FD /* ListDtailViewController.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,

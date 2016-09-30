@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UITableViewController {
     
     var lists: [List]?
+    var selectedListId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class ListViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        let vc = segue.destination as! ListDetailViewController
+        vc.selectedListId = self.selectedListId
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +47,7 @@ class ListViewController: UITableViewController {
     }
     
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        self.selectedListId = lists?[indexPath.row].id
         self.performSegue(withIdentifier: "goEdit", sender: nil)
     }
 }
