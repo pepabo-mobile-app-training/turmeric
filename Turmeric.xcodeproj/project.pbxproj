@@ -20,6 +20,7 @@
 		525B707C1D98F985004D72BD /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B70791D98F985004D72BD /* AlamofireImage.framework */; };
 		525B707D1D98F985004D72BD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B707A1D98F985004D72BD /* SwiftyJSON.framework */; };
 		52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52685A261D990E4400FEC0A7 /* APIClient.swift */; };
+		52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A7A1D9E304500DE76FD /* ListViewController.swift */; };
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		525B70791D98F985004D72BD /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		525B707A1D98F985004D72BD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		52685A261D990E4400FEC0A7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		52A44A7A1D9E304500DE76FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		52A635D21D9CD9FE00646119 /* Micropost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Micropost.swift; sourceTree = "<group>"; };
 		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
+				52A44A7A1D9E304500DE76FD /* ListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */,
 				52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */,
+				52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
