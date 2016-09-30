@@ -12,7 +12,7 @@ class UserTests: XCTestCase {
 
         stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
             return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["id": 1, "name" : "testUser", "email": "test@test.com"]],
+                jsonObject: ["user" : ["id": 1, "name" : "ogidow", "email": "syuta_ogido@yahoo.co.jp"]],
                 statusCode: 200,
                 headers: nil
             )
@@ -51,10 +51,10 @@ class UserTests: XCTestCase {
 
         let parameters:  [String : Any] = [
             "user": [
-                "name": "testUser",
-                "email": "test@test.com",
-                "password": "hogehoge",
-                "password_confirmation": "hogehoge"
+                "name": "ogidow",
+                "email": "syuta_ogido@yahoo.co.jp",
+                "password": "testtest",
+                "password_confirmation": "testtest"
             ]
         ]
 
