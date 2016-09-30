@@ -152,7 +152,6 @@
                     <navigationItem key="navigationItem" title="プロフィール" id="LW0-wT-rEs"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="editButton" destination="Qnu-cd-McX" id="vX8-Yq-YfE"/>
                         <outlet property="followersButton" destination="mQj-hl-Bd0" id="5tH-kq-yvz"/>
                         <outlet property="followingButton" destination="1qL-Po-6Tv" id="yJw-6h-BM2"/>
                         <outlet property="micropostsLabel" destination="siK-Xr-AGZ" id="k5u-YX-uTh"/>
