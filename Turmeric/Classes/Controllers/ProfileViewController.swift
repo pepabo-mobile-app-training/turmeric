@@ -26,8 +26,8 @@ class ProfileViewController: UIViewController {
             if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
                 self.micropostsLabel.text = micropostCount.description
                 
-                self.followersButton.titleLabel!.text = followersCount.description
-                self.followingButton.titleLabel!.text = followingCount.description
+                self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
+                self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
             }
         }
     }
