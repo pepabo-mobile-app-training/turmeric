@@ -16,13 +16,13 @@ class List {
     }
     
     static func getList(id: Int, handler: @escaping ((List) -> Void)) {
-        APIClient.request(endpoint: Endpoint.ListShow(id)) { json in
+        APIClient.request(endpoint: Endpoint.ListsShow(id)) { json in
             handler(List(json: json["list"]))
         }
     }
     
     static func getMembers(id:Int, handler: @escaping ([User]?) -> Void) {
-        APIClient.request(endpoint: Endpoint.ListMembers(id)) { json in
+        APIClient.request(endpoint: Endpoint.ListsMembers(id)) { json in
             let members: [User]? = (json["members"].array?.map {
                 User(json: $0)
                 })
