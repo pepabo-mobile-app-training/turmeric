@@ -19,16 +19,20 @@ func logout() {
 func enableHTTPStubsResponse() {
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/100") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
-            fileAtPath: OHPathForFileInBundle("MicropostsShow.json", Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!,
+            fileAtPath: stubFilePath(name: "MicropostsShow.json"),
             statusCode: 200,
             headers: ["Content-Type": "application/json"]
         )
     }
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/101") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
-            fileAtPath: OHPathForFileInBundle("MicropostsShow_withPicture.json", Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!,
+            fileAtPath: stubFilePath(name: "MicropostsShow_withPicture.json"),
             statusCode: 200,
             headers: ["Content-Type": "application/json"]
         )
     }
+}
+
+private func stubFilePath(name: String) -> String {
+    return OHPathForFileInBundle(name, Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!
 }
