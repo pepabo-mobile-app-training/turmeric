@@ -15,8 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         #if DEBUG
+            // for debug setting
+            print("launch debug mode")
+        #elseif TEST
+            // for test setting
+            print("launch test mode")
+        #endif
+        
+        #if DEBUG || TEST
             User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
                 print("logged in")
             }
