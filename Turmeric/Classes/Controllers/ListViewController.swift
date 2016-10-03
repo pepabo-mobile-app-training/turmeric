@@ -24,9 +24,15 @@ class ListViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        tableView.tableFooterView = UIView()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        tableView.tableFooterView = UIView()
+    }
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let vc = segue.destination as! ListDetailViewController
         vc.selectedListId = self.selectedListId
