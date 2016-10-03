@@ -25,4 +25,16 @@ class ListTests: XCTestCase {
         }
     }
     
+    func testListMembers() {
+        waitUntil { done in
+            List.getMembers(id: 100) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.name)
+                    XCTAssertNotNil($0.iconURL)
+                }
+                done()
+            }
+        }
+    }
 }
