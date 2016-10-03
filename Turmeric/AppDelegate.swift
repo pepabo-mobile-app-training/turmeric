@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #elseif TEST
             // for test setting
             print("launch test mode")
+            enableHTTPStubs()
         #endif
         
         #if DEBUG || TEST
