@@ -1,0 +1,25 @@
+{
+    "lists": [
+        {
+            "id": 1,
+            "name": "Friends",
+            "user_id": 1,
+            "created_at": "2016-10-03T09:02:36.000Z",
+            "updated_at": "2016-10-03T09:02:36.000Z"
+        },
+        {
+            "id": 2,
+            "name": "Curry",
+            "user_id": 1,
+            "created_at": "2016-10-03T09:03:36.000Z",
+            "updated_at": "2016-10-03T09:03:36.000Z"
+        },
+        {
+            "id": 3,
+            "name": "PB",
+            "user_id": 1,
+            "created_at": "2016-10-03T09:04:36.000Z",
+            "updated_at": "2016-10-03T09:04:36.000Z"
+        }
+    ]
+}
