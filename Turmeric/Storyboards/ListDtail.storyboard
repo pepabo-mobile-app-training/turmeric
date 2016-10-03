@@ -9,7 +9,7 @@
         <!--ListEdit-->
         <scene sceneID="22q-Nb-cJZ">
             <objects>
-                <viewController title="ListEdit" id="iTM-W3-xrr" customClass="ListDetailViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ListEdit" id="iTM-W3-xrr" customClass="ListDtailViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RZw-dv-ElU"/>
                         <viewControllerLayoutGuide type="bottom" id="6zi-vu-MZi"/>

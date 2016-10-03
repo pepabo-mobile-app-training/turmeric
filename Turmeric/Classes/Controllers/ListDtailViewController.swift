@@ -16,8 +16,6 @@ class ListDtailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  listLabel.text = String("リストID" + String(describing: selectedListId))
-        print(selectedListId)
     }
     
     override func didReceiveMemoryWarning() {
