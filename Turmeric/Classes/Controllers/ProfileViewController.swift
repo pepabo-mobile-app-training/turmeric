@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var micropostsLabel: UILabel!
     @IBOutlet weak var followersButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
+    @IBOutlet weak var profileImage: UIImageView!
     
     //var followingButton: UIButton
     override func viewWillAppear(_ animated: Bool) {

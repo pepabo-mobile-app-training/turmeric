@@ -155,6 +155,7 @@
                         <outlet property="followersButton" destination="mQj-hl-Bd0" id="5tH-kq-yvz"/>
                         <outlet property="followingButton" destination="1qL-Po-6Tv" id="yJw-6h-BM2"/>
                         <outlet property="micropostsLabel" destination="siK-Xr-AGZ" id="k5u-YX-uTh"/>
+                        <outlet property="profileImage" destination="xnf-Iu-OEq" id="ME1-oZ-fet"/>
                         <outlet property="usernameLabel" destination="ngK-ft-fVb" id="Bjh-JY-ayj"/>
                     </connections>
                 </viewController>
