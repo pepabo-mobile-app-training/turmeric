@@ -1,0 +1,13 @@
+{
+    "message": "Created",
+    "user": {
+        "id": 1,
+        "name": "Example User",
+        "activated": true,
+        "icon_url": "https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80",
+        "following_count": 0,
+        "followers_count": 0,
+        "microposts_count": 0,
+        "email": "user@example.com"
+    }
+}

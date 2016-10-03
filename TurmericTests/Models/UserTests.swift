@@ -8,15 +8,7 @@ class UserTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["id": 1, "name" : "ogidow", "email": "syuta_ogido@yahoo.co.jp"]],
-                statusCode: 200,
-                headers: nil
-            )
-        }
+        enableHTTPStubs()
 
         stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
             return OHHTTPStubsResponse(
@@ -48,11 +40,10 @@ class UserTests: XCTestCase {
     }
 
     func testUserCreate() {
-
         let parameters:  [String : Any] = [
             "user": [
-                "name": "ogidow",
-                "email": "syuta_ogido@yahoo.co.jp",
+                "name": "Example User",
+                "email": "user@example.com",
                 "password": "testtest",
                 "password_confirmation": "testtest"
             ]
@@ -61,7 +52,7 @@ class UserTests: XCTestCase {
         // リクエスト処理を同期的に実行する
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
-                XCTAssertEqual("ogidow", response.name)
+                XCTAssertEqual("Example User", response.name)
                 done()
             }
         }

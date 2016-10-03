@@ -32,6 +32,7 @@
 		52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */; };
 		52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6E7C01D9CE22900A0A564 /* UserTests.swift */; };
 		52F6CAF11DA2069800C1C9CC /* MicropostsShow_withPicture.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F6CAF01DA2069800C1C9CC /* MicropostsShow_withPicture.json */; };
+		52F6CAF31DA2203B00C1C9CC /* UsersCreate.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F6CAF21DA2203B00C1C9CC /* UsersCreate.json */; };
 		7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7231C3D81D9A0BA90086D60F /* Mention.storyboard */; };
 		724DB9131D9926FB00008C25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724DB9121D9926FB00008C25 /* Home.storyboard */; };
 		724DB9151D99271B00008C25 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724DB9141D99271B00008C25 /* Post.storyboard */; };
@@ -87,6 +88,7 @@
 		52B1C6FE1D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D6E7C01D9CE22900A0A564 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		52F6CAF01DA2069800C1C9CC /* MicropostsShow_withPicture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MicropostsShow_withPicture.json; sourceTree = "<group>"; };
+		52F6CAF21DA2203B00C1C9CC /* UsersCreate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersCreate.json; sourceTree = "<group>"; };
 		7231C3D81D9A0BA90086D60F /* Mention.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mention.storyboard; sourceTree = "<group>"; };
 		724DB9121D9926FB00008C25 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		724DB9141D99271B00008C25 /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				5206546B1D9E6E0900FD0BBE /* MicropostsShow.json */,
 				52F6CAF01DA2069800C1C9CC /* MicropostsShow_withPicture.json */,
+				52F6CAF21DA2203B00C1C9CC /* UsersCreate.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F6CAF31DA2203B00C1C9CC /* UsersCreate.json in Resources */,
 				52F6CAF11DA2069800C1C9CC /* MicropostsShow_withPicture.json in Resources */,
 				5206546C1D9E6E0900FD0BBE /* MicropostsShow.json in Resources */,
 			);
