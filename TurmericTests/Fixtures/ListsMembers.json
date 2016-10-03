@@ -1,13 +1,13 @@
 {
     "members" : {
         [
-            "id" : 101,
-            "name" : "ry023",
+            "id"       : 101,
+            "name"     : "ry023",
             "icon_url" : "http://example.com/image/icon1.png"
         ],
         [
-            "id" : 102,
-            "name" : "shimoju",
+            "id"       : 102,
+            "name"     : "shimoju",
             "icon_url" : "http://example.com/image/icon2.png"
         ]
     }

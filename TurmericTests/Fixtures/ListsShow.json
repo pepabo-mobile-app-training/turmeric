@@ -1,6 +1,6 @@
 {
     "list" : {
-        "id" : 100
+        "id"   : 100,
         "name" : "friend"
     }
 }
