@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListDetailViewController: UIViewController {
+class ListDtailViewController: UIViewController {
     
     var selectedListId: Int?
     
