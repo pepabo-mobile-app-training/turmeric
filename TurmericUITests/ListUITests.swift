@@ -33,10 +33,11 @@ class ListUITests: XCTestCase {
         app.tabBars.buttons["リスト"].tap()
         
         let listEditButton = app.buttons["追加・削除(仮)"]
-        let listDetailCell = app.tables.cells.element(boundBy: 0)
+        let listCells = app.tables.cells
         
         XCTAssert(listEditButton.exists)
-        XCTAssert(listDetailCell.exists)
+        XCTAssertEqual(2, listCells.count)
+        
     }
     
 }
