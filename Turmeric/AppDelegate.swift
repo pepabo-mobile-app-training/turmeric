@@ -23,20 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // for test setting
             print("launch test mode")
             enableHTTPStubs()
-        #endif
-        
-        #if DEBUG || TEST
-            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
-                print("logged in")
-            }
-            
-            stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
-                return OHHTTPStubsResponse(
-                    jsonObject: ["user" : ["id": 1, "name" : "ogidow", "email": "syuta_ogido@yahoo.co.jp"]],
-                    statusCode: 200,
-                    headers: nil
-                )
-            }
             
             stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
                 return OHHTTPStubsResponse(
@@ -57,6 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     statusCode: 200,
                     headers: nil
                 )
+            }
+        #endif
+        
+        #if DEBUG || TEST
+            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
+                print("logged in")
             }
         #endif
         return true
