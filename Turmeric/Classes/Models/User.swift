@@ -50,7 +50,7 @@ class User {
     
     static func getMyUser(handler: @escaping ((User) -> Void)) {
         APIClient.request(endpoint: Endpoint.UsersMe, parameters: [:]) { json in
-            handler(User(json: json))
+            handler(User(json: json["user"]))
         }
     }
 
