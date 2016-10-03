@@ -24,6 +24,9 @@
 		5262B6AC1DA2568F00B78751 /* MyLists.json in Resources */ = {isa = PBXBuildFile; fileRef = 5262B6AB1DA2568F00B78751 /* MyLists.json */; };
 		52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52685A261D990E4400FEC0A7 /* APIClient.swift */; };
 		52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F281DA1FABA009D4525 /* ListUITests.swift */; };
+		52A15F341DA243BF009D4525 /* ListsShow.json in Resources */ = {isa = PBXBuildFile; fileRef = 52A15F331DA243BF009D4525 /* ListsShow.json */; };
+		52A15F361DA243F0009D4525 /* ListsMembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 52A15F351DA243F0009D4525 /* ListsMembers.json */; };
+		52A15F381DA24923009D4525 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F371DA24923009D4525 /* ListTests.swift */; };
 		52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A7A1D9E304500DE76FD /* ListViewController.swift */; };
 		52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A44A861D9E465800DE76FD /* ListDetail.storyboard */; };
 		52A44A891D9E512600DE76FD /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A881D9E512600DE76FD /* ListDetailViewController.swift */; };
@@ -76,6 +79,9 @@
 		5262B6AB1DA2568F00B78751 /* MyLists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyLists.json; sourceTree = "<group>"; };
 		52685A261D990E4400FEC0A7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		52A15F281DA1FABA009D4525 /* ListUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
+		52A15F331DA243BF009D4525 /* ListsShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsShow.json; sourceTree = "<group>"; };
+		52A15F351DA243F0009D4525 /* ListsMembers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsMembers.json; sourceTree = "<group>"; };
+		52A15F371DA24923009D4525 /* ListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 		52A44A7A1D9E304500DE76FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		52A44A861D9E465800DE76FD /* ListDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListDetail.storyboard; sourceTree = "<group>"; };
 		52A44A881D9E512600DE76FD /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 			children = (
 				52D6E7C01D9CE22900A0A564 /* UserTests.swift */,
 				520654661D9E086500FD0BBE /* MicropostTests.swift */,
+				52A15F371DA24923009D4525 /* ListTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -520,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				520654671D9E086500FD0BBE /* MicropostTests.swift in Sources */,
+				52A15F381DA24923009D4525 /* ListTests.swift in Sources */,
 				52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */,
 				522C8AAF1D9D1D3F00E17D4C /* TestHelpers.swift in Sources */,
 			);
