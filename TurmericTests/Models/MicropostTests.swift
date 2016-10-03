@@ -1,5 +1,4 @@
 import XCTest
-import OHHTTPStubs
 import Nimble
 
 @testable import Turmeric
@@ -7,12 +6,12 @@ import Nimble
 class MicropostTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        enableHTTPStubsResponse()
+        enableHTTPStubs()
     }
 
     override func tearDown() {
         super.tearDown()
-        OHHTTPStubs.removeAllStubs()
+        disableHTTPStubs()
     }
 
     func testGetMicropost() {

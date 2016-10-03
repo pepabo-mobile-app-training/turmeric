@@ -16,7 +16,7 @@ func logout() {
     APIClient.token = nil
 }
 
-func enableHTTPStubsResponse() {
+func enableHTTPStubs() {
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/100") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "MicropostsShow.json"),
@@ -31,6 +31,11 @@ func enableHTTPStubsResponse() {
             headers: ["Content-Type": "application/json"]
         )
     }
+}
+
+func disableHTTPStubs() {
+    // "Expression resolves to an unused function"と言われるため
+    _ = OHHTTPStubs.removeAllStubs
 }
 
 private func stubFilePath(name: String) -> String {
