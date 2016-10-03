@@ -16,9 +16,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followingButton: UIButton!
     
     //var followingButton: UIButton
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         User.getMyUser(){ user in
             self.usernameLabel.text = user.name
