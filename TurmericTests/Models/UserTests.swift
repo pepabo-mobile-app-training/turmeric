@@ -17,19 +17,6 @@ class UserTests: XCTestCase {
                 headers: nil
             )
         }
-        
-        stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: [
-                    "lists" : [
-                        ["id" : 1, "name" : "friend"],
-                        ["id" : 2, "name" : "curry"]
-                    ]
-                ],
-                statusCode: 200,
-                headers: nil
-            )
-        }
     }
 
     override func tearDown() {
