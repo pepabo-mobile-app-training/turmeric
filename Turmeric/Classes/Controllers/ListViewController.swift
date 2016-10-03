@@ -34,7 +34,7 @@ class ListViewController: UITableViewController {
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        let vc = segue.destination as! ListDetailViewController
+        let vc = segue.destination as! ListDtailViewController
         vc.selectedListId = self.selectedListId
     }
     
