@@ -6,18 +6,21 @@ class User {
 
     let id: Int
     let name: String
-    let email: String
+    let email: String?
+    let iconURL: String
 
-    init(id: Int, name: String, email: String, token: String? = nil) {
+    init(id: Int, name: String, iconURL: String, email: String? = nil, token: String? = nil) {
         self.id = id
         self.name = name
         self.email = email
+        self.iconURL = iconURL
     }
 
     init(json: JSON) {
         self.id = json["id"].int!
         self.name = json["name"].string!
-        self.email = json["email"].string!
+        self.email = json["email"].string
+        self.iconURL = json["icon_url"].string!
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
