@@ -99,8 +99,8 @@ enum Endpoint {
         case .Feed: return "api/feed"
             
         case .MyLists: return "/api/lists"
-        case .ListShow(let listId): return "api/lists/\(listId)"
-        case .ListMembers(let listId): return "api/lists/\(listId)/members"
+        case .ListShow(let listId): return "/api/lists/\(listId)"
+        case .ListMembers(let listId): return "/api/lists/\(listId)/members"
         }
     }
 }
