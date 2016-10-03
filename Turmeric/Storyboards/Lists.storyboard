@@ -32,7 +32,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zxZ-eS-ZOq" kind="show" identifier="goEdit" trigger="accessoryAction" id="vxP-sG-usM"/>
+                                    <segue destination="zxZ-eS-ZOq" kind="show" identifier="goDetail" trigger="accessoryAction" id="vxP-sG-usM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -34,8 +34,12 @@ class ListViewController: UITableViewController {
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        let vc = segue.destination as! ListDetailViewController
-        vc.selectedListId = self.selectedListId
+        switch segue.identifier! {
+        case "goDetail":
+            let vc = segue.destination as! ListDetailViewController
+            vc.selectedListId = self.selectedListId
+        default : break
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,7 +58,7 @@ class ListViewController: UITableViewController {
     
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.selectedListId = lists?[indexPath.row].id
-        self.performSegue(withIdentifier: "goEdit", sender: nil)
+        self.performSegue(withIdentifier: "goDetail", sender: nil)
     }
 }
 
