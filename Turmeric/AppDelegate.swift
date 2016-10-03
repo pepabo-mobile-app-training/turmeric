@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OHHTTPStubs
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
             User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
                 print("logged in")
+            }
+            
+            stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
+                return OHHTTPStubsResponse(
+                    jsonObject: ["user" : ["id": 1, "name" : "ogidow", "email": "syuta_ogido@yahoo.co.jp"]],
+                    statusCode: 200,
+                    headers: nil
+                )
+            }
+            
+            stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
+                return OHHTTPStubsResponse(
+                    jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com"], "token" : "ThisIsAuthToken"],
+                    statusCode: 200,
+                    headers: nil
+                )
+            }
+            
+            stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
+                return OHHTTPStubsResponse(
+                    jsonObject: [
+                        "lists" : [
+                            ["id" : 1, "name" : "friend"],
+                            ["id" : 2, "name" : "curry"]
+                        ]
+                    ],
+                    statusCode: 200,
+                    headers: nil
+                )
             }
         #endif
         return true
