@@ -1,0 +1,10 @@
+{
+    "micropost": {
+        "id": 101,
+        "content": "With picture",
+        "user_id": 2,
+        "created_at": "2016-10-03T12:41:24.000Z",
+        "updated_at": "2016-10-03T12:51:25.000Z",
+        "picture": "https://example.com/picture.jpg"
+    }
+}

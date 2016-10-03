@@ -24,4 +24,11 @@ func enableHTTPStubsResponse() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    stub(condition: isHost("currry.xyz") && isPath("/api/microposts/101") && isMethodGET()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: OHPathForFileInBundle("MicropostsShow_withPicture.json", Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!,
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
 }
