@@ -40,6 +40,23 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    
+    //List
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/100") && isMethodGET()){ _ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListsShow.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+    
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/100/members") && isMethodGET()){ _ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListsMembers.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
 }
 
 func disableHTTPStubs() {
