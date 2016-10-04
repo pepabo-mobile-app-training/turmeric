@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ListEdit-->
+        <!--ListDetail-->
         <scene sceneID="22q-Nb-cJZ">
             <objects>
-                <viewController title="ListEdit" id="iTM-W3-xrr" customClass="ListDetailViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ListDetail" id="iTM-W3-xrr" customClass="ListDetailViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RZw-dv-ElU"/>
                         <viewControllerLayoutGuide type="bottom" id="6zi-vu-MZi"/>
@@ -66,13 +66,33 @@
                             <constraint firstItem="0Co-9z-amy" firstAttribute="top" secondItem="RZw-dv-ElU" secondAttribute="bottom" constant="20" id="tnS-5l-dRu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4tb-ek-WcY"/>
+                    <navigationItem key="navigationItem" id="bRm-dm-o81">
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="KDT-Hu-VTA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="listNameLabel" destination="0Co-9z-amy" id="AFB-DR-Lpd"/>
                         <outlet property="tableView" destination="Eo2-Ea-PF9" id="lMe-V3-E1Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAa-EJ-7TE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="29.23538230884558"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MhX-Dl-0Hm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="454-dM-OHR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YFf-DX-ajP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iTM-W3-xrr" kind="relationship" relationship="rootViewController" id="21z-Xq-MA6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9No-pk-bYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1120.8" y="29.23538230884558"/>
         </scene>

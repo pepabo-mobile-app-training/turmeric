@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hKw-KS-PZS" id="bMa-4u-ea6">
-                                    <frame key="frameInset" width="342" height="43.5"/>
+                                    <frame key="frameInset" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYe-zE-jh4">
-                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
+                                            <frame key="frameInset" minX="15" width="325" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -60,6 +60,7 @@
         <!--リスト-->
         <scene sceneID="dTI-Zc-Zzf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5w-VR-PY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jay-tI-oGy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="リスト" id="pmo-cF-mVQ" userLabel="リスト"/>
                     <toolbarItems/>
@@ -73,7 +74,6 @@
                         <segue destination="vDV-Im-vlK" kind="relationship" relationship="rootViewController" id="7Qo-Bu-40m"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5w-VR-PY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-706.39999999999998" y="-66.11694152923539"/>
         </scene>
