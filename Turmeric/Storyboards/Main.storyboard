@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="jTJ-PE-qgF">
             <objects>
-                <tabBarController id="Zvd-9n-caL" sceneMemberID="viewController">
+                <tabBarController id="Zvd-9n-caL" customClass="TabBarController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="zjA-pX-vN8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
