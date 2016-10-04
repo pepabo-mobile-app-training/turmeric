@@ -29,7 +29,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         List.getMembers(id: self.selectedListId!) { response in
-            self.members = [User(id: 1, name: "syuta", iconURL: "https://currry.xyz/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png")]
+            self.members = response
             self.tableView.reloadData()
         }
     }

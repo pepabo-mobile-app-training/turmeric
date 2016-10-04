@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,21 +16,27 @@
                 <frame key="frameInset" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ft-vX-5eh">
-                        <frame key="frameInset" width="60" height="43"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2ft-vX-5eh">
                         <constraints>
-                            <constraint firstAttribute="height" constant="43" id="Ndu-6U-vmI"/>
-                            <constraint firstAttribute="width" constant="60" id="zsI-Iz-KaW"/>
+                            <constraint firstAttribute="height" constant="40" id="5e8-La-bZE"/>
+                            <constraint firstAttribute="width" constant="40" id="NqC-nf-YsV"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-Cb-ZLF">
-                        <frame key="frameInset" minX="129" minY="8" width="84" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMf-Cb-ZLF">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="KDO-ae-992"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="uMf-Cb-ZLF" firstAttribute="leading" secondItem="2ft-vX-5eh" secondAttribute="trailing" constant="30" id="7mh-IW-aPj"/>
+                    <constraint firstItem="uMf-Cb-ZLF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="9DO-sh-CMz"/>
+                    <constraint firstItem="2ft-vX-5eh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="1" id="L22-bP-YOR"/>
+                    <constraint firstItem="2ft-vX-5eh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="pgB-w8-E4u"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImage" destination="2ft-vX-5eh" id="VfT-39-Afo"/>

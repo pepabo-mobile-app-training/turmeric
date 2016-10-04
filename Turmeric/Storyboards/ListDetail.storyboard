@@ -3,13 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--ListEdit-->
         <scene sceneID="22q-Nb-cJZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LAa-EJ-7TE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="ListEdit" id="iTM-W3-xrr" customClass="ListDetailViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RZw-dv-ElU"/>
@@ -19,10 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-9z-amy">
-                                <frame key="frameInset" minX="128" minY="102" width="72" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFA-Lf-wY3">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,8 +52,19 @@
                                     <outlet property="delegate" destination="iTM-W3-xrr" id="6jg-gu-gnL"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Co-9z-amy">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TFA-Lf-wY3" firstAttribute="top" secondItem="RZw-dv-ElU" secondAttribute="bottom" constant="20" id="3GR-ga-Q3M"/>
+                            <constraint firstItem="TFA-Lf-wY3" firstAttribute="leading" secondItem="Ykf-1M-UZ0" secondAttribute="leadingMargin" constant="20" id="IFg-32-hXH"/>
+                            <constraint firstItem="0Co-9z-amy" firstAttribute="leading" secondItem="TFA-Lf-wY3" secondAttribute="trailing" constant="20" id="VzY-UI-7jp"/>
+                            <constraint firstItem="0Co-9z-amy" firstAttribute="top" secondItem="RZw-dv-ElU" secondAttribute="bottom" constant="20" id="tnS-5l-dRu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4tb-ek-WcY"/>
                     <connections>
@@ -63,6 +72,7 @@
                         <outlet property="tableView" destination="Eo2-Ea-PF9" id="lMe-V3-E1Z"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAa-EJ-7TE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1120.8" y="29.23538230884558"/>
         </scene>
