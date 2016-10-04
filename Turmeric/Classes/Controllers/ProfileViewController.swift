@@ -29,6 +29,13 @@ class ProfileViewController: UIViewController {
                 self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
                 self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
             }
+            
+            do {
+                let data = try Data(contentsOf: URL(string: user.iconURL)! )
+                self.profileImage.image = UIImage(data: data)
+            } catch {
+                //画像がダウンロードできなかった
+            }
         }
     }
 
