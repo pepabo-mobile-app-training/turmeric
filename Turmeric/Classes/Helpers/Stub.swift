@@ -65,5 +65,5 @@ func disableHTTPStubs() {
 }
 
 private func stubFilePath(name: String) -> String {
-    return OHPathForFileInBundle(name, Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!
+    return OHPathForFileInBundle(name, Bundle.main)!
 }
