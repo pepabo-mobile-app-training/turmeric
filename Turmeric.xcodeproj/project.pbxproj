@@ -35,7 +35,6 @@
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
-		52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */; };
 		52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6E7C01D9CE22900A0A564 /* UserTests.swift */; };
 		7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7231C3D81D9A0BA90086D60F /* Mention.storyboard */; };
 		724DB9131D9926FB00008C25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724DB9121D9926FB00008C25 /* Home.storyboard */; };
@@ -95,7 +94,6 @@
 		52B1C6ED1D98EFD2002AB83B /* TurmericTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6F31D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B1C6F81D98EFD2002AB83B /* TurmericUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurmericUITests.swift; sourceTree = "<group>"; };
 		52B1C6FE1D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D6E7C01D9CE22900A0A564 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		7231C3D81D9A0BA90086D60F /* Mention.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mention.storyboard; sourceTree = "<group>"; };
@@ -137,20 +135,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		520C41C21D9CDC66004C439C /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		520C41C31D9CDC66004C439C /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		520C41C41D9CDC66004C439C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,20 +143,6 @@
 				52A15F371DA24923009D4525 /* ListTests.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		520C41C51D9CDC66004C439C /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
-		520C41C61D9CDC66004C439C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		5222F5A51DA34A0F00990E8E /* Fixtures */ = {
@@ -307,11 +277,7 @@
 		52B1C6F01D98EFD2002AB83B /* TurmericTests */ = {
 			isa = PBXGroup;
 			children = (
-				520C41C21D9CDC66004C439C /* Controllers */,
-				520C41C31D9CDC66004C439C /* Helpers */,
 				520C41C41D9CDC66004C439C /* Models */,
-				520C41C51D9CDC66004C439C /* Stores */,
-				520C41C61D9CDC66004C439C /* Views */,
 				52B1C6F31D98EFD2002AB83B /* Info.plist */,
 				522C8AAE1D9D1D3F00E17D4C /* TestHelpers.swift */,
 			);
@@ -321,7 +287,6 @@
 		52B1C6FB1D98EFD2002AB83B /* TurmericUITests */ = {
 			isa = PBXGroup;
 			children = (
-				52B1C6FC1D98EFD2002AB83B /* TurmericUITests.swift */,
 				52B1C6FE1D98EFD2002AB83B /* Info.plist */,
 				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
 			);
@@ -541,7 +506,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */,
 				52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
