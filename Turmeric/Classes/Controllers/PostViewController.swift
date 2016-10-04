@@ -14,6 +14,9 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // ページ開いたら自動フォーカス
+        postTextView.becomeFirstResponder()
+        
         // XIBファイルからカスタムビューを取得、インスタンス化
         let toolbar = UINib(nibName: "PostKeyboardToolbar", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIToolbar
         
