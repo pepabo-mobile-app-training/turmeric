@@ -17,14 +17,6 @@ class UserTests: XCTestCase {
                 headers: nil
             )
         }
-        
-        stub(condition: isHost("currry.xyz") && isPath("/api/users/me") && isMethodGET()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com", "following_count": 100, "followers_count": 200, "microposts_count": 1000, "icon_url": "https://example.com/example.jpg"]],
-                statusCode: 200,
-                headers: nil
-            )
-        }
     }
 
     override func tearDown() {
@@ -56,11 +48,11 @@ class UserTests: XCTestCase {
     func testUserMe() {
         waitUntil { done in
             User.getMyUser(){ response in
-                XCTAssertEqual("testUser", response.name)
+                XCTAssertEqual("Example User", response.name)
                 XCTAssertEqual(100, response.followingCount)
                 XCTAssertEqual(200, response.followersCount)
                 XCTAssertEqual(1000, response.micropostsCount)
-                XCTAssertEqual("https://example.com/example.jpg", response.iconURL)
+                XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", response.iconURL)
                 done()
             }
         }

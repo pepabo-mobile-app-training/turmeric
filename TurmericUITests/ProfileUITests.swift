@@ -32,10 +32,15 @@ class ProfileUITests: XCTestCase {
         
         XCTAssert(profileEditButton.exists)
         XCTAssert(profileFollowersCountButton.exists)
-        XCTAssert(profileFollowingCountButton.exists)
-        XCTAssert(profileMicropostsCountLabel.exists)
-        XCTAssert(profileImage.exists)
+        XCTAssertEqual(profileFollowersCountButton.label, "200")
         
+        XCTAssert(profileFollowingCountButton.exists)
+        XCTAssertEqual(profileFollowingCountButton.label, "100")
+        
+        XCTAssert(profileMicropostsCountLabel.exists)
+        XCTAssertEqual(profileMicropostsCountLabel.label, "1000")
+        
+        XCTAssert(profileImage.exists)
     }
     
 }

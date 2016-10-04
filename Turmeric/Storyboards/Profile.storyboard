@@ -12,7 +12,7 @@
         <!--プロフィール-->
         <scene sceneID="G3C-m0-anD">
             <objects>
-                <viewController id="s0U-2F-OaN" sceneMemberID="viewController">
+                <viewController id="s0U-2F-OaN" customClass="ProfileViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Cw-4b-JHm"/>
                         <viewControllerLayoutGuide type="bottom" id="Z3F-Cp-n07"/>
@@ -151,6 +151,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="プロフィール" id="LW0-wT-rEs"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="followersButton" destination="mQj-hl-Bd0" id="5tH-kq-yvz"/>
+                        <outlet property="followingButton" destination="1qL-Po-6Tv" id="yJw-6h-BM2"/>
+                        <outlet property="micropostsLabel" destination="siK-Xr-AGZ" id="k5u-YX-uTh"/>
+                        <outlet property="profileImage" destination="xnf-Iu-OEq" id="ME1-oZ-fet"/>
+                        <outlet property="usernameLabel" destination="ngK-ft-fVb" id="Bjh-JY-ayj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
