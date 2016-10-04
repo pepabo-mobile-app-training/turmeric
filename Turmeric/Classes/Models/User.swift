@@ -35,7 +35,16 @@ class User {
             handler(nil)
         }
     }
-    
+
+    static func getMyFeed(handler: @escaping ([Micropost]?) -> Void) {
+        APIClient.request(endpoint: Endpoint.MyFeed) { json in
+            let microposts: [Micropost]? = (json["feed"].array?.map {
+                Micropost(json: $0)
+                })
+            handler(microposts)
+        }
+    }
+
     static func getMyLists(handler: @escaping ([List]?) -> Void) {
         APIClient.request(endpoint: Endpoint.MyLists) { json in
             let lists: [List]? = (json["lists"].array?.map {
