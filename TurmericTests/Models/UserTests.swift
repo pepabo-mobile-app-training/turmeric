@@ -39,7 +39,7 @@ class UserTests: XCTestCase {
 
     func testUserLogin() {
         waitUntil { done in
-            User.authenticate(parameters: ["user": ["email": "debug@example.com", "password": "foobar"]]) { response in
+            User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
                 XCTAssertEqual("This.Is.Example-Auth-Token", APIClient.token)
                 done()
             }
