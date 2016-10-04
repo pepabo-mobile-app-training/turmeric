@@ -45,7 +45,21 @@ class UserTests: XCTestCase {
             }
         }
     }
-    
+
+    func testGetMyFeed() {
+        login()
+        waitUntil { done in
+            User.getMyFeed { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.content)
+                    XCTAssertNotNil($0.userId)
+                }
+                done()
+            }
+        }
+    }
+
     func testGetMyLists() {
         login()
         
