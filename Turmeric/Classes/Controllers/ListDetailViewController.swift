@@ -20,6 +20,8 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(UINib(nibName: "MembersCell", bundle: nil), forCellReuseIdentifier: "membersCell")
         List.getList(id: self.selectedListId!) { response in
             self.list = response
             self.listNameLabel.text = response.name
@@ -45,8 +47,10 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "memberCell", for: indexPath as IndexPath)
-        cell.textLabel?.text = self.members?[indexPath.row].name
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersCell", for: indexPath as IndexPath) as! MembersCell
+        
+        cell.name.text = self.members?[indexPath.row].name
+        
         return cell
     }
 }
