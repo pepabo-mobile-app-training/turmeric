@@ -19,14 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
             // for debug setting
             print("launch debug mode")
+            User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
+                print("logged in")
+            }
         #elseif TEST
             // for test setting
             print("launch test mode")
             enableHTTPStubs()
-        #endif
-
-        #if DEBUG || TEST
-            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
+            User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
                 print("logged in")
             }
         #endif
