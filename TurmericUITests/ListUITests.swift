@@ -36,8 +36,6 @@ class ListUITests: XCTestCase {
         let listCells = app.tables.cells
         
         XCTAssert(listEditButton.exists)
-        XCTAssertEqual(2, listCells.count)
-        
+        XCTAssertEqual(3, listCells.count)
     }
-    
 }
