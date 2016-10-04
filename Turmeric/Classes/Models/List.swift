@@ -21,11 +21,11 @@ class List {
         }
     }
     
-    static func getMembers(id:Int, handler: @escaping ([User]?) -> Void) {
+    static func getMembers(id:Int, handler: @escaping ([User]) -> Void) {
         APIClient.request(endpoint: Endpoint.ListsMembers(id)) { json in
-            let members: [User]? = (json["members"].array?.map {
+            let members: [User] = json["members"].array!.map {
                 User(json: $0)
-                })
+                }
             handler(members)
         }
     }

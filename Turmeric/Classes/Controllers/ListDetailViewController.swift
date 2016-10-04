@@ -1,4 +1,4 @@
-//
+git //
 //  ListEditViewController.swift
 //  Turmeric
 //
@@ -14,7 +14,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     //この時点で初期化してあげないとエラー出てしまう
     var selectedListId: Int?
     var list: List? = nil
-    var members: [User]? = nil
+    var members: [User] = []
     
     @IBOutlet weak var listNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -44,20 +44,16 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = self.members?.count {
-            return count
-        } else {
-            return 0
-        }
+        return self.members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersCell", for: indexPath) as! MembersCell
         
-        let member = self.members?[indexPath.row]
-        let url = URL(string: member!.iconURL)!
+        let member = self.members[indexPath.row]
+        let url = URL(string: member.iconURL)!
         cell.iconImage.af_setImage(withURL: url)
-        cell.name.text = member?.name
+        cell.name.text = member.name
         
         return cell
     }
