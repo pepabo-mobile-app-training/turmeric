@@ -40,6 +40,7 @@ class APIClient {
 }
 
 enum Endpoint {
+    // User
     case Auth
     case UsersCreate
     case UsersMicropost(Int)
@@ -48,13 +49,13 @@ enum Endpoint {
     case UsersShow(Int)
     case UsersUpdate(Int)
 
-    //Microposts
+    // Micropost
     case MyFeed
     case MicropostsPost
     case MicropostsShow(Int)
     case MicropostsDelete(Int)
 
-    //List
+    // List
     case MyLists
     case ListsShow(Int)
     case ListsMembers(Int)
