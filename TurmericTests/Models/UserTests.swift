@@ -9,14 +9,6 @@ class UserTests: XCTestCase {
     override func setUp() {
         super.setUp()
         enableHTTPStubs()
-
-        stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com"], "token" : "ThisIsAuthToken"],
-                statusCode: 200,
-                headers: nil
-            )
-        }
     }
 
     override func tearDown() {
@@ -47,8 +39,8 @@ class UserTests: XCTestCase {
 
     func testUserLogin() {
         waitUntil { done in
-            User.authenticate(parameters: ["user" : ["email" : "syuta_ogido@yahoo.co.jp", "password" : "testtest"]]) { response in
-                XCTAssertEqual("ThisIsAuthToken", APIClient.token)
+            User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
+                XCTAssertEqual("This.Is.Example-Auth-Token", APIClient.token)
                 done()
             }
         }

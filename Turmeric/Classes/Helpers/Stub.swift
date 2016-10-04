@@ -10,6 +10,7 @@ import Foundation
 import OHHTTPStubs
 
 func enableHTTPStubs() {
+    // Micropost
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/100") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "MicropostsShow.json"),
@@ -24,7 +25,7 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
+
     // User
     stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
         return OHHTTPStubsResponse(
@@ -33,6 +34,15 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "Auth.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+
+    // List
     stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "MyLists.json"),
@@ -40,8 +50,6 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
-    //List
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/100") && isMethodGET()){ _ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "ListsShow.json"),
@@ -49,7 +57,6 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/100/members") && isMethodGET()){ _ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "ListsMembers.json"),
