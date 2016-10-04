@@ -90,7 +90,7 @@ enum Endpoint {
         case .UsersShow(let userId): return "/api/users/\(userId)"
         case .UsersUpdate(let userId): return "/api/users/\(userId)"
 
-        case .MyFeed: return "api/feed"
+        case .MyFeed: return "/api/feed"
         case .MicropostsPost: return "/api/microposts"
         case .MicropostsShow(let micropostId): return "/api/microposts/\(micropostId)"
         case .MicropostsDelete(let micropostId): return "/api/microposts/\(micropostId)"
