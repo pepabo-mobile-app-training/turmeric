@@ -60,7 +60,7 @@ class UserTests: XCTestCase {
                 XCTAssertEqual(100, response.followingCount)
                 XCTAssertEqual(200, response.followersCount)
                 XCTAssertEqual(1000, response.micropostsCount)
-                XCTAssertEqual("https://example.com/example.jpg", response.iconURL?.absoluteString)
+                XCTAssertEqual("https://example.com/example.jpg", response.iconURL)
                 done()
             }
         }
