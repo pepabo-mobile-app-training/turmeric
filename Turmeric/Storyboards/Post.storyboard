@@ -12,7 +12,7 @@
         <!--ポスト-->
         <scene sceneID="2kR-ce-HRK">
             <objects>
-                <viewController id="SHx-TC-7lW" sceneMemberID="viewController">
+                <viewController id="SHx-TC-7lW" customClass="PostViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mhe-9q-LRo"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7z-zG-NFD"/>
@@ -23,6 +23,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
                                 <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="goBack" destination="zUd-aa-ud9" eventType="touchUpInside" id="fGC-dh-tv4"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-r5-Fet">
                                 <constraints>
@@ -31,6 +34,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wz7-fi-KcY">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="PostTextView"/>
                                 <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -50,6 +54,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="ポスト" id="A7e-2q-HFY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="postTextView" destination="Wz7-fi-KcY" id="Ooi-cu-7YX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUd-aa-ud9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
