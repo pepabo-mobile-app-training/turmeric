@@ -20,6 +20,7 @@
 		5222F5B11DA34A0F00990E8E /* UsersCreate.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5AB1DA34A0F00990E8E /* UsersCreate.json */; };
 		521BC0A41DA3527000A83893 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0A21DA3527000A83893 /* MembersCell.swift */; };
 		521BC0A51DA3527000A83893 /* MembersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521BC0A31DA3527000A83893 /* MembersCell.xib */; };
+		521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0A61DA3971200A83893 /* ListDetailUITests.swift */; };
 		522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C8AA61D9CBC2C00E17D4C /* List.swift */; };
 		522C8AAF1D9D1D3F00E17D4C /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C8AAE1D9D1D3F00E17D4C /* TestHelpers.swift */; };
 		5232599F1D9A0D8100476111 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232599E1D9A0D8100476111 /* User.swift */; };
@@ -77,6 +78,7 @@
 		5222F5AB1DA34A0F00990E8E /* UsersCreate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersCreate.json; sourceTree = "<group>"; };
 		521BC0A21DA3527000A83893 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
 		521BC0A31DA3527000A83893 /* MembersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersCell.xib; sourceTree = "<group>"; };
+		521BC0A61DA3971200A83893 /* ListDetailUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailUITests.swift; sourceTree = "<group>"; };
 		522C8AA61D9CBC2C00E17D4C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		522C8AAE1D9D1D3F00E17D4C /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		5232599E1D9A0D8100476111 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				52B1C6FE1D98EFD2002AB83B /* Info.plist */,
 				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
+				521BC0A61DA3971200A83893 /* ListDetailUITests.swift */,
 			);
 			path = TurmericUITests;
 			sourceTree = "<group>";
@@ -518,6 +521,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */,
+				52B1C6FD1D98EFD2002AB83B /* TurmericUITests.swift in Sources */,
 				52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
