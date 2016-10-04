@@ -11,6 +11,13 @@ import OHHTTPStubs
 
 func enableHTTPStubs() {
     // Micropost
+    stub(condition: isHost("currry.xyz") && isPath("/api/feed") && isMethodGET()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "MyFeed.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/100") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "MicropostsShow.json"),
