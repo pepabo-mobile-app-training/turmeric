@@ -20,7 +20,7 @@ class ListDetailUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testListDetailLayout() {
         let app = XCUIApplication()
         app.tabBars.buttons["リスト"].tap()
         let cell = app.tables.cells.element(boundBy: 0)
@@ -28,11 +28,11 @@ class ListDetailUITests: XCTestCase {
         
         let editButton = app.buttons["編集"]
         let membersCells = app.tables.cells
-        let listName = app.staticTexts["listNameLabel"]
+        let listNameLabel = app.staticTexts["listNameLabel"]
         
         XCTAssert(editButton.exists)
-        XCTAssertEqual(3, membersCells.count)
-        XCTAssertEqual("test", listName)
+        XCTAssertEqual(2, membersCells.count)
+        XCTAssertEqual("Friends", listNameLabel.label)
         
     }
     
