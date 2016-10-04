@@ -33,6 +33,30 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "MyLists.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+    
+    //List
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/100") && isMethodGET()){ _ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListsShow.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+    
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/100/members") && isMethodGET()){ _ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListsMembers.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
 }
 
 func disableHTTPStubs() {
@@ -41,5 +65,5 @@ func disableHTTPStubs() {
 }
 
 private func stubFilePath(name: String) -> String {
-    return OHPathForFileInBundle(name, Bundle.init(identifier: "com.pepabo.training.TurmericTests")!)!
+    return OHPathForFileInBundle(name, Bundle.main)!
 }

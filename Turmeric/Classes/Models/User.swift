@@ -6,40 +6,32 @@ class User {
 
     let id: Int
     let name: String
-    let email: String
-    
+    let email: String?
+    let iconURL: String
     let followingCount: Int?
     let followersCount: Int?
     let micropostsCount: Int?
-    let iconURL: NSURL?
-    
-    init(id: Int, name: String, email: String) {
+
+    init(id: Int, name: String, iconURL: String, email: String? = nil) {
         self.id = id
         self.name = name
         self.email = email
+        self.iconURL = iconURL
         
         self.followersCount  = nil
         self.followingCount  = nil
         self.micropostsCount = nil
-        
-        self.iconURL = nil
     }
 
     init(json: JSON) {
         self.id = json["id"].int!
         self.name = json["name"].string!
-        self.email = json["email"].string!
-        
+        self.email = json["email"].string
+
         self.followingCount  = json["following_count"].int
         self.followersCount  = json["followers_count"].int
         self.micropostsCount = json["microposts_count"].int
-        
-        if let iconURL = json["icon_url"].string {
-            self.iconURL = NSURL(string: iconURL)
-        } else {
-            self.iconURL = nil
-        }
-        
+        self.iconURL = json["icon_url"].string!
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {

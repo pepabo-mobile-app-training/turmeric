@@ -18,19 +18,6 @@ class UserTests: XCTestCase {
             )
         }
         
-        stub(condition: isHost("currry.xyz") && isPath("/api/lists") && isMethodGET()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: [
-                    "lists" : [
-                        ["id" : 1, "name" : "friend"],
-                        ["id" : 2, "name" : "curry"]
-                    ]
-                ],
-                statusCode: 200,
-                headers: nil
-            )
-        }
-        
         stub(condition: isHost("currry.xyz") && isPath("/api/users/me") && isMethodGET()){_ in
             return OHHTTPStubsResponse(
                 jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com", "following_count": 100, "followers_count": 200, "microposts_count": 1000, "icon_url": "https://example.com/example.jpg"]],
