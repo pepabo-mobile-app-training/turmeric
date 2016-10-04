@@ -9,14 +9,6 @@ class UserTests: XCTestCase {
     override func setUp() {
         super.setUp()
         enableHTTPStubs()
-
-        stub(condition: isHost("currry.xyz") && isPath("/api/auth") && isMethodPOST()){_ in
-            return OHHTTPStubsResponse(
-                jsonObject: ["user" : ["id" : 1, "name" : "testUser", "email" : "test@test.com"], "token" : "ThisIsAuthToken"],
-                statusCode: 200,
-                headers: nil
-            )
-        }
     }
 
     override func tearDown() {
