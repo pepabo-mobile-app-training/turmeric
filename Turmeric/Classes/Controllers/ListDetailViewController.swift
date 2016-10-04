@@ -52,7 +52,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersCell", for: indexPath as IndexPath) as! MembersCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersCell", for: indexPath) as! MembersCell
         
         let member = self.members?[indexPath.row]
         let url = URL(string: member!.iconURL)!
