@@ -14,13 +14,7 @@
             <items>
                 <barButtonItem title="画像" id="TNz-4U-2Ng"/>
                 <barButtonItem style="plain" systemItem="flexibleSpace" id="ZGp-Yc-JI1"/>
-                <barButtonItem style="plain" id="eVf-h3-gej">
-                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Xb-ol-VJN">
-                        <rect key="frame" x="328" y="7" width="31" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="投稿"/>
-                    </button>
-                </barButtonItem>
+                <barButtonItem title="投稿" id="Kv1-uj-A0g"/>
             </items>
             <point key="canvasLocation" x="-545" y="358"/>
         </toolbar>
