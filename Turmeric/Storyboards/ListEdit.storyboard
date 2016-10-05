@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +26,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-OI-gT1">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101.5" id="s3n-9A-eKC"/>
+                                    <constraint firstAttribute="height" constant="30" id="xhL-lq-gCC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Friend" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seq-kd-q7h">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rSY-He-jXg"/>
+                                    <constraint firstAttribute="width" constant="120" id="tn5-Wf-2vJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="seq-kd-q7h" firstAttribute="leading" secondItem="L7T-OI-gT1" secondAttribute="trailing" constant="20" id="Ca9-b7-mG4"/>
+                            <constraint firstItem="seq-kd-q7h" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="Zuq-DZ-YBg"/>
+                            <constraint firstItem="L7T-OI-gT1" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="c2G-Ng-9Yq"/>
+                            <constraint firstItem="L7T-OI-gT1" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leadingMargin" constant="20" id="qWi-0p-Klt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OAM-lP-6ud">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="fkQ-PZ-8LZ">
