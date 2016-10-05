@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="jTJ-PE-qgF">
             <objects>
-                <tabBarController id="Zvd-9n-caL" sceneMemberID="viewController">
+                <tabBarController id="Zvd-9n-caL" customClass="TabBarController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="zjA-pX-vN8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -18,7 +18,7 @@
                     <connections>
                         <segue destination="oYf-uQ-Nn2" kind="relationship" relationship="viewControllers" id="GIL-D6-yta"/>
                         <segue destination="Veb-Lr-qfr" kind="relationship" relationship="viewControllers" id="5mx-F6-29T"/>
-                        <segue destination="mz0-jX-A0M" kind="relationship" relationship="viewControllers" id="9jL-Yl-OPB"/>
+                        <segue destination="5x2-61-YA4" kind="relationship" relationship="viewControllers" id="NLo-zS-biO"/>
                         <segue destination="qa6-Xi-O3F" kind="relationship" relationship="viewControllers" id="eO5-QK-kyV"/>
                         <segue destination="rft-SR-PqB" kind="relationship" relationship="viewControllers" id="H9v-K2-lNM"/>
                     </connections>
@@ -47,16 +47,6 @@
             </objects>
             <point key="canvasLocation" x="-1033" y="-184"/>
         </scene>
-        <!--Post-->
-        <scene sceneID="H8h-xP-LtC">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Post" id="mz0-jX-A0M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FSQ-7h-Uz4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yq9-mE-AeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1032" y="-61"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="dtH-fs-qiK">
             <objects>
@@ -66,6 +56,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KU9-KU-Xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1033" y="61"/>
+        </scene>
+        <!--投稿-->
+        <scene sceneID="EDV-Zp-pZ2">
+            <objects>
+                <viewController id="5x2-61-YA4" customClass="DummyViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OIv-fq-00l"/>
+                        <viewControllerLayoutGuide type="bottom" id="uw4-9d-rME"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jKg-RW-Yyr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="投稿" id="bWd-od-Mbs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7R-Wf-CMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-54"/>
         </scene>
         <!--Lists-->
         <scene sceneID="TIw-pn-ld8">

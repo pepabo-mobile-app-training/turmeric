@@ -3,37 +3,60 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ポスト-->
+        <!--Post View Controller-->
         <scene sceneID="2kR-ce-HRK">
             <objects>
-                <viewController id="SHx-TC-7lW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Post" id="SHx-TC-7lW" customClass="PostViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mhe-9q-LRo"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7z-zG-NFD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wEg-bl-yIT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTc-Ac-YBE">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
+                                <state key="normal" title="閉じる"/>
+                                <connections>
+                                    <action selector="closeButtonDidTapped:" destination="SHx-TC-7lW" eventType="touchUpInside" id="h0H-4P-nj9"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-r5-Fet">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dgT-r5-Fet" secondAttribute="height" multiplier="1:1" id="euw-bV-kyy"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wz7-fi-KcY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="PostTextView"/>
+                                <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tTc-Ac-YBE" firstAttribute="centerY" secondItem="wEg-bl-yIT" secondAttribute="centerY" id="FGo-v7-U4C"/>
-                            <constraint firstItem="tTc-Ac-YBE" firstAttribute="centerY" secondItem="wEg-bl-yIT" secondAttribute="centerY" id="eys-2G-WI6"/>
-                            <constraint firstItem="tTc-Ac-YBE" firstAttribute="centerX" secondItem="wEg-bl-yIT" secondAttribute="centerX" id="meF-JO-h2F"/>
-                            <constraint firstItem="tTc-Ac-YBE" firstAttribute="centerX" secondItem="wEg-bl-yIT" secondAttribute="centerX" id="vf1-7h-9Gm"/>
+                            <constraint firstItem="Y7z-zG-NFD" firstAttribute="top" secondItem="Wz7-fi-KcY" secondAttribute="bottom" id="6ZW-Iq-25k"/>
+                            <constraint firstItem="dgT-r5-Fet" firstAttribute="top" secondItem="Mhe-9q-LRo" secondAttribute="bottom" id="A64-Un-JkE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RVG-ZU-Evk" secondAttribute="trailing" id="I7r-g1-MAP"/>
+                            <constraint firstItem="Wz7-fi-KcY" firstAttribute="top" secondItem="dgT-r5-Fet" secondAttribute="bottom" id="Ozd-At-5E1"/>
+                            <constraint firstItem="Wz7-fi-KcY" firstAttribute="trailing" secondItem="wEg-bl-yIT" secondAttribute="trailingMargin" id="e3c-fJ-Ut7"/>
+                            <constraint firstItem="dgT-r5-Fet" firstAttribute="leading" secondItem="wEg-bl-yIT" secondAttribute="leadingMargin" id="es9-AE-Cb7"/>
+                            <constraint firstItem="Wz7-fi-KcY" firstAttribute="leading" secondItem="wEg-bl-yIT" secondAttribute="leadingMargin" id="kzh-rh-yJe"/>
+                            <constraint firstItem="dgT-r5-Fet" firstAttribute="width" secondItem="wEg-bl-yIT" secondAttribute="width" multiplier="0.2" id="uHi-pF-ePj"/>
+                            <constraint firstItem="RVG-ZU-Evk" firstAttribute="top" secondItem="Mhe-9q-LRo" secondAttribute="bottom" id="zYc-Kn-51o"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ポスト" id="A7e-2q-HFY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="iconImageView" destination="dgT-r5-Fet" id="KvE-N0-Mnl"/>
+                        <outlet property="postTextView" destination="Wz7-fi-KcY" id="Ooi-cu-7YX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUd-aa-ud9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
