@@ -37,4 +37,23 @@ class ListTests: XCTestCase {
             }
         }
     }
+    
+    func testListUpdate() {
+        let parameters = ["list" : ["name" : "myFriends"]]
+        waitUntil { done in
+            List.update(id: 1, parameters: parameters) { response in
+                XCTAssertEqual(1, response.id)
+                XCTAssertEqual("myFriends", response.name)
+                done()
+            }
+        }
+    }
+    
+    func testDeleteMembers() {
+        waitUntil { done in
+            List.deleteMember(listId: 1, memberId: 101) {
+                done()
+            }
+        }
+    }
 }
