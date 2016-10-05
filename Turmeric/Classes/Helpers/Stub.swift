@@ -32,6 +32,14 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    stub(condition: isHost("currry.xyz") && isPath("/api/microposts") && isMethodPOST()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "MicropostsPost.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+
 
     // User
     stub(condition: isHost("currry.xyz") && isPath("/api/users") && isMethodPOST()){_ in
