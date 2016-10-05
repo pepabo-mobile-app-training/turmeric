@@ -40,9 +40,20 @@ class PostViewController: UIViewController {
         
         // テキスト入力の際、キーボードの上に追加で表示されるビュー
         self.postTextView.inputAccessoryView = toolbar
+        
+        
+        let postButton: UIBarButtonItem = toolbar.items![2]
+        
+        postButton.target = self;
+        postButton.action = #selector(PostViewController.postButtonDidTap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func postButtonDidTap(){
+        postTextView.resignFirstResponder() //キーボードを非アクティブ化
+        self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
     }
 }
