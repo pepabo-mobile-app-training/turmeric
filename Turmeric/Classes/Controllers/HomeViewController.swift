@@ -4,6 +4,9 @@ import XLPagerTabStrip
 class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        // NavigationBarにButtonBar(タブ)を置く
+        buttonBarView.removeFromSuperview()
+        navigationController?.navigationBar.addSubview(buttonBarView)
     }
 
     override func didReceiveMemoryWarning() {
