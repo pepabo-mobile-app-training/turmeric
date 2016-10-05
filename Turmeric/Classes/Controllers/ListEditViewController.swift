@@ -9,6 +9,7 @@ import UIKit
 
 class ListEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var selectedListId: Int?
     
     @IBOutlet weak var tableView: UITableView!
 

@@ -46,6 +46,15 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.tableFooterView = UIView()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        switch segue.identifier! {
+        case "goEdit":
+            let vc = segue.destination as! ListEditViewController
+            vc.selectedListId = self.selectedListId
+        default : break
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.members.count
     }
