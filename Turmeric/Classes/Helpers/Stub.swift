@@ -80,6 +80,14 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/1") && isMethodPATCH()) { _ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListsUpdates.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
 }
 
 func disableHTTPStubs() {
