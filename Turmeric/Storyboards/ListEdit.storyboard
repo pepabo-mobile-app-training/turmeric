@@ -79,6 +79,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="WOw-Zo-hUx" id="s2A-sW-hT3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rz-8n-ifR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cjw-DI-CNq" userLabel="Exit" sceneMemberID="exit"/>
