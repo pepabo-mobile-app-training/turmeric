@@ -17,6 +17,18 @@ class PostViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // アイコン表示
+        User.getMyUser(){ user in
+            do {
+                let data = try Data(contentsOf: URL(string: user.iconURL)! )
+                self.iconImageView.image = UIImage(data: data)
+            } catch {
+                //画像がダウンロードできなかった
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
