@@ -79,6 +79,7 @@
                         <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="listNameField" destination="seq-kd-q7h" id="bPj-ds-31v"/>
                         <outlet property="tableView" destination="WOw-Zo-hUx" id="XhU-bd-hoC"/>
                     </connections>
                 </viewController>
