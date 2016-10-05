@@ -17,9 +17,9 @@ class ListTests: XCTestCase {
     
     func testListShow() {
         waitUntil { done in
-            List.getList(id: 100) { response in
-                XCTAssertEqual(100, response.id)
-                XCTAssertEqual("friend", response.name)
+            List.getList(id: 1) { response in
+                XCTAssertEqual(1, response.id)
+                XCTAssertEqual("Friends", response.name)
                 done()
             }
         }
@@ -27,8 +27,8 @@ class ListTests: XCTestCase {
     
     func testListMembers() {
         waitUntil { done in
-            List.getMembers(id: 100) { response in
-                response!.forEach {
+            List.getMembers(id: 1) { response in
+                response.forEach {
                     XCTAssertNotNil($0.id)
                     XCTAssertNotNil($0.name)
                     XCTAssertNotNil($0.iconURL)
