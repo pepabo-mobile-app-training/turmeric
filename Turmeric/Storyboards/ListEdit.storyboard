@@ -37,13 +37,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-Zo-hUx">
-                                <frame key="frameInset" minY="191" width="375" height="476"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WOw-Zo-hUx">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="Hu0-Xg-MmX"/>
-                                    <constraint firstAttribute="height" constant="476" id="LLt-do-LeJ"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e3W-Wu-9Sy">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -55,19 +50,20 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="RV0-rB-WZQ" id="Gr7-3x-XUb"/>
-                                    <outlet property="delegate" destination="RV0-rB-WZQ" id="d1c-LD-NQt"/>
+                                    <outlet property="dataSource" destination="RV0-rB-WZQ" id="bF3-sB-21c"/>
+                                    <outlet property="delegate" destination="RV0-rB-WZQ" id="JpY-1Z-j5W"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WOw-Zo-hUx" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leadingMargin" id="1Qn-lv-V43"/>
+                            <constraint firstItem="WOw-Zo-hUx" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leading" id="7z0-Di-3Ji"/>
                             <constraint firstItem="seq-kd-q7h" firstAttribute="leading" secondItem="L7T-OI-gT1" secondAttribute="trailing" constant="20" id="Ca9-b7-mG4"/>
+                            <constraint firstItem="WOw-Zo-hUx" firstAttribute="top" secondItem="seq-kd-q7h" secondAttribute="bottom" constant="77" id="K0c-7Z-1CR"/>
+                            <constraint firstAttribute="trailing" secondItem="WOw-Zo-hUx" secondAttribute="trailing" id="SCC-yf-FIg"/>
                             <constraint firstItem="seq-kd-q7h" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="Zuq-DZ-YBg"/>
+                            <constraint firstItem="kHP-Jr-dPC" firstAttribute="top" secondItem="WOw-Zo-hUx" secondAttribute="bottom" id="aqI-go-TkA"/>
                             <constraint firstItem="L7T-OI-gT1" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="c2G-Ng-9Yq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WOw-Zo-hUx" secondAttribute="trailing" id="kOa-DQ-hAx"/>
-                            <constraint firstItem="kHP-Jr-dPC" firstAttribute="top" secondItem="WOw-Zo-hUx" secondAttribute="bottom" id="nor-Rt-yJt"/>
                             <constraint firstItem="L7T-OI-gT1" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leadingMargin" constant="20" id="qWi-0p-Klt"/>
                         </constraints>
                     </view>
@@ -80,7 +76,7 @@
                         <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="WOw-Zo-hUx" id="s2A-sW-hT3"/>
+                        <outlet property="tableView" destination="WOw-Zo-hUx" id="XhU-bd-hoC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rz-8n-ifR" userLabel="First Responder" sceneMemberID="firstResponder"/>
