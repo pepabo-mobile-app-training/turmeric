@@ -8,23 +8,40 @@ class User {
     let name: String
     let email: String?
     let iconURL: String
+    let followingCount: Int?
+    let followersCount: Int?
+    let micropostsCount: Int?
 
-    init(id: Int, name: String, iconURL: String, email: String? = nil, token: String? = nil) {
+    init(id: Int, name: String, iconURL: String, email: String? = nil) {
         self.id = id
         self.name = name
         self.email = email
         self.iconURL = iconURL
+        
+        self.followersCount  = nil
+        self.followingCount  = nil
+        self.micropostsCount = nil
     }
 
     init(json: JSON) {
         self.id = json["id"].int!
         self.name = json["name"].string!
         self.email = json["email"].string
+
+        self.followingCount  = json["following_count"].int
+        self.followersCount  = json["followers_count"].int
+        self.micropostsCount = json["microposts_count"].int
         self.iconURL = json["icon_url"].string!
     }
 
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
         APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { json in
+            handler(User(json: json["user"]))
+        }
+    }
+    
+    static func getMyUser(handler: @escaping ((User) -> Void)) {
+        APIClient.request(endpoint: Endpoint.UsersMe, parameters: [:]) { json in
             handler(User(json: json["user"]))
         }
     }

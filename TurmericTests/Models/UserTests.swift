@@ -36,7 +36,20 @@ class UserTests: XCTestCase {
             }
         }
     }
-
+    
+    func testUserMe() {
+        waitUntil { done in
+            User.getMyUser(){ response in
+                XCTAssertEqual("Example User", response.name)
+                XCTAssertEqual(100, response.followingCount)
+                XCTAssertEqual(200, response.followersCount)
+                XCTAssertEqual(1000, response.micropostsCount)
+                XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", response.iconURL)
+                done()
+            }
+        }
+    }
+    
     func testUserLogin() {
         waitUntil { done in
             User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in

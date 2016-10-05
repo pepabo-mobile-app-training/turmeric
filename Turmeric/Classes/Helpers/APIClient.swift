@@ -48,7 +48,8 @@ enum Endpoint {
     case UsersFollowers(Int)
     case UsersShow(Int)
     case UsersUpdate(Int)
-
+    case UsersMe
+    
     // Micropost
     case MyFeed
     case MicropostsPost
@@ -69,6 +70,7 @@ enum Endpoint {
         case .UsersFollowers: return .get
         case .UsersShow: return .get
         case .UsersUpdate: return .patch
+        case .UsersMe: return .get
 
         case .MyFeed: return .get
         case .MicropostsPost: return .post
@@ -90,7 +92,8 @@ enum Endpoint {
         case .UsersFollowers(let userId): return "/api/users/\(userId)/followers"
         case .UsersShow(let userId): return "/api/users/\(userId)"
         case .UsersUpdate(let userId): return "/api/users/\(userId)"
-
+        case .UsersMe: return "/api/users/me"
+            
         case .MyFeed: return "/api/feed"
         case .MicropostsPost: return "/api/microposts"
         case .MicropostsShow(let micropostId): return "/api/microposts/\(micropostId)"
