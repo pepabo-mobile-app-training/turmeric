@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dsT-Ta-oRd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WcU-le-MZR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ホーム-->
+        <!--Home View Controller-->
         <scene sceneID="fsc-PR-mz7">
             <objects>
                 <viewController id="dsT-Ta-oRd" customClass="HomeViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,12 +30,31 @@
                             <constraint firstItem="gXD-wl-1AQ" firstAttribute="centerX" secondItem="BeL-ay-e7E" secondAttribute="centerX" id="Msq-Mm-68v"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" id="A7P-F1-Jx0"/>
+                    <navigationItem key="navigationItem" id="X1m-Hy-NKb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBn-TM-mdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="69" y="-124"/>
+            <point key="canvasLocation" x="1007.2" y="-124.58770614692655"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="WoB-5h-xwJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WcU-le-MZR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ホーム" id="A7P-F1-Jx0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPj-3u-kHg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dsT-Ta-oRd" kind="relationship" relationship="rootViewController" id="m4m-IS-QSI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuA-ic-Xvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="-124.58770614692655"/>
         </scene>
     </scenes>
 </document>
