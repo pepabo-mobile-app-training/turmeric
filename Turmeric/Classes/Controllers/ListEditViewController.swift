@@ -12,6 +12,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     var selectedListId: Int?
     var list: List? = nil
     var members: [User] = []
+    var deleteMembers: [User] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var listNameField: UITextField!
@@ -32,9 +33,12 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         }
 
         queue.async(group: group) {
-            group.enter()
-            print("testttest")
-            group.leave()
+            self.deleteMembers.forEach{
+                group.enter()
+                List.deleteMember(listId: self.list!.id, memberId: $0.id) {
+                    group.leave()
+                }
+            }
         }
         
         group.notify(queue: queue, execute: {
@@ -85,5 +89,9 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         cell.iconImage.af_setImage(withURL: url)
         cell.name.text = member.name
         return cell
+    }
+    
+    func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        self.deleteMembers.append(members[indexPath.row])
     }
 }
