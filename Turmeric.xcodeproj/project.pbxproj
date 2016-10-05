@@ -17,6 +17,7 @@
 		521BC0A91DA3B05300A83893 /* ListEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521BC0A81DA3B05300A83893 /* ListEdit.storyboard */; };
 		521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */; };
 		5221F3551DA35B9100719B90 /* Auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5221F3541DA35B9100719B90 /* Auth.json */; };
+		52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D231DA4E83700AA6DD4 /* HomeViewController.swift */; };
 		5222F5AC1DA34A0F00990E8E /* ListsMembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A61DA34A0F00990E8E /* ListsMembers.json */; };
 		5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A71DA34A0F00990E8E /* ListsShow.json */; };
 		5222F5AE1DA34A0F00990E8E /* MicropostsShow.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A81DA34A0F00990E8E /* MicropostsShow.json */; };
@@ -94,6 +95,7 @@
 		521BC0A81DA3B05300A83893 /* ListEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEdit.storyboard; sourceTree = "<group>"; };
 		521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditViewController.swift; sourceTree = "<group>"; };
 		5221F3541DA35B9100719B90 /* Auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Auth.json; sourceTree = "<group>"; };
+		52221D231DA4E83700AA6DD4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5222F5A61DA34A0F00990E8E /* ListsMembers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsMembers.json; sourceTree = "<group>"; };
 		5222F5A71DA34A0F00990E8E /* ListsShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsShow.json; sourceTree = "<group>"; };
 		5222F5A81DA34A0F00990E8E /* MicropostsShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MicropostsShow.json; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				72B14FF61DA39D79005E7523 /* PostViewController.swift */,
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */,
+				52221D231DA4E83700AA6DD4 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
+				52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,

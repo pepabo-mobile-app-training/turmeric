@@ -9,7 +9,7 @@
         <!--ホーム-->
         <scene sceneID="fsc-PR-mz7">
             <objects>
-                <viewController id="dsT-Ta-oRd" sceneMemberID="viewController">
+                <viewController id="dsT-Ta-oRd" customClass="HomeViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7gn-nB-JpP"/>
                         <viewControllerLayoutGuide type="bottom" id="rqG-mI-QmD"/>
