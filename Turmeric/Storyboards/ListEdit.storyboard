@@ -34,6 +34,7 @@
                                 <segue destination="cjw-DI-CNq" kind="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Rz-8n-ifR" userLabel="First Responder" sceneMemberID="firstResponder"/>
