@@ -10,7 +10,13 @@ import UIKit
 
 class PostViewController: UIViewController {
     @IBOutlet weak var postTextView: UITextView!
-
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    @IBAction func closeButtonDidTapped(_ sender: AnyObject) {
+        postTextView.resignFirstResponder() //キーボードを非アクティブ化
+        self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

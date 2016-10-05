@@ -21,10 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
+                                <frame key="frameInset" minX="309" minY="20" width="46" height="30"/>
                                 <state key="normal" title="閉じる"/>
                                 <connections>
-                                    <action selector="goBack" destination="zUd-aa-ud9" eventType="touchUpInside" id="fGC-dh-tv4"/>
+                                    <action selector="closeButtonDidTapped:" destination="SHx-TC-7lW" eventType="touchUpInside" id="h0H-4P-nj9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-r5-Fet">
@@ -54,6 +55,7 @@
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="iconImageView" destination="dgT-r5-Fet" id="KvE-N0-Mnl"/>
                         <outlet property="postTextView" destination="Wz7-fi-KcY" id="Ooi-cu-7YX"/>
                     </connections>
                 </viewController>
