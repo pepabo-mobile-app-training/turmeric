@@ -16,6 +16,34 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var listNameField: UITextField!
     
+    @IBAction func updateButtonTapped(_ sender: AnyObject) {
+        let group = DispatchGroup.init()
+        let queue = DispatchQueue.main
+        
+        queue.async(group: group) {
+            group.enter()
+            if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
+                
+                let parameters = ["list" : ["name" : self.listNameField.text!]]
+                List.update(id: self.list!.id, parameters: parameters) { response in
+                    print(response.name)
+                    group.leave()
+                }
+            }
+        }
+
+        queue.async(group: group) {
+            group.enter()
+            print("testttest")
+            group.leave()
+        }
+        
+        group.notify(queue: queue, execute: {
+            print("unwind!!!!!!")
+            self.performSegue(withIdentifier: "unwind", sender: nil)
+        })
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersDeleteCell", bundle: nil), forCellReuseIdentifier: "membersDeleteCell")
