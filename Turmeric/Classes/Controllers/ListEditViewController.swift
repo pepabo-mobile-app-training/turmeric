@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class ListEditViewController: UIViewController {
+class ListEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     override func viewDidLoad() {

@@ -33,6 +33,8 @@
 		525B707C1D98F985004D72BD /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B70791D98F985004D72BD /* AlamofireImage.framework */; };
 		525B707D1D98F985004D72BD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B707A1D98F985004D72BD /* SwiftyJSON.framework */; };
 		52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52685A261D990E4400FEC0A7 /* APIClient.swift */; };
+		526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */; };
+		526B14A01DA4A21F00BDAAFA /* MembersDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */; };
 		52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F281DA1FABA009D4525 /* ListUITests.swift */; };
 		52A15F381DA24923009D4525 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F371DA24923009D4525 /* ListTests.swift */; };
 		52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A7A1D9E304500DE76FD /* ListViewController.swift */; };
@@ -102,6 +104,8 @@
 		525B70791D98F985004D72BD /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		525B707A1D98F985004D72BD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		52685A261D990E4400FEC0A7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDeleteCell.swift; sourceTree = "<group>"; };
+		526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersDeleteCell.xib; sourceTree = "<group>"; };
 		52A15F281DA1FABA009D4525 /* ListUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
 		52A15F371DA24923009D4525 /* ListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 		52A44A7A1D9E304500DE76FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +251,8 @@
 				72C0D6E71D9BBC9000D47723 /* LinedButton.swift */,
 				521BC0A21DA3527000A83893 /* MembersCell.swift */,
 				521BC0A31DA3527000A83893 /* MembersCell.xib */,
+				526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */,
+				526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */,
+				526B14A01DA4A21F00BDAAFA /* MembersDeleteCell.xib in Resources */,
 				5222F5B11DA34A0F00990E8E /* UsersCreate.json in Resources */,
 				5222F5AF1DA34A0F00990E8E /* MicropostsShow_withPicture.json in Resources */,
 				521BC0A91DA3B05300A83893 /* ListEdit.storyboard in Resources */,
@@ -538,6 +545,7 @@
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
+				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				725B13131DA2450C00A12006 /* Stub.swift in Sources */,
 				72C0D6EE1D9D106000D47723 /* ProfileViewController.swift in Sources */,
@@ -565,11 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */,
-<<<<<<< 494598fa567c3437b10b72fdabe81151b399144b
 				72C0D6EC1D9CBBE200D47723 /* ProfileUITests.swift in Sources */,
 				52B1C6FD1D98EFD2002AB83B,
-=======
->>>>>>> キャンセルボタン追加
 				52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
