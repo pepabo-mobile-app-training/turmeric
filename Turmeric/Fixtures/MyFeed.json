@@ -5,90 +5,70 @@
             "content": "Writing a short test",
             "user_id": 1,
             "created_at": "2016-10-04T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 7,
             "content": "I'm sorry. Your words made sense, but your sarcastic tone did not",
             "user_id": 6,
             "created_at": "2016-10-02T08:08:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 1,
             "content": "I just ate an orange!",
             "user_id": 7,
             "created_at": "2016-10-01T08:08:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 3,
             "content": "Sad cats are sad: http://youtu.be/PKffm2ul4dk",
             "user_id": 26,
             "created_at": "2016-09-12T06:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 8,
             "content": "Dude, this van's like, rolling proable cause.",
             "user_id": 37,
             "created_at": "2016-09-04T04:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 9,
             "content": "Dolor qui sapiente voluptatum vel sint.",
             "user_id": 12,
             "created_at": "2016-08-30T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 10,
             "content": "Aut cum assumenda rem quo placeat aut voluptatem.",
             "user_id": 78,
             "created_at": "2016-08-25T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 11,
             "content": "Veniam assumenda voluptatum laborum officia quo.",
             "user_id": 10,
             "created_at": "2016-08-23T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 12,
             "content": "Ut nisi debitis ducimus consequatur deserunt aliquam omnis est et.",
             "user_id": 100,
             "created_at": "2016-08-10T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         },
         {
             "id": 33,
             "content": "Rerum ut laborum at ab in itaque quos.",
             "user_id": 2,
             "created_at": "2016-07-23T08:18:33.000Z",
-            "picture": {
-                "url": null
-            }
+            "picture": null
         }
     ]
 }
