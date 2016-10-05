@@ -10,9 +10,12 @@ import UIKit
 class ListEditViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedListId: Int?
+    var list: List? = nil
+    var members: [User] = []
     
     @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var listNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersDeleteCell", bundle: nil), forCellReuseIdentifier: "membersDeleteCell")
@@ -21,6 +24,16 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.tableHeaderView = UIView(frame: frame)
         self.tableView.tableHeaderView!.backgroundColor = UIColor.black
         
+        
+        List.getList(id: self.selectedListId!) { response in
+            self.list = response
+            self.listNameField.text = response.name
+        }
+        
+        List.getMembers(id: self.selectedListId!) { response in
+            self.members = response
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -34,15 +47,16 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersDeleteCell", for: indexPath) as! MembersDeleteCell
         
-        let url = URL(string: "https://pbs.twimg.com/profile_images/734659407963815936/oxYPIVNz.jpg")!
+        let member = self.members[indexPath.row]
+        let url = URL(string: member.iconURL)!
         cell.iconImage.af_setImage(withURL: url)
-        cell.name.text = "ogidow"
+        cell.name.text = member.name
         return cell
     }
 }
