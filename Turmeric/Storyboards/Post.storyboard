@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ポスト-->
+        <!--Post View Controller-->
         <scene sceneID="2kR-ce-HRK">
             <objects>
-                <viewController id="SHx-TC-7lW" customClass="PostViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Post" id="SHx-TC-7lW" customClass="PostViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mhe-9q-LRo"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7z-zG-NFD"/>
@@ -52,7 +52,6 @@
                             <constraint firstItem="RVG-ZU-Evk" firstAttribute="top" secondItem="Mhe-9q-LRo" secondAttribute="bottom" id="zYc-Kn-51o"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ポスト" id="A7e-2q-HFY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="postTextView" destination="Wz7-fi-KcY" id="Ooi-cu-7YX"/>

@@ -21,16 +21,18 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     // viewControllerに切り替えるタブがタップされた際に呼ばれ、遷移するかどうかを判定
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        // 投稿画面以外は全部問題なく切り替え
-        if !(viewController is PostViewController) {
+        // 投稿画面の(ダミー画面)以外は全部問題なく切り替え
+        if !(viewController is DummyViewController) {
            return true
         }
         
-        // 投稿画面は切り替えずにモーダルを表示
+        // 投稿画面をモーダル表示
         if let currentVC = self.selectedViewController{
-            currentVC.present(viewController, animated: true, completion: nil)
+            let vc = UIStoryboard(name: "Post", bundle: nil).instantiateInitialViewController()
+            currentVC.present(vc!, animated: true, completion: nil)
         }
         
+        // ダミー画面は表示しない
         return false
     }
 }
