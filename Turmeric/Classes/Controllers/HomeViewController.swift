@@ -1,6 +1,7 @@
 import UIKit
+import XLPagerTabStrip
 
-class HomeViewController: UIViewController {
+class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
