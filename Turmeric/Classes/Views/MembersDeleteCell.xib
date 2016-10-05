@@ -23,24 +23,24 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aby-lf-ukG">
                         <constraints>
-                            <constraint firstAttribute="height" constant="20.5" id="9zN-7P-iEz"/>
-                            <constraint firstAttribute="width" constant="150" id="jyF-er-adK"/>
+                            <constraint firstAttribute="height" constant="20.5" id="J5A-S2-MWt"/>
+                            <constraint firstAttribute="width" constant="150" id="fQe-bA-4zn"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-KR-3IK">
-                        <frame key="frameInset" minX="259" minY="8" width="46" height="30"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNn-KR-3IK">
                         <state key="normal" title="削除"/>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lmq-fB-4Rm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="83S-HD-T6P"/>
+                    <constraint firstItem="jNn-KR-3IK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRI-Un-dpB"/>
+                    <constraint firstItem="Aby-lf-ukG" firstAttribute="leading" secondItem="lmq-fB-4Rm" secondAttribute="trailing" constant="18" id="JAj-4y-Vqe"/>
+                    <constraint firstAttribute="trailing" secondItem="jNn-KR-3IK" secondAttribute="trailing" constant="15" id="L88-xB-DTk"/>
                     <constraint firstItem="lmq-fB-4Rm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Mhv-uW-zGB"/>
-                    <constraint firstItem="Aby-lf-ukG" firstAttribute="leading" secondItem="lmq-fB-4Rm" secondAttribute="trailing" constant="18" id="QW5-nJ-sDA"/>
-                    <constraint firstItem="Aby-lf-ukG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="l8N-s6-Jcz"/>
+                    <constraint firstItem="Aby-lf-ukG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="c1O-hp-WsB"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
