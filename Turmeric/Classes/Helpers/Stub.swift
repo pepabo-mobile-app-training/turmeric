@@ -91,7 +91,7 @@ func enableHTTPStubs() {
     
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1") && isMethodPATCH()) { _ in
         return OHHTTPStubsResponse(
-            fileAtPath: stubFilePath(name: "ListsUpdates.json"),
+            fileAtPath: stubFilePath(name: "ListsUpdate.json"),
             statusCode: 200,
             headers: ["Content-Type": "application/json"]
         )
