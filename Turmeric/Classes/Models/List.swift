@@ -36,4 +36,10 @@ class List {
             handler(List(json: json["list"]))
         }
     }
+    
+    static func deleteMember(listId: Int, memberId: Int, handler: @escaping (Void) -> Void) {
+        APIClient.request(endpoint: Endpoint.ListsDeleteMember(listId, memberId)) { json in
+            handler()
+        }
+    }
 }
