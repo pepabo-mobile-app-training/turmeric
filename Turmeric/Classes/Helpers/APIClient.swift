@@ -60,6 +60,7 @@ enum Endpoint {
     case MyLists
     case ListsShow(Int)
     case ListsMembers(Int)
+    case ListUpdate(Int)
 
     func method() -> HTTPMethod {
         switch self {
@@ -80,6 +81,7 @@ enum Endpoint {
         case .MyLists: return .get
         case .ListsShow: return .get
         case .ListsMembers: return .get
+        case .ListUpdate: return .patch
         }
     }
 
@@ -102,6 +104,7 @@ enum Endpoint {
         case .MyLists: return "/api/lists"
         case .ListsShow(let listId): return "/api/lists/\(listId)"
         case .ListsMembers(let listId): return "/api/lists/\(listId)/members"
+        case .ListUpdate(let listId): return "/api/lists/\(listId)"
         }
     }
 }
