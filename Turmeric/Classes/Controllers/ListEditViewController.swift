@@ -15,6 +15,12 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersDeleteCell", bundle: nil), forCellReuseIdentifier: "membersDeleteCell")
+        
+        let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 0.5)
+        self.tableView.tableHeaderView = UIView(frame: frame)
+        self.tableView.tableHeaderView!.backgroundColor = UIColor.black
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
