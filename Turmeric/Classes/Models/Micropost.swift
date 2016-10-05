@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 import SwiftyJSON
 
 class Micropost {
@@ -22,6 +23,12 @@ class Micropost {
             self.picture = NSURL(string: picture)
         } else {
             self.picture = nil
+        }
+    }
+    
+    static func postMicropost(parameters: Parameters, handler: @escaping ((Micropost) -> Void)) {
+        APIClient.request(endpoint: Endpoint.MicropostsPost, parameters: parameters) { json in
+            handler(Micropost(json: json["micropost"]))
         }
     }
 
