@@ -18,11 +18,10 @@
                         <viewControllerLayoutGuide type="bottom" id="Y7z-zG-NFD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wEg-bl-yIT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
-                                <frame key="frameInset" minX="309" minY="20" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ZU-Evk">
                                 <state key="normal" title="閉じる"/>
                                 <connections>
                                     <action selector="closeButtonDidTapped:" destination="SHx-TC-7lW" eventType="touchUpInside" id="h0H-4P-nj9"/>
