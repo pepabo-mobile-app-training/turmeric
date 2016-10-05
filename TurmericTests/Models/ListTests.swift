@@ -51,7 +51,7 @@ class ListTests: XCTestCase {
     
     func testDeleteMembers() {
         waitUntil { done in
-            List.deleteMember(listId: 1, memberId: 101) { _ in
+            List.deleteMember(listId: 1, memberId: 101) {
                 done()
             }
         }
