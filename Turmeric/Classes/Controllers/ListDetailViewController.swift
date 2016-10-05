@@ -19,6 +19,9 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var listNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func unwindToListDetailScreen(sender: UIStoryboardSegue) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
