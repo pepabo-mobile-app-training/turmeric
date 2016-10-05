@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PostViewController: UIViewController {
     @IBOutlet weak var postTextView: UITextView!
@@ -53,7 +54,17 @@ class PostViewController: UIViewController {
     }
     
     func postButtonDidTap(){
-        postTextView.resignFirstResponder() //キーボードを非アクティブ化
-        self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
+        
+        if let postText = postTextView.text {
+            let parameters: [String : Any] = ["micropost": [
+                "content": postText
+                ]
+            ]
+
+            Micropost.postMicropost(parameters: parameters, handler: {micropost in })
+        
+            postTextView.resignFirstResponder() //キーボードを非アクティブ化
+            self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
+        }
     }
 }

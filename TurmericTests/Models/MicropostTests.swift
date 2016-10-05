@@ -13,6 +13,10 @@ class MicropostTests: XCTestCase {
         super.tearDown()
         disableHTTPStubs()
     }
+    
+    func testPostMicropost() {
+        
+    }
 
     func testGetMicropost() {
         waitUntil { done in
