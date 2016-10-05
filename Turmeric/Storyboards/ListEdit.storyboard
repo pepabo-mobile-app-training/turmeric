@@ -73,10 +73,14 @@
                     <navigationItem key="navigationItem" id="OAM-lP-6ud">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="fkQ-PZ-8LZ">
                             <connections>
-                                <segue destination="cjw-DI-CNq" kind="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
+                                <segue destination="cjw-DI-CNq" kind="unwind" identifier="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg">
+                            <connections>
+                                <action selector="updateButtonTapped:" destination="RV0-rB-WZQ" id="Tis-ni-8ba"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="listNameField" destination="seq-kd-q7h" id="bPj-ds-31v"/>
