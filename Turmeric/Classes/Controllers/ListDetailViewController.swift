@@ -24,6 +24,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("fsfsafsfasfeaf")
         
         self.tableView.register(UINib(nibName: "MembersCell", bundle: nil), forCellReuseIdentifier: "membersCell")
         List.getList(id: self.selectedListId!) { response in
@@ -43,6 +44,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.viewDidLoad()
         tableView.tableFooterView = UIView()
     }
     
