@@ -21,9 +21,8 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         let queue = DispatchQueue.main
         
         queue.async(group: group) {
-            group.enter()
             if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
-                
+                group.enter()
                 let parameters = ["list" : ["name" : self.listNameField.text!]]
                 List.update(id: self.list!.id, parameters: parameters) { response in
                     print(response.name)
