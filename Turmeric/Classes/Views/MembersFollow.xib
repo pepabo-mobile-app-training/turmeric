@@ -40,6 +40,11 @@
                     <constraint firstAttribute="trailing" secondItem="ndN-U1-SnQ" secondAttribute="trailing" constant="15" id="tf4-g1-NzK"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="button" destination="ndN-U1-SnQ" id="nXv-cx-2fo"/>
+                <outlet property="iconImage" destination="5gU-2I-aep" id="5Mu-Ca-DYI"/>
+                <outlet property="name" destination="OTs-Xg-ukK" id="lAK-Ld-zoD"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

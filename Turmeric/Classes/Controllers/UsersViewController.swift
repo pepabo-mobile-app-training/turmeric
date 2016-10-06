@@ -33,14 +33,16 @@ class UsersViewController: UITableViewController {
     
     // tableの要素数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return displayUsers.count
-        return 10
+        return displayUsers.count
     }
     
     // indexPathの行のビュー
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersFollow", for: indexPath)
+        // 表示するセルを再利用して取得
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersFollow", for: indexPath) as! MembersFollow
         
+        cell.displayUser(user: displayUsers[indexPath.row])
+    
         return cell
     }
 }
