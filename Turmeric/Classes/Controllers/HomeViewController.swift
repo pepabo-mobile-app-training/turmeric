@@ -29,8 +29,11 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     // 必ずオーバーライドする必要がある
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         // ViewControlerを作成
-        let child1 = FeedViewController(itemInfo: IndicatorInfo(title: "Home"))
-        let child2 = FeedViewController(itemInfo: IndicatorInfo(title: "Friends"))
+        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
+        let child1 = storyboard.instantiateInitialViewController() as! FeedViewController
+        child1.itemInfo = IndicatorInfo(title: "Home")
+        let child2 = storyboard.instantiateInitialViewController() as! FeedViewController
+        child2.itemInfo = IndicatorInfo(title: "Friends")
 
         // 配列で返す
         return [child1, child2]
