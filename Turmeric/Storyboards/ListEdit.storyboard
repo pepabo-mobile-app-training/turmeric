@@ -55,7 +55,11 @@
                                     <outlet property="delegate" destination="RV0-rB-WZQ" id="JpY-1Z-j5W"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-AZ-1FJ"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-AZ-1FJ">
+                                <connections>
+                                    <segue destination="aA3-X5-anM" kind="presentation" id="Rxn-P2-Suj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -92,6 +96,14 @@
                 <exit id="cjw-DI-CNq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2178.4000000000001" y="184.85757121439281"/>
+        </scene>
+        <!--ListAddMember-->
+        <scene sceneID="tnt-vp-JDL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListAddMember" id="aA3-X5-anM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxB-0S-u79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oJG-es-Xn9">
