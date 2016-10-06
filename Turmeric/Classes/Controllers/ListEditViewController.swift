@@ -19,29 +19,26 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func updateButtonTapped(_ sender: AnyObject) {
         let group = DispatchGroup.init()
-        let queue = DispatchQueue.main
         
-        queue.async(group: group) {
-            if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
-                group.enter()
-                let parameters = ["list" : ["name" : self.listNameField.text!]]
-                List.update(id: self.list!.id, parameters: parameters) { response in
-                    print(response.name)
-                    group.leave()
-                }
+        if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
+            group.enter()
+            let parameters = ["list" : ["name" : self.listNameField.text!]]
+            List.update(id: self.list!.id, parameters: parameters) { response in
+                print(response.name)
+                group.leave()
             }
         }
 
-        queue.async(group: group) {
-            self.deleteMembers.forEach{
-                group.enter()
-                List.deleteMember(listId: self.list!.id, memberId: $0.id) {
-                    group.leave()
-                }
+        
+        self.deleteMembers.forEach{
+            group.enter()
+            List.deleteMember(listId: self.list!.id, memberId: $0.id) {
+                group.leave()
             }
         }
         
-        group.notify(queue: queue, execute: {
+        
+        group.notify(queue: DispatchQueue.main, execute: {
             print("unwind!!!!!!")
             self.performSegue(withIdentifier: "unwind", sender: nil)
         })
@@ -90,6 +87,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         cell.name.text = member.name
         let deleteButton = cell.deleteButton!
         
+        //削除ボタンタップ時のコールバック設定
         deleteButton.addTarget(self, action: #selector(ListEditViewController.deleteButtonTap), for: .touchDown)
         return cell
     }
