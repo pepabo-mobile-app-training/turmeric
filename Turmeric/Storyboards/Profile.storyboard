@@ -163,20 +163,20 @@
             </objects>
             <point key="canvasLocation" x="271.875" y="-124.64788732394366"/>
         </scene>
-        <!--Following-->
+        <!--Users-->
         <scene sceneID="zZf-6R-EpN">
             <objects>
-                <viewControllerPlaceholder storyboardName="Following" id="6U7-mI-ayN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Users" id="6U7-mI-ayN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tTG-lt-jMe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-Lh-A90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="-326"/>
         </scene>
-        <!--Followers-->
+        <!--Users-->
         <scene sceneID="5u5-Ek-KdT">
             <objects>
-                <viewControllerPlaceholder storyboardName="Followers" id="3df-Ct-SUt" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Users" id="3df-Ct-SUt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4ag-Dd-iFD"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-w4-EwG" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -58,6 +58,8 @@
 		72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */; };
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
+		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
+		72B1500F1DA5FD74005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500E1DA5FD74005E7523 /* MembersFollow.xib */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -141,6 +143,8 @@
 		72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MicropostsPost.json; sourceTree = "<group>"; };
 		72B150001DA5EEE4005E7523 /* PostUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUITests.swift; sourceTree = "<group>"; };
+		72B1500C1DA5FBD9005E7523 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		72B1500E1DA5FD74005E7523 /* MembersFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersFollow.xib; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -266,6 +270,7 @@
 			children = (
 				72C0D6E71D9BBC9000D47723 /* LinedButton.swift */,
 				521BC0A21DA3527000A83893 /* MembersCell.swift */,
+				72B1500E1DA5FD74005E7523 /* MembersFollow.xib */,
 				521BC0A31DA3527000A83893 /* MembersCell.xib */,
 				526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */,
 				526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */,
@@ -290,6 +295,7 @@
 				72C0D6E31D9BB56100D47723 /* Followers.storyboard */,
 				72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */,
 				521BC0A81DA3B05300A83893 /* ListEdit.storyboard */,
+				72B1500C1DA5FBD9005E7523 /* Users.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -487,11 +493,13 @@
 				5222F5AC1DA34A0F00990E8E /* ListsMembers.json in Resources */,
 				52F1EF4D1DA39BD1009B4327 /* MyFeed.json in Resources */,
 				7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */,
+				72B1500F1DA5FD74005E7523 /* MembersFollow.xib in Resources */,
 				52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */,
 				72C0D6E61D9BB70900D47723 /* ProfileEdit.storyboard in Resources */,
 				5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */,
 				72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */,
 				5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */,
+				72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */,
 				521BC0A51DA3527000A83893 /* MembersCell.xib in Resources */,
 				5222F5B01DA34A0F00990E8E /* MyLists.json in Resources */,
 				724DB9151D99271B00008C25 /* Post.storyboard in Resources */,
