@@ -24,7 +24,6 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
             group.enter()
             let parameters = ["list" : ["name" : self.listNameField.text!]]
             List.update(id: self.list!.id, parameters: parameters) { response in
-                print(response.name)
                 group.leave()
             }
         }
@@ -39,7 +38,6 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         group.notify(queue: DispatchQueue.main, execute: {
-            print("unwind!!!!!!")
             self.performSegue(withIdentifier: "unwind", sender: nil)
         })
         
