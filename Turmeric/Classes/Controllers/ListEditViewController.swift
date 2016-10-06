@@ -24,6 +24,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
             group.enter()
             let parameters = ["list" : ["name" : self.listNameField.text!]]
+            // TODO:レスポンスが返ってこない場合、無限に待ち続けるのでエラーハンドリングする
             List.update(id: self.list!.id, parameters: parameters) { response in
                 group.leave()
             }
