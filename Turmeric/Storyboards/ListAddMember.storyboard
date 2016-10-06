@@ -25,12 +25,29 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-sq-wo6">
                                 <state key="normal" title="キャンセル"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B83-FT-JiE">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hGi-dX-25K">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGi-dX-25K" id="jT6-Yb-CTM">
+                                            <frame key="frameInset" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jcK-hi-kZP" firstAttribute="top" secondItem="3Yg-lA-lh5" secondAttribute="bottom" id="GO5-Pt-PFc"/>
                             <constraint firstItem="Tgr-sq-wo6" firstAttribute="leading" secondItem="0jH-h1-5Iq" secondAttribute="leadingMargin" id="UNh-7B-cgU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jcK-hi-kZP" secondAttribute="trailing" id="ZJ7-Qo-Lx3"/>
+                            <constraint firstItem="B83-FT-JiE" firstAttribute="leading" secondItem="0jH-h1-5Iq" secondAttribute="leadingMargin" id="fHD-ke-vD7"/>
+                            <constraint firstItem="B83-FT-JiE" firstAttribute="top" secondItem="Tgr-sq-wo6" secondAttribute="bottom" constant="5" id="gLF-yx-xYJ"/>
+                            <constraint firstItem="B83-FT-JiE" firstAttribute="trailing" secondItem="0jH-h1-5Iq" secondAttribute="trailingMargin" id="hgM-uD-cDC"/>
+                            <constraint firstItem="dGD-Ss-I5t" firstAttribute="top" secondItem="B83-FT-JiE" secondAttribute="bottom" id="it1-W3-f9x"/>
                             <constraint firstItem="Tgr-sq-wo6" firstAttribute="top" secondItem="3Yg-lA-lh5" secondAttribute="bottom" id="pEt-g2-BnO"/>
                         </constraints>
                     </view>
