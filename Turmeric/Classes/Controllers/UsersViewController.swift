@@ -10,15 +10,17 @@ import UIKit
 
 class UsersViewController: UITableViewController {
 
-    // 遷移元のVCで、遷移前にこのプロパティを設定する
-    var displayUsers: [User] = []
- 
-    /*
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    // 遷移元のVCで、このプロパティに表示したいユーザをsetする
+    var displayUsers: [User] {
+        get { return self.displayUsersVal }
         
+        set {
+            self.displayUsersVal = newValue
+            self.tableView.reloadData()      // 非同期読み込みなどする場合があるのでsetされたら再描画
+        }
     }
- */
+    private var displayUsersVal: [User] = [] // displayUsersの実データ部
+    
     
     override func viewDidLoad() {
         // MembersFollow.xib のカスタムビューを基準としてターブルビューに配置する
@@ -26,14 +28,9 @@ class UsersViewController: UITableViewController {
 
         super.viewDidLoad()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // tableの要素数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(displayUsers.count)
         return displayUsers.count
     }
     

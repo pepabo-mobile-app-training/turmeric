@@ -46,17 +46,14 @@ class ProfileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let identifer = segue.identifier {
-        print(segue.identifier!)
             
         switch(identifer){
         case "following":
             let vc = segue.destination as! UsersViewController
-            // TODO フォローユーザを取得しvcにぶち込む
-            
+
             User.getMyUser(){ me in
                 User.getFollowing(id: me.id){ following in
                     vc.displayUsers = following!
-                    vc.tableView.reloadData()
                 }
             }
             break
