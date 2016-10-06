@@ -16,7 +16,7 @@ class MicropostTests: XCTestCase {
     
     func testPostMicropost() {
         let parameters: [String: Any] = [
-            "content": "test_micropost"
+            "content": "I just ate an orange!"
         ]
         
         waitUntil { done in
