@@ -27,6 +27,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
             User.getMyLists() { lists in
                 self.lists = lists
+                self.reloadPagerTabStripView()
             }
         }
     }
@@ -40,13 +41,21 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         // ViewControlerを作成
         let storyboard = UIStoryboard(name: "Feed", bundle: nil)
-        let child1 = storyboard.instantiateInitialViewController() as! FeedViewController
-        child1.itemInfo = IndicatorInfo(title: "Home")
-        let child2 = storyboard.instantiateInitialViewController() as! FeedViewController
-        child2.itemInfo = IndicatorInfo(title: "Friends")
+        let homeFeed = storyboard.instantiateInitialViewController() as! FeedViewController
+        homeFeed.itemInfo = IndicatorInfo(title: "Home")
 
-        // 配列で返す
-        return [child1, child2]
+        if let lists = lists {
+            var listFeed = [FeedViewController]()
+            for list in lists {
+                let vc = storyboard.instantiateInitialViewController() as! FeedViewController
+                vc.itemInfo = IndicatorInfo(title: list.name)
+                listFeed.append(vc)
+            }
+            // 配列で返す
+            return [homeFeed] + listFeed
+        } else {
+            return [homeFeed]
+        }
     }
 
     override func reloadPagerTabStripView() {
