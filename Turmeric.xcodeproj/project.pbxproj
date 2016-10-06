@@ -60,6 +60,7 @@
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
 		72B1500F1DA5FD74005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500E1DA5FD74005E7523 /* MembersFollow.xib */; };
+		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -145,6 +146,7 @@
 		72B150001DA5EEE4005E7523 /* PostUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUITests.swift; sourceTree = "<group>"; };
 		72B1500C1DA5FBD9005E7523 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
 		72B1500E1DA5FD74005E7523 /* MembersFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersFollow.xib; sourceTree = "<group>"; };
+		72B150101DA5FE10005E7523 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				72B14FF61DA39D79005E7523 /* PostViewController.swift */,
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */,
+				72B150101DA5FE10005E7523 /* UsersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
+				72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				72C0D6EE1D9D106000D47723 /* ProfileViewController.swift in Sources */,
 				72B14FF71DA39D79005E7523 /* PostViewController.swift in Sources */,
