@@ -2,6 +2,8 @@ import UIKit
 import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
+    var lists: [List]?
+
     override func viewDidLoad() {
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
@@ -20,6 +22,13 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         // buttonBarViewはスーパークラスで定義されている
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
+
+        // AppDelegateにあるログイン処理が実行される前に読み込まれてしまうので、ひとまず対策
+        User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
+            User.getMyLists() { lists in
+                self.lists = lists
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
