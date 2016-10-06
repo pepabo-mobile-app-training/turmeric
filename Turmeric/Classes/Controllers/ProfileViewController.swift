@@ -61,7 +61,13 @@ class ProfileViewController: UIViewController {
             break
         case "followers":
             let vc = segue.destination as! UsersViewController
-            // TODO フォロワーユーザを取得しvcにぶち込む
+            
+            // 次のvcに自分のフォロワーたちを表示するように依頼
+            User.getMyUser(){ me in
+                User.getFollowers(id: me.id){ followers in
+                    vc.displayUsers = followers!
+                }
+            }
             break
         default:
             break
