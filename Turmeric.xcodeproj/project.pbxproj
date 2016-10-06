@@ -17,6 +17,8 @@
 		521BC0A91DA3B05300A83893 /* ListEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521BC0A81DA3B05300A83893 /* ListEdit.storyboard */; };
 		521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */; };
 		5221F3551DA35B9100719B90 /* Auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5221F3541DA35B9100719B90 /* Auth.json */; };
+		52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D231DA4E83700AA6DD4 /* HomeViewController.swift */; };
+		52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */; };
 		5222F5AC1DA34A0F00990E8E /* ListsMembers.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A61DA34A0F00990E8E /* ListsMembers.json */; };
 		5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A71DA34A0F00990E8E /* ListsShow.json */; };
 		5222F5AE1DA34A0F00990E8E /* MicropostsShow.json in Resources */ = {isa = PBXBuildFile; fileRef = 5222F5A81DA34A0F00990E8E /* MicropostsShow.json */; };
@@ -35,6 +37,7 @@
 		52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52685A261D990E4400FEC0A7 /* APIClient.swift */; };
 		526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */; };
 		526B14A01DA4A21F00BDAAFA /* MembersDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */; };
+		528F83591DA5F70F00630ACF /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F83581DA5F70F00630ACF /* HomeUITests.swift */; };
 		52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F281DA1FABA009D4525 /* ListUITests.swift */; };
 		52A15F381DA24923009D4525 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F371DA24923009D4525 /* ListTests.swift */; };
 		52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A7A1D9E304500DE76FD /* ListViewController.swift */; };
@@ -43,6 +46,7 @@
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
+		52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */; };
 		52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6E7C01D9CE22900A0A564 /* UserTests.swift */; };
 		52F1EF4D1DA39BD1009B4327 /* MyFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F1EF4C1DA39BD1009B4327 /* MyFeed.json */; };
 		7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7231C3D81D9A0BA90086D60F /* Mention.storyboard */; };
@@ -94,6 +98,8 @@
 		521BC0A81DA3B05300A83893 /* ListEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEdit.storyboard; sourceTree = "<group>"; };
 		521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditViewController.swift; sourceTree = "<group>"; };
 		5221F3541DA35B9100719B90 /* Auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Auth.json; sourceTree = "<group>"; };
+		52221D231DA4E83700AA6DD4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5222F5A61DA34A0F00990E8E /* ListsMembers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsMembers.json; sourceTree = "<group>"; };
 		5222F5A71DA34A0F00990E8E /* ListsShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsShow.json; sourceTree = "<group>"; };
 		5222F5A81DA34A0F00990E8E /* MicropostsShow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MicropostsShow.json; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 		52685A261D990E4400FEC0A7 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersDeleteCell.swift; sourceTree = "<group>"; };
 		526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersDeleteCell.xib; sourceTree = "<group>"; };
+		528F83581DA5F70F00630ACF /* HomeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
 		52A15F281DA1FABA009D4525 /* ListUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
 		52A15F371DA24923009D4525 /* ListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
 		52A44A7A1D9E304500DE76FD /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +133,7 @@
 		52B1C6F31D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B1C6F81D98EFD2002AB83B /* TurmericUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurmericUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6FE1D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		52D6E7C01D9CE22900A0A564 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		52F1EF4C1DA39BD1009B4327 /* MyFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyFeed.json; sourceTree = "<group>"; };
 		7231C3D81D9A0BA90086D60F /* Mention.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mention.storyboard; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */,
 				525B707B1D98F985004D72BD /* Alamofire.framework in Frameworks */,
 				525B707C1D98F985004D72BD /* AlamofireImage.framework in Frameworks */,
 				521173B61D9A504800DDA29E /* OHHTTPStubs.framework in Frameworks */,
@@ -223,14 +232,16 @@
 		5242ABF11D98F16A0095D4F4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
-				52A44A7A1D9E304500DE76FD /* ListViewController.swift */,
-				52A44A881D9E512600DE76FD /* ListDetailViewController.swift */,
-				72C0D6ED1D9D106000D47723 /* ProfileViewController.swift */,
-				521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */,
-				72B14FF61DA39D79005E7523 /* PostViewController.swift */,
-				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */,
+				52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */,
+				52221D231DA4E83700AA6DD4 /* HomeViewController.swift */,
+				52A44A881D9E512600DE76FD /* ListDetailViewController.swift */,
+				521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */,
+				52A44A7A1D9E304500DE76FD /* ListViewController.swift */,
+				72B14FF61DA39D79005E7523 /* PostViewController.swift */,
+				72C0D6ED1D9D106000D47723 /* ProfileViewController.swift */,
+				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
+				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +308,7 @@
 		525B70771D98F985004D72BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */,
 				521173B81D9A79AB00DDA29E /* Nimble.framework */,
 				521173B51D9A504800DDA29E /* OHHTTPStubs.framework */,
 				525B70781D98F985004D72BD /* Alamofire.framework */,
@@ -354,10 +366,11 @@
 			isa = PBXGroup;
 			children = (
 				52B1C6FE1D98EFD2002AB83B /* Info.plist */,
-				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
-				72C0D6EB1D9CBBE200D47723 /* ProfileUITests.swift */,
+				528F83581DA5F70F00630ACF /* HomeUITests.swift */,
 				521BC0A61DA3971200A83893 /* ListDetailUITests.swift */,
+				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
 				72B150001DA5EEE4005E7523 /* PostUITests.swift */,
+				72C0D6EB1D9CBBE200D47723 /* ProfileUITests.swift */,
 			);
 			path = TurmericUITests;
 			sourceTree = "<group>";
@@ -528,6 +541,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
 			);
 			outputPaths = (
 			);
@@ -546,6 +560,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
 			);
 			outputPaths = (
 			);
@@ -564,7 +579,9 @@
 				52A44A891D9E512600DE76FD /* ListDetailViewController.swift in Sources */,
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
+				52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
+				52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
 				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
@@ -595,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528F83591DA5F70F00630ACF /* HomeUITests.swift in Sources */,
 				521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */,
 				72C0D6EC1D9CBBE200D47723 /* ProfileUITests.swift in Sources */,
 				52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */,
