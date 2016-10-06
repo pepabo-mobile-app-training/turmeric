@@ -59,8 +59,10 @@
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
-		72B1500F1DA5FD74005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500E1DA5FD74005E7523 /* MembersFollow.xib */; };
 		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
+		72B150131DA61C8C005E7523 /* MembersFollowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150121DA61C8C005E7523 /* MembersFollowCell.swift */; };
+		72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150141DA621D4005E7523 /* MembersFollow.swift */; };
+		72B150171DA621D4005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B150151DA621D4005E7523 /* MembersFollow.xib */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -145,8 +147,10 @@
 		72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MicropostsPost.json; sourceTree = "<group>"; };
 		72B150001DA5EEE4005E7523 /* PostUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUITests.swift; sourceTree = "<group>"; };
 		72B1500C1DA5FBD9005E7523 /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
-		72B1500E1DA5FD74005E7523 /* MembersFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersFollow.xib; sourceTree = "<group>"; };
 		72B150101DA5FE10005E7523 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		72B150121DA61C8C005E7523 /* MembersFollowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersFollowCell.swift; sourceTree = "<group>"; };
+		72B150141DA621D4005E7523 /* MembersFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersFollow.swift; sourceTree = "<group>"; };
+		72B150151DA621D4005E7523 /* MembersFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersFollow.xib; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -273,11 +277,13 @@
 			children = (
 				72C0D6E71D9BBC9000D47723 /* LinedButton.swift */,
 				521BC0A21DA3527000A83893 /* MembersCell.swift */,
-				72B1500E1DA5FD74005E7523 /* MembersFollow.xib */,
 				521BC0A31DA3527000A83893 /* MembersCell.xib */,
 				526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */,
 				526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */,
 				725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */,
+				72B150121DA61C8C005E7523 /* MembersFollowCell.swift */,
+				72B150141DA621D4005E7523 /* MembersFollow.swift */,
+				72B150151DA621D4005E7523 /* MembersFollow.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -496,7 +502,7 @@
 				5222F5AC1DA34A0F00990E8E /* ListsMembers.json in Resources */,
 				52F1EF4D1DA39BD1009B4327 /* MyFeed.json in Resources */,
 				7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */,
-				72B1500F1DA5FD74005E7523 /* MembersFollow.xib in Resources */,
+				72B150171DA621D4005E7523 /* MembersFollow.xib in Resources */,
 				52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */,
 				72C0D6E61D9BB70900D47723 /* ProfileEdit.storyboard in Resources */,
 				5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */,
@@ -571,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */,
 				521BC0A41DA3527000A83893 /* MembersCell.swift in Sources */,
 				52A44A891D9E512600DE76FD /* ListDetailViewController.swift in Sources */,
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
@@ -587,6 +594,7 @@
 				72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */,
+				72B150131DA61C8C005E7523 /* MembersFollowCell.swift in Sources */,
 				52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */,
 				52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */,
 			);

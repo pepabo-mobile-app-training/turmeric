@@ -8,19 +8,39 @@
 
 import UIKit
 
-class UsersViewController: UIViewController {
+class UsersViewController: UITableViewController {
 
     // 遷移元のVCで、遷移前にこのプロパティを設定する
     var displayUsers: [User] = []
  
+    /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
+ */
+    
     override func viewDidLoad() {
+        // MembersFollow.xib のカスタムビューを基準としてターブルビューに配置する
+        tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
+
         super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // tableの要素数
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //return displayUsers.count
+        return 10
+    }
+    
+    // indexPathの行のビュー
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersFollow", for: indexPath)
+        
+        return cell
     }
 }
