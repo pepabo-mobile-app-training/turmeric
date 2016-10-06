@@ -70,4 +70,12 @@ class User {
             handler(lists)
         }
     }
+    
+    static func getFollowing(id: Int, handler: @escaping (([User]?) -> Void) ) {
+        APIClient.request(endpoint: Endpoint.UsersFollowing(id)) { json in
+            let users: [User]? = (json["following"].array?.map { User(json: $0) })
+            handler(users)
+        }
+
+    }
 }
