@@ -44,13 +44,15 @@ class ProfileViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueID = segue.identifier else {
+            return
+        }
         
-        if let identifer = segue.identifier {
-            
-        switch(identifer){
+        switch(segueID){
         case "following":
             let vc = segue.destination as! UsersViewController
 
+            // 次のvcに自分のフォローユーザたちを表示するように依頼
             User.getMyUser(){ me in
                 User.getFollowing(id: me.id){ following in
                     vc.displayUsers = following!
@@ -63,7 +65,6 @@ class ProfileViewController: UIViewController {
             break
         default:
             break
-        }
         }
     }
 }
