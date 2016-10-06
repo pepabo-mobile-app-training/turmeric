@@ -29,6 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="friend" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seq-kd-q7h">
+                                <accessibility key="accessibilityConfiguration" identifier="listNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rSY-He-jXg"/>
                                     <constraint firstAttribute="width" constant="120" id="tn5-Wf-2vJ"/>
