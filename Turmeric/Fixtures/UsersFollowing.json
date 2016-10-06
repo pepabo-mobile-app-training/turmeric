@@ -1,0 +1,12 @@
+{
+    "following": {
+        "count": 1,
+        "users": [
+            {
+                "id"       : 101,
+                "name"     : "ry023",
+                "icon_url" : "http://example.com/image/icon1.png"
+            }
+        ]
+    }
+}

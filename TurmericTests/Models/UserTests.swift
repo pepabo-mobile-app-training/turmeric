@@ -86,4 +86,32 @@ class UserTests: XCTestCase {
             }
         }
     }
+    
+    func testFollowing() {
+        login()
+        
+        waitUntil { done in
+            User.getFollowing(id: 1) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.name)
+                }
+                done()
+            }
+        }
+    }
+    
+    func testFollowers() {
+        login()
+        
+        waitUntil { done in
+            User.getFollowers(id: 1) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.name)
+                }
+                done()
+            }
+        }
+    }
 }
