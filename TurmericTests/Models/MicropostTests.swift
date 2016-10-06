@@ -15,7 +15,16 @@ class MicropostTests: XCTestCase {
     }
     
     func testPostMicropost() {
+        let parameters: [String: Any] = [
+            "content": "test_micropost"
+        ]
         
+        waitUntil { done in
+            Micropost.postMicropost(parameters: parameters){ response in
+                XCTAssertEqual("I just ate an orange!", response.content)
+                done()
+            }
+        }
     }
 
     func testGetMicropost() {
