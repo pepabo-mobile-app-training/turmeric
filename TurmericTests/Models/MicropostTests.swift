@@ -13,6 +13,19 @@ class MicropostTests: XCTestCase {
         super.tearDown()
         disableHTTPStubs()
     }
+    
+    func testPostMicropost() {
+        let parameters: [String: Any] = [
+            "content": "I just ate an orange!"
+        ]
+        
+        waitUntil { done in
+            Micropost.postMicropost(parameters: parameters){ response in
+                XCTAssertEqual("I just ate an orange!", response.content)
+                done()
+            }
+        }
+    }
 
     func testGetMicropost() {
         waitUntil { done in

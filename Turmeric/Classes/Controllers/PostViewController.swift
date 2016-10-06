@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PostViewController: UIViewController {
     @IBOutlet weak var postTextView: UITextView!
@@ -15,6 +16,18 @@ class PostViewController: UIViewController {
     @IBAction func closeButtonDidTapped(_ sender: AnyObject) {
         postTextView.resignFirstResponder() //キーボードを非アクティブ化
         self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // アイコン表示
+        User.getMyUser(){ user in
+            do {
+                let data = try Data(contentsOf: URL(string: user.iconURL)! )
+                self.iconImageView.image = UIImage(data: data)
+            } catch {
+                //画像がダウンロードできなかった
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -28,9 +41,30 @@ class PostViewController: UIViewController {
         
         // テキスト入力の際、キーボードの上に追加で表示されるビュー
         self.postTextView.inputAccessoryView = toolbar
+        
+        
+        let postButton: UIBarButtonItem = toolbar.items![2]
+        
+        postButton.target = self;
+        postButton.action = #selector(PostViewController.postButtonDidTap)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func postButtonDidTap(){
+        
+        if let postText = postTextView.text {
+            let parameters: [String : Any] = ["micropost": [
+                "content": postText
+                ]
+            ]
+
+            Micropost.postMicropost(parameters: parameters, handler: {micropost in })
+        
+            postTextView.resignFirstResponder() //キーボードを非アクティブ化
+            self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
+        }
     }
 }
