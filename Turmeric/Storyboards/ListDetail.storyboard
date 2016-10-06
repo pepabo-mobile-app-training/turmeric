@@ -72,7 +72,7 @@
                     <navigationItem key="navigationItem" id="bRm-dm-o81">
                         <barButtonItem key="rightBarButtonItem" title="編集" id="KDT-Hu-VTA">
                             <connections>
-                                <segue destination="b94-PN-NKx" kind="show" animates="NO" id="9Zh-b7-0l0"/>
+                                <segue destination="b94-PN-NKx" kind="show" identifier="goEdit" animates="NO" id="9Zh-b7-0l0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

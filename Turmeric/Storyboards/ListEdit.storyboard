@@ -29,6 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="friend" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seq-kd-q7h">
+                                <accessibility key="accessibilityConfiguration" identifier="listNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rSY-He-jXg"/>
                                     <constraint firstAttribute="width" constant="120" id="tn5-Wf-2vJ"/>
@@ -73,12 +74,17 @@
                     <navigationItem key="navigationItem" id="OAM-lP-6ud">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="fkQ-PZ-8LZ">
                             <connections>
-                                <segue destination="cjw-DI-CNq" kind="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
+                                <segue destination="cjw-DI-CNq" kind="unwind" identifier="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg">
+                            <connections>
+                                <action selector="updateButtonTapped:" destination="RV0-rB-WZQ" id="Tis-ni-8ba"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="listNameField" destination="seq-kd-q7h" id="bPj-ds-31v"/>
                         <outlet property="tableView" destination="WOw-Zo-hUx" id="XhU-bd-hoC"/>
                     </connections>
                 </viewController>

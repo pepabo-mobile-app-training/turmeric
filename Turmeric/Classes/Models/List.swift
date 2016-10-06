@@ -1,5 +1,6 @@
 import Foundation
 import SwiftyJSON
+import Alamofire
 
 class List {
     let id: Int
@@ -27,6 +28,18 @@ class List {
                 User(json: $0)
                 }
             handler(members)
+        }
+    }
+    
+    static func update(id: Int, parameters: Parameters, handler: @escaping ((List) -> Void)){
+        APIClient.request(endpoint: Endpoint.ListsUpdate(id), parameters: parameters) { json in
+            handler(List(json: json["list"]))
+        }
+    }
+    
+    static func deleteMember(listId: Int, memberId: Int, handler: @escaping (Void) -> Void) {
+        APIClient.request(endpoint: Endpoint.ListsDeleteMember(listId, memberId)) { json in
+            handler()
         }
     }
 }
