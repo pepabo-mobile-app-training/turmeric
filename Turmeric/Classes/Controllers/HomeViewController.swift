@@ -39,23 +39,24 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     // それぞれのタブとなるViewControlerを返す
     // 必ずオーバーライドする必要がある
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        // ViewControlerを作成
+        // ホームのフィードは必ず作成
         let storyboard = UIStoryboard(name: "Feed", bundle: nil)
         let homeFeed = storyboard.instantiateInitialViewController() as! FeedViewController
         homeFeed.itemInfo = IndicatorInfo(title: "Home")
 
-        if let lists = lists {
-            var listFeed = [FeedViewController]()
-            for list in lists {
-                let vc = storyboard.instantiateInitialViewController() as! FeedViewController
-                vc.itemInfo = IndicatorInfo(title: list.name)
-                listFeed.append(vc)
-            }
-            // 配列で返す
-            return [homeFeed] + listFeed
-        } else {
+        // リストがなければすぐにreturn
+        guard let myLists = self.lists else {
             return [homeFeed]
         }
+
+        var listFeed = [FeedViewController]()
+        for list in myLists {
+            let vc = storyboard.instantiateInitialViewController() as! FeedViewController
+            vc.itemInfo = IndicatorInfo(title: list.name)
+            listFeed.append(vc)
+        }
+        // 配列で返す
+        return [homeFeed] + listFeed
     }
 
     override func reloadPagerTabStripView() {
