@@ -93,14 +93,18 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     
     func deleteButtonTap(sender: UIButton, event: UIEvent) {
         if let touch = event.allTouches?.first {
+            // タッチされたボタンの位置からindexPathを検出
             let point = touch.location(in: self.tableView)
             let indexPath = self.tableView.indexPathForRow(at: point)
             let cell = self.tableView.cellForRow(at: indexPath!) as! MembersDeleteCell
+            
+            // 削除ボタンの該当ユーザをdeleteMemberとして保存する
             self.deleteMembers.append(members[(indexPath?.row)!])
+            
+            // 該当セルの背景をグレイにし、削除ボタンを非表示にする
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.lightGray
             cell.deleteButton.isHidden = true
-            print(cell.name.text)
         }
     }
     
