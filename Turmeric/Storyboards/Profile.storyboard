@@ -79,7 +79,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="100"/>
                                         <connections>
-                                            <segue destination="6U7-mI-ayN" kind="push" id="Qkf-wJ-qOt"/>
+                                            <segue destination="6U7-mI-ayN" kind="push" identifier="following" id="Qkf-wJ-qOt"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="フォロワー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knD-Z0-VR9" userLabel="フォロワー">
@@ -92,7 +92,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="100"/>
                                         <connections>
-                                            <segue destination="3df-Ct-SUt" kind="push" id="L9h-7o-iQe"/>
+                                            <segue destination="3df-Ct-SUt" kind="push" identifier="followers" id="L9h-7o-iQe"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Xr-AGZ">

@@ -42,4 +42,19 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch(segue.identifier!){
+        case "following":
+            let vc = segue.destination as! UsersViewController
+            // TODO フォローユーザを取得しvcにぶち込む
+            break
+        case "followers":
+            let vc = segue.destination as! UsersViewController
+            // TODO フォロワーユーザを取得しvcにぶち込む
+            break
+        default:
+            break
+        }
+    }
 }
