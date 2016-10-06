@@ -47,6 +47,7 @@
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
 		52A8F6221DA6291A00354999 /* ListEditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8F6211DA6291A00354999 /* ListEditUITests.swift */; };
 		52A8F6241DA652F500354999 /* ListAddMember.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A8F6231DA652F500354999 /* ListAddMember.storyboard */; };
+		52A8F6261DA656CE00354999 /* ListAddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
 		52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */; };
@@ -131,6 +132,7 @@
 		52A635D21D9CD9FE00646119 /* Micropost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Micropost.swift; sourceTree = "<group>"; };
 		52A8F6211DA6291A00354999 /* ListEditUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditUITests.swift; sourceTree = "<group>"; };
 		52A8F6231DA652F500354999 /* ListAddMember.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListAddMember.storyboard; sourceTree = "<group>"; };
+		52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddMemberViewController.swift; sourceTree = "<group>"; };
 		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B1C6E31D98EFD2002AB83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				72C0D6ED1D9D106000D47723 /* ProfileViewController.swift */,
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
+				52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,11 +302,11 @@
 				5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */,
 				724DB9121D9926FB00008C25 /* Home.storyboard */,
 				724DB9141D99271B00008C25 /* Post.storyboard */,
+				72C0D6DF1D9BB50600D47723 /* Feed.storyboard */,
 				724DB9161D99274A00008C25 /* Profile.storyboard */,
 				724DB9181D99275300008C25 /* Lists.storyboard */,
 				7231C3D81D9A0BA90086D60F /* Mention.storyboard */,
 				52A44A861D9E465800DE76FD /* ListDetail.storyboard */,
-				72C0D6DF1D9BB50600D47723 /* Feed.storyboard */,
 				72C0D6E11D9BB54A00D47723 /* Following.storyboard */,
 				72C0D6E31D9BB56100D47723 /* Followers.storyboard */,
 				72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */,
@@ -603,6 +606,7 @@
 				725B13131DA2450C00A12006 /* Stub.swift in Sources */,
 				72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
+				52A8F6261DA656CE00354999 /* ListAddMemberViewController.swift in Sources */,
 				522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */,
 				52685A271D990E4400FEC0A7 /* APIClient.swift in Sources */,
 				52A44A7B1D9E304500DE76FD /* ListViewController.swift in Sources */,

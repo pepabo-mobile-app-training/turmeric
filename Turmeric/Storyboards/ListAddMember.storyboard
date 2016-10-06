@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List Add Member View Controller-->
         <scene sceneID="W5P-Dj-niZ">
             <objects>
-                <viewController id="jFB-cK-7Vn" sceneMemberID="viewController">
+                <viewController id="jFB-cK-7Vn" customClass="ListAddMemberViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Yg-lA-lh5"/>
                         <viewControllerLayoutGuide type="bottom" id="dGD-Ss-I5t"/>
@@ -28,7 +28,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B83-FT-JiE">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hGi-dX-25K">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="followerCell" id="hGi-dX-25K">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hGi-dX-25K" id="jT6-Yb-CTM">
@@ -37,6 +37,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jFB-cK-7Vn" id="qr0-2f-BQ1"/>
+                                    <outlet property="delegate" destination="jFB-cK-7Vn" id="vQK-wT-gOZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,10 +55,9 @@
                             <constraint firstItem="Tgr-sq-wo6" firstAttribute="top" secondItem="3Yg-lA-lh5" secondAttribute="bottom" id="pEt-g2-BnO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zbM-7r-jNO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Zdi-kc-ae4"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="AeF-WL-qAe"/>
-                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="B83-FT-JiE" id="boF-UP-eIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQy-sq-6bX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
