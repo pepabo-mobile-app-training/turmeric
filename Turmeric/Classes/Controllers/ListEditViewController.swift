@@ -20,6 +20,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func updateButtonTapped(_ sender: AnyObject) {
         let group = DispatchGroup.init()
         
+        // リスト名が変更前後で変わっていない場合、リスト名が空文字列の場合はAPIにリクエストを発行しない
         if (self.list!.name != self.listNameField.text && self.listNameField.text != "") {
             group.enter()
             let parameters = ["list" : ["name" : self.listNameField.text!]]
@@ -36,7 +37,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
             }
         }
         
-        
+        //全てのAPIのレスポンスを受け取った後に画面遷移する
         group.notify(queue: DispatchQueue.main, execute: {
             self.performSegue(withIdentifier: "unwind", sender: nil)
         })
