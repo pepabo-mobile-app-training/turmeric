@@ -48,4 +48,9 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         // 配列で返す
         return [child1, child2]
     }
+
+    override func reloadPagerTabStripView() {
+        // タブ更新時に独自の処理をさせたければここに書く
+        super.reloadPagerTabStripView()
+    }
 }
