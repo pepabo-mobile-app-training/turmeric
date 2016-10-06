@@ -4,11 +4,6 @@ import XLPagerTabStrip
 class FeedViewController: UITableViewController, IndicatorInfoProvider {
     var itemInfo = IndicatorInfo(title: "Feed")
 
-    init(itemInfo: IndicatorInfo) {
-        self.itemInfo = itemInfo
-        super.init(nibName: nil, bundle: nil)
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
