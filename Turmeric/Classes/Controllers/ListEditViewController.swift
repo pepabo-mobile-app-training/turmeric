@@ -102,6 +102,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
             self.deleteMembers.append(members[(indexPath?.row)!])
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.lightGray
+            cell.deleteButton.isHidden = true
             print(cell.name.text)
         }
     }
