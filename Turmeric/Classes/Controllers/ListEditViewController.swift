@@ -88,10 +88,27 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         let url = URL(string: member.iconURL)!
         cell.iconImage.af_setImage(withURL: url)
         cell.name.text = member.name
+        let deleteButton = cell.deleteButton!
+        
+        deleteButton.addTarget(self, action: #selector(ListEditViewController.deleteButtonTap), for: .touchDown)
         return cell
     }
     
+    func deleteButtonTap(sender: UIButton, event: UIEvent) {
+        if let touch = event.allTouches?.first {
+            let point = touch.location(in: self.tableView)
+            let indexPath = self.tableView.indexPathForRow(at: point)
+            let cell = self.tableView.cellForRow(at: indexPath!) as! MembersDeleteCell
+            self.deleteMembers.append(members[(indexPath?.row)!])
+            cell.selectionStyle = .none
+            cell.backgroundColor = UIColor.lightGray
+            print(cell.name.text)
+        }
+    }
+    
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        self.deleteMembers.append(members[indexPath.row])
+        let cell = self.tableView.cellForRow(at: indexPath)!
+        // セル内で削除ボタン以外がタッチされても背景を変えない
+        cell.selectionStyle = .none
     }
 }
