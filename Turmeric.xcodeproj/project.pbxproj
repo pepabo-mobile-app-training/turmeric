@@ -42,6 +42,7 @@
 		52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52A44A861D9E465800DE76FD /* ListDetail.storyboard */; };
 		52A44A891D9E512600DE76FD /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A44A881D9E512600DE76FD /* ListDetailViewController.swift */; };
 		52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A635D21D9CD9FE00646119 /* Micropost.swift */; };
+		52A8F6221DA6291A00354999 /* ListEditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8F6211DA6291A00354999 /* ListEditUITests.swift */; };
 		52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */; };
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
 		52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6E7C01D9CE22900A0A564 /* UserTests.swift */; };
@@ -114,6 +115,7 @@
 		52A44A861D9E465800DE76FD /* ListDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListDetail.storyboard; sourceTree = "<group>"; };
 		52A44A881D9E512600DE76FD /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		52A635D21D9CD9FE00646119 /* Micropost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Micropost.swift; sourceTree = "<group>"; };
+		52A8F6211DA6291A00354999 /* ListEditUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditUITests.swift; sourceTree = "<group>"; };
 		52B1C6D91D98EFD2002AB83B /* Turmeric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turmeric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B1C6DC1D98EFD2002AB83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B1C6E31D98EFD2002AB83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
 				72C0D6EB1D9CBBE200D47723 /* ProfileUITests.swift */,
 				521BC0A61DA3971200A83893 /* ListDetailUITests.swift */,
+				52A8F6211DA6291A00354999 /* ListEditUITests.swift */,
 			);
 			path = TurmericUITests;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */,
 				72C0D6EC1D9CBBE200D47723 /* ProfileUITests.swift in Sources */,
 				52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */,
+				52A8F6221DA6291A00354999 /* ListEditUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
