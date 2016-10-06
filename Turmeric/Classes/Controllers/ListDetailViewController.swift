@@ -27,7 +27,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.tableView.register(UINib(nibName: "MembersCell", bundle: nil), forCellReuseIdentifier: "membersCell")
         
-        self.requestDatas()
+        self.requestData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.requestDatas()
+        self.requestData()
         tableView.tableFooterView = UIView()
     }
     
@@ -64,7 +64,7 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    private func requestDatas() {
+    private func requestData() {
         List.getList(id: self.selectedListId!) { response in
             self.list = response
             self.listNameLabel.text = response.name
