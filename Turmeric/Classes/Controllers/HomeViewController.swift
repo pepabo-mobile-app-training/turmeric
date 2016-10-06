@@ -17,6 +17,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
 
         super.viewDidLoad()
         // NavigationBarにButtonBar(タブ)を置く
+        // buttonBarViewはスーパークラスで定義されている
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
     }
