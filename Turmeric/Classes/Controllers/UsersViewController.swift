@@ -33,6 +33,7 @@ class UsersViewController: UITableViewController {
     
     // tableの要素数
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(displayUsers.count)
         return displayUsers.count
     }
     
