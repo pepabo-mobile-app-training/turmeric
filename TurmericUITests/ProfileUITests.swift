@@ -43,4 +43,25 @@ class ProfileUITests: XCTestCase {
         XCTAssert(profileImage.exists)
     }
     
+    func testMyFollowers(){
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tabBars.buttons["プロフィール"].tap()
+        app.buttons["profileFollowersCountButton"].tap()
+        
+        XCTAssert(app.staticTexts["ry023"].exists)
+        XCTAssert(app.staticTexts["shimoju"].exists)
+    }
+    
+    func testMyFollowing(){
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tabBars.buttons["プロフィール"].tap()
+        app.buttons["profileFollowingCountButton"].tap()
+        
+        XCTAssert(app.staticTexts["ry023"].exists)
+        XCTAssert(!app.staticTexts["shimoju"].exists)
+    }
 }
