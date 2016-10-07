@@ -27,7 +27,7 @@ class MembersFollow: UITableViewCell {
     func displayUser(user: User, following:Bool = false){
         name.text = user.name
         
-        let title: String? = following ? "アンフォロー" : "フォロー"
+        let title: String = following ? "アンフォロー" : "フォロー"
         button.setTitle(title, for: UIControlState.normal)
         
         iconImage.af_setImage(withURL: URL(string: user.iconURL)!)
