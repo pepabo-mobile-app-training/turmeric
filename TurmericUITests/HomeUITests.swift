@@ -19,7 +19,8 @@ class HomeUITests: XCTestCase {
 
         // 上部のスワイプ切り替えタブ
         let swipeTab = app.navigationBars["Turmeric.HomeView"].collectionViews
-        XCTAssertEqual(2, swipeTab.cells.count)
+        XCTAssertEqual(4, swipeTab.cells.count)
+        swipeTab.staticTexts["PB"].tap()
         swipeTab.staticTexts["Friends"].tap()
         swipeTab.staticTexts["Home"].tap()
    }
