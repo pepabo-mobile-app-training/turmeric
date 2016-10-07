@@ -44,6 +44,17 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         })
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        switch segue.identifier! {
+        case "goAddMember":
+            let vc = segue.destination as! ListAddMemberViewController
+            vc.selectedListId = self.selectedListId!
+            vc.members = self.members
+        default : break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersDeleteCell", bundle: nil), forCellReuseIdentifier: "membersDeleteCell")
@@ -52,17 +63,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.tableHeaderView = UIView(frame: frame)
         self.tableView.tableHeaderView!.backgroundColor = UIColor.black
         
-        
-        List.getList(id: self.selectedListId!) { response in
-            self.list = response
-            self.listNameField.text = response.name
-        }
-        
-        List.getMembers(id: self.selectedListId!) { response in
-            self.members = response
-            self.tableView.reloadData()
-        }
-        
+        requestData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,6 +73,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.tableFooterView = UIView()
+        requestData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -113,5 +115,17 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = self.tableView.cellForRow(at: indexPath)!
         // セル内で削除ボタン以外がタッチされても背景を変えない
         cell.selectionStyle = .none
+    }
+    
+    private func requestData() {
+        List.getList(id: self.selectedListId!) { response in
+            self.list = response
+            self.listNameField.text = response.name
+        }
+        
+        List.getMembers(id: self.selectedListId!) { response in
+            self.members = response
+            self.tableView.reloadData()
+        }
     }
 }
