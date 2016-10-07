@@ -59,8 +59,7 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
 
         let followingUser = self.followings[indexPath.row]
 
-        let url = followingUser.iconURL
-        cell.iconImage.af_setImage(withURL: url)
+        cell.iconImage.af_setImage(withURL: followingUser.iconURL)
         cell.name.text = followingUser.name
 
         let addButton = cell.addButton!

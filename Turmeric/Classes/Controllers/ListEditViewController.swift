@@ -84,8 +84,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersDeleteCell", for: indexPath) as! MembersDeleteCell
 
         let member = self.members[indexPath.row]
-        let url = member.iconURL
-        cell.iconImage.af_setImage(withURL: url)
+        cell.iconImage.af_setImage(withURL: member.iconURL)
         cell.name.text = member.name
         let deleteButton = cell.deleteButton!
 
