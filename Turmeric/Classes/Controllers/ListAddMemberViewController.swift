@@ -61,7 +61,7 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
         
         let addButton = cell.addButton!
         
-        //削除ボタンタップ時のコールバック設定
+        //追加ボタンタップ時のコールバック設定
         addButton.addTarget(self, action: #selector(ListAddMemberViewController.addButtonTap), for: .touchDown)
         
         return cell
