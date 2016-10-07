@@ -13,6 +13,8 @@ class MembersFollow: UITableViewCell {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var name: UILabel!
     
+    var isFollowedByMe: Bool!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,12 +26,32 @@ class MembersFollow: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func displayUser(user: User, following:Bool = false){
+    func displayUser(user: User){
         name.text = user.name
         
-        let title: String = following ? "アンフォロー" : "フォロー"
-        button.setTitle(title, for: UIControlState.normal)
-        
         iconImage.af_setImage(withURL: URL(string: user.iconURL)!)
+        
+        // ボタン隠しておく
+        self.button.isHidden = true
+        
+        // 自分のフォローリストにuserが含まれてるか判定してボタンを書き換える
+        User.getMyUser(){ me in
+            User.getFollowing(id: me.id){ following in
+                self.button.isHidden = false    // レスポンスが来たので隠すのをやめる
+                
+                self.isFollowedByMe = false
+                var title = "フォロー"
+                
+                following?.forEach() { followedByMe in
+                    if(followedByMe.id == user.id){
+                        self.isFollowedByMe = true
+                        title = "アンフォロー"
+                        return
+                    }
+                }
+                
+                self.button.setTitle(title, for: UIControlState.normal)
+            }
+        }
     }
 }

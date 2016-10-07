@@ -63,6 +63,10 @@ enum Endpoint {
     case ListsUpdate(Int)
     case ListsDeleteMember(Int, Int)
 
+    // Relationship
+    case RelationshipCreate
+    case RelationshipDestroy
+    
     func method() -> HTTPMethod {
         switch self {
         case .Auth: return .post
@@ -84,6 +88,9 @@ enum Endpoint {
         case .ListsMembers: return .get
         case .ListsUpdate: return .patch
         case .ListsDeleteMember: return .delete
+            
+        case .RelationshipCreate:  return .post
+        case .RelationshipDestroy: return .delete
         }
     }
 
@@ -108,6 +115,9 @@ enum Endpoint {
         case .ListsMembers(let listId): return "/api/lists/\(listId)/members"
         case .ListsUpdate(let listId): return "/api/lists/\(listId)"
         case .ListsDeleteMember(let listId, let memberId): return "/api/lists/\(listId)/members/\(memberId)"
+            
+        case .RelationshipCreate:  return "/api/relationship"
+        case .RelationshipDestroy: return "/api/relationship"
         }
     }
 }
