@@ -25,7 +25,10 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
         
         User.getMyUser(){ me in
             User.getFollowing(id: me.id){ following in
-                self.followings = following!
+                // すでにリストに追加されているユーザは取り除く
+                self.followings = following!.filter() {user in
+                    !self.members.contains(where: {$0.id == user.id})
+                }
                 self.tableView.reloadData()
             }
         }
