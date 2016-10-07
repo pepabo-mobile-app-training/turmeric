@@ -2,7 +2,7 @@ import UIKit
 import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
-    var lists: [List]?
+    var lists: [List] = []
 
     override func viewDidLoad() {
         // タブのデザイン
@@ -27,7 +27,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
             User.getMyLists() { lists in
-                self.lists = lists
+                self.lists = lists!
                 self.reloadPagerTabStripView()
             }
         })
@@ -42,13 +42,8 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         // ホームのフィードは必ず作成
         let homeTab = [createFeedViewController(title: "Home")]
-
-        // リストがなければすぐにreturn
-        guard let myLists = self.lists else {
-            return homeTab
-        }
-
-        let listTabs = myLists.map { createFeedViewController(title: $0.name) }
+        // リストがあればリストフィードを作成
+        let listTabs = self.lists.map { createFeedViewController(title: $0.name) }
         return homeTab + listTabs
     }
 
