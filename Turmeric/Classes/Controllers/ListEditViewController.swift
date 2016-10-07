@@ -50,6 +50,7 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         case "goAddMember":
             let vc = segue.destination as! ListAddMemberViewController
             vc.selectedListId = self.selectedListId!
+            vc.members = self.members
         default : break
         }
     }

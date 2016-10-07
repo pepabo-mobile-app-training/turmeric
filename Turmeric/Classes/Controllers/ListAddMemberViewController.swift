@@ -11,6 +11,7 @@ import UIKit
 class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var followings: [User] = []
+    var members: [User] = []
     var selectedListId: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
