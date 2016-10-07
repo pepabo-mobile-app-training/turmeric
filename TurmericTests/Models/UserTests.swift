@@ -36,7 +36,7 @@ class UserTests: XCTestCase {
             }
         }
     }
-    
+
     func testUserMe() {
         waitUntil { done in
             User.getMyUser(){ response in
@@ -44,12 +44,12 @@ class UserTests: XCTestCase {
                 XCTAssertEqual(100, response.followingCount)
                 XCTAssertEqual(200, response.followersCount)
                 XCTAssertEqual(1000, response.micropostsCount)
-                XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", response.iconURL)
+                XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", response.iconURL.absoluteString)
                 done()
             }
         }
     }
-    
+
     func testUserLogin() {
         waitUntil { done in
             User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
@@ -75,7 +75,7 @@ class UserTests: XCTestCase {
 
     func testGetMyLists() {
         login()
-        
+
         waitUntil { done in
             User.getMyLists { response in
                 response!.forEach {
@@ -86,10 +86,10 @@ class UserTests: XCTestCase {
             }
         }
     }
-    
+
     func testFollowing() {
         login()
-        
+
         waitUntil { done in
             User.getFollowing(id: 1) { response in
                 response!.forEach {
@@ -100,10 +100,10 @@ class UserTests: XCTestCase {
             }
         }
     }
-    
+
     func testFollowers() {
         login()
-        
+
         waitUntil { done in
             User.getFollowers(id: 1) { response in
                 response!.forEach {
