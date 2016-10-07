@@ -43,20 +43,20 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         let storyboard = UIStoryboard(name: "Feed", bundle: nil)
         let homeFeed = storyboard.instantiateInitialViewController() as! FeedViewController
         homeFeed.itemInfo = IndicatorInfo(title: "Home")
+        let homeTab = [homeFeed]
 
         // リストがなければすぐにreturn
         guard let myLists = self.lists else {
-            return [homeFeed]
+            return homeTab
         }
 
-        var listFeed = [FeedViewController]()
-        for list in myLists {
-            let vc = storyboard.instantiateInitialViewController() as! FeedViewController
-            vc.itemInfo = IndicatorInfo(title: list.name)
-            listFeed.append(vc)
+        let listTabs = myLists.map { (list) -> FeedViewController in
+            let listFeed = storyboard.instantiateInitialViewController() as! FeedViewController
+            listFeed.itemInfo = IndicatorInfo(title: list.name)
+            return listFeed
         }
         // 配列で返す
-        return [homeFeed] + listFeed
+        return homeTab + listTabs
     }
 
     override func reloadPagerTabStripView() {
