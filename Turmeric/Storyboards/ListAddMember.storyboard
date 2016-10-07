@@ -19,9 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcK-hi-kZP">
-                                <state key="normal" title="保存"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-sq-wo6">
                                 <state key="normal" title="キャンセル"/>
                             </button>
@@ -42,12 +39,17 @@
                                     <outlet property="delegate" destination="jFB-cK-7Vn" id="vQK-wT-gOZ"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザを追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caP-wD-so1">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jcK-hi-kZP" firstAttribute="top" secondItem="3Yg-lA-lh5" secondAttribute="bottom" id="GO5-Pt-PFc"/>
                             <constraint firstItem="Tgr-sq-wo6" firstAttribute="leading" secondItem="0jH-h1-5Iq" secondAttribute="leadingMargin" id="UNh-7B-cgU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jcK-hi-kZP" secondAttribute="trailing" id="ZJ7-Qo-Lx3"/>
+                            <constraint firstItem="caP-wD-so1" firstAttribute="top" secondItem="3Yg-lA-lh5" secondAttribute="bottom" id="dLo-ST-dgc"/>
+                            <constraint firstItem="caP-wD-so1" firstAttribute="leading" secondItem="Tgr-sq-wo6" secondAttribute="trailing" constant="50" id="efK-sY-xhn"/>
                             <constraint firstItem="B83-FT-JiE" firstAttribute="leading" secondItem="0jH-h1-5Iq" secondAttribute="leadingMargin" id="fHD-ke-vD7"/>
                             <constraint firstItem="B83-FT-JiE" firstAttribute="top" secondItem="Tgr-sq-wo6" secondAttribute="bottom" constant="5" id="gLF-yx-xYJ"/>
                             <constraint firstItem="B83-FT-JiE" firstAttribute="trailing" secondItem="0jH-h1-5Iq" secondAttribute="trailingMargin" id="hgM-uD-cDC"/>
