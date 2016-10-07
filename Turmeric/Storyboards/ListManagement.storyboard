@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Management View Controller-->
+        <!--リスト-->
         <scene sceneID="6OU-Bi-X5Y">
             <objects>
                 <viewController id="Nlr-Yd-cPS" customClass="ListManagementViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,10 +19,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="リスト" id="GDy-OM-LdD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="qiY-zb-Xuj"/>
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="I0Z-9w-UlO"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ExO-bC-6Hb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="106"/>
+            <point key="canvasLocation" x="1080.8" y="105.69715142428787"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CuO-Ud-DZ3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2NH-LR-eha" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T2e-fN-A0z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nlr-Yd-cPS" kind="relationship" relationship="rootViewController" id="7qf-0Z-6BP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUX-jU-gv3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="105.69715142428787"/>
         </scene>
     </scenes>
 </document>
