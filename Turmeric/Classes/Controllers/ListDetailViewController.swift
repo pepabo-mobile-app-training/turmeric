@@ -26,15 +26,8 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         self.tableView.register(UINib(nibName: "MembersCell", bundle: nil), forCellReuseIdentifier: "membersCell")
-        List.getList(id: self.selectedListId!) { response in
-            self.list = response
-            self.listNameLabel.text = response.name
-        }
         
-        List.getMembers(id: self.selectedListId!) { response in
-            self.members = response
-            self.tableView.reloadData()
-        }
+        self.requestData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +36,17 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.requestData()
         tableView.tableFooterView = UIView()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        switch segue.identifier! {
+        case "goEdit":
+            let vc = segue.destination as! ListEditViewController
+            vc.selectedListId = self.selectedListId
+        default : break
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,5 +62,17 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.name.text = member.name
         
         return cell
+    }
+    
+    private func requestData() {
+        List.getList(id: self.selectedListId!) { response in
+            self.list = response
+            self.listNameLabel.text = response.name
+        }
+        
+        List.getMembers(id: self.selectedListId!) { response in
+            self.members = response
+            self.tableView.reloadData()
+        }
     }
 }

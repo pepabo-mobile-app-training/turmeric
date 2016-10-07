@@ -29,6 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="friend" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="seq-kd-q7h">
+                                <accessibility key="accessibilityConfiguration" identifier="listNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rSY-He-jXg"/>
                                     <constraint firstAttribute="width" constant="120" id="tn5-Wf-2vJ"/>
@@ -54,7 +55,11 @@
                                     <outlet property="delegate" destination="RV0-rB-WZQ" id="JpY-1Z-j5W"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-AZ-1FJ"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-AZ-1FJ">
+                                <connections>
+                                    <segue destination="aA3-X5-anM" kind="presentation" id="Rxn-P2-Suj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,12 +78,17 @@
                     <navigationItem key="navigationItem" id="OAM-lP-6ud">
                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="fkQ-PZ-8LZ">
                             <connections>
-                                <segue destination="cjw-DI-CNq" kind="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
+                                <segue destination="cjw-DI-CNq" kind="unwind" identifier="unwind" animates="NO" unwindAction="unwindToListDetailScreenWithSender:" id="90C-AF-yh6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="EfR-Yb-ngg">
+                            <connections>
+                                <action selector="updateButtonTapped:" destination="RV0-rB-WZQ" id="Tis-ni-8ba"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="listNameField" destination="seq-kd-q7h" id="bPj-ds-31v"/>
                         <outlet property="tableView" destination="WOw-Zo-hUx" id="XhU-bd-hoC"/>
                     </connections>
                 </viewController>
@@ -86,6 +96,14 @@
                 <exit id="cjw-DI-CNq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2178.4000000000001" y="184.85757121439281"/>
+        </scene>
+        <!--ListAddMember-->
+        <scene sceneID="tnt-vp-JDL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListAddMember" id="aA3-X5-anM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxB-0S-u79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797" y="96"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oJG-es-Xn9">
