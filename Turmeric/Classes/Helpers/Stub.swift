@@ -116,7 +116,7 @@ func enableHTTPStubs() {
     }
     
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1/members") && isMethodPOST()) { _ in
-        return OHHTTPStubsResponse(jsonObject : [], statusCode: 200, headers: nil)
+        return OHHTTPStubsResponse(jsonObject : [], statusCode: 201, headers: nil)
     }
 }
 
