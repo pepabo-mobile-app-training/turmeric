@@ -17,7 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="uHe-QP-wCs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gbe-gK-Sag">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="E2F-hQ-DQM">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E2F-hQ-DQM" id="EEu-sT-cuN">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2N4-jc-vb6" firstAttribute="top" secondItem="gbe-gK-Sag" secondAttribute="bottom" id="Art-58-c5R"/>
+                            <constraint firstItem="gbe-gK-Sag" firstAttribute="top" secondItem="JVp-W4-dvf" secondAttribute="bottom" id="P5r-6V-m7e"/>
+                            <constraint firstItem="gbe-gK-Sag" firstAttribute="leading" secondItem="uHe-QP-wCs" secondAttribute="leading" id="cQl-pp-td6"/>
+                            <constraint firstAttribute="trailing" secondItem="gbe-gK-Sag" secondAttribute="trailing" id="mYW-je-cfK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="リスト" id="GDy-OM-LdD">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="qiY-zb-Xuj"/>
