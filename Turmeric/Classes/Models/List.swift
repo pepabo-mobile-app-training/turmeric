@@ -43,9 +43,9 @@ class List {
         }
     }
     
-    static func addMember(id: Int, parameters: Parameters, handler: @escaping (User) -> Void) {
+    static func addMember(id: Int, parameters: Parameters, handler: @escaping (Void) -> Void) {
         APIClient.request(endpoint: Endpoint.ListsAddMember(id), parameters: parameters) { json in
-            handler(User(json: json["member"]))
+            handler()
         }
     }
 }
