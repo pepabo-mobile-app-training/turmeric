@@ -23,13 +23,14 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
 
-        // AppDelegateにあるログイン処理が実行される前に読み込まれてしまうので、ひとまず対策
-        User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
+        // AppDelegateからログイン完了の通知を受けたらリストを取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
             User.getMyLists() { lists in
                 self.lists = lists
                 self.reloadPagerTabStripView()
             }
-        }
+        })
     }
 
     override func didReceiveMemoryWarning() {
