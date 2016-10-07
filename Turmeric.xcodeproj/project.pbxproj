@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		520654671D9E086500FD0BBE /* MicropostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520654661D9E086500FD0BBE /* MicropostTests.swift */; };
+		5208BBD31DA726F60098DBC6 /* MemberAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD11DA726F60098DBC6 /* MemberAddCell.swift */; };
+		5208BBD41DA726F60098DBC6 /* MemberAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBD21DA726F60098DBC6 /* MemberAddCell.xib */; };
 		521173B61D9A504800DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B71D9A6D0000DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B91D9A79AB00DDA29E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B81D9A79AB00DDA29E /* Nimble.framework */; };
@@ -94,6 +96,8 @@
 
 /* Begin PBXFileReference section */
 		520654661D9E086500FD0BBE /* MicropostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicropostTests.swift; sourceTree = "<group>"; };
+		5208BBD11DA726F60098DBC6 /* MemberAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberAddCell.swift; sourceTree = "<group>"; };
+		5208BBD21DA726F60098DBC6 /* MemberAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberAddCell.xib; sourceTree = "<group>"; };
 		521173B51D9A504800DDA29E /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		521173B81D9A79AB00DDA29E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		521BC0A21DA3527000A83893 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */,
 				526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */,
 				725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */,
+				5208BBD11DA726F60098DBC6 /* MemberAddCell.swift */,
+				5208BBD21DA726F60098DBC6 /* MemberAddCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 				72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */,
 				724DB9171D99274A00008C25 /* Profile.storyboard in Resources */,
 				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
+				5208BBD41DA726F60098DBC6 /* MemberAddCell.xib in Resources */,
 				72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */,
 				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
 				725B13181DA35C4600A12006 /* Me.json in Resources */,
@@ -592,6 +599,7 @@
 			files = (
 				521BC0A41DA3527000A83893 /* MembersCell.swift in Sources */,
 				52A44A891D9E512600DE76FD /* ListDetailViewController.swift in Sources */,
+				5208BBD31DA726F60098DBC6 /* MemberAddCell.swift in Sources */,
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */,
