@@ -14,7 +14,7 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "MembersCell", bundle: nil), forCellReuseIdentifier: "membersCell")
+        self.tableView.register(UINib(nibName: "MembersAddCell", bundle: nil), forCellReuseIdentifier: "membersAddCell")
         
         let frame = CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 0.5)
         self.tableView.tableHeaderView = UIView(frame: frame)
@@ -37,7 +37,7 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersCell", for: indexPath) as! MembersCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersAddCell", for: indexPath) as! MembersAddCell
         
         let url = URL(string: "https://achievement-images.teamtreehouse.com/badges_SimpleFacebook_Stage1.png")!
         cell.iconImage.af_setImage(withURL: url)

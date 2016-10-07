@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MemberAddCell: UITableViewCell {
+class MembersAddCell: UITableViewCell {
 
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var addButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
