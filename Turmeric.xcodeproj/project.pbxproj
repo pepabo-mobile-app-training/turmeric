@@ -75,6 +75,7 @@
 		72B1501A1DA6576A005E7523 /* UsersFollowers.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B150191DA6576A005E7523 /* UsersFollowers.json */; };
 		72B1501C1DA6577C005E7523 /* UsersFollowing.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B1501B1DA6577C005E7523 /* UsersFollowing.json */; };
 		72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501D1DA768B1005E7523 /* Relationship.swift */; };
+		72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501F1DA7807E005E7523 /* RelationshipTests.swift */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -175,6 +176,7 @@
 		72B150191DA6576A005E7523 /* UsersFollowers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersFollowers.json; sourceTree = "<group>"; };
 		72B1501B1DA6577C005E7523 /* UsersFollowing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersFollowing.json; sourceTree = "<group>"; };
 		72B1501D1DA768B1005E7523 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		72B1501F1DA7807E005E7523 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				52D6E7C01D9CE22900A0A564 /* UserTests.swift */,
 				520654661D9E086500FD0BBE /* MicropostTests.swift */,
 				52A15F371DA24923009D4525 /* ListTests.swift */,
+				72B1501F1DA7807E005E7523 /* RelationshipTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				520654671D9E086500FD0BBE /* MicropostTests.swift in Sources */,
+				72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */,
 				52A15F381DA24923009D4525 /* ListTests.swift in Sources */,
 				52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */,
 				522C8AAF1D9D1D3F00E17D4C /* TestHelpers.swift in Sources */,
