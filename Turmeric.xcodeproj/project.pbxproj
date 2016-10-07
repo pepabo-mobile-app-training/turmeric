@@ -11,6 +11,8 @@
 		5208BBD31DA726F60098DBC6 /* MembersAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */; };
 		5208BBD41DA726F60098DBC6 /* MembersAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */; };
 		5208BBD81DA76AD60098DBC6 /* ListAddMemberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */; };
+		5208BBDC1DA782670098DBC6 /* ListManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */; };
+		5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */; };
 		521173B61D9A504800DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B71D9A6D0000DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B91D9A79AB00DDA29E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B81D9A79AB00DDA29E /* Nimble.framework */; };
@@ -106,6 +108,8 @@
 		5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersAddCell.swift; sourceTree = "<group>"; };
 		5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersAddCell.xib; sourceTree = "<group>"; };
 		5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddMemberUITests.swift; sourceTree = "<group>"; };
+		5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListManagement.storyboard; sourceTree = "<group>"; };
+		5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManagementViewController.swift; sourceTree = "<group>"; };
 		521173B51D9A504800DDA29E /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		521173B81D9A79AB00DDA29E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		521BC0A21DA3527000A83893 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 				52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */,
+				5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				521BC0A81DA3B05300A83893 /* ListEdit.storyboard */,
 				72B1500C1DA5FBD9005E7523 /* Users.storyboard */,
 				52A8F6231DA652F500354999 /* ListAddMember.storyboard */,
+				5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 				521BC0A51DA3527000A83893 /* MembersCell.xib in Resources */,
 				5222F5B01DA34A0F00990E8E /* MyLists.json in Resources */,
 				724DB9151D99271B00008C25 /* Post.storyboard in Resources */,
+				5208BBDC1DA782670098DBC6 /* ListManagement.storyboard in Resources */,
 				724DB9131D9926FB00008C25 /* Home.storyboard in Resources */,
 				724DB9191D99275300008C25 /* Lists.storyboard in Resources */,
 				5222F5AE1DA34A0F00990E8E /* MicropostsShow.json in Resources */,
@@ -638,6 +645,7 @@
 				72B14FF71DA39D79005E7523 /* PostViewController.swift in Sources */,
 				521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */,
 				725B13131DA2450C00A12006 /* Stub.swift in Sources */,
+				5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */,
 				72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				52A8F6261DA656CE00354999 /* ListAddMemberViewController.swift in Sources */,
