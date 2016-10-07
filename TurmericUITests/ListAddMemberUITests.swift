@@ -33,8 +33,6 @@ class ListAddMemberUITests: XCTestCase {
         let addButton = followingCells.buttons["addButton"]
         XCTAssert(cancelButton.exists)
         XCTAssert(addButton.exists)
-        
-        
     }
     
 }

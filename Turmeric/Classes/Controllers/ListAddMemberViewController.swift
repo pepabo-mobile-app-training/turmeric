@@ -78,7 +78,6 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
             let indexPath = self.tableView.indexPathForRow(at: point)!
             
             let tappedUser = self.followings[indexPath.row]
-            
             List.addMember(id: self.selectedListId, parameters: ["user_id" : tappedUser.id]) { response in
                 self.dismiss(animated: true, completion: nil)
             }
