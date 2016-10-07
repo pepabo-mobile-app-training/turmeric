@@ -47,9 +47,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             return homeTab
         }
 
-        let listTabs = myLists.map { (list) in
-            createFeedViewController(title: list.name)
-        }
+        let listTabs = myLists.map { createFeedViewController(title: $0.name) }
         return homeTab + listTabs
     }
 
