@@ -44,6 +44,16 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
         })
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        switch segue.identifier! {
+        case "goAddMember":
+            let vc = segue.destination as! ListAddMemberViewController
+            vc.selectedListId = self.selectedListId!
+        default : break
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersDeleteCell", bundle: nil), forCellReuseIdentifier: "membersDeleteCell")

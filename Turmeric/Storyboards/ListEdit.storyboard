@@ -57,7 +57,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-AZ-1FJ">
                                 <connections>
-                                    <segue destination="aA3-X5-anM" kind="presentation" id="Rxn-P2-Suj"/>
+                                    <segue destination="aA3-X5-anM" kind="presentation" identifier="goAddMember" id="Rxn-P2-Suj"/>
                                 </connections>
                             </button>
                         </subviews>

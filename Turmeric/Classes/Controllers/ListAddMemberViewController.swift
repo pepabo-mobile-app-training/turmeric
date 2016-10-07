@@ -11,6 +11,7 @@ import UIKit
 class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var followings: [User] = []
+    var selectedListId: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -58,6 +59,25 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
         cell.iconImage.af_setImage(withURL: url)
         cell.name.text = followingUser.name
         
+        let addButton = cell.addButton!
+        
+        //削除ボタンタップ時のコールバック設定
+        addButton.addTarget(self, action: #selector(ListAddMemberViewController.addButtonTap), for: .touchDown)
+        
         return cell
+    }
+    
+    func addButtonTap(sender: UIButton, event: UIEvent) {
+        if let touch = event.allTouches?.first {
+            // タッチされたボタンの位置からindexPathを検出
+            let point = touch.location(in: self.tableView)
+            let indexPath = self.tableView.indexPathForRow(at: point)!
+            
+            let tappedUser = self.followings[indexPath.row]
+            
+            List.addMember(id: self.selectedListId, parameters: ["user_id" : tappedUser.id]) { response in
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }
