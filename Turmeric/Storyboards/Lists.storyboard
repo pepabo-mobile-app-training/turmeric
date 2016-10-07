@@ -42,12 +42,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="リスト" id="QgN-AV-nMy">
-                        <barButtonItem key="rightBarButtonItem" title="追加・削除(仮)" id="Qki-tn-NeD"/>
+                        <barButtonItem key="rightBarButtonItem" title="追加・削除(仮)" id="Qki-tn-NeD">
+                            <connections>
+                                <segue destination="1HR-t8-bgk" kind="show" identifier="goManagement" animates="NO" id="81Q-l0-mhV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GiT-oQ-rR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="-66.11694152923539"/>
+        </scene>
+        <!--ListManagement-->
+        <scene sceneID="v4k-Fn-Bbp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListManagement" id="1HR-t8-bgk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3m9-yM-NcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997" y="-211"/>
         </scene>
         <!--ListDetail-->
         <scene sceneID="CIc-Bt-huf">
@@ -60,7 +72,6 @@
         <!--リスト-->
         <scene sceneID="dTI-Zc-Zzf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5w-VR-PY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jay-tI-oGy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="リスト" id="pmo-cF-mVQ" userLabel="リスト"/>
                     <toolbarItems/>
@@ -74,6 +85,7 @@
                         <segue destination="vDV-Im-vlK" kind="relationship" relationship="rootViewController" id="7Qo-Bu-40m"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5w-VR-PY1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-706.39999999999998" y="-66.11694152923539"/>
         </scene>
