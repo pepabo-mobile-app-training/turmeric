@@ -21,6 +21,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-sq-wo6">
                                 <state key="normal" title="キャンセル"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="jFB-cK-7Vn" eventType="touchUpInside" id="jzZ-8R-IPg"/>
+                                    <segue destination="QT6-0w-DjY" kind="unwind" unwindAction="unwindToListEditScreenWithSender:" id="3y8-GQ-ect"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B83-FT-JiE">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,6 +66,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQy-sq-6bX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="QT6-0w-DjY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1216.8" y="-80.50974512743629"/>
         </scene>

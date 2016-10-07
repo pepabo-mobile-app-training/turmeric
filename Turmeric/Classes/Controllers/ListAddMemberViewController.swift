@@ -12,6 +12,9 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func cancelButtonTapped(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil) 
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersAddCell", bundle: nil), forCellReuseIdentifier: "membersAddCell")
