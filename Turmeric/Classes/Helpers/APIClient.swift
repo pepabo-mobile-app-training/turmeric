@@ -63,6 +63,7 @@ enum Endpoint {
     case ListsUpdate(Int)
     case ListsDeleteMember(Int, Int)
     case ListsAddMember(Int)
+    case ListsDelete(Int)
 
     // Relationship
     case RelationshipCreate
@@ -90,7 +91,8 @@ enum Endpoint {
         case .ListsUpdate: return .patch
         case .ListsDeleteMember: return .delete
         case .ListsAddMember: return .post
-            
+        case .ListsDelete: return .delete
+
         case .RelationshipCreate:  return .post
         case .RelationshipDestroy: return .delete
         }
@@ -118,6 +120,7 @@ enum Endpoint {
         case .ListsUpdate(let listId): return "/api/lists/\(listId)"
         case .ListsDeleteMember(let listId, let memberId): return "/api/lists/\(listId)/members/\(memberId)"
         case .ListsAddMember(let listId): return "/api/lists/\(listId)/members"
+        case .ListsDelete(let listId): return "/api/lists/\(listId)"
 
         case .RelationshipCreate:  return "/api/relationships"
         case .RelationshipDestroy: return "/api/relationship"

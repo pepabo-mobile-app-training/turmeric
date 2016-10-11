@@ -15,11 +15,7 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        User.getMyLists { lists in
-            self.lists = lists
-            self.tableView.reloadData()
-        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,8 +24,8 @@ class ListViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
-        
         super.viewWillAppear(animated)
+        requestData()
         tableView.tableFooterView = UIView()
     }
    
@@ -59,6 +55,16 @@ class ListViewController: UITableViewController {
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.selectedListId = lists?[indexPath.row].id
         self.performSegue(withIdentifier: "goDetail", sender: nil)
+    }
+    
+    @IBAction func unwindToListViewScreen(sender: UIStoryboardSegue) {
+    }
+    
+    private func requestData(){
+        User.getMyLists { lists in
+            self.lists = lists
+            self.tableView.reloadData()
+        }
     }
 }
 

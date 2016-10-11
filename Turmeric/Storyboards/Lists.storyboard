@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hKw-KS-PZS" id="bMa-4u-ea6">
-                                    <frame key="frameInset" width="342" height="43"/>
+                                    <frame key="frameInset" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYe-zE-jh4">
-                                            <frame key="frameInset" minX="15" width="325" height="43"/>
+                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -42,7 +42,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="リスト" id="QgN-AV-nMy">
-                        <barButtonItem key="rightBarButtonItem" title="追加・削除(仮)" id="Qki-tn-NeD">
+                        <barButtonItem key="rightBarButtonItem" title="追加・削除" id="Qki-tn-NeD">
                             <connections>
                                 <segue destination="1HR-t8-bgk" kind="show" identifier="goManagement" animates="NO" id="81Q-l0-mhV"/>
                             </connections>

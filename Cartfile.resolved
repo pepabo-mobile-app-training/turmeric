@@ -1,6 +1,7 @@
 github "Alamofire/Alamofire" "4.0.1"
+github "xmartlabs/Eureka" "26c48ae5835de438c037b194597792ee6777196f"
 github "Quick/Nimble" "v5.0.0"
 github "AliSoftware/OHHTTPStubs" "624d51619bc88144015c2b275e761b359ae5ecb3"
-github "SwiftyJSON/SwiftyJSON" "3.1.0"
+github "SwiftyJSON/SwiftyJSON" "v3.1.1"
 github "xmartlabs/XLPagerTabStrip" "d12b4fa6c51f091deb06dd4ba9eaec66d6102fbb"
 github "Alamofire/AlamofireImage" "3.1.0"
