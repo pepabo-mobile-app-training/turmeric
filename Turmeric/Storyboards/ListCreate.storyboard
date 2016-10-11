@@ -24,7 +24,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem id="DHn-dJ-DK1">
-                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="inn-w0-HQM"/>
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="inn-w0-HQM">
+                                            <connections>
+                                                <segue destination="4VG-im-ibZ" kind="unwind" unwindAction="unwindToListManagementViewScreenWithSender:" id="76J-Vh-vpN"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="保存" id="YA2-v8-UC7"/>
                                     </navigationItem>
                                 </items>
@@ -37,13 +41,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oAr-8d-knr" secondAttribute="trailing" id="1qH-U9-nNE"/>
-                            <constraint firstItem="1Xa-kx-s3T" firstAttribute="top" secondItem="oAr-8d-knr" secondAttribute="bottom" id="Ipm-Qe-k8N"/>
-                            <constraint firstItem="oAr-8d-knr" firstAttribute="top" secondItem="vuG-Vd-R84" secondAttribute="bottom" id="Ong-iz-gR9"/>
-                            <constraint firstItem="oAr-8d-knr" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="QdU-Bd-985"/>
+                            <constraint firstAttribute="trailing" secondItem="vuG-Vd-R84" secondAttribute="trailing" id="2am-vP-I14"/>
+                            <constraint firstItem="1Xa-kx-s3T" firstAttribute="top" secondItem="oAr-8d-knr" secondAttribute="bottom" id="65T-dS-tgJ"/>
+                            <constraint firstItem="oAr-8d-knr" firstAttribute="top" secondItem="vuG-Vd-R84" secondAttribute="bottom" id="FBo-dL-YD7"/>
+                            <constraint firstItem="vuG-Vd-R84" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="W9f-xb-NLh"/>
                             <constraint firstItem="vuG-Vd-R84" firstAttribute="top" secondItem="zix-n4-l9z" secondAttribute="top" id="Z1a-D8-Yhd"/>
                             <constraint firstAttribute="trailing" secondItem="vuG-Vd-R84" secondAttribute="trailing" id="ahq-50-hsP"/>
+                            <constraint firstAttribute="trailing" secondItem="oAr-8d-knr" secondAttribute="trailing" id="als-ea-HRV"/>
+                            <constraint firstItem="oAr-8d-knr" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="dpk-PH-2jW"/>
                             <constraint firstItem="vuG-Vd-R84" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="ncR-K9-f3n"/>
+                            <constraint firstItem="vuG-Vd-R84" firstAttribute="top" secondItem="zix-n4-l9z" secondAttribute="top" id="xS7-kj-Gu4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fuM-Qs-odR">
@@ -52,18 +59,20 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igs-pF-kxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4VG-im-ibZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1180" y="30.134932533733135"/>
         </scene>
         <!--List Form View Controller-->
         <scene sceneID="tAg-3F-56d">
             <objects>
-                <viewController id="Afo-hq-H78" customClass="ListFormViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Afo-hq-H78" customClass="ListFormViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T3w-K6-OC5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xq-aS-wn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
