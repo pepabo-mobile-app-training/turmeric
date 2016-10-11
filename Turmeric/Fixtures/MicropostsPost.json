@@ -5,6 +5,15 @@
         "content": "I just ate an orange!",
         "user_id": 1,
         "created_at": "2016-09-30T09:41:24.000Z",
-        "picture": null
+        "picture": null,
+        "user": {
+            "id": 1,
+            "name": "Example User",
+            "activated": true,
+            "icon_url": "https://secure.gravatar.com/avatar/03ea78c0884c9ac0f73e6af7b9649e90?s=80",
+            "following_count": 2,
+            "followers_count": 3,
+            "microposts_count": 35
+        }
     }
 }
