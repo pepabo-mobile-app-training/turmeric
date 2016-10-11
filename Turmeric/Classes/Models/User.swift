@@ -11,7 +11,7 @@ class User {
     let followingCount: Int?
     let followersCount: Int?
     let micropostsCount: Int?
-
+    
     init(id: Int, name: String, iconURL: URL, email: String? = nil) {
         self.id = id
         self.name = name
@@ -33,7 +33,7 @@ class User {
         self.micropostsCount = json["microposts_count"].int
         self.iconURL = URL(string: json["icon_url"].string!)!
     }
-
+    
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
         APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { json in
             handler(User(json: json["user"]))

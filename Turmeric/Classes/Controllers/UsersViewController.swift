@@ -21,9 +21,8 @@ class UsersViewController: UITableViewController {
     }
     private var displayUsersVal: [User] = [] // displayUsersの実データ部
     
-    
     override func viewDidLoad() {
-        // MembersFollow.xib のカスタムビューを基準としてターブルビューに配置する
+        // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
         tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
 
         super.viewDidLoad()

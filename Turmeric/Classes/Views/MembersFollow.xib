@@ -27,7 +27,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-U1-SnQ">
-                        <state key="normal" title="フォロー"/>
+                        <connections>
+                            <action selector="followButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BAy-Ka-CdF"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

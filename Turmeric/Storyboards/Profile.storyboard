@@ -63,7 +63,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8V-ir-COL" userLabel="Stat">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngK-ft-fVb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngK-ft-fVb">
                                         <accessibility key="accessibilityConfiguration" identifier="profileUsetnameLabel"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
@@ -77,7 +77,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qL-Po-6Tv" userLabel="FollowingButton">
                                         <accessibility key="accessibilityConfiguration" identifier="profileFollowingCountButton"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="100"/>
                                         <connections>
                                             <segue destination="6U7-mI-ayN" kind="push" identifier="following" id="Qkf-wJ-qOt"/>
                                         </connections>
@@ -90,12 +89,11 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQj-hl-Bd0" userLabel="FollowersButton">
                                         <accessibility key="accessibilityConfiguration" identifier="profileFollowersCountButton"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="100"/>
                                         <connections>
                                             <segue destination="3df-Ct-SUt" kind="push" identifier="followers" id="L9h-7o-iQe"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5,100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Xr-AGZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Xr-AGZ">
                                         <accessibility key="accessibilityConfiguration" identifier="profileMicropostsCountLabel"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>

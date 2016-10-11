@@ -74,6 +74,8 @@
 		72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */; };
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
+		72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501D1DA768B1005E7523 /* Relationship.swift */; };
+		72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501F1DA7807E005E7523 /* RelationshipTests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
 		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
 		72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150141DA621D4005E7523 /* MembersFollow.swift */; };
@@ -173,6 +175,8 @@
 		724DB9181D99275300008C25 /* Lists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		725B13121DA2450C00A12006 /* Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		725B13171DA35C4600A12006 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
+		72B1501D1DA768B1005E7523 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		72B1501F1DA7807E005E7523 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
 		725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostKeyboardToolbar.xib; sourceTree = "<group>"; };
 		72B14FF61DA39D79005E7523 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		72B14FF81DA3B11D005E7523 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 				52D6E7C01D9CE22900A0A564 /* UserTests.swift */,
 				520654661D9E086500FD0BBE /* MicropostTests.swift */,
 				52A15F371DA24923009D4525 /* ListTests.swift */,
+				72B1501F1DA7807E005E7523 /* RelationshipTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				5232599E1D9A0D8100476111 /* User.swift */,
 				522C8AA61D9CBC2C00E17D4C /* List.swift */,
 				52A635D21D9CD9FE00646119 /* Micropost.swift */,
+				72B1501D1DA768B1005E7523 /* Relationship.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */,
+				72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
 				72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */,
 				5208BBE11DA78BCE0098DBC6 /* ListDeleteCell.swift in Sources */,
@@ -671,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				520654671D9E086500FD0BBE /* MicropostTests.swift in Sources */,
+				72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */,
 				52A15F381DA24923009D4525 /* ListTests.swift in Sources */,
 				52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */,
 				522C8AAF1D9D1D3F00E17D4C /* TestHelpers.swift in Sources */,
