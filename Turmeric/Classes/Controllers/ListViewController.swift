@@ -15,8 +15,7 @@ class ListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        requestData()
+
     }
     
     override func didReceiveMemoryWarning() {
