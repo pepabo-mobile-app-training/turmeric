@@ -12,7 +12,7 @@ class ListManagementViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeletCell")
+        self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeleteCell")
         self.tableView.reloadData()
     }
     
@@ -30,7 +30,7 @@ class ListManagementViewController: UITableViewController{
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "listDeletCell", for: indexPath) as! ListDeleteCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "listDeleteCell", for: indexPath) as! ListDeleteCell
         cell.name.text = "Friends"
         return cell
     }
