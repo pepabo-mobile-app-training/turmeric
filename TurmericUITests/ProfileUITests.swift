@@ -44,24 +44,47 @@ class ProfileUITests: XCTestCase {
     }
     
     func testMyFollowers(){
+        // ページに移動
         let app = XCUIApplication()
         app.launch()
-        
         app.tabBars.buttons["プロフィール"].tap()
         app.buttons["profileFollowersCountButton"].tap()
         
+        // ユーザ名とフォロー/アンフォローボタンを確認
         XCTAssert(app.staticTexts["ry023"].exists)
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
+        
         XCTAssert(app.staticTexts["shimoju"].exists)
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"shimoju").buttons["フォロー"].exists)
+        
+        //アンフォローしたらフォローボタンに変わる
+        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].exists)
+        
+        //フォローしたらアンフォローボタンに変わる
+        app.tables.cells.containing(.staticText, identifier:"shimoju").buttons["フォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"shimoju").buttons["アンフォロー"].exists)
     }
     
     func testMyFollowing(){
+        // ページに移動
         let app = XCUIApplication()
         app.launch()
-        
         app.tabBars.buttons["プロフィール"].tap()
         app.buttons["profileFollowingCountButton"].tap()
         
+        // ユーザ名とアンフォローボタンを確認
         XCTAssert(app.staticTexts["ry023"].exists)
-        XCTAssert(!app.staticTexts["shimoju"].exists)
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
+        
+        XCTAssert(!app.staticTexts["shimoju"].exists)   // フォローしていないユーザは表示されない
+        
+        //アンフォローしたらフォローボタンに変わる
+        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].exists)
+        
+        //フォローしたらアンフォローボタンに変わる
+        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
     }
 }
