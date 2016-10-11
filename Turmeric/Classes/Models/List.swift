@@ -48,4 +48,13 @@ class List {
             handler()
         }
     }
+    
+    static func getMyLists(handler: @escaping ([List]) -> Void) {
+        APIClient.request(endpoint: Endpoint.MyLists) { json in
+            let myLists: [List] = json["lists"].array!.map {
+                List(json: $0)
+            }
+            handler(myLists)
+        }
+    }
 }
