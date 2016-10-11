@@ -366,11 +366,11 @@
 				52A44A861D9E465800DE76FD /* ListDetail.storyboard */,
 				72C0D6E11D9BB54A00D47723 /* Following.storyboard */,
 				72C0D6E31D9BB56100D47723 /* Followers.storyboard */,
-				72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */,
 				521BC0A81DA3B05300A83893 /* ListEdit.storyboard */,
 				72B1500C1DA5FBD9005E7523 /* Users.storyboard */,
 				52A8F6231DA652F500354999 /* ListAddMember.storyboard */,
 				5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */,
+				72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */,
 				526437151DAC9ADF0034F7F2 /* ListCreate.storyboard */,
 			);
 			path = Storyboards;

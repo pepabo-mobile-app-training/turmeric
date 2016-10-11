@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,11 +30,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reU-wj-3Ih">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-6H-Ker">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="V8b-Bg-eAk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zJy-6H-Ker" firstAttribute="leading" secondItem="reU-wj-3Ih" secondAttribute="trailing" constant="30" id="L3k-qQ-lDy"/>
+                            <constraint firstItem="reU-wj-3Ih" firstAttribute="top" secondItem="vuG-Vd-R84" secondAttribute="bottom" constant="20" id="N4F-VV-vIr"/>
+                            <constraint firstItem="zJy-6H-Ker" firstAttribute="top" secondItem="vuG-Vd-R84" secondAttribute="bottom" constant="20" id="U0o-tX-oNf"/>
                             <constraint firstItem="vuG-Vd-R84" firstAttribute="top" secondItem="zix-n4-l9z" secondAttribute="top" id="Z1a-D8-Yhd"/>
                             <constraint firstAttribute="trailing" secondItem="vuG-Vd-R84" secondAttribute="trailing" id="ahq-50-hsP"/>
+                            <constraint firstItem="reU-wj-3Ih" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leadingMargin" constant="20" id="nZn-Ff-8tR"/>
                             <constraint firstItem="vuG-Vd-R84" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="ncR-K9-f3n"/>
                         </constraints>
                     </view>
