@@ -1,6 +1,8 @@
 import UIKit
 
 class MicropostCell: UITableViewCell {
+    @IBOutlet weak var profileImage: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

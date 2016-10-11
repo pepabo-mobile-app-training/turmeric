@@ -29,6 +29,9 @@
                     <constraint firstItem="qsK-Qf-28z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="er2-SX-rlc"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="profileImage" destination="qsK-Qf-28z" id="59b-gW-Zko"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
