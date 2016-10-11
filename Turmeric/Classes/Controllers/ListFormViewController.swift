@@ -12,7 +12,7 @@ import Eureka
 class ListFormViewController:  FormViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        //隙間が入っていしまうので明示的にヘッダの高さを指定してあげる
+        //隙間が入ってしまうので明示的にヘッダの高さを指定してあげる
         let frame = CGRect(x: 0, y: 0, width: (self.tableView?.frame.width)!, height: 0.1)
         self.tableView?.tableHeaderView = UIView(frame: frame)
         
