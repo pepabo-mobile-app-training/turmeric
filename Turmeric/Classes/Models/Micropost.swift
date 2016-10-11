@@ -6,9 +6,9 @@ class Micropost {
     let id: Int
     let userId: Int
     let content: String
-    let picture: NSURL?
+    let picture: URL?
 
-    init(id: Int, userId: Int, content: String, picture: NSURL?) {
+    init(id: Int, userId: Int, content: String, picture: URL?) {
         self.id = id
         self.userId = userId
         self.content = content
@@ -20,12 +20,12 @@ class Micropost {
         self.userId = json["user_id"].int!
         self.content = json["content"].string!
         if let picture = json["picture"].string {
-            self.picture = NSURL(string: picture)
+            self.picture = URL(string: picture)
         } else {
             self.picture = nil
         }
     }
-    
+
     static func postMicropost(parameters: Parameters, handler: @escaping ((Micropost) -> Void)) {
         APIClient.request(endpoint: Endpoint.MicropostsPost, parameters: parameters) { json in
             handler(Micropost(json: json["micropost"]))

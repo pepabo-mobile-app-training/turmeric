@@ -56,4 +56,12 @@ class ListTests: XCTestCase {
             }
         }
     }
+    
+    func testAddMembers() {
+        waitUntil { done in
+            List.addMember(id: 1, parameters: ["user_id" : 102]) {_ in
+                done()
+            }
+        }
+    }
 }

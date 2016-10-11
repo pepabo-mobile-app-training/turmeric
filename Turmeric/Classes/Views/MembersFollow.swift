@@ -26,11 +26,11 @@ class MembersFollow: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func displayUser(user: User){
         name.text = user.name
         
-        iconImage.af_setImage(withURL: URL(string: user.iconURL)!)
+        iconImage.af_setImage(withURL: user.iconURL)
         
         // ボタン隠しておく
         self.button.isHidden = true

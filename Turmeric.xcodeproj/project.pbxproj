@@ -10,6 +10,11 @@
 		520654671D9E086500FD0BBE /* MicropostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520654661D9E086500FD0BBE /* MicropostTests.swift */; };
 		5208BBD31DA726F60098DBC6 /* MembersAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */; };
 		5208BBD41DA726F60098DBC6 /* MembersAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */; };
+		5208BBD81DA76AD60098DBC6 /* ListAddMemberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */; };
+		5208BBDC1DA782670098DBC6 /* ListManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */; };
+		5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */; };
+		5208BBE11DA78BCE0098DBC6 /* ListDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */; };
+		5208BBE21DA78BCE0098DBC6 /* ListDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */; };
 		521173B61D9A504800DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B71D9A6D0000DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B91D9A79AB00DDA29E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B81D9A79AB00DDA29E /* Nimble.framework */; };
@@ -54,6 +59,7 @@
 		52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B1C6E31D98EFD2002AB83B /* Assets.xcassets */; };
 		52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */; };
 		52D6E7C11D9CE22900A0A564 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6E7C01D9CE22900A0A564 /* UserTests.swift */; };
+		52EC66D71DA764B500A2D53D /* FeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EC66D61DA764B500A2D53D /* FeedUITests.swift */; };
 		52F1EF4D1DA39BD1009B4327 /* MyFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 52F1EF4C1DA39BD1009B4327 /* MyFeed.json */; };
 		7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7231C3D81D9A0BA90086D60F /* Mention.storyboard */; };
 		724DB9131D9926FB00008C25 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 724DB9121D9926FB00008C25 /* Home.storyboard */; };
@@ -68,14 +74,14 @@
 		72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B14FFA1DA49D4E005E7523 /* DummyViewController.swift */; };
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
+		72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501D1DA768B1005E7523 /* Relationship.swift */; };
+		72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501F1DA7807E005E7523 /* RelationshipTests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
 		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
 		72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150141DA621D4005E7523 /* MembersFollow.swift */; };
 		72B150171DA621D4005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B150151DA621D4005E7523 /* MembersFollow.xib */; };
 		72B1501A1DA6576A005E7523 /* UsersFollowers.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B150191DA6576A005E7523 /* UsersFollowers.json */; };
 		72B1501C1DA6577C005E7523 /* UsersFollowing.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B1501B1DA6577C005E7523 /* UsersFollowing.json */; };
-		72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501D1DA768B1005E7523 /* Relationship.swift */; };
-		72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501F1DA7807E005E7523 /* RelationshipTests.swift */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -106,6 +112,11 @@
 		520654661D9E086500FD0BBE /* MicropostTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicropostTests.swift; sourceTree = "<group>"; };
 		5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersAddCell.swift; sourceTree = "<group>"; };
 		5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersAddCell.xib; sourceTree = "<group>"; };
+		5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddMemberUITests.swift; sourceTree = "<group>"; };
+		5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListManagement.storyboard; sourceTree = "<group>"; };
+		5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManagementViewController.swift; sourceTree = "<group>"; };
+		5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDeleteCell.swift; sourceTree = "<group>"; };
+		5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDeleteCell.xib; sourceTree = "<group>"; };
 		521173B51D9A504800DDA29E /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		521173B81D9A79AB00DDA29E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		521BC0A21DA3527000A83893 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
@@ -155,6 +166,7 @@
 		52B1C6FE1D98EFD2002AB83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		52D6E7C01D9CE22900A0A564 /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		52EC66D61DA764B500A2D53D /* FeedUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedUITests.swift; sourceTree = "<group>"; };
 		52F1EF4C1DA39BD1009B4327 /* MyFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyFeed.json; sourceTree = "<group>"; };
 		7231C3D81D9A0BA90086D60F /* Mention.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mention.storyboard; sourceTree = "<group>"; };
 		724DB9121D9926FB00008C25 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -163,6 +175,8 @@
 		724DB9181D99275300008C25 /* Lists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		725B13121DA2450C00A12006 /* Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		725B13171DA35C4600A12006 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
+		72B1501D1DA768B1005E7523 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
+		72B1501F1DA7807E005E7523 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
 		725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostKeyboardToolbar.xib; sourceTree = "<group>"; };
 		72B14FF61DA39D79005E7523 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		72B14FF81DA3B11D005E7523 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -175,8 +189,6 @@
 		72B150151DA621D4005E7523 /* MembersFollow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersFollow.xib; sourceTree = "<group>"; };
 		72B150191DA6576A005E7523 /* UsersFollowers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersFollowers.json; sourceTree = "<group>"; };
 		72B1501B1DA6577C005E7523 /* UsersFollowing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersFollowing.json; sourceTree = "<group>"; };
-		72B1501D1DA768B1005E7523 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
-		72B1501F1DA7807E005E7523 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -276,6 +288,7 @@
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 				52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */,
+				5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -320,6 +333,8 @@
 				72B150151DA621D4005E7523 /* MembersFollow.xib */,
 				5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */,
 				5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */,
+				5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */,
+				5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,6 +357,7 @@
 				521BC0A81DA3B05300A83893 /* ListEdit.storyboard */,
 				72B1500C1DA5FBD9005E7523 /* Users.storyboard */,
 				52A8F6231DA652F500354999 /* ListAddMember.storyboard */,
+				5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -407,12 +423,14 @@
 			isa = PBXGroup;
 			children = (
 				52B1C6FE1D98EFD2002AB83B /* Info.plist */,
+				52EC66D61DA764B500A2D53D /* FeedUITests.swift */,
 				528F83581DA5F70F00630ACF /* HomeUITests.swift */,
 				52A15F281DA1FABA009D4525 /* ListUITests.swift */,
 				72B150001DA5EEE4005E7523 /* PostUITests.swift */,
 				72C0D6EB1D9CBBE200D47723 /* ProfileUITests.swift */,
 				521BC0A61DA3971200A83893 /* ListDetailUITests.swift */,
 				52A8F6211DA6291A00354999 /* ListEditUITests.swift */,
+				5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */,
 			);
 			path = TurmericUITests;
 			sourceTree = "<group>";
@@ -539,6 +557,7 @@
 				724DB9171D99274A00008C25 /* Profile.storyboard in Resources */,
 				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
 				5208BBD41DA726F60098DBC6 /* MembersAddCell.xib in Resources */,
+				5208BBE21DA78BCE0098DBC6 /* ListDeleteCell.xib in Resources */,
 				72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */,
 				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
 				725B13181DA35C4600A12006 /* Me.json in Resources */,
@@ -557,6 +576,7 @@
 				521BC0A51DA3527000A83893 /* MembersCell.xib in Resources */,
 				5222F5B01DA34A0F00990E8E /* MyLists.json in Resources */,
 				724DB9151D99271B00008C25 /* Post.storyboard in Resources */,
+				5208BBDC1DA782670098DBC6 /* ListManagement.storyboard in Resources */,
 				724DB9131D9926FB00008C25 /* Home.storyboard in Resources */,
 				724DB9191D99275300008C25 /* Lists.storyboard in Resources */,
 				5222F5AE1DA34A0F00990E8E /* MicropostsShow.json in Resources */,
@@ -634,6 +654,7 @@
 				72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
 				72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */,
+				5208BBE11DA78BCE0098DBC6 /* ListDeleteCell.swift in Sources */,
 				52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
@@ -642,6 +663,7 @@
 				72B14FF71DA39D79005E7523 /* PostViewController.swift in Sources */,
 				521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */,
 				725B13131DA2450C00A12006 /* Stub.swift in Sources */,
+				5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */,
 				72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				52A8F6261DA656CE00354999 /* ListAddMemberViewController.swift in Sources */,
@@ -667,6 +689,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5208BBD81DA76AD60098DBC6 /* ListAddMemberUITests.swift in Sources */,
+				52EC66D71DA764B500A2D53D /* FeedUITests.swift in Sources */,
 				528F83591DA5F70F00630ACF /* HomeUITests.swift in Sources */,
 				521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */,
 				72C0D6EC1D9CBBE200D47723 /* ProfileUITests.swift in Sources */,

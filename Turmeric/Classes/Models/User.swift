@@ -7,17 +7,17 @@ class User {
     let id: Int
     let name: String
     let email: String?
-    let iconURL: String
+    let iconURL: URL
     let followingCount: Int?
     let followersCount: Int?
     let micropostsCount: Int?
     
-    init(id: Int, name: String, iconURL: String, email: String? = nil) {
+    init(id: Int, name: String, iconURL: URL, email: String? = nil) {
         self.id = id
         self.name = name
         self.email = email
         self.iconURL = iconURL
-        
+
         self.followersCount  = nil
         self.followingCount  = nil
         self.micropostsCount = nil
@@ -31,7 +31,7 @@ class User {
         self.followingCount  = json["following_count"].int
         self.followersCount  = json["followers_count"].int
         self.micropostsCount = json["microposts_count"].int
-        self.iconURL = json["icon_url"].string!
+        self.iconURL = URL(string: json["icon_url"].string!)!
     }
     
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
@@ -39,7 +39,7 @@ class User {
             handler(User(json: json["user"]))
         }
     }
-    
+
     static func getMyUser(handler: @escaping ((User) -> Void)) {
         APIClient.request(endpoint: Endpoint.UsersMe, parameters: [:]) { json in
             handler(User(json: json["user"]))
@@ -70,14 +70,14 @@ class User {
             handler(lists)
         }
     }
-    
+
     static func getFollowing(id: Int, handler: @escaping (([User]?) -> Void) ) {
         APIClient.request(endpoint: Endpoint.UsersFollowing(id)) { json in
             let users: [User]? = (json["following"]["users"].array?.map { User(json: $0) })
             handler(users)
         }
     }
-    
+
     static func getFollowers(id: Int, handler: @escaping (([User]?) -> Void) ) {
         APIClient.request(endpoint: Endpoint.UsersFollowers(id)) { json in
             let users: [User]? = (json["followers"]["users"].array?.map { User(json: $0) })

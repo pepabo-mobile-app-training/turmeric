@@ -2,6 +2,8 @@ import UIKit
 import XLPagerTabStrip
 
 class HomeViewController: ButtonBarPagerTabStripViewController {
+    var lists: [List] = []
+
     override func viewDidLoad() {
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
@@ -20,6 +22,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         // buttonBarViewはスーパークラスで定義されている
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
+
+        // AppDelegateからログイン完了の通知を受けたらリストを取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
+            User.getMyLists() { lists in
+                self.lists = lists!
+                self.reloadPagerTabStripView()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +40,22 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     // それぞれのタブとなるViewControlerを返す
     // 必ずオーバーライドする必要がある
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        // ViewControlerを作成
-        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
-        let child1 = storyboard.instantiateInitialViewController() as! FeedViewController
-        child1.itemInfo = IndicatorInfo(title: "Home")
-        let child2 = storyboard.instantiateInitialViewController() as! FeedViewController
-        child2.itemInfo = IndicatorInfo(title: "Friends")
+        // ホームのフィードは必ず作成
+        let homeTab = [createFeedViewController(title: "Home")]
+        // リストがあればリストフィードを作成
+        let listTabs = self.lists.map { createFeedViewController(title: $0.name) }
+        return homeTab + listTabs
+    }
 
-        // 配列で返す
-        return [child1, child2]
+    override func reloadPagerTabStripView() {
+        // タブ更新時に独自の処理をさせたければここに書く
+        super.reloadPagerTabStripView()
+    }
+
+    private func createFeedViewController(title: String) -> FeedViewController {
+        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
+        let feed = storyboard.instantiateInitialViewController() as! FeedViewController
+        feed.itemInfo = IndicatorInfo(title: title)
+        return feed
     }
 }
