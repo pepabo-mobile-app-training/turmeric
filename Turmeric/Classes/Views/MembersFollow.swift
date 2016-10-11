@@ -12,7 +12,7 @@ class MembersFollow: UITableViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var name: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,13 +23,13 @@ class MembersFollow: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func displayUser(user: User, following:Bool = false){
         name.text = user.name
-        
+
         let title: String = following ? "アンフォロー" : "フォロー"
         button.setTitle(title, for: UIControlState.normal)
-        
-        iconImage.af_setImage(withURL: URL(string: user.iconURL)!)
+
+        iconImage.af_setImage(withURL: user.iconURL)
     }
 }

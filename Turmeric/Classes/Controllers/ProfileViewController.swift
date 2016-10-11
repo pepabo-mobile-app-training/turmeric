@@ -15,23 +15,23 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followersButton: UIButton!
     @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
-    
+
     //var followingButton: UIButton
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         User.getMyUser(){ user in
             self.usernameLabel.text = user.name
-            
+
             if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
                 self.micropostsLabel.text = micropostCount.description
-                
+
                 self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
                 self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
             }
-            
+
             do {
-                let data = try Data(contentsOf: URL(string: user.iconURL)! )
+                let data = try Data(contentsOf: user.iconURL )
                 self.profileImage.image = UIImage(data: data)
             } catch {
                 //画像がダウンロードできなかった
@@ -42,12 +42,12 @@ class ProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let segueID = segue.identifier else {
             return
         }
-        
+
         switch(segueID){
         case "following":
             let vc = segue.destination as! UsersViewController
@@ -61,7 +61,7 @@ class ProfileViewController: UIViewController {
             break
         case "followers":
             let vc = segue.destination as! UsersViewController
-            
+
             // 次のvcに自分のフォロワーたちを表示するように依頼
             User.getMyUser(){ me in
                 User.getFollowers(id: me.id){ followers in

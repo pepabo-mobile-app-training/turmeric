@@ -12,39 +12,39 @@ import Alamofire
 class PostViewController: UIViewController {
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var iconImageView: UIImageView!
-    
+
     @IBAction func closeButtonDidTapped(_ sender: AnyObject) {
         postTextView.resignFirstResponder() //キーボードを非アクティブ化
         self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         // アイコン表示
         User.getMyUser(){ user in
             do {
-                let data = try Data(contentsOf: URL(string: user.iconURL)! )
+                let data = try Data(contentsOf: user.iconURL )
                 self.iconImageView.image = UIImage(data: data)
             } catch {
                 //画像がダウンロードできなかった
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // ページ開いたら自動フォーカス
         postTextView.becomeFirstResponder()
-        
+
         // XIBファイルからカスタムビューを取得、インスタンス化
         let toolbar = UINib(nibName: "PostKeyboardToolbar", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIToolbar
-        
+
         // テキスト入力の際、キーボードの上に追加で表示されるビュー
         self.postTextView.inputAccessoryView = toolbar
-        
-        
+
+
         let postButton: UIBarButtonItem = toolbar.items![2]
-        
+
         postButton.target = self;
         postButton.action = #selector(PostViewController.postButtonDidTap)
     }
@@ -52,9 +52,9 @@ class PostViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     func postButtonDidTap(){
-        
+
         if let postText = postTextView.text {
             let parameters: [String : Any] = ["micropost": [
                 "content": postText
@@ -62,7 +62,7 @@ class PostViewController: UIViewController {
             ]
 
             Micropost.postMicropost(parameters: parameters, handler: {micropost in })
-        
+
             postTextView.resignFirstResponder() //キーボードを非アクティブ化
             self.dismiss(animated: true, completion: nil)   //モーダルを閉じる
         }
