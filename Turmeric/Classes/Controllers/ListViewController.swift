@@ -60,5 +60,8 @@ class ListViewController: UITableViewController {
         self.selectedListId = lists?[indexPath.row].id
         self.performSegue(withIdentifier: "goDetail", sender: nil)
     }
+    
+    @IBAction func unwindToListViewScreen(sender: UIStoryboardSegue) {
+    }
 }
 

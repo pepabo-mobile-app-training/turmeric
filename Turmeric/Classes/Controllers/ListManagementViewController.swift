@@ -13,11 +13,27 @@ class ListManagementViewController: UITableViewController{
     var myLists: [List] = []
     var deleteLists: [List] = []
     
+    @IBAction func completeButtonTapped(_ sender: AnyObject) {
+        let group = DispatchGroup.init()
+        
+        self.deleteLists.forEach {
+            group.enter()
+            List.deleteList(id: $0.id) {
+                group.leave()
+            }
+        }
+        //選択されたリストが全て削除し終わったら画面遷移する
+        group.notify(queue: DispatchQueue.main, execute: {
+            self.performSegue(withIdentifier: "unwind", sender: nil)
+        })
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeleteCell")
-        List.getMyLists { response in
-            self.myLists = response
+        User.getMyLists { response in
+            self.myLists = response!
             self.tableView.reloadData()
         }
     }
