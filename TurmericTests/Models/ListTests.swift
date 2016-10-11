@@ -72,4 +72,13 @@ class ListTests: XCTestCase {
             }
         }
     }
+    
+    func testListCreate() {
+        waitUntil { done in
+            List.createList(parameters: ["list" : ["name" : "engineer"]]) {response in
+                XCTAssertEqual(response.name, "engineer")
+                done()
+            }
+        }
+    }
 }
