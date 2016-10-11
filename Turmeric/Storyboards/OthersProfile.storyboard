@@ -40,7 +40,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Sgg-uN-ULc" kind="modal" id="PIL-83-mV2"/>
+                                            <action selector="followButtonDidTap:" destination="s0U-2F-OaN" eventType="touchUpInside" id="6qt-XM-4cQ"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnf-Iu-OEq">
@@ -151,6 +151,7 @@
                     <navigationItem key="navigationItem" title="プロフィール" id="LW0-wT-rEs"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="followButton" destination="Qnu-cd-McX" id="xXo-Jo-jnn"/>
                         <outlet property="followersButton" destination="mQj-hl-Bd0" id="3of-6S-Fud"/>
                         <outlet property="followingButton" destination="1qL-Po-6Tv" id="vUa-YB-2np"/>
                         <outlet property="micropostsLabel" destination="siK-Xr-AGZ" id="kkM-FM-AWb"/>
@@ -180,16 +181,6 @@
                 </viewControllerPlaceholder>
             </objects>
             <point key="canvasLocation" x="993" y="12"/>
-        </scene>
-        <!--ProfileEdit-->
-        <scene sceneID="uFc-D4-ScO">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pra-fj-hTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="ProfileEdit" id="Sgg-uN-ULc" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="imR-aG-V0F"/>
-                </viewControllerPlaceholder>
-            </objects>
-            <point key="canvasLocation" x="993" y="133"/>
         </scene>
         <!--Feed-->
         <scene sceneID="DFI-Se-g9U">
