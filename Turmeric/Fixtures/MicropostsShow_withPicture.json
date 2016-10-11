@@ -4,6 +4,15 @@
         "content": "With picture",
         "user_id": 2,
         "created_at": "2016-10-03T12:41:24.000Z",
-        "picture": "https://example.com/picture.jpg"
+        "picture": "https://example.com/picture.jpg",
+        "user": {
+            "id": 2,
+            "name": "Michael",
+            "activated": true,
+            "icon_url": "https://secure.gravatar.com/avatar/03ea78c0884c9ac0f73e6af7b9649e90?s=80",
+            "following_count": 2,
+            "followers_count": 3,
+            "microposts_count": 34
+        }
     }
 }
