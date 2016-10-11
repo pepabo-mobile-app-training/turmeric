@@ -11,6 +11,7 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "MicropostCell", bundle: nil), forCellReuseIdentifier: "micropostCell")
 
         User.getMyFeed { feed in
             self.microposts = feed!
@@ -34,7 +35,6 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "micropostCell", for: indexPath)
-        cell.textLabel?.text = self.microposts[indexPath.row].content
 
         return cell
     }
