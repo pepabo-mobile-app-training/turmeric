@@ -17,7 +17,7 @@ class ListFormViewController:  FormViewController{
         self.tableView?.tableHeaderView = UIView(frame: frame)
         
         // Do any additional setup after loading the view, typically from a nib.
-        form +++ TextRow() { row in
+        form +++ TextRow("listName") { row in
             row.title = "リスト名"
         }
     }
