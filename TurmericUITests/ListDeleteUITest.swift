@@ -34,7 +34,6 @@ class ListDeleteUITest: XCTestCase {
         
         deleteButton.tap()
         complateButton.tap()
-        
     }
     
 }

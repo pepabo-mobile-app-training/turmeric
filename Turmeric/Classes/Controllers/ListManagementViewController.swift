@@ -26,7 +26,6 @@ class ListManagementViewController: UITableViewController{
         group.notify(queue: DispatchQueue.main, execute: {
             self.performSegue(withIdentifier: "unwind", sender: nil)
         })
-        
     }
     
     override func viewDidLoad() {
@@ -76,7 +75,7 @@ class ListManagementViewController: UITableViewController{
             let indexPath = self.tableView.indexPathForRow(at: point)
             let cell = self.tableView.cellForRow(at: indexPath!) as! ListDeleteCell
             
-            // 削除ボタンの該当ユーザをdeleteMemberとして保存する
+            // 削除ボタンの該当リストをdeleteListsとして保持する
             self.deleteLists.append(self.myLists[(indexPath?.row)!])
             
             // 該当セルの背景をグレイにし、削除ボタンを非表示にする
