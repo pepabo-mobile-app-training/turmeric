@@ -12,7 +12,7 @@ class ListManagementViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeletCell")
+        self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeletCell")
         self.tableView.reloadData()
     }
     
