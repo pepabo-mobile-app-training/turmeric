@@ -26,7 +26,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-U1-SnQ"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndN-U1-SnQ">
+                        <connections>
+                            <action selector="followButtonDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BAy-Ka-CdF"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="OTs-Xg-ukK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6wD-ey-V7F"/>

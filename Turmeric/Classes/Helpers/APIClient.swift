@@ -116,7 +116,7 @@ enum Endpoint {
         case .ListsUpdate(let listId): return "/api/lists/\(listId)"
         case .ListsDeleteMember(let listId, let memberId): return "/api/lists/\(listId)/members/\(memberId)"
             
-        case .RelationshipCreate:  return "/api/relationship"
+        case .RelationshipCreate:  return "/api/relationships"
         case .RelationshipDestroy: return "/api/relationship"
         }
     }

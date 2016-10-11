@@ -119,7 +119,7 @@ func enableHTTPStubs() {
     stub(condition: isHost("currry.xyz") && isPath("/api/relationship") && isMethodDELETE()) { _ in
         return OHHTTPStubsResponse(jsonObject : [], statusCode: 200, headers: nil)
     }
-    stub(condition: isHost("currry.xyz") && isPath("/api/relationship") && isMethodPOST()) { _ in
+    stub(condition: isHost("currry.xyz") && isPath("/api/relationships") && isMethodPOST()) { _ in
         return OHHTTPStubsResponse(jsonObject : [], statusCode: 200, headers: nil)
     }
 }
