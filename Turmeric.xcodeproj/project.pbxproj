@@ -13,6 +13,8 @@
 		5208BBD81DA76AD60098DBC6 /* ListAddMemberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */; };
 		5208BBDC1DA782670098DBC6 /* ListManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */; };
 		5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */; };
+		5208BBE11DA78BCE0098DBC6 /* ListDeleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */; };
+		5208BBE21DA78BCE0098DBC6 /* ListDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */; };
 		521173B61D9A504800DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B71D9A6D0000DDA29E /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B51D9A504800DDA29E /* OHHTTPStubs.framework */; };
 		521173B91D9A79AB00DDA29E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521173B81D9A79AB00DDA29E /* Nimble.framework */; };
@@ -110,6 +112,8 @@
 		5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAddMemberUITests.swift; sourceTree = "<group>"; };
 		5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListManagement.storyboard; sourceTree = "<group>"; };
 		5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManagementViewController.swift; sourceTree = "<group>"; };
+		5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDeleteCell.swift; sourceTree = "<group>"; };
+		5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDeleteCell.xib; sourceTree = "<group>"; };
 		521173B51D9A504800DDA29E /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		521173B81D9A79AB00DDA29E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		521BC0A21DA3527000A83893 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 				72B150151DA621D4005E7523 /* MembersFollow.xib */,
 				5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */,
 				5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */,
+				5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */,
+				5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -542,6 +548,7 @@
 				724DB9171D99274A00008C25 /* Profile.storyboard in Resources */,
 				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
 				5208BBD41DA726F60098DBC6 /* MembersAddCell.xib in Resources */,
+				5208BBE21DA78BCE0098DBC6 /* ListDeleteCell.xib in Resources */,
 				72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */,
 				52B1C6E41D98EFD2002AB83B /* Assets.xcassets in Resources */,
 				725B13181DA35C4600A12006 /* Me.json in Resources */,
@@ -637,6 +644,7 @@
 				52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
 				72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */,
+				5208BBE11DA78BCE0098DBC6 /* ListDeleteCell.swift in Sources */,
 				52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
