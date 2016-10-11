@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AhQ-rM-qjU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s0U-2F-OaN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -12,6 +12,7 @@
         <!--プロフィール-->
         <scene sceneID="G3C-m0-anD">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="s0U-2F-OaN" customClass="OthersProfileViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Cw-4b-JHm"/>
@@ -157,63 +158,44 @@
                         <outlet property="usernameLabel" destination="ngK-ft-fVb" id="yOr-Qu-Zfm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="271.875" y="-124.64788732394366"/>
         </scene>
         <!--Users-->
         <scene sceneID="zZf-6R-EpN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-Lh-A90" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Users" id="6U7-mI-ayN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tTG-lt-jMe"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-Lh-A90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="-326"/>
         </scene>
         <!--Users-->
         <scene sceneID="5u5-Ek-KdT">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-w4-EwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Users" id="3df-Ct-SUt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4ag-Dd-iFD"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-w4-EwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="12"/>
         </scene>
         <!--ProfileEdit-->
         <scene sceneID="uFc-D4-ScO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pra-fj-hTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ProfileEdit" id="Sgg-uN-ULc" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="imR-aG-V0F"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pra-fj-hTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="133"/>
-        </scene>
-        <!--プロフィール-->
-        <scene sceneID="0Oo-Sm-jhh">
-            <objects>
-                <navigationController id="AhQ-rM-qjU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プロフィール" id="YtW-gu-rE6"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fy8-IM-aRG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="s0U-2F-OaN" kind="relationship" relationship="rootViewController" id="6T8-se-30e"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QBt-vO-vi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-727" y="-123"/>
         </scene>
         <!--Feed-->
         <scene sceneID="DFI-Se-g9U">
             <objects>
-                <viewControllerPlaceholder storyboardName="Feed" id="vdx-5Z-HXO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6C-c8-zmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Feed" id="vdx-5Z-HXO" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="272" y="288"/>
         </scene>

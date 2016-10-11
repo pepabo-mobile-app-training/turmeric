@@ -21,9 +21,9 @@ class OthersProfileViewController: UIViewController {
         set {
             self.userVal = newValue
             
-            self.usernameLabel.text = newValue.name
+            self.usernameLabel.text = newValue?.name
             
-            if let micropostCount = newValue.micropostsCount, let followersCount = newValue.followersCount, let followingCount = newValue.followingCount {
+            if let micropostCount = newValue?.micropostsCount, let followersCount = newValue?.followersCount, let followingCount = newValue?.followingCount {
                 self.micropostsLabel.text = micropostCount.description
                 
                 self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
@@ -31,7 +31,7 @@ class OthersProfileViewController: UIViewController {
             }
             
             do {
-                let data = try Data(contentsOf: newValue.iconURL )
+                let data = try Data(contentsOf: (newValue?.iconURL)! )
                 self.profileImage.image = UIImage(data: data)
             } catch {
                 //画像がダウンロードできなかった
@@ -62,7 +62,7 @@ class OthersProfileViewController: UIViewController {
             let vc = segue.destination as! UsersViewController
             
             // 次のvcにフォローユーザたちを表示するように依頼
-            User.getFollowing(id: user.id){ following in
+            User.getFollowing(id: user!.id){ following in
                 vc.displayUsers = following!
             }
             break
@@ -70,7 +70,7 @@ class OthersProfileViewController: UIViewController {
             let vc = segue.destination as! UsersViewController
             
             // 次のvcにフォロワーたちを表示するように依頼
-            User.getFollowers(id: user.id){ followers in
+            User.getFollowers(id: user!.id){ followers in
                 vc.displayUsers = followers!
             }
             break
