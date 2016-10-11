@@ -82,6 +82,9 @@
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
+		72B150241DAC88DB005E7523 /* OthersProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B150231DAC88DB005E7523 /* OthersProfile.storyboard */; };
+		72B150261DAC8A8B005E7523 /* OthersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */; };
+		72B150281DACDE22005E7523 /* OthersProfileUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150271DACDE22005E7523 /* OthersProfileUITest.swift */; };
 		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
 		72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150141DA621D4005E7523 /* MembersFollow.swift */; };
 		72B150171DA621D4005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B150151DA621D4005E7523 /* MembersFollow.xib */; };
@@ -189,6 +192,9 @@
 		724DB9181D99275300008C25 /* Lists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		725B13121DA2450C00A12006 /* Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		725B13171DA35C4600A12006 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
+		72B150231DAC88DB005E7523 /* OthersProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OthersProfile.storyboard; sourceTree = "<group>"; };
+		72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileViewController.swift; sourceTree = "<group>"; };
+		72B150271DACDE22005E7523 /* OthersProfileUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileUITest.swift; sourceTree = "<group>"; };
 		725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostKeyboardToolbar.xib; sourceTree = "<group>"; };
 		72B14FF61DA39D79005E7523 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		72B14FF81DA3B11D005E7523 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -304,6 +310,7 @@
 				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 				52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */,
 				5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */,
+				72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */,
 				526437171DAC9B3C0034F7F2 /* ListCreateViewController.swift */,
 				5264371B1DACB8F80034F7F2 /* ListFormViewController.swift */,
 			);
@@ -377,6 +384,7 @@
 				52A8F6231DA652F500354999 /* ListAddMember.storyboard */,
 				5208BBDB1DA782670098DBC6 /* ListManagement.storyboard */,
 				72C0D6E51D9BB70900D47723 /* ProfileEdit.storyboard */,
+				72B150231DAC88DB005E7523 /* OthersProfile.storyboard */,
 				526437151DAC9ADF0034F7F2 /* ListCreate.storyboard */,
 			);
 			path = Storyboards;
@@ -452,6 +460,7 @@
 				521BC0A61DA3971200A83893 /* ListDetailUITests.swift */,
 				52A8F6211DA6291A00354999 /* ListEditUITests.swift */,
 				5208BBD71DA76AD60098DBC6 /* ListAddMemberUITests.swift */,
+				72B150271DACDE22005E7523 /* OthersProfileUITest.swift */,
 				526437131DAC8F6B0034F7F2 /* ListDeleteUITest.swift */,
 			);
 			path = TurmericUITests;
@@ -596,6 +605,7 @@
 				72C0D6E61D9BB70900D47723 /* ProfileEdit.storyboard in Resources */,
 				72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */,
 				5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */,
+				72B150241DAC88DB005E7523 /* OthersProfile.storyboard in Resources */,
 				72B1501A1DA6576A005E7523 /* UsersFollowers.json in Resources */,
 				521BC0A51DA3527000A83893 /* MembersCell.xib in Resources */,
 				5222F5B01DA34A0F00990E8E /* MyLists.json in Resources */,
@@ -677,6 +687,7 @@
 				72C0D6E81D9BBC9000D47723 /* LinedButton.swift in Sources */,
 				52A635D31D9CD9FE00646119 /* Micropost.swift in Sources */,
 				52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */,
+				72B150261DAC8A8B005E7523 /* OthersProfileViewController.swift in Sources */,
 				72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */,
 				72B14FF91DA3B11D005E7523 /* TabBarController.swift in Sources */,
 				72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */,
@@ -717,6 +728,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B150281DACDE22005E7523 /* OthersProfileUITest.swift in Sources */,
 				5208BBD81DA76AD60098DBC6 /* ListAddMemberUITests.swift in Sources */,
 				52EC66D71DA764B500A2D53D /* FeedUITests.swift in Sources */,
 				526437141DAC8F6B0034F7F2 /* ListDeleteUITest.swift in Sources */,

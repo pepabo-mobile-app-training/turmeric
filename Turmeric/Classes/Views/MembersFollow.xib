@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-2I-aep">
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5gU-2I-aep">
                         <constraints>
                             <constraint firstAttribute="width" secondItem="5gU-2I-aep" secondAttribute="height" multiplier="1:1" id="UHP-9I-lEx"/>
                         </constraints>

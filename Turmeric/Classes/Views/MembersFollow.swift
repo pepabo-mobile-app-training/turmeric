@@ -62,7 +62,6 @@ class MembersFollow: UITableViewCell {
     
     // フォロー/アンフォローボタン押下
     @IBAction func followButtonDidTap(_ sender: AnyObject) {
-        print(user.id)
         if(self.isFollowedByMe!){
             Relationship.destroyRelationship(userID: user.id){
                 self.isFollowedByMe = false
