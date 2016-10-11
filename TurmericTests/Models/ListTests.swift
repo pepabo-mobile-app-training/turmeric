@@ -64,4 +64,12 @@ class ListTests: XCTestCase {
             }
         }
     }
+    
+    func testDeleteList() {
+        waitUntil { done in
+            List.deleteList(id: 1) {_ in
+                done()
+            }
+        }
+    }
 }

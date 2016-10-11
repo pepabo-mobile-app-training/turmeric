@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7FL-EZ-zIx" id="xxU-IA-Sjj">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-sg-riC">
@@ -39,10 +39,18 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="リスト" id="BMB-Ol-9zC">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="u5z-Z6-yvY"/>
-                        <barButtonItem key="rightBarButtonItem" title="完了" id="z4d-VU-d6j"/>
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="z4d-VU-d6j">
+                            <connections>
+                                <action selector="completeButtonTapped:" destination="Mg8-VF-Vfm" id="E2g-ix-N7x"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ylx-Be-rCZ" kind="unwind" identifier="unwind" animates="NO" unwindAction="unwindToListViewScreenWithSender:" id="igV-JP-NPA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rrm-dT-aAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ylx-Be-rCZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2034.4000000000001" y="114.69265367316342"/>
         </scene>
