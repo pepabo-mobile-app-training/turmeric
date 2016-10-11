@@ -8,8 +8,7 @@
                 "icon_url" : "http://example.com/image/icon1.png",
                 "following_count": 100,
                 "followers_count": 200,
-                "microposts_count": 1000,
-                "email": "ry023@example.com"
+                "microposts_count": 1000
             },
             {
                 "id"       : 103,
@@ -17,8 +16,7 @@
                 "icon_url" : "http://example.com/image/icon1.png",
                 "following_count": 100,
                 "followers_count": 200,
-                "microposts_count": 1000,
-                "email": "mataku@example.com"
+                "microposts_count": 1000
             }
             
         ]
