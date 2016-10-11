@@ -18,6 +18,7 @@ class FeedUITests: XCTestCase {
         let micropostCells = app.tables.cells
         XCTAssertEqual(10, micropostCells.count)
         XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
+        XCTAssert(micropostCells.staticTexts["Example User"].exists)
     }
 
     // リストフィード(リストに追加されたユーザーの投稿)
@@ -31,6 +32,7 @@ class FeedUITests: XCTestCase {
         // TODO: リストのフィードが取得できるようになったら個数やテキストを変更する
         XCTAssertEqual(10, micropostCells.count)
         XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
+        XCTAssert(micropostCells.staticTexts["Example User"].exists)
     }
 
     // プロフィールフィード(プロフィールページの自分の投稿)
@@ -41,5 +43,6 @@ class FeedUITests: XCTestCase {
         // TODO: プロフィールフィードが取得できるようになったら個数やテキストを変更する
         XCTAssertEqual(10, micropostCells.count)
         XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
+        XCTAssert(micropostCells.staticTexts["Example User"].exists)
     }
 }
