@@ -17,32 +17,25 @@ class OthersProfileViewController: UIViewController {
     
     
     // 遷移元のVCで、このプロパティに表示したいユーザをsetする
-    var user: User? {
-        set {
-            self.userVal = newValue
+    var user: User? = nil
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.usernameLabel.text = self.user?.name
+        
+        if let micropostCount = user?.micropostsCount, let followersCount = user?.followersCount, let followingCount = user?.followingCount {
+            self.micropostsLabel.text = micropostCount.description
             
-            self.usernameLabel.text = newValue?.name
-            
-            if let micropostCount = newValue?.micropostsCount, let followersCount = newValue?.followersCount, let followingCount = newValue?.followingCount {
-                self.micropostsLabel.text = micropostCount.description
-                
-                self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
-                self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
-            }
-            
-            do {
-                let data = try Data(contentsOf: (newValue?.iconURL)! )
-                self.profileImage.image = UIImage(data: data)
-            } catch {
-                //画像がダウンロードできなかった
-            }
+            self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
+            self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
         }
         
-        get {
-            return self.userVal
+        do {
+            let data = try Data(contentsOf: (user?.iconURL)! )
+            self.profileImage.image = UIImage(data: data)
+        } catch {
+            //画像がダウンロードできなかった
         }
     }
-    private var userVal: User? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

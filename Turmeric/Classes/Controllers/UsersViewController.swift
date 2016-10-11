@@ -21,6 +21,8 @@ class UsersViewController: UITableViewController {
     }
     private var displayUsersVal: [User] = [] // displayUsersの実データ部
     
+    var selectedUser: User!
+    
     override func viewDidLoad() {
         // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
         tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
@@ -38,33 +40,26 @@ class UsersViewController: UITableViewController {
         // 表示するセルを再利用して取得
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersFollow", for: indexPath) as! MembersFollow
         
-        // 画像押された時のコールバックを登録
-        //self.addCallbackForOthersProfile(image: cell.iconImage, user: displayUsers[indexPath.row])
-        
         cell.displayUser(user: displayUsers[indexPath.row])
         
         return cell
     }
     
-    /*
-    // アイコンのUIImageに他者(user)のプロフィールに飛ぶコールバックを登録 押されたらコールバックが呼び出される
-    private func addCallbackForOthersProfile(image: UIImageView, user: User){
-        image.isUserInteractionEnabled = true
-        let gesture = UIGestureRecognizer(target: self, action: #selector(UsersViewController.moveToProfile))
-        
-        image.addGestureRecognizer(gesture)
-    }
- */
-    
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "profile", sender: nil)
+        self.selectedUser = displayUsers[indexPath.row]  // 選択されたユーザを覚えておいてprepareで使う
+        print(selectedUser.name)
+        
+        self.performSegue(withIdentifier: "profile", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "profile"){
+            let vc = segue.destination as! OthersProfileViewController
+            
+            print(selectedUser.name)
+            
+            vc.user = self.selectedUser
+        }
     }
 
-    /*
-    // アイコンのUIImageが押されたらプロフィールページへ移動する
-    func moveToProfile() {
-        print("debug")
-        performSegue(withIdentifier: "profile", sender: self)
-    }
- */
 }
