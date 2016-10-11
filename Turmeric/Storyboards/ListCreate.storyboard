@@ -17,12 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="zix-n4-l9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuG-Vd-R84">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="oDb-E4-4TD"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="DHn-dJ-DK1">
+                                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="inn-w0-HQM"/>
+                                        <barButtonItem key="rightBarButtonItem" title="保存" id="YA2-v8-UC7"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vuG-Vd-R84" firstAttribute="top" secondItem="zix-n4-l9z" secondAttribute="top" id="Z1a-D8-Yhd"/>
+                            <constraint firstAttribute="trailing" secondItem="vuG-Vd-R84" secondAttribute="trailing" id="ahq-50-hsP"/>
+                            <constraint firstItem="vuG-Vd-R84" firstAttribute="leading" secondItem="zix-n4-l9z" secondAttribute="leading" id="ncR-K9-f3n"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fuM-Qs-odR">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="0qq-qi-lhi"/>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Z77-yF-Qks"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igs-pF-kxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="31"/>
+            <point key="canvasLocation" x="1180" y="30.134932533733135"/>
         </scene>
     </scenes>
 </document>
