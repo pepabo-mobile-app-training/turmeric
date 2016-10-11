@@ -12,6 +12,11 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "MicropostCell", bundle: nil), forCellReuseIdentifier: "micropostCell")
+        // あらかじめセルの高さの概算値を設定しておいて、実際の計算処理を遅延させる
+        // 実際に表示される高さに近くしておくとカクカクしにくくなるらしい
+        tableView.estimatedRowHeight = 70
+        // セルの高さを自動計算する
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         User.getMyFeed { feed in
             self.microposts = feed!
