@@ -12,7 +12,16 @@ class ListCreateViewController: UIViewController {
     var formController: ListFormViewController!
     
     @IBAction func saveButtonTapped(_ sender: AnyObject) {
-        print(formController.listName)
+        //リスト名が空の場合は何もしない
+        if (formController.listName == "") {
+            return
+        }
+        
+        let parameters = ["list" : ["name" : formController.listName]]
+        
+        List.createList(parameters: parameters) { response in
+            self.performSegue(withIdentifier: "unwind", sender: nil)
+        }
     }
     
     override func viewDidLoad() {
