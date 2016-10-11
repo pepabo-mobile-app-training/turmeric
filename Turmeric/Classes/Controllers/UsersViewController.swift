@@ -47,16 +47,12 @@ class UsersViewController: UITableViewController {
     
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         self.selectedUser = displayUsers[indexPath.row]  // 選択されたユーザを覚えておいてprepareで使う
-        print(selectedUser.name)
-        
         self.performSegue(withIdentifier: "profile", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "profile"){
             let vc = segue.destination as! OthersProfileViewController
-            
-            print(selectedUser.name)
             
             vc.user = self.selectedUser
         }
