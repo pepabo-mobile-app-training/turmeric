@@ -35,6 +35,8 @@
 		522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C8AA61D9CBC2C00E17D4C /* List.swift */; };
 		522C8AAF1D9D1D3F00E17D4C /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C8AAE1D9D1D3F00E17D4C /* TestHelpers.swift */; };
 		5232599F1D9A0D8100476111 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232599E1D9A0D8100476111 /* User.swift */; };
+		523D86B41DAC7CFB00F5D1F2 /* MicropostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */; };
+		523D86B51DAC7CFB00F5D1F2 /* MicropostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */; };
 		5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242ABF71D98F1BE0095D4F4 /* ViewController.swift */; };
 		5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */; };
 		5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */; };
@@ -137,6 +139,8 @@
 		522C8AA61D9CBC2C00E17D4C /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		522C8AAE1D9D1D3F00E17D4C /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		5232599E1D9A0D8100476111 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicropostCell.swift; sourceTree = "<group>"; };
+		523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MicropostCell.xib; sourceTree = "<group>"; };
 		5242ABF71D98F1BE0095D4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -326,17 +330,19 @@
 			isa = PBXGroup;
 			children = (
 				72C0D6E71D9BBC9000D47723 /* LinedButton.swift */,
+				5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */,
+				5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */,
+				5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */,
+				5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */,
 				521BC0A21DA3527000A83893 /* MembersCell.swift */,
 				521BC0A31DA3527000A83893 /* MembersCell.xib */,
 				526B149D1DA4A21F00BDAAFA /* MembersDeleteCell.swift */,
 				526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */,
-				725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */,
 				72B150141DA621D4005E7523 /* MembersFollow.swift */,
 				72B150151DA621D4005E7523 /* MembersFollow.xib */,
-				5208BBD11DA726F60098DBC6 /* MembersAddCell.swift */,
-				5208BBD21DA726F60098DBC6 /* MembersAddCell.xib */,
-				5208BBDF1DA78BCE0098DBC6 /* ListDeleteCell.swift */,
-				5208BBE01DA78BCE0098DBC6 /* ListDeleteCell.xib */,
+				523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */,
+				523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */,
+				725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,6 +553,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523D86B51DAC7CFB00F5D1F2 /* MicropostCell.xib in Resources */,
 				52A8F6241DA652F500354999 /* ListAddMember.storyboard in Resources */,
 				72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */,
 				526B14A01DA4A21F00BDAAFA /* MembersDeleteCell.xib in Resources */,
@@ -668,6 +675,7 @@
 				725B13131DA2450C00A12006 /* Stub.swift in Sources */,
 				5208BBDE1DA782AA0098DBC6 /* ListManagementViewController.swift in Sources */,
 				72B14FFB1DA49D4E005E7523 /* DummyViewController.swift in Sources */,
+				523D86B41DAC7CFB00F5D1F2 /* MicropostCell.swift in Sources */,
 				52B1C6DD1D98EFD2002AB83B /* AppDelegate.swift in Sources */,
 				52A8F6261DA656CE00354999 /* ListAddMemberViewController.swift in Sources */,
 				522C8AA71D9CBC2C00E17D4C /* List.swift in Sources */,

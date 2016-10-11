@@ -11,6 +11,12 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "MicropostCell", bundle: nil), forCellReuseIdentifier: "micropostCell")
+        // あらかじめセルの高さの概算値を設定しておいて、実際の計算処理を遅延させる
+        // 実際に表示される高さに近くしておくとカクカクしにくくなるらしい
+        tableView.estimatedRowHeight = 60
+        // セルの高さを自動計算する
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         User.getMyFeed { feed in
             self.microposts = feed!
@@ -33,8 +39,10 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "micropostCell", for: indexPath)
-        cell.textLabel?.text = self.microposts[indexPath.row].content
+        let cell = tableView.dequeueReusableCell(withIdentifier: "micropostCell", for: indexPath) as! MicropostCell
+        cell.name.text = "Example User"
+        cell.content.text = self.microposts[indexPath.row].content
+        cell.profileImage.af_setImage(withURL: URL(string: "https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80")!)
 
         return cell
     }
