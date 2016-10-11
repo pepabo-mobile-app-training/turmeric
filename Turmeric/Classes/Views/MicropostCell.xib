@@ -17,7 +17,7 @@
                 <frame key="frameInset" width="320" height="67"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-wt-JL0">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-wt-JL0">
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -39,6 +39,7 @@
                     <constraint firstItem="J1y-wt-JL0" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="0e6-uS-LNI"/>
                     <constraint firstItem="qsK-Qf-28z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="2uh-1n-alg"/>
                     <constraint firstItem="qsK-Qf-28z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3tS-Ef-TQ9"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gPJ-QP-VGg" secondAttribute="bottom" id="4gb-tg-9gD"/>
                     <constraint firstItem="gPJ-QP-VGg" firstAttribute="leading" secondItem="qsK-Qf-28z" secondAttribute="trailing" constant="10" id="H73-kN-naW"/>
                     <constraint firstItem="J1y-wt-JL0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="e86-Iy-Apq"/>
                     <constraint firstItem="J1y-wt-JL0" firstAttribute="leading" secondItem="qsK-Qf-28z" secondAttribute="trailing" constant="10" id="ev5-4c-Mts"/>
