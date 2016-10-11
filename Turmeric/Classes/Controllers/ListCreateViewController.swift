@@ -9,9 +9,16 @@
 import UIKit
 
 class ListCreateViewController: UIViewController {
+    var formController: ListFormViewController!
+    
+    @IBAction func saveButtonTapped(_ sender: AnyObject) {
+        print(formController.listName)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        formController = self.childViewControllers.first as! ListFormViewController
         
     }
     

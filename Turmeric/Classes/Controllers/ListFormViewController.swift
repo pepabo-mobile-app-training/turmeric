@@ -10,6 +10,9 @@ import UIKit
 import Eureka
 
 class ListFormViewController:  FormViewController{
+    
+    var listName: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //隙間が入ってしまうので明示的にヘッダの高さを指定してあげる
@@ -19,6 +22,12 @@ class ListFormViewController:  FormViewController{
         // Do any additional setup after loading the view, typically from a nib.
         form +++ TextRow("listName") { row in
             row.title = "リスト名"
+        }.onChange{ row in
+            if let value = row.value {
+                self.listName = value as String
+            } else {
+                self.listName = ""
+            }
         }
     }
     
