@@ -51,4 +51,44 @@ class MicropostTests: XCTestCase {
             }
         }
     }
+
+    func testGetFeed() {
+        // ホームフィード(通常のタイムライン)
+        waitUntil { done in
+            Micropost.getFeed(endpoint: Endpoint.MyFeed) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.content)
+                    XCTAssertNotNil($0.userId)
+                    XCTAssertNotNil($0.user.name)
+                }
+                done()
+            }
+        }
+        // リストフィード(リストに追加されたユーザーの投稿)
+        waitUntil { done in
+            Micropost.getFeed(endpoint: Endpoint.ListFeed(1)) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.content)
+                    XCTAssertNotNil($0.userId)
+                    XCTAssertNotNil($0.user.name)
+                }
+                done()
+            }
+        }
+        // プロフィールフィード(ユーザーが投稿したマイクロポスト一覧)
+        waitUntil { done in
+            Micropost.getFeed(endpoint: Endpoint.UsersMicroposts(1)) { response in
+                response!.forEach {
+                    XCTAssertNotNil($0.id)
+                    XCTAssertNotNil($0.content)
+                    XCTAssertNotNil($0.userId)
+                    XCTAssertNotNil($0.user.name)
+                }
+                done()
+            }
+        }
+    }
+
 }
