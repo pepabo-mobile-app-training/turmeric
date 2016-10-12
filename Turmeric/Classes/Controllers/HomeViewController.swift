@@ -4,6 +4,18 @@ import XLPagerTabStrip
 class HomeViewController: ButtonBarPagerTabStripViewController {
     var lists: [List] = []
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // AppDelegateからログイン完了の通知を受けたらリストを取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
+            User.getMyLists() { lists in
+                self.lists = lists!
+                self.reloadPagerTabStripView()
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
@@ -22,15 +34,6 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         // buttonBarViewはスーパークラスで定義されている
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
-
-        // AppDelegateからログイン完了の通知を受けたらリストを取得する
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyLists() { lists in
-                self.lists = lists!
-                self.reloadPagerTabStripView()
-            }
-        })
     }
 
     override func didReceiveMemoryWarning() {
