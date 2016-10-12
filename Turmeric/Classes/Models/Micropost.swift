@@ -29,29 +29,42 @@ class Micropost {
         self.user = User(json: json["user"])
     }
 
-    static func postMicropost(parameters: Parameters, handler: @escaping ((Micropost) -> Void)) {
-        APIClient.request(endpoint: Endpoint.MicropostsPost, parameters: parameters) { json in
-            handler(Micropost(json: json["micropost"]))
+    static func postMicropost(parameters: Parameters, handler: @escaping ((APIResponse<Micropost>) -> Void)) {
+        APIClient.request(endpoint: Endpoint.MicropostsPost, parameters: parameters) { response in
+            switch response {
+            case .Success(let json):
+                handler(APIResponse.Success(Micropost(json: json["micropost"])))
+            default: break
+            }
+            
         }
     }
 
-    static func getMicropost(id: Int, handler: @escaping ((Micropost) -> Void)) {
-        APIClient.request(endpoint: Endpoint.MicropostsShow(id)) { json in
-            handler(Micropost(json: json["micropost"]))
+    static func getMicropost(id: Int, handler: @escaping ((APIResponse<Micropost>) -> Void)) {
+        APIClient.request(endpoint: Endpoint.MicropostsShow(id)) { response in
+            switch response {
+            case .Success(let json):
+                handler(APIResponse.Success(Micropost(json: json["micropost"])))
+            default: break
+            }
         }
     }
 
     static func getFeed(endpoint: Endpoint, handler: @escaping ([Micropost]?) -> Void) {
-        APIClient.request(endpoint: endpoint) { json in
-            let microposts: [Micropost]?
-
-            switch endpoint {
-            case .UsersMicroposts:
-                microposts = (json["microposts"].array?.map { Micropost(json: $0) })
-            default:
-                microposts = (json["feed"].array?.map { Micropost(json: $0) })
+        APIClient.request(endpoint: endpoint) { response in
+            switch response {
+            case .Success(let json):
+                let microposts: [Micropost]?
+                
+                switch endpoint {
+                case .UsersMicroposts:
+                    microposts = (json["microposts"].array?.map { Micropost(json: $0) })
+                default:
+                    microposts = (json["feed"].array?.map { Micropost(json: $0) })
+                }
+                handler(microposts)
+            default: break
             }
-            handler(microposts)
         }
     }
 }

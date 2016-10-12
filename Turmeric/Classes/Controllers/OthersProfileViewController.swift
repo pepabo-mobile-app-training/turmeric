@@ -39,23 +39,33 @@ class OthersProfileViewController: UIViewController {
         
         
         // 自分がフォローしてるか取得してボタンを変更
-        User.getMyUser(){ me in
-            User.getFollowing(id: me.id){ following in
-                self.followButton.isHidden = false    // レスポンスが来たので隠すのをやめる
-                
-                self.isFollowedByMe = false
-                
-                var title = "フォロー"
-                
-                following?.forEach() { followedByMe in
-                    if(followedByMe.id == self.user?.id){
-                        self.isFollowedByMe = true
-                        title = "アンフォロー"
-                        return
+        User.getMyUser(){ getMyUserResponse in
+            switch getMyUserResponse {
+            case .Success(let me):
+                User.getFollowing(id: me.id){ getFollowingResponse in
+                    switch getFollowingResponse {
+                    case .Success(let following):
+                        self.followButton.isHidden = false    // レスポンスが来たので隠すのをやめる
+                        
+                        self.isFollowedByMe = false
+                        
+                        var title = "フォロー"
+                        
+                        following?.forEach() { followedByMe in
+                            if(followedByMe.id == self.user?.id){
+                                self.isFollowedByMe = true
+                                title = "アンフォロー"
+                                return
+                            }
+                        }
+                        
+                        self.followButton.setTitle(title, for: UIControlState.normal)
+                    default: break
+
                     }
                 }
-                
-                self.followButton.setTitle(title, for: UIControlState.normal)
+
+            default: break
             }
         }
     }
@@ -80,6 +90,7 @@ class OthersProfileViewController: UIViewController {
             // 次のvcにフォローユーザたちを表示するように依頼
             vc.displayStyle = UsersViewController.DisplayStyle.Following(user!.id)
             break
+
         case "followers":
             let vc = segue.destination as! UsersViewController
             
@@ -94,14 +105,23 @@ class OthersProfileViewController: UIViewController {
     @IBAction func followButtonDidTap(_ sender: AnyObject) {
         // フォロー/アンフォローボタンを押下
         if(self.isFollowedByMe!){
-            Relationship.destroyRelationship(userID: self.user!.id){
-                self.isFollowedByMe = false
-                self.followButton.setTitle("フォロー", for: UIControlState.normal)
+            Relationship.destroyRelationship(userID: self.user!.id){ response in
+                switch response {
+                case .Success:
+                    self.isFollowedByMe = false
+                    self.followButton.setTitle("フォロー", for: UIControlState.normal)
+                default: break
+                }
             }
         }else{
-            Relationship.createRelationship(userID: self.user!.id){
-                self.isFollowedByMe = true
-                self.followButton.setTitle("アンフォロー", for: UIControlState.normal)
+            Relationship.createRelationship(userID: self.user!.id){ response in
+                switch response {
+                case .Success:
+                    self.isFollowedByMe = true
+                    self.followButton.setTitle("アンフォロー", for: UIControlState.normal)
+                default: break
+                }
+                
             }
         }
 

@@ -331,8 +331,8 @@
 		5242ABF21D98F16A0095D4F4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				52685A261D990E4400FEC0A7 /* APIClient.swift */,
 				725B13121DA2450C00A12006 /* Stub.swift */,
+				52685A261D990E4400FEC0A7 /* APIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

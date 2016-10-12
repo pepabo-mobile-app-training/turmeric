@@ -65,13 +65,23 @@ class ListDetailViewController: UIViewController, UITableViewDelegate, UITableVi
 
     private func requestData() {
         List.getList(id: self.selectedListId!) { response in
-            self.list = response
-            self.listNameLabel.text = response.name
+            switch response {
+            case .Success(let list):
+                self.list = list
+                self.listNameLabel.text = list.name
+            default: break
+            }
+            
         }
 
         List.getMembers(id: self.selectedListId!) { response in
-            self.members = response
-            self.tableView.reloadData()
+            switch response {
+            case .Success(let members):
+                self.members = members
+                self.tableView.reloadData()
+            default: break
+            }
+            
         }
     }
 }

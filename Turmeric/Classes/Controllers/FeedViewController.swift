@@ -21,9 +21,13 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         // AppDelegateからログイン完了の通知を受けたらフィードを取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyFeed { feed in
-                self.microposts = feed!
-                self.tableView.reloadData()
+            User.getMyFeed { response in
+                switch response {
+                case .Success(let feed):
+                    self.microposts = feed!
+                    self.tableView.reloadData()
+                default: break
+                }
             }
         })
     }

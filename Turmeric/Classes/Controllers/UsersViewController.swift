@@ -36,14 +36,23 @@ class UsersViewController: UITableViewController {
         // フォロー一覧かフォロワー一覧かで読み込む内容を判別
         switch self.displayStyle! {
         case let UsersViewController.DisplayStyle.Following(userID):
-            User.getFollowing(id: userID){ following in
-                self.displayUsers = following!
-                self.tableView.reloadData()
+            User.getFollowing(id: userID){ response in
+                switch response {
+                case .Success(let following):
+                    self.displayUsers = following!
+                    self.tableView.reloadData()
+                default: break
+                }
             }
         case let UsersViewController.DisplayStyle.Followers(userID):
-            User.getFollowers(id: userID){ followers in
-                self.displayUsers = followers!
-                self.tableView.reloadData()
+            User.getFollowers(id: userID){ response in
+                switch response {
+                case .Success(let followers):
+                    self.displayUsers = followers!
+                    self.tableView.reloadData()
+                default: break
+                }
+                
             }
         }
     }

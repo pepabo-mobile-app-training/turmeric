@@ -7,22 +7,37 @@ class APIClient {
 
     static var token: String?
 
-    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ response: APIResponse<JSON>) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         let headers = authHeader()
 
         Alamofire.request(url, method: method, parameters: parameters, headers: headers).validate(statusCode: 200...299).responseJSON { response in
+            
             switch response.result {
             case .success(let value):
-                handler(JSON(value))
+                handler(APIResponse.Success(JSON(value)))
             case .failure(let error):
-                print(error)
+                switch error as! AFError {
+                case .responseValidationFailed:
+                    print(response.response!.statusCode)
+                    if (response.response!.statusCode == 422){
+                        let responseData = JSON(NSString(data: response.data!, encoding: String.Encoding.utf8.rawValue))
+                        handler(APIResponse.ValidationError(responseData))
+                    } else if (response.response!.statusCode == 401) {
+                        handler(APIResponse.Unauthorized)
+                    } else {
+                        handler(APIResponse.RequestFailure)
+                    }
+                    
+                default:
+                    handler(APIResponse.RequestFailure)
+                }
             }
         }
     }
 
-    static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, handler: @escaping (_ response: APIResponse<JSON>) -> Void) {
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
 
@@ -132,4 +147,12 @@ enum Endpoint {
         case .RelationshipDestroy: return "/api/relationship"
         }
     }
+    
+}
+
+enum APIResponse<ResultType> {
+    case Success(ResultType)   //リクエスト成功
+    case ValidationError(JSON) //バリデーションエラー
+    case Unauthorized          //認証エラー
+    case RequestFailure        //その他のエラー
 }

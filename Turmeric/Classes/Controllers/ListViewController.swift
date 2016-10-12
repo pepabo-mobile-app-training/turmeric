@@ -61,9 +61,13 @@ class ListViewController: UITableViewController {
     }
     
     private func requestData(){
-        User.getMyLists { lists in
-            self.lists = lists
-            self.tableView.reloadData()
+        User.getMyLists { response in
+            switch response {
+            case .Success(let lists):
+                self.lists = lists
+                self.tableView.reloadData()
+            default: break
+            }
         }
     }
 }

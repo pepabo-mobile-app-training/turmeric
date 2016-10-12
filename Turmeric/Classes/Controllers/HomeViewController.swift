@@ -9,9 +9,13 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         // AppDelegateからログイン完了の通知を受けたらリストを取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyLists() { lists in
-                self.lists = lists!
-                self.reloadPagerTabStripView()
+            User.getMyLists() { response in
+                switch response {
+                case .Success(let lists):
+                    self.lists = lists!
+                    self.reloadPagerTabStripView()
+                default: break
+                }
             }
         })
     }

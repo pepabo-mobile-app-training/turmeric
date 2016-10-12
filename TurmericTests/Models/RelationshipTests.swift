@@ -21,8 +21,12 @@ class RelationshipTests: XCTestCase {
         login()
         
         waitUntil { done in
-            Relationship.createRelationship(userID: 102){
-                done()
+            Relationship.createRelationship(userID: 102){ response in
+                switch response {
+                case .Success:
+                    done()
+                default: break
+                }
             }
         }
     }
@@ -31,8 +35,12 @@ class RelationshipTests: XCTestCase {
         login()
         
         waitUntil { done in
-            Relationship.destroyRelationship(userID: 101){
-                done()
+            Relationship.destroyRelationship(userID: 101){ response in
+                switch response {
+                case .Success:
+                    done()
+                default: break
+                }
             }
         }
     }
