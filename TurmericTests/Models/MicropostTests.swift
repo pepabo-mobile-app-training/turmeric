@@ -22,6 +22,7 @@ class MicropostTests: XCTestCase {
         waitUntil { done in
             Micropost.postMicropost(parameters: parameters){ response in
                 XCTAssertEqual("I just ate an orange!", response.content)
+                XCTAssertEqual("Example User", response.user.name)
                 done()
             }
         }
