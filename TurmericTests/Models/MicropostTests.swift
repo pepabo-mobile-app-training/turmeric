@@ -62,6 +62,8 @@ class MicropostTests: XCTestCase {
                     XCTAssertNotNil($0.userId)
                     XCTAssertNotNil($0.user.name)
                 }
+                // ユーザー名を確認して、エンドポイントごとに適切なレスポンスが返ってきているかテスト
+                XCTAssertEqual("Example User", response![0].user.name)
                 done()
             }
         }
@@ -74,6 +76,7 @@ class MicropostTests: XCTestCase {
                     XCTAssertNotNil($0.userId)
                     XCTAssertNotNil($0.user.name)
                 }
+                XCTAssertEqual("ListFeed Test User", response![0].user.name)
                 done()
             }
         }
@@ -86,6 +89,7 @@ class MicropostTests: XCTestCase {
                     XCTAssertNotNil($0.userId)
                     XCTAssertNotNil($0.user.name)
                 }
+                XCTAssertEqual("Profile Test User", response![0].user.name)
                 done()
             }
         }
