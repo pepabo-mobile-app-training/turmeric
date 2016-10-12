@@ -22,11 +22,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         let profileFeed = self.childViewControllers[0] as! FeedViewController
-        User.getMyUser(){ user in
-            self.me = user
-            profileFeed.endpoint = Endpoint.UsersMicroposts(self.me!.id)
-            profileFeed.reloadFeed()
+        User.getMyUser(){ response in
+            switch response {
+            case .Success(let user):
+                self.me = user
+                profileFeed.endpoint = Endpoint.UsersMicroposts(self.me!.id)
+                profileFeed.reloadFeed()
+            default: break
+            }
         }
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
