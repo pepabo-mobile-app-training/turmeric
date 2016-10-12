@@ -67,43 +67,54 @@ class MicropostTests: XCTestCase {
         // ホームフィード(通常のタイムライン)
         waitUntil { done in
             Micropost.getFeed(endpoint: Endpoint.MyFeed) { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.content)
-                    XCTAssertNotNil($0.userId)
-                    XCTAssertNotNil($0.user.name)
+                switch response {
+                case .Success(let feed):
+                    feed!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.content)
+                        XCTAssertNotNil($0.userId)
+                        XCTAssertNotNil($0.user.name)
+                    }
+                    // ユーザー名を確認して、エンドポイントごとに適切なレスポンスが返ってきているかテスト
+                    XCTAssertEqual("Example User", feed![0].user.name)
+                    done()
+                default: break
                 }
-                // ユーザー名を確認して、エンドポイントごとに適切なレスポンスが返ってきているかテスト
-                XCTAssertEqual("Example User", response![0].user.name)
-                done()
             }
         }
         // リストフィード(リストに追加されたユーザーの投稿)
         waitUntil { done in
             Micropost.getFeed(endpoint: Endpoint.ListFeed(1)) { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.content)
-                    XCTAssertNotNil($0.userId)
-                    XCTAssertNotNil($0.user.name)
+                switch response {
+                case .Success(let feed):
+                    feed!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.content)
+                        XCTAssertNotNil($0.userId)
+                        XCTAssertNotNil($0.user.name)
+                    }
+                    XCTAssertEqual("ListFeed Test User", feed![0].user.name)
+                    done()
+                default: break
                 }
-                XCTAssertEqual("ListFeed Test User", response![0].user.name)
-                done()
             }
         }
         // プロフィールフィード(ユーザーが投稿したマイクロポスト一覧)
         waitUntil { done in
             Micropost.getFeed(endpoint: Endpoint.UsersMicroposts(1)) { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.content)
-                    XCTAssertNotNil($0.userId)
-                    XCTAssertNotNil($0.user.name)
+                switch response {
+                case .Success(let feed):
+                    feed!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.content)
+                        XCTAssertNotNil($0.userId)
+                        XCTAssertNotNil($0.user.name)
+                    }
+                    XCTAssertEqual("Profile Test User", feed![0].user.name)
+                    done()
+                default: break
                 }
-                XCTAssertEqual("Profile Test User", response![0].user.name)
-                done()
             }
         }
     }
-
 }
