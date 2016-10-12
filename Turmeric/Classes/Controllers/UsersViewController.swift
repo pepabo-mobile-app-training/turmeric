@@ -30,11 +30,11 @@ class UsersViewController: UITableViewController {
     
     var selectedUser: User!
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
         // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
         tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
 
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
         if self.displayStyle != nil {
             switch self.displayStyle! {
