@@ -18,6 +18,20 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
+    stub(condition: isHost("currry.xyz") && isPath("/api/lists/1/feed") && isMethodGET()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "ListFeed.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
+    stub(condition: isHost("currry.xyz") && isPath("/api/users/1/microposts") && isMethodGET()){_ in
+        return OHHTTPStubsResponse(
+            fileAtPath: stubFilePath(name: "UsersMicroposts.json"),
+            statusCode: 200,
+            headers: ["Content-Type": "application/json"]
+        )
+    }
     stub(condition: isHost("currry.xyz") && isPath("/api/microposts/100") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "MicropostsShow.json"),
