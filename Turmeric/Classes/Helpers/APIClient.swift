@@ -151,8 +151,8 @@ enum Endpoint {
 }
 
 enum APIResponse<ResultType> {
-    case Success(ResultType)
-    case ValidationError(JSON)
-    case Unauthorized
-    case RequestFailure
+    case Success(ResultType)   //リクエスト成功
+    case ValidationError(JSON) //バリデーションエラー
+    case Unauthorized          //認証エラー
+    case RequestFailure        //その他のエラー
 }
