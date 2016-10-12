@@ -35,59 +35,97 @@ class User {
     }
     
     static func createUser(parameters: Parameters, handler: @escaping ((User) -> Void)) {
-        APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { json in
-            handler(User(json: json["user"]))
+        APIClient.request(endpoint: Endpoint.UsersCreate, parameters: parameters) { response in
+            switch response {
+            case .Success(let json):
+                handler(User(json: json["user"]))
+            default:
+                break
+            }
         }
     }
 
     static func getMyUser(handler: @escaping ((User) -> Void)) {
-        APIClient.request(endpoint: Endpoint.UsersMe) { json in
-            handler(User(json: json["user"]))
+
+        APIClient.request(endpoint: Endpoint.UsersMe, parameters: [:]) { response in
+            switch response {
+            case .Success(let json):
+                handler(User(json: json["user"]))
+            default:
+                break
+            }
+
         }
     }
     
     static func getUser(userID: Int, handler: @escaping ((User) -> Void)){
-        APIClient.request(endpoint: Endpoint.UsersShow(userID)) { json in
-            handler(User(json: json["user"]))
+        APIClient.request(endpoint: Endpoint.UsersShow(userID)) { response in
+            switch response {
+            case .Success(let user):
+                handler(User(json: json["user"]))
+            default: break
+            }
         }
     }
 
     static func authenticate(parameters: Parameters, handler: @escaping (Any?) -> Void) {
-        APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { json in
-            APIClient.token = json["token"].string!
-            handler(nil)
+        APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { response in
+            switch response {
+            case .Success(let json):
+                APIClient.token = json["token"].string!
+                handler(nil)
+            default:
+                break
+            }
         }
     }
 
     static func getMyFeed(handler: @escaping ([Micropost]?) -> Void) {
-        APIClient.request(endpoint: Endpoint.MyFeed) { json in
-            let microposts: [Micropost]? = (json["feed"].array?.map {
-                Micropost(json: $0)
-                })
-            handler(microposts)
+        APIClient.request(endpoint: Endpoint.MyFeed) { response in
+            switch response {
+            case .Success(let json):
+                let microposts: [Micropost]? = (json["feed"].array?.map {
+                    Micropost(json: $0)
+                    })
+                handler(microposts)
+            default: break
+            }
         }
     }
 
     static func getMyLists(handler: @escaping ([List]?) -> Void) {
-        APIClient.request(endpoint: Endpoint.MyLists) { json in
-            let lists: [List]? = (json["lists"].array?.map {
-                List(json: $0)
-                })
-            handler(lists)
+        APIClient.request(endpoint: Endpoint.MyLists) { response in
+            switch response {
+            case .Success(let json):
+                let lists: [List]? = (json["lists"].array?.map {
+                    List(json: $0)
+                    })
+                handler(lists)
+            default:
+                break
+            }
         }
     }
 
     static func getFollowing(id: Int, handler: @escaping (([User]?) -> Void) ) {
-        APIClient.request(endpoint: Endpoint.UsersFollowing(id)) { json in
-            let users: [User]? = (json["following"]["users"].array?.map { User(json: $0) })
-            handler(users)
+        APIClient.request(endpoint: Endpoint.UsersFollowing(id)) { response in
+            switch response {
+            case .Success(let json):
+                let users: [User]? = (json["following"]["users"].array?.map { User(json: $0) })
+                handler(users)
+            default: break
+            }
         }
     }
 
     static func getFollowers(id: Int, handler: @escaping (([User]?) -> Void) ) {
-        APIClient.request(endpoint: Endpoint.UsersFollowers(id)) { json in
-            let users: [User]? = (json["followers"]["users"].array?.map { User(json: $0) })
-            handler(users)
+        APIClient.request(endpoint: Endpoint.UsersFollowers(id)) { response in
+            switch response {
+            case .Success(let json):
+                let users: [User]? = (json["followers"]["users"].array?.map { User(json: $0) })
+                handler(users)
+            default: break
+            }
         }
     }
 }

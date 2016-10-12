@@ -10,8 +10,12 @@ class Relationship {
             ]
         ]
         
-        APIClient.request(endpoint: Endpoint.RelationshipCreate, parameters: parameters) { json in
-            handler()
+        APIClient.request(endpoint: Endpoint.RelationshipCreate, parameters: parameters) { response in
+            switch response {
+            case .Success(let json):
+                handler()
+            default: break
+            }
         }
     }
     
@@ -22,8 +26,13 @@ class Relationship {
             ]
         ]
         
-        APIClient.request(endpoint: Endpoint.RelationshipDestroy, parameters: parameters) { json in
-            handler()
+        APIClient.request(endpoint: Endpoint.RelationshipDestroy, parameters: parameters) { response in
+            switch response {
+            case .Success(let json):
+                handler()
+            default: break
+            }
+            
         }
     }
 }

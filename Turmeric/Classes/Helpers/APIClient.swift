@@ -7,7 +7,7 @@ class APIClient {
 
     static var token: String?
 
-    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ err: APIError?, _ data: JSON) -> Void) {
+    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ response: APIResponse<JSON>) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         let headers = authHeader()
@@ -16,28 +16,28 @@ class APIClient {
             
             switch response.result {
             case .success(let value):
-                handler(nil, JSON(value))
+                handler(APIResponse.Success(JSON(value)))
             case .failure(let error):
                 switch error as! AFError {
                 case .responseValidationFailed:
                     print(response.response!.statusCode)
                     if (response.response!.statusCode == 422){
                         let responseData = JSON(NSString(data: response.data!, encoding: String.Encoding.utf8.rawValue))
-                        handler(APIError.ValidationError(responseData), nil)
-                    } else if (response.response!.statusCode == 422) {
-                        handler(APIError.Unauthorized, nil)
+                        handler(APIResponse.ValidationError(responseData))
+                    } else if (response.response!.statusCode == 401) {
+                        handler(APIResponse.Unauthorized)
                     } else {
-                        handler(APIError.RequestFailure, nil)
+                        handler(APIResponse.RequestFailure)
                     }
                     
                 default:
-                    handler(APIError.RequestFailure, nil)
+                    handler(APIResponse.RequestFailure)
                 }
             }
         }
     }
 
-    static func request(endpoint: Endpoint, handler: @escaping (_ err: APIError?, _ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, handler: @escaping (_ response: APIResponse<JSON>) -> Void) {
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
 
@@ -150,7 +150,8 @@ enum Endpoint {
     
 }
 
-enum APIError: Error {
+enum APIResponse<ResultType> {
+    case Success(ResultType)
     case ValidationError(JSON)
     case Unauthorized
     case RequestFailure
