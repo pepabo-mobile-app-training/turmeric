@@ -29,22 +29,22 @@ class Micropost {
         self.user = User(json: json["user"])
     }
 
-    static func postMicropost(parameters: Parameters, handler: @escaping ((Micropost) -> Void)) {
+    static func postMicropost(parameters: Parameters, handler: @escaping ((APIResponse<Micropost>) -> Void)) {
         APIClient.request(endpoint: Endpoint.MicropostsPost, parameters: parameters) { response in
             switch response {
             case .Success(let json):
-                handler(Micropost(json: json["micropost"]))
+                handler(APIResponse.Success(Micropost(json: json["micropost"])))
             default: break
             }
             
         }
     }
 
-    static func getMicropost(id: Int, handler: @escaping ((Micropost) -> Void)) {
+    static func getMicropost(id: Int, handler: @escaping ((APIResponse<Micropost>) -> Void)) {
         APIClient.request(endpoint: Endpoint.MicropostsShow(id)) { response in
             switch response {
             case .Success(let json):
-                handler(Micropost(json: json["micropost"]))
+                handler(APIResponse.Success(Micropost(json: json["micropost"])))
             default: break
             }
         }
