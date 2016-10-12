@@ -2,13 +2,13 @@
     "feed": [
         {
             "id": 4,
-            "content": "Writing a short test",
+            "content": "ListFeed desu.",
             "user_id": 1,
             "created_at": "2016-10-04T08:18:33.000Z",
             "picture": null,
             "user": {
                 "id": 1,
-                "name": "Example User",
+                "name": "ListFeed Test User",
                 "activated": true,
                 "icon_url": "https://secure.gravatar.com/avatar/03ea78c0884c9ac0f73e6af7b9649e90?s=80",
                 "following_count": 2,
@@ -18,7 +18,7 @@
         },
         {
             "id": 7,
-            "content": "吾輩は猫である。名前はまだない。どこで生れたか頓と見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々140文字",
+            "content": "日本語の文章にほんごのぶんしょうニホンゴノブンショウ",
             "user_id": 6,
             "created_at": "2016-10-02T08:08:33.000Z",
             "picture": null,
@@ -129,30 +129,14 @@
             }
         },
         {
-            "id": 12,
-            "content": "Ut nisi debitis ducimus consequatur deserunt aliquam omnis est et.",
-            "user_id": 100,
-            "created_at": "2016-08-10T08:18:33.000Z",
-            "picture": null,
-            "user": {
-                "id": 100,
-                "name": "mataku",
-                "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/03ea78c0884c9ac0f73e6af7b9649e90?s=80",
-                "following_count": 2,
-                "followers_count": 3,
-                "microposts_count": 34
-            }
-        },
-        {
             "id": 33,
-            "content": "Rerum ut laborum at ab in itaque quos.",
+            "content": "リストフィードです",
             "user_id": 2,
             "created_at": "2016-07-23T08:18:33.000Z",
             "picture": null,
             "user": {
                 "id": 2,
-                "name": "Michael",
+                "name": "Michael List",
                 "activated": true,
                 "icon_url": "https://secure.gravatar.com/avatar/03ea78c0884c9ac0f73e6af7b9649e90?s=80",
                 "following_count": 2,

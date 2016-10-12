@@ -40,4 +40,18 @@ class Micropost {
             handler(Micropost(json: json["micropost"]))
         }
     }
+
+    static func getFeed(endpoint: Endpoint, handler: @escaping ([Micropost]?) -> Void) {
+        APIClient.request(endpoint: endpoint) { json in
+            let microposts: [Micropost]?
+
+            switch endpoint {
+            case .UsersMicroposts:
+                microposts = (json["microposts"].array?.map { Micropost(json: $0) })
+            default:
+                microposts = (json["feed"].array?.map { Micropost(json: $0) })
+            }
+            handler(microposts)
+        }
+    }
 }
