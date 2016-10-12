@@ -52,6 +52,7 @@ enum Endpoint {
     
     // Micropost
     case MyFeed
+    case ListFeed(Int)
     case MicropostsPost
     case MicropostsShow(Int)
     case MicropostsDelete(Int)
@@ -82,6 +83,7 @@ enum Endpoint {
         case .UsersMe: return .get
 
         case .MyFeed: return .get
+        case .ListFeed: return .get
         case .MicropostsPost: return .post
         case .MicropostsShow: return .get
         case .MicropostsDelete: return .delete
@@ -112,6 +114,7 @@ enum Endpoint {
         case .UsersMe: return "/api/users/me"
             
         case .MyFeed: return "/api/feed"
+        case .ListFeed(let listId): return "/api/lists/\(listId)/feed"
         case .MicropostsPost: return "/api/microposts"
         case .MicropostsShow(let micropostId): return "/api/microposts/\(micropostId)"
         case .MicropostsDelete(let micropostId): return "/api/microposts/\(micropostId)"
