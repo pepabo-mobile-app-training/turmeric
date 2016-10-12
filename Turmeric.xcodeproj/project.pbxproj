@@ -54,6 +54,8 @@
 		526B14A01DA4A21F00BDAAFA /* MembersDeleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */; };
 		526B14A21DA4E43B00BDAAFA /* ListsUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 526B14A11DA4E43B00BDAAFA /* ListsUpdate.json */; };
 		5286FB001DADBECD001B23C3 /* ListCreateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286FAFF1DADBECD001B23C3 /* ListCreateUITests.swift */; };
+		528B8A141DADE3DF00CEB1B4 /* ListFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 528B8A131DADE3DF00CEB1B4 /* ListFeed.json */; };
+		528B8A161DADE3F400CEB1B4 /* UsersMicroposts.json in Resources */ = {isa = PBXBuildFile; fileRef = 528B8A151DADE3F400CEB1B4 /* UsersMicroposts.json */; };
 		528F83591DA5F70F00630ACF /* HomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528F83581DA5F70F00630ACF /* HomeUITests.swift */; };
 		52A15F291DA1FABA009D4525 /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F281DA1FABA009D4525 /* ListUITests.swift */; };
 		52A15F381DA24923009D4525 /* ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A15F371DA24923009D4525 /* ListTests.swift */; };
@@ -84,9 +86,6 @@
 		72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */; };
 		72B150011DA5EEE4005E7523 /* PostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150001DA5EEE4005E7523 /* PostUITests.swift */; };
 		72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1500C1DA5FBD9005E7523 /* Users.storyboard */; };
-		72B150241DAC88DB005E7523 /* OthersProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B150231DAC88DB005E7523 /* OthersProfile.storyboard */; };
-		72B150261DAC8A8B005E7523 /* OthersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */; };
-		72B150281DACDE22005E7523 /* OthersProfileUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150271DACDE22005E7523 /* OthersProfileUITest.swift */; };
 		72B150111DA5FE10005E7523 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150101DA5FE10005E7523 /* UsersViewController.swift */; };
 		72B150161DA621D4005E7523 /* MembersFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150141DA621D4005E7523 /* MembersFollow.swift */; };
 		72B150171DA621D4005E7523 /* MembersFollow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B150151DA621D4005E7523 /* MembersFollow.xib */; };
@@ -94,6 +93,9 @@
 		72B1501C1DA6577C005E7523 /* UsersFollowing.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B1501B1DA6577C005E7523 /* UsersFollowing.json */; };
 		72B1501E1DA768B1005E7523 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501D1DA768B1005E7523 /* Relationship.swift */; };
 		72B150201DA7807E005E7523 /* RelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1501F1DA7807E005E7523 /* RelationshipTests.swift */; };
+		72B150241DAC88DB005E7523 /* OthersProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B150231DAC88DB005E7523 /* OthersProfile.storyboard */; };
+		72B150261DAC8A8B005E7523 /* OthersProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */; };
+		72B150281DACDE22005E7523 /* OthersProfileUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B150271DACDE22005E7523 /* OthersProfileUITest.swift */; };
 		72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6DF1D9BB50600D47723 /* Feed.storyboard */; };
 		72C0D6E21D9BB54A00D47723 /* Following.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E11D9BB54A00D47723 /* Following.storyboard */; };
 		72C0D6E41D9BB56100D47723 /* Followers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C0D6E31D9BB56100D47723 /* Followers.storyboard */; };
@@ -167,6 +169,8 @@
 		526B149E1DA4A21F00BDAAFA /* MembersDeleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MembersDeleteCell.xib; sourceTree = "<group>"; };
 		526B14A11DA4E43B00BDAAFA /* ListsUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListsUpdate.json; sourceTree = "<group>"; };
 		5286FAFF1DADBECD001B23C3 /* ListCreateUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCreateUITests.swift; sourceTree = "<group>"; };
+		528B8A131DADE3DF00CEB1B4 /* ListFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ListFeed.json; sourceTree = "<group>"; };
+		528B8A151DADE3F400CEB1B4 /* UsersMicroposts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersMicroposts.json; sourceTree = "<group>"; };
 		528F83581DA5F70F00630ACF /* HomeUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUITests.swift; sourceTree = "<group>"; };
 		52A15F281DA1FABA009D4525 /* ListUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
 		52A15F371DA24923009D4525 /* ListTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTests.swift; sourceTree = "<group>"; };
@@ -196,9 +200,6 @@
 		724DB9181D99275300008C25 /* Lists.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lists.storyboard; sourceTree = "<group>"; };
 		725B13121DA2450C00A12006 /* Stub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		725B13171DA35C4600A12006 /* Me.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Me.json; sourceTree = "<group>"; };
-		72B150231DAC88DB005E7523 /* OthersProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OthersProfile.storyboard; sourceTree = "<group>"; };
-		72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileViewController.swift; sourceTree = "<group>"; };
-		72B150271DACDE22005E7523 /* OthersProfileUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileUITest.swift; sourceTree = "<group>"; };
 		725B13191DA39AFC00A12006 /* PostKeyboardToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostKeyboardToolbar.xib; sourceTree = "<group>"; };
 		72B14FF61DA39D79005E7523 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		72B14FF81DA3B11D005E7523 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -213,6 +214,9 @@
 		72B1501B1DA6577C005E7523 /* UsersFollowing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersFollowing.json; sourceTree = "<group>"; };
 		72B1501D1DA768B1005E7523 /* Relationship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
 		72B1501F1DA7807E005E7523 /* RelationshipTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipTests.swift; sourceTree = "<group>"; };
+		72B150231DAC88DB005E7523 /* OthersProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OthersProfile.storyboard; sourceTree = "<group>"; };
+		72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileViewController.swift; sourceTree = "<group>"; };
+		72B150271DACDE22005E7523 /* OthersProfileUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersProfileUITest.swift; sourceTree = "<group>"; };
 		72C0D6DF1D9BB50600D47723 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		72C0D6E11D9BB54A00D47723 /* Following.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Following.storyboard; sourceTree = "<group>"; };
 		72C0D6E31D9BB56100D47723 /* Followers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Followers.storyboard; sourceTree = "<group>"; };
@@ -270,19 +274,21 @@
 			isa = PBXGroup;
 			children = (
 				5221F3541DA35B9100719B90 /* Auth.json */,
+				528B8A131DADE3DF00CEB1B4 /* ListFeed.json */,
+				5264371D1DACEDDC0034F7F2 /* ListsCreate.json */,
 				5222F5A61DA34A0F00990E8E /* ListsMembers.json */,
 				5222F5A71DA34A0F00990E8E /* ListsShow.json */,
-				5222F5A81DA34A0F00990E8E /* MicropostsShow.json */,
-				5222F5A91DA34A0F00990E8E /* MicropostsShow_withPicture.json */,
-				52F1EF4C1DA39BD1009B4327 /* MyFeed.json */,
+				526B14A11DA4E43B00BDAAFA /* ListsUpdate.json */,
 				725B13171DA35C4600A12006 /* Me.json */,
+				72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */,
+				5222F5A91DA34A0F00990E8E /* MicropostsShow_withPicture.json */,
+				5222F5A81DA34A0F00990E8E /* MicropostsShow.json */,
+				52F1EF4C1DA39BD1009B4327 /* MyFeed.json */,
 				5222F5AA1DA34A0F00990E8E /* MyLists.json */,
 				5222F5AB1DA34A0F00990E8E /* UsersCreate.json */,
-				72B14FFC1DA4CCEA005E7523 /* MicropostsPost.json */,
 				72B150191DA6576A005E7523 /* UsersFollowers.json */,
 				72B1501B1DA6577C005E7523 /* UsersFollowing.json */,
-				526B14A11DA4E43B00BDAAFA /* ListsUpdate.json */,
-				5264371D1DACEDDC0034F7F2 /* ListsCreate.json */,
+				528B8A151DADE3F400CEB1B4 /* UsersMicroposts.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				72C0D6E01D9BB50600D47723 /* Feed.storyboard in Resources */,
 				724DB9171D99274A00008C25 /* Profile.storyboard in Resources */,
 				5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */,
+				528B8A161DADE3F400CEB1B4 /* UsersMicroposts.json in Resources */,
 				5208BBD41DA726F60098DBC6 /* MembersAddCell.xib in Resources */,
 				5208BBE21DA78BCE0098DBC6 /* ListDeleteCell.xib in Resources */,
 				72B14FFD1DA4CCEA005E7523 /* MicropostsPost.json in Resources */,
@@ -606,6 +613,7 @@
 				52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */,
 				526437161DAC9ADF0034F7F2 /* ListCreate.storyboard in Resources */,
 				526B14A21DA4E43B00BDAAFA /* ListsUpdate.json in Resources */,
+				528B8A141DADE3DF00CEB1B4 /* ListFeed.json in Resources */,
 				5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */,
 				72B1500D1DA5FBD9005E7523 /* Users.storyboard in Resources */,
 				72C0D6E61D9BB70900D47723 /* ProfileEdit.storyboard in Resources */,
