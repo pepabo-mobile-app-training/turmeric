@@ -195,7 +195,7 @@
         <scene sceneID="0Oo-Sm-jhh">
             <objects>
                 <navigationController id="AhQ-rM-qjU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="プロフィール" id="YtW-gu-rE6"/>
+                    <tabBarItem key="tabBarItem" title="プロフィール" image="Profile" id="YtW-gu-rE6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fy8-IM-aRG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -218,4 +218,7 @@
             <point key="canvasLocation" x="272" y="288"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Profile" width="30" height="30"/>
+    </resources>
 </document>

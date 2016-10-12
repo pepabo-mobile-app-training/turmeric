@@ -17,10 +17,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="oYf-uQ-Nn2" kind="relationship" relationship="viewControllers" id="GIL-D6-yta"/>
-                        <segue destination="Veb-Lr-qfr" kind="relationship" relationship="viewControllers" id="5mx-F6-29T"/>
-                        <segue destination="5x2-61-YA4" kind="relationship" relationship="viewControllers" id="NLo-zS-biO"/>
                         <segue destination="qa6-Xi-O3F" kind="relationship" relationship="viewControllers" id="eO5-QK-kyV"/>
                         <segue destination="rft-SR-PqB" kind="relationship" relationship="viewControllers" id="H9v-K2-lNM"/>
+                        <segue destination="5x2-61-YA4" kind="relationship" relationship="viewControllers" id="NLo-zS-biO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCz-Ib-PHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,16 +35,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbr-Zg-Fh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1033" y="-318"/>
-        </scene>
-        <!--Mention-->
-        <scene sceneID="Xir-Pi-zDr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Mention" id="Veb-Lr-qfr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5vm-f7-X0n"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A9i-bQ-C7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1033" y="-184"/>
         </scene>
         <!--Profile-->
         <scene sceneID="dtH-fs-qiK">
@@ -66,11 +55,11 @@
                         <viewControllerLayoutGuide type="bottom" id="uw4-9d-rME"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jKg-RW-Yyr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="投稿" id="bWd-od-Mbs"/>
+                    <tabBarItem key="tabBarItem" title="投稿" image="Post" id="0c3-3M-ZtJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7R-Wf-CMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,4 +76,7 @@
             <point key="canvasLocation" x="-1033" y="174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Post" width="30" height="30"/>
+    </resources>
 </document>
