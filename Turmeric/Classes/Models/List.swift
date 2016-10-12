@@ -55,4 +55,10 @@ class List {
         }
     }
     
+    static func createList(parameters: Parameters, handler: @escaping ((List) -> Void)){
+        APIClient.request(endpoint: Endpoint.ListsCreate, parameters: parameters) { json in
+            handler(List(json: json["list"]))
+        }
+    }
+    
 }

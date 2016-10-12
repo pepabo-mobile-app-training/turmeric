@@ -26,10 +26,14 @@
                                     <navigationItem id="DHn-dJ-DK1">
                                         <barButtonItem key="leftBarButtonItem" title="キャンセル" id="inn-w0-HQM">
                                             <connections>
-                                                <segue destination="4VG-im-ibZ" kind="unwind" unwindAction="unwindToListManagementViewScreenWithSender:" id="76J-Vh-vpN"/>
+                                                <segue destination="4VG-im-ibZ" kind="unwind" identifier="unwind" unwindAction="unwindToListManagementViewScreenWithSender:" id="76J-Vh-vpN"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="保存" id="YA2-v8-UC7"/>
+                                        <barButtonItem key="rightBarButtonItem" title="保存" id="YA2-v8-UC7">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="Ct4-s6-s8D" id="D1w-sb-2Xv"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

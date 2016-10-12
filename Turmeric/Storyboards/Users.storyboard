@@ -30,10 +30,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ユーザ一覧" id="auv-pN-ry9"/>
+                    <connections>
+                        <segue destination="k5z-nU-YOJ" kind="push" identifier="profile" id="gVT-ey-qtg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jd-YQ-Oiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1319" y="-1228"/>
+        </scene>
+        <!--OthersProfile-->
+        <scene sceneID="tlT-8n-bZO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OthersProfile" id="k5z-nU-YOJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="73m-7J-jlU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzX-nN-CMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-602" y="-1229"/>
         </scene>
     </scenes>
 </document>

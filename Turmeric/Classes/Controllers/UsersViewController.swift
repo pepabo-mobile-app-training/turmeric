@@ -28,6 +28,8 @@ class UsersViewController: UITableViewController {
     }
     private var displayUsersVal: [User] = [] // displayUsersの実データ部
     
+    var selectedUser: User!
+    
     override func viewDidLoad() {
         // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
         tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
@@ -63,7 +65,21 @@ class UsersViewController: UITableViewController {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "membersFollow", for: indexPath) as! MembersFollow
         
         cell.displayUser(user: displayUsers[indexPath.row])
-    
+        
         return cell
     }
+    
+    override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
+        self.selectedUser = displayUsers[indexPath.row]  // 選択されたユーザを覚えておいてprepareで使う
+        self.performSegue(withIdentifier: "profile", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "profile"){
+            let vc = segue.destination as! OthersProfileViewController
+            
+            vc.user = self.selectedUser
+        }
+    }
+
 }

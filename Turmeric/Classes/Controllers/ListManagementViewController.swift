@@ -31,10 +31,7 @@ class ListManagementViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "ListDeleteCell", bundle: nil), forCellReuseIdentifier: "listDeleteCell")
-        User.getMyLists { response in
-            self.myLists = response!
-            self.tableView.reloadData()
-        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,6 +40,10 @@ class ListManagementViewController: UITableViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        User.getMyLists { response in
+            self.myLists = response!
+            self.tableView.reloadData()
+        }
         self.tableView.tableFooterView = UIView()
     }
     
