@@ -50,7 +50,7 @@ class Micropost {
         }
     }
 
-    static func getFeed(endpoint: Endpoint, handler: @escaping ([Micropost]?) -> Void) {
+    static func getFeed(endpoint: Endpoint, handler: @escaping (APIResponse<[Micropost]?>) -> Void) {
         APIClient.request(endpoint: endpoint) { response in
             switch response {
             case .Success(let json):
@@ -62,7 +62,7 @@ class Micropost {
                 default:
                     microposts = (json["feed"].array?.map { Micropost(json: $0) })
                 }
-                handler(microposts)
+                handler(APIResponse.Success(microposts))
             default: break
             }
         }

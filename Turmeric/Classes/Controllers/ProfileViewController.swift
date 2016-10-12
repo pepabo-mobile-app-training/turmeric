@@ -18,7 +18,24 @@ class ProfileViewController: UIViewController {
 
     var me: User? = nil
     
-    //var followingButton: UIButton
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let profileFeed = self.childViewControllers[0] as! FeedViewController
+        User.getMyUser(){ response in
+            switch response {
+            case .Success(let user):
+                self.me = user
+                profileFeed.endpoint = Endpoint.UsersMicroposts(self.me!.id)
+                // 非同期のためユーザーを取得してendpointに値が入る前にビューがロードされてしまう
+                // 簡単な対策として明示的にリロードする
+                profileFeed.reloadFeed()
+            default: break
+            }
+        }
+
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
