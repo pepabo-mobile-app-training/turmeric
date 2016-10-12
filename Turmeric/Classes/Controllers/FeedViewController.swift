@@ -56,18 +56,10 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
     
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if(isHome){
-            return 20 // タブ分ずらす
-        }else{
-            return 0
-        }
+        return isHome ? 20 : 0
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        if(isHome){
-            return 49 // タブバー分ずらす
-        }else{
-            return 0
-        }
+        return isHome ? 49 : 0
     }
 }
