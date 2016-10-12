@@ -7,22 +7,37 @@ class APIClient {
 
     static var token: String?
 
-    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, parameters: Parameters?, handler: @escaping (_ err: APIError?, _ data: JSON) -> Void) {
         let method = endpoint.method()
         let url = fullURL(endpoint: endpoint)
         let headers = authHeader()
 
         Alamofire.request(url, method: method, parameters: parameters, headers: headers).validate(statusCode: 200...299).responseJSON { response in
+            
             switch response.result {
             case .success(let value):
-                handler(JSON(value))
+                handler(nil, JSON(value))
             case .failure(let error):
-                print(error)
+                switch error as! AFError {
+                case .responseValidationFailed:
+                    print(response.response!.statusCode)
+                    if (response.response!.statusCode == 422){
+                        let responseData = JSON(NSString(data: response.data!, encoding: String.Encoding.utf8.rawValue))
+                        handler(APIError.ValidationError(responseData), nil)
+                    } else if (response.response!.statusCode == 422) {
+                        handler(APIError.Unauthorized, nil)
+                    } else {
+                        handler(APIError.RequestFailure, nil)
+                    }
+                    
+                default:
+                    handler(APIError.RequestFailure, nil)
+                }
             }
         }
     }
 
-    static func request(endpoint: Endpoint, handler: @escaping (_ json: JSON) -> Void) {
+    static func request(endpoint: Endpoint, handler: @escaping (_ err: APIError?, _ json: JSON) -> Void) {
         request(endpoint: endpoint, parameters: nil, handler: handler)
     }
 
@@ -132,4 +147,11 @@ enum Endpoint {
         case .RelationshipDestroy: return "/api/relationship"
         }
     }
+    
+}
+
+enum APIError: Error {
+    case ValidationError(JSON)
+    case Unauthorized
+    case RequestFailure
 }
