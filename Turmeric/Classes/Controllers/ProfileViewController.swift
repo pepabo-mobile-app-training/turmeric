@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, PerformSegueToProfileDelegate {
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var micropostsLabel: UILabel!
@@ -69,5 +69,10 @@ class ProfileViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func performSegueToProfile(user: User) {
+        //プロフィールからプロフィールに遷移しても仕方ないので遷移しない
+        return
     }
 }

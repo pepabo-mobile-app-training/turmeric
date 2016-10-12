@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OthersProfileViewController: UIViewController {
+class OthersProfileViewController: UIViewController, PerformSegueToProfileDelegate {
     @IBOutlet weak var followButton: LinedButton!
     @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var followersButton: UIButton!
@@ -125,6 +125,11 @@ class OthersProfileViewController: UIViewController {
             }
         }
 
+    }
+    
+    func performSegueToProfile(user: User) {
+        //プロフィールからプロフィールに遷移しても仕方ないので遷移しない
+        return
     }
 
 }
