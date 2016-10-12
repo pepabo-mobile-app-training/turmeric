@@ -9,9 +9,25 @@
 import UIKit
 
 class ListCreateViewController: UIViewController {
+    var formController: ListFormViewController!
+    
+    @IBAction func saveButtonTapped(_ sender: AnyObject) {
+        //リスト名が空の場合は何もしない
+        if (formController.listName == "") {
+            return
+        }
+        
+        let parameters = ["list" : ["name" : formController.listName]]
+        
+        List.createList(parameters: parameters) { response in
+            self.performSegue(withIdentifier: "unwind", sender: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        formController = self.childViewControllers.first as! ListFormViewController
         
     }
     
