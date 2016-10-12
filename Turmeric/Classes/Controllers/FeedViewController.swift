@@ -18,10 +18,14 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         // セルの高さを自動計算する
         tableView.rowHeight = UITableViewAutomaticDimension
 
-        User.getMyFeed { feed in
-            self.microposts = feed!
-            self.tableView.reloadData()
-        }
+        // AppDelegateからログイン完了の通知を受けたらフィードを取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
+            User.getMyFeed { feed in
+                self.microposts = feed!
+                self.tableView.reloadData()
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
