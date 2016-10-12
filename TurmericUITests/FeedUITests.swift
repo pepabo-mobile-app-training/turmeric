@@ -35,16 +35,15 @@ class FeedUITests: XCTestCase {
         // Friendsリストのフィードに移動
         swipeTab.staticTexts["Friends"].tap()
         let micropostCells = app.tables.cells
-        // TODO: リストのフィードが取得できるようになったら個数やテキストを変更する
-        XCTAssertEqual(10, micropostCells.count)
+        XCTAssertEqual(9, micropostCells.count)
         // 最初のセル
         let firstCell = micropostCells.element(boundBy: 0)
-        XCTAssert(firstCell.staticTexts["Example User"].exists)
-        XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        XCTAssert(firstCell.staticTexts["ListFeed Test User"].exists)
+        XCTAssert(firstCell.staticTexts["ListFeed desu."].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
-        XCTAssert(lastCell.staticTexts["Michael"].exists)
-        XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
+        XCTAssert(lastCell.staticTexts["Michael List"].exists)
+        XCTAssert(lastCell.staticTexts["リストフィードです"].exists)
     }
 
     // プロフィールフィード(プロフィールページの自分の投稿)
@@ -52,15 +51,14 @@ class FeedUITests: XCTestCase {
         let app = XCUIApplication()
         app.tabBars.buttons["プロフィール"].tap()
         let micropostCells = app.tables.cells
-        // TODO: プロフィールフィードが取得できるようになったら個数やテキストを変更する
-        XCTAssertEqual(10, micropostCells.count)
+        XCTAssertEqual(8, micropostCells.count)
         // 最初のセル
         let firstCell = micropostCells.element(boundBy: 0)
-        XCTAssert(firstCell.staticTexts["Example User"].exists)
-        XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        XCTAssert(firstCell.staticTexts["Profile Test User"].exists)
+        XCTAssert(firstCell.staticTexts["投稿8"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
-        XCTAssert(lastCell.staticTexts["Michael"].exists)
-        XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
+        XCTAssert(lastCell.staticTexts["Profile Test User"].exists)
+        XCTAssert(lastCell.staticTexts["投稿1"].exists)
     }
 }
