@@ -78,17 +78,13 @@ class OthersProfileViewController: UIViewController {
             let vc = segue.destination as! UsersViewController
             
             // 次のvcにフォローユーザたちを表示するように依頼
-            User.getFollowing(id: user!.id){ following in
-                vc.displayUsers = following!
-            }
+            vc.displayStyle = UsersViewController.DisplayStyle.Following(user!.id)
             break
         case "followers":
             let vc = segue.destination as! UsersViewController
             
             // 次のvcにフォロワーたちを表示するように依頼
-            User.getFollowers(id: user!.id){ followers in
-                vc.displayUsers = followers!
-            }
+            vc.displayStyle = UsersViewController.DisplayStyle.Followers(user!.id)
             break
         default:
             break

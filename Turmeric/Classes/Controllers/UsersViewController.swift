@@ -10,24 +10,42 @@ import UIKit
 
 class UsersViewController: UITableViewController {
 
-    // 遷移元のVCで、このプロパティに表示したいユーザをsetする
-    var displayUsers: [User] {
-        get { return self.displayUsersVal }
-        
-        set {
-            self.displayUsersVal = newValue
-            self.tableView.reloadData()      // 非同期読み込みなどする場合があるのでsetされたら再描画
-        }
+    enum DisplayStyle {
+        case Following(Int)
+        case Followers(Int)
     }
-    private var displayUsersVal: [User] = [] // displayUsersの実データ部
     
-    var selectedUser: User!
+    //遷移前にフォロー一覧かフォロワー一覧か指定
+    var displayStyle: DisplayStyle? = nil
     
-    override func viewDidLoad() {
+    var displayUsers: [User] = []
+    
+    // テーブルタップ時に選択したユーザをprepareまで保存
+    private var selectedUser: User!
+    
+    override func viewWillAppear(_ animated: Bool) {
         // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
         tableView.register(UINib(nibName: "MembersFollow", bundle: nil), forCellReuseIdentifier: "membersFollow")
 
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
+        
+        guard self.displayStyle != nil else {
+            return
+        }
+        
+        // フォロー一覧かフォロワー一覧かで読み込む内容を判別
+        switch self.displayStyle! {
+        case let UsersViewController.DisplayStyle.Following(userID):
+            User.getFollowing(id: userID){ following in
+                self.displayUsers = following!
+                self.tableView.reloadData()
+            }
+        case let UsersViewController.DisplayStyle.Followers(userID):
+            User.getFollowers(id: userID){ followers in
+                self.displayUsers = followers!
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // tableの要素数
@@ -54,6 +72,7 @@ class UsersViewController: UITableViewController {
         if(segue.identifier == "profile"){
             let vc = segue.destination as! OthersProfileViewController
             
+            // 選択したユーザのプロフィールを表示するように次のVCに依頼
             vc.user = self.selectedUser
         }
     }

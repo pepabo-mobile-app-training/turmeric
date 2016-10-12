@@ -41,7 +41,13 @@ class User {
     }
 
     static func getMyUser(handler: @escaping ((User) -> Void)) {
-        APIClient.request(endpoint: Endpoint.UsersMe, parameters: [:]) { json in
+        APIClient.request(endpoint: Endpoint.UsersMe) { json in
+            handler(User(json: json["user"]))
+        }
+    }
+    
+    static func getUser(userID: Int, handler: @escaping ((User) -> Void)){
+        APIClient.request(endpoint: Endpoint.UsersShow(userID)) { json in
             handler(User(json: json["user"]))
         }
     }
