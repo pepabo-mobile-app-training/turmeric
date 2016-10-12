@@ -27,6 +27,8 @@ class ProfileViewController: UIViewController {
             case .Success(let user):
                 self.me = user
                 profileFeed.endpoint = Endpoint.UsersMicroposts(self.me!.id)
+                // 非同期のためユーザーを取得してendpointに値が入る前にビューがロードされてしまう
+                // 簡単な対策として明示的にリロードする
                 profileFeed.reloadFeed()
             default: break
             }
