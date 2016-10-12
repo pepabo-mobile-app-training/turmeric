@@ -55,11 +55,11 @@
                         <viewControllerLayoutGuide type="bottom" id="uw4-9d-rME"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jKg-RW-Yyr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="投稿" image="post.png" id="bWd-od-Mbs"/>
+                    <tabBarItem key="tabBarItem" title="投稿" image="Post" id="0c3-3M-ZtJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7R-Wf-CMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="post.png" width="30" height="30"/>
+        <image name="Post" width="30" height="30"/>
     </resources>
 </document>

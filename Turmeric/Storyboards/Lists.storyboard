@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hKw-KS-PZS" id="bMa-4u-ea6">
-                                    <frame key="frameInset" width="342" height="43"/>
+                                    <frame key="frameInset" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYe-zE-jh4">
-                                            <frame key="frameInset" minX="15" width="325" height="43"/>
+                                            <frame key="frameInset" minX="15" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -73,7 +73,7 @@
         <scene sceneID="dTI-Zc-Zzf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jay-tI-oGy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="リスト" image="list.png" id="pmo-cF-mVQ" userLabel="リスト" customClass="tabBarItem" customModule="Turmeric" customModuleProvider="target">
+                    <tabBarItem key="tabBarItem" title="リスト" image="List" id="pmo-cF-mVQ" userLabel="リスト" customClass="tabBarItem" customModule="Turmeric" customModuleProvider="target">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -93,6 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="list.png" width="30" height="30"/>
+        <image name="List" width="30" height="30"/>
     </resources>
 </document>

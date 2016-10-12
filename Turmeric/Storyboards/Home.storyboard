@@ -41,7 +41,7 @@
         <scene sceneID="WoB-5h-xwJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WcU-le-MZR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ホーム" image="home.png" id="igk-77-jwG"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="Home" id="igk-77-jwG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPj-3u-kHg">
@@ -59,6 +59,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="home.png" width="26" height="25"/>
+        <image name="Home" width="30" height="30"/>
     </resources>
 </document>
