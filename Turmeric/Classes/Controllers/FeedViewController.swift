@@ -14,6 +14,11 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 「引っ張って更新」
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl?.addTarget(self, action: #selector(FeedViewController.reloadFeed), for: UIControlEvents.valueChanged)
+
         tableView.register(UINib(nibName: "MicropostCell", bundle: nil), forCellReuseIdentifier: "micropostCell")
         // あらかじめセルの高さの概算値を設定しておいて、実際の計算処理を遅延させる
         // 実際に表示される高さに近くしておくとカクカクしにくくなるらしい
@@ -65,6 +70,8 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
                 case .Success(let feed):
                     self.microposts = feed!
                     self.tableView.reloadData()
+                    // endRefreshingしないとローディングアイコンが回り続ける
+                    self.refreshControl?.endRefreshing()
                 default: break
                 }
             }
