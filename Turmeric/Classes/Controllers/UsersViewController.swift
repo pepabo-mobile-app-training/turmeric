@@ -29,22 +29,24 @@ class UsersViewController: UITableViewController {
 
         super.viewWillAppear(animated)
         
+        guard self.displayStyle != nil else {
+            return
+        }
+        
         // フォロー一覧かフォロワー一覧かで読み込む内容を判別
-        if self.displayStyle != nil {
-            switch self.displayStyle! {
-            case let UsersViewController.DisplayStyle.Following(userID):
-                User.getUser(userID: userID){ user in
-                    User.getFollowing(id: user.id){ following in
-                        self.displayUsers = following!
-                        self.tableView.reloadData()
-                    }
+        switch self.displayStyle! {
+        case let UsersViewController.DisplayStyle.Following(userID):
+            User.getUser(userID: userID){ user in
+                User.getFollowing(id: user.id){ following in
+                    self.displayUsers = following!
+                    self.tableView.reloadData()
                 }
-            case let UsersViewController.DisplayStyle.Followers(userID):
-                User.getUser(userID: userID){ user in
-                    User.getFollowers(id: user.id){ followers in
-                        self.displayUsers = followers!
-                        self.tableView.reloadData()
-                    }
+            }
+        case let UsersViewController.DisplayStyle.Followers(userID):
+            User.getUser(userID: userID){ user in
+                User.getFollowers(id: user.id){ followers in
+                    self.displayUsers = followers!
+                    self.tableView.reloadData()
                 }
             }
         }
