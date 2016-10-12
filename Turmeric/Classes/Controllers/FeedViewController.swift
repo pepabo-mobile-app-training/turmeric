@@ -3,8 +3,9 @@ import XLPagerTabStrip
 
 class FeedViewController: UITableViewController, IndicatorInfoProvider {
     var itemInfo = IndicatorInfo(title: "Feed")
+    var endpoint = Endpoint.MyFeed
     var microposts = [Micropost]()
-    
+
     var isHome: Bool = false
 
     required init?(coder aDecoder: NSCoder) {
@@ -13,6 +14,11 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 「引っ張って更新」
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "引っ張って更新")
+        self.refreshControl?.addTarget(self, action: #selector(FeedViewController.reloadFeed), for: UIControlEvents.valueChanged)
+
         tableView.register(UINib(nibName: "MicropostCell", bundle: nil), forCellReuseIdentifier: "micropostCell")
         // あらかじめセルの高さの概算値を設定しておいて、実際の計算処理を遅延させる
         // 実際に表示される高さに近くしておくとカクカクしにくくなるらしい
@@ -20,18 +26,7 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         // セルの高さを自動計算する
         tableView.rowHeight = UITableViewAutomaticDimension
 
-        // AppDelegateからログイン完了の通知を受けたらフィードを取得する
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyFeed { response in
-                switch response {
-                case .Success(let feed):
-                    self.microposts = feed!
-                    self.tableView.reloadData()
-                default: break
-                }
-            }
-        })
+        reloadFeed()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,12 +60,28 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         parent.performSegueToProfile(user: selectedUser)
     }
     
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return isHome ? 20 : 0
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return isHome ? 49 : 0
+    }
+
+    func reloadFeed() {
+        // AppDelegateからログイン完了の通知を受けたらフィードを取得する
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
+            Micropost.getFeed(endpoint: self.endpoint) { response in
+                switch response {
+                case .Success(let feed):
+                    self.microposts = feed!
+                    self.tableView.reloadData()
+                    // endRefreshingしないとローディングアイコンが回り続ける
+                    self.refreshControl?.endRefreshing()
+                default: break
+                }
+            }
+        })
     }
 }
