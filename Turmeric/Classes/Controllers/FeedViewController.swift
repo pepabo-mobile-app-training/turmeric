@@ -3,8 +3,9 @@ import XLPagerTabStrip
 
 class FeedViewController: UITableViewController, IndicatorInfoProvider {
     var itemInfo = IndicatorInfo(title: "Feed")
+    var endpoint = Endpoint.MyFeed
     var microposts = [Micropost]()
-    
+
     var isHome: Bool = false
 
     required init?(coder aDecoder: NSCoder) {
@@ -23,7 +24,7 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         // AppDelegateからログイン完了の通知を受けたらフィードを取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyFeed { response in
+            Micropost.getFeed(endpoint: self.endpoint) { response in
                 switch response {
                 case .Success(let feed):
                     self.microposts = feed!
@@ -57,12 +58,12 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
         return cell
     }
-    
-    
+
+
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return isHome ? 20 : 0
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return isHome ? 49 : 0
     }
