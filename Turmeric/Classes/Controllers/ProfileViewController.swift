@@ -16,11 +16,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var followingButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
 
+    var me: User? = nil
+    
     //var followingButton: UIButton
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         User.getMyUser(){ user in
+            self.me = user
+            
             self.usernameLabel.text = user.name
 
             if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
@@ -51,23 +55,11 @@ class ProfileViewController: UIViewController {
         switch(segueID){
         case "following":
             let vc = segue.destination as! UsersViewController
-
-            // 次のvcに自分のフォローユーザたちを表示するように依頼
-            User.getMyUser(){ me in
-                User.getFollowing(id: me.id){ following in
-                    vc.displayUsers = following!
-                }
-            }
+            vc.displayStyle = UsersViewController.DisplayStyle.Following(me!.id)
             break
         case "followers":
             let vc = segue.destination as! UsersViewController
-
-            // 次のvcに自分のフォロワーたちを表示するように依頼
-            User.getMyUser(){ me in
-                User.getFollowers(id: me.id){ followers in
-                    vc.displayUsers = followers!
-                }
-            }
+            vc.displayStyle = UsersViewController.DisplayStyle.Followers(me!.id)
             break
         default:
             break
