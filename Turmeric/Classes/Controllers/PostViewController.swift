@@ -20,13 +20,17 @@ class PostViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         // アイコン表示
-        User.getMyUser(){ user in
-            do {
-                let data = try Data(contentsOf: user.iconURL )
-                self.iconImageView.image = UIImage(data: data)
-            } catch {
-                //画像がダウンロードできなかった
-            }
+        User.getMyUser(){ response in
+            switch response {
+            case .Success(let user):
+                do {
+                    let data = try Data(contentsOf: user.iconURL )
+                    self.iconImageView.image = UIImage(data: data)
+                } catch {
+                    //画像がダウンロードできなかった
+                }
+            default: break
+            }            
         }
     }
 

@@ -39,23 +39,29 @@ class MembersFollow: UITableViewCell {
         self.user = user
         
         // 自分のフォローリストにuserが含まれてるか判定してボタンを書き換える
-        User.getMyUser(){ me in
-            User.getFollowing(id: me.id){ following in
-                self.button.isHidden = false    // レスポンスが来たので隠すのをやめる
-                
-                self.isFollowedByMe = false
-                
-                var title = "フォロー"
-                
-                following?.forEach() { followedByMe in
-                    if(followedByMe.id == user.id){
-                        self.isFollowedByMe = true
-                        title = "アンフォロー"
-                        return
+        User.getMyUser(){ getMyUserResponse in
+            switch getMyUserResponse {
+            case .Success(let me):
+                User.getFollowing(id: me.id){ response in
+                    self.button.isHidden = false    // レスポンスが来たので隠すのをやめる
+                    
+                    self.isFollowedByMe = false
+                    
+                    var title = "フォロー"
+                    switch response {
+                    case .Success(let following):
+                        following?.forEach() { followedByMe in
+                            if(followedByMe.id == user.id){
+                                self.isFollowedByMe = true
+                                title = "アンフォロー"
+                                return
+                            }
+                        }
+                        self.button.setTitle(title, for: UIControlState.normal)
+                    default: break
                     }
                 }
-                
-                self.button.setTitle(title, for: UIControlState.normal)
+            default: break
             }
         }
     }
@@ -63,14 +69,24 @@ class MembersFollow: UITableViewCell {
     // フォロー/アンフォローボタン押下
     @IBAction func followButtonDidTap(_ sender: AnyObject) {
         if(self.isFollowedByMe!){
-            Relationship.destroyRelationship(userID: user.id){
-                self.isFollowedByMe = false
-                self.button.setTitle("フォロー", for: UIControlState.normal)
+            Relationship.destroyRelationship(userID: user.id){ response in
+                switch response {
+                case .Success:
+                    self.isFollowedByMe = false
+                    self.button.setTitle("フォロー", for: UIControlState.normal)
+                default: break
+                }
+                
             }
         }else{
-            Relationship.createRelationship(userID: user.id){
-                self.isFollowedByMe = true
-                self.button.setTitle("アンフォロー", for: UIControlState.normal)
+            Relationship.createRelationship(userID: user.id){ response in
+                switch response {
+                case .Success:
+                    self.isFollowedByMe = true
+                    self.button.setTitle("アンフォロー", for: UIControlState.normal)
+                default: break
+                }
+                
             }
         }
     }

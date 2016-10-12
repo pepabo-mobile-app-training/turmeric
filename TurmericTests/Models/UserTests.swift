@@ -31,8 +31,12 @@ class UserTests: XCTestCase {
         // リクエスト処理を同期的に実行する
         waitUntil { done in
             User.createUser(parameters: parameters){ response in
-                XCTAssertEqual("Example User", response.name)
-                done()
+                switch response {
+                case .Success(let user):
+                    XCTAssertEqual("Example User", user.name)
+                    done()
+                default: break
+                }
             }
         }
     }
@@ -40,12 +44,17 @@ class UserTests: XCTestCase {
     func testUserMe() {
         waitUntil { done in
             User.getMyUser(){ response in
-                XCTAssertEqual("Example User", response.name)
-                XCTAssertEqual(100, response.followingCount)
-                XCTAssertEqual(200, response.followersCount)
-                XCTAssertEqual(1000, response.micropostsCount)
-                XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", response.iconURL.absoluteString)
-                done()
+                switch response {
+                case .Success(let user):
+                    XCTAssertEqual("Example User", user.name)
+                    XCTAssertEqual(100, user.followingCount)
+                    XCTAssertEqual(200, user.followersCount)
+                    XCTAssertEqual(1000, user.micropostsCount)
+                    XCTAssertEqual("https://secure.gravatar.com/avatar/b58996c504c5638798eb6b511e6f49af?s=80", user.iconURL.absoluteString)
+                    done()
+                default: break
+                }
+                
             }
         }
     }
@@ -53,8 +62,12 @@ class UserTests: XCTestCase {
     func testUserLogin() {
         waitUntil { done in
             User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
-                XCTAssertEqual("This.Is.Example-Auth-Token", APIClient.token)
-                done()
+                switch response {
+                case .Success:
+                    XCTAssertEqual("This.Is.Example-Auth-Token", APIClient.token)
+                    done()
+                default: break
+                }
             }
         }
     }
@@ -63,13 +76,17 @@ class UserTests: XCTestCase {
         login()
         waitUntil { done in
             User.getMyFeed { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.content)
-                    XCTAssertNotNil($0.userId)
-                    XCTAssertNotNil($0.user.name)
+                switch response {
+                case .Success(let feed):
+                    feed!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.content)
+                        XCTAssertNotNil($0.userId)
+                        XCTAssertNotNil($0.user.name)
+                    }
+                    done()
+                default: break
                 }
-                done()
             }
         }
     }
@@ -79,11 +96,15 @@ class UserTests: XCTestCase {
 
         waitUntil { done in
             User.getMyLists { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.name)
+                switch response {
+                case .Success(let lists):
+                    lists!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.name)
+                    }
+                    done()
+                default: break
                 }
-                done()
             }
         }
     }
@@ -93,11 +114,15 @@ class UserTests: XCTestCase {
 
         waitUntil { done in
             User.getFollowing(id: 1) { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.name)
+                switch response {
+                case .Success(let following):
+                    following!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.name)
+                    }
+                    done()
+                default: break
                 }
-                done()
             }
         }
     }
@@ -107,11 +132,15 @@ class UserTests: XCTestCase {
 
         waitUntil { done in
             User.getFollowers(id: 1) { response in
-                response!.forEach {
-                    XCTAssertNotNil($0.id)
-                    XCTAssertNotNil($0.name)
+                switch response {
+                case .Success(let followers):
+                    followers!.forEach {
+                        XCTAssertNotNil($0.id)
+                        XCTAssertNotNil($0.name)
+                    }
+                    done()
+                default: break
                 }
-                done()
             }
         }
     }

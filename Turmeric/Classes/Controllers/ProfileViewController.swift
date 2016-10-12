@@ -22,25 +22,30 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        User.getMyUser(){ user in
-            self.me = user
-            
-            self.usernameLabel.text = user.name
-
-            if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
-                self.micropostsLabel.text = micropostCount.description
-
-                self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
-                self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
-            }
-
-            do {
-                let data = try Data(contentsOf: user.iconURL )
-                self.profileImage.image = UIImage(data: data)
-            } catch {
-                //画像がダウンロードできなかった
+        User.getMyUser(){ response in
+            switch response {
+            case .Success(let user):
+                self.me = user
+                
+                self.usernameLabel.text = user.name
+                
+                if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
+                    self.micropostsLabel.text = micropostCount.description
+                    
+                    self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
+                    self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
+                }
+                
+                do {
+                    let data = try Data(contentsOf: user.iconURL )
+                    self.profileImage.image = UIImage(data: data)
+                } catch {
+                    //画像がダウンロードできなかった
+                }
+            default: break
             }
         }
+            
     }
 
     override func didReceiveMemoryWarning() {

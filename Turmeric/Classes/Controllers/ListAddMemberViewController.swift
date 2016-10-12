@@ -23,13 +23,21 @@ class ListAddMemberViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "MembersAddCell", bundle: nil), forCellReuseIdentifier: "membersAddCell")
 
-        User.getMyUser(){ me in
-            User.getFollowing(id: me.id){ following in
-                // すでにリストに追加されているユーザは取り除く
-                self.followings = following!.filter() {user in
-                    !self.members.contains(where: {$0.id == user.id})
+        User.getMyUser(){ getMyUserResponse in
+            switch getMyUserResponse {
+            case .Success(let me):
+                User.getFollowing(id: me.id){ getFollowingResponse in
+                    switch getFollowingResponse {
+                    case .Success(let following):
+                        // すでにリストに追加されているユーザは取り除く
+                        self.followings = following!.filter() {user in
+                            !self.members.contains(where: {$0.id == user.id})
+                        }
+                        self.tableView.reloadData()
+                    default: break
+                    }
                 }
-                self.tableView.reloadData()
+            default: break
             }
         }
 

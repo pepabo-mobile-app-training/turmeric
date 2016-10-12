@@ -18,8 +18,12 @@ class ListManagementViewController: UITableViewController{
         
         self.deleteLists.forEach {
             group.enter()
-            List.deleteList(id: $0.id) {
-                group.leave()
+            List.deleteList(id: $0.id) {response in
+                switch response {
+                case .Success:
+                    group.leave()
+                default: break
+                }
             }
         }
         //選択されたリストが全て削除し終わったら画面遷移する
@@ -41,9 +45,14 @@ class ListManagementViewController: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         User.getMyLists { response in
-            self.myLists = response!
-            self.tableView.reloadData()
+            switch response {
+            case .Success(let lists):
+                self.myLists = lists!
+                self.tableView.reloadData()
+            default: break
+            }
         }
+        
         self.tableView.tableFooterView = UIView()
     }
     

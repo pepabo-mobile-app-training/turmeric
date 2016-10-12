@@ -33,8 +33,12 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
 
         self.deleteMembers.forEach{
             group.enter()
-            List.deleteMember(listId: self.list!.id, memberId: $0.id) {
-                group.leave()
+            List.deleteMember(listId: self.list!.id, memberId: $0.id) { response in
+                switch response {
+                case .Success:
+                   group.leave()
+                default: break
+                }
             }
         }
 
@@ -118,13 +122,21 @@ class ListEditViewController: UIViewController, UITableViewDelegate, UITableView
 
     private func requestData() {
         List.getList(id: self.selectedListId!) { response in
-            self.list = response
-            self.listNameField.text = response.name
+            switch response {
+            case .Success(let list):
+                self.list = list
+                self.listNameField.text = list.name
+            default: break
+            }
         }
 
         List.getMembers(id: self.selectedListId!) { response in
-            self.members = response
-            self.tableView.reloadData()
+            switch response {
+            case .Success(let members):
+                self.members = members
+                self.tableView.reloadData()
+            default: break
+            }
         }
     }
 }
