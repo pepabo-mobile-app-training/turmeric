@@ -7,12 +7,14 @@ class Micropost {
     let userId: Int
     let content: String
     let picture: URL?
+    let user: User
 
-    init(id: Int, userId: Int, content: String, picture: URL?) {
+    init(id: Int, userId: Int, content: String, picture: URL?, user: User) {
         self.id = id
         self.userId = userId
         self.content = content
         self.picture = picture
+        self.user = user
     }
 
     init(json: JSON) {
@@ -24,6 +26,7 @@ class Micropost {
         } else {
             self.picture = nil
         }
+        self.user = User(json: json["user"])
     }
 
     static func postMicropost(parameters: Parameters, handler: @escaping ((Micropost) -> Void)) {

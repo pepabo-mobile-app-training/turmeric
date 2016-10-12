@@ -67,6 +67,7 @@ class UserTests: XCTestCase {
                     XCTAssertNotNil($0.id)
                     XCTAssertNotNil($0.content)
                     XCTAssertNotNil($0.userId)
+                    XCTAssertNotNil($0.user.name)
                 }
                 done()
             }

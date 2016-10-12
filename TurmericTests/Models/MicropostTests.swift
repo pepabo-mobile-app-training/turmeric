@@ -22,6 +22,7 @@ class MicropostTests: XCTestCase {
         waitUntil { done in
             Micropost.postMicropost(parameters: parameters){ response in
                 XCTAssertEqual("I just ate an orange!", response.content)
+                XCTAssertEqual("Example User", response.user.name)
                 done()
             }
         }
@@ -34,6 +35,8 @@ class MicropostTests: XCTestCase {
                 XCTAssertEqual(1, response.userId)
                 XCTAssertEqual("I just ate an orange!", response.content)
                 XCTAssertNil(response.picture)
+                // マイクロポストにユーザー情報が含まれているかテスト
+                XCTAssertEqual("Example User", response.user.name)
                 done()
             }
         }
@@ -43,6 +46,7 @@ class MicropostTests: XCTestCase {
                 XCTAssertEqual(2, response.userId)
                 XCTAssertEqual("With picture", response.content)
                 XCTAssertEqual("https://example.com/picture.jpg", response.picture?.absoluteString)
+                XCTAssertEqual("Michael", response.user.name)
                 done()
             }
         }

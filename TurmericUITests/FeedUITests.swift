@@ -17,8 +17,14 @@ class FeedUITests: XCTestCase {
         app.tabBars.buttons["ホーム"].tap()
         let micropostCells = app.tables.cells
         XCTAssertEqual(10, micropostCells.count)
-        XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
-        XCTAssert(micropostCells.staticTexts["Example User"].exists)
+        // 最初のセル
+        let firstCell = micropostCells.element(boundBy: 0)
+        XCTAssert(firstCell.staticTexts["Example User"].exists)
+        XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        // 最後のセル
+        let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
+        XCTAssert(lastCell.staticTexts["Michael"].exists)
+        XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
     }
 
     // リストフィード(リストに追加されたユーザーの投稿)
@@ -31,8 +37,14 @@ class FeedUITests: XCTestCase {
         let micropostCells = app.tables.cells
         // TODO: リストのフィードが取得できるようになったら個数やテキストを変更する
         XCTAssertEqual(10, micropostCells.count)
-        XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
-        XCTAssert(micropostCells.staticTexts["Example User"].exists)
+        // 最初のセル
+        let firstCell = micropostCells.element(boundBy: 0)
+        XCTAssert(firstCell.staticTexts["Example User"].exists)
+        XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        // 最後のセル
+        let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
+        XCTAssert(lastCell.staticTexts["Michael"].exists)
+        XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
     }
 
     // プロフィールフィード(プロフィールページの自分の投稿)
@@ -42,7 +54,13 @@ class FeedUITests: XCTestCase {
         let micropostCells = app.tables.cells
         // TODO: プロフィールフィードが取得できるようになったら個数やテキストを変更する
         XCTAssertEqual(10, micropostCells.count)
-        XCTAssert(micropostCells.staticTexts["Writing a short test"].exists)
-        XCTAssert(micropostCells.staticTexts["Example User"].exists)
+        // 最初のセル
+        let firstCell = micropostCells.element(boundBy: 0)
+        XCTAssert(firstCell.staticTexts["Example User"].exists)
+        XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        // 最後のセル
+        let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
+        XCTAssert(lastCell.staticTexts["Michael"].exists)
+        XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
     }
 }
