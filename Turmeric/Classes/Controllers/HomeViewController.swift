@@ -20,6 +20,16 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // ナビから戻ってきたらタブを復活させる
+        let subviews = navigationController?.navigationBar.subviews
+        for subview in subviews! {
+            subview.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
@@ -65,5 +75,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         feed.itemInfo = IndicatorInfo(title: title)
         feed.isHome = true
         return feed
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "profile"){
+            // navbarをナビに使うのでタブを退場させる
+            let subviews = navigationController?.navigationBar.subviews
+            for subview in subviews! {
+                subview.isHidden = true
+            }
+        }
     }
 }
