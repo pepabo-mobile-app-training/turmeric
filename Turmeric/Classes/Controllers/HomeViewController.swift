@@ -59,6 +59,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         let storyboard = UIStoryboard(name: "Feed", bundle: nil)
         let feed = storyboard.instantiateInitialViewController() as! FeedViewController
         feed.itemInfo = IndicatorInfo(title: title)
+        feed.isHome = true
         return feed
     }
 }
