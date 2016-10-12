@@ -59,8 +59,10 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedUser = self.microposts[indexPath.row].user
-        self.parent?.performSegue(withIdentifier: "profile", sender: nil)
+        let selectedUser = self.microposts[indexPath.row].user
+        let parent = self.parent as! PerformSegueToProfileDelegate
+        
+        parent.performSegueToProfile(user: selectedUser)
     }
     
     
