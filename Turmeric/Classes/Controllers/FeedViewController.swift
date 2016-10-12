@@ -4,6 +4,8 @@ import XLPagerTabStrip
 class FeedViewController: UITableViewController, IndicatorInfoProvider {
     var itemInfo = IndicatorInfo(title: "Feed")
     var microposts = [Micropost]()
+    
+    var isHome: Bool = false
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -54,5 +56,14 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         cell.profileImage.af_setImage(withURL: micropost.user.iconURL)
 
         return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return isHome ? 20 : 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return isHome ? 49 : 0
     }
 }
