@@ -1,9 +1,11 @@
 import UIKit
 import XLPagerTabStrip
 
-class HomeViewController: ButtonBarPagerTabStripViewController {
+class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToProfileDelegate {
     var lists: [List] = []
 
+    var selectedUser: User! = nil;
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // AppDelegateからログイン完了の通知を受けたらリストを取得する
@@ -84,6 +86,14 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             for subview in subviews! {
                 subview.isHidden = true
             }
+            
+            let vc = segue.destination as! OthersProfileViewController
+            vc.user = self.selectedUser
         }
+    }
+    
+    func performSegueToProfile(user: User) {
+        self.selectedUser = user
+        performSegue(withIdentifier: "profile", sender: self)
     }
 }
