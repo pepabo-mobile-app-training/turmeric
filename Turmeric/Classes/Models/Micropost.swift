@@ -51,16 +51,20 @@ class Micropost {
     }
 
     static func getFeed(endpoint: Endpoint, handler: @escaping ([Micropost]?) -> Void) {
-        APIClient.request(endpoint: endpoint) { json in
-            let microposts: [Micropost]?
-
-            switch endpoint {
-            case .UsersMicroposts:
-                microposts = (json["microposts"].array?.map { Micropost(json: $0) })
-            default:
-                microposts = (json["feed"].array?.map { Micropost(json: $0) })
+        APIClient.request(endpoint: endpoint) { response in
+            switch response {
+            case .Success(let json):
+                let microposts: [Micropost]?
+                
+                switch endpoint {
+                case .UsersMicroposts:
+                    microposts = (json["microposts"].array?.map { Micropost(json: $0) })
+                default:
+                    microposts = (json["feed"].array?.map { Micropost(json: $0) })
+                }
+                handler(microposts)
+            default: break
             }
-            handler(microposts)
         }
     }
 }
