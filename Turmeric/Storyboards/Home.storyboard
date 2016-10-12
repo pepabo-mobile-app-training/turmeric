@@ -32,10 +32,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="X1m-Hy-NKb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="w7v-H3-5Xq" kind="push" identifier="profile" id="h4m-3X-dXZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBn-TM-mdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1007.2" y="-124.58770614692655"/>
+        </scene>
+        <!--OthersProfile-->
+        <scene sceneID="BOJ-2B-Qr6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OthersProfile" id="w7v-H3-5Xq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oIy-3x-1Xg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AY8-Nd-EGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="-125"/>
         </scene>
         <!--ホーム-->
         <scene sceneID="WoB-5h-xwJ">
