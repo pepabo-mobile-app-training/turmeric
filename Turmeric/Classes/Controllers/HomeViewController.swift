@@ -5,6 +5,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
     var lists: [List] = []
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         // AppDelegateからログイン完了の通知を受けたらリストを取得する
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
