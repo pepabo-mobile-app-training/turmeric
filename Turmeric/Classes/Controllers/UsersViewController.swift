@@ -15,20 +15,13 @@ class UsersViewController: UITableViewController {
         case Followers(Int)
     }
     
+    //遷移前にフォロー一覧かフォロワー一覧か指定
     var displayStyle: DisplayStyle? = nil
     
-    // 遷移元のVCで、このプロパティに表示したいユーザをsetする
-    var displayUsers: [User] {
-        get { return self.displayUsersVal }
-        
-        set {
-            self.displayUsersVal = newValue
-            self.tableView.reloadData()      // 非同期読み込みなどする場合があるのでsetされたら再描画
-        }
-    }
-    private var displayUsersVal: [User] = [] // displayUsersの実データ部
+    var displayUsers: [User] = []
     
-    var selectedUser: User!
+    // テーブルタップ時に選択したユーザをprepareまで保存
+    private var selectedUser: User!
     
     override func viewWillAppear(_ animated: Bool) {
         // MembersFollow.xib のカスタムビューを基準としてテーブルビューに配置する
@@ -36,18 +29,21 @@ class UsersViewController: UITableViewController {
 
         super.viewWillAppear(animated)
         
+        // フォロー一覧かフォロワー一覧かで読み込む内容を判別
         if self.displayStyle != nil {
             switch self.displayStyle! {
             case let UsersViewController.DisplayStyle.Following(userID):
                 User.getUser(userID: userID){ user in
                     User.getFollowing(id: user.id){ following in
                         self.displayUsers = following!
+                        self.tableView.reloadData()
                     }
                 }
             case let UsersViewController.DisplayStyle.Followers(userID):
                 User.getUser(userID: userID){ user in
                     User.getFollowers(id: user.id){ followers in
                         self.displayUsers = followers!
+                        self.tableView.reloadData()
                     }
                 }
             }
@@ -78,6 +74,7 @@ class UsersViewController: UITableViewController {
         if(segue.identifier == "profile"){
             let vc = segue.destination as! OthersProfileViewController
             
+            // 選択したユーザのプロフィールを表示するように次のVCに依頼
             vc.user = self.selectedUser
         }
     }
