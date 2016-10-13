@@ -12,7 +12,7 @@
                 "microposts_count": 1000
             },
             {
-                "id"       : 102,
+                "id"       : 104,
                 "name"     : "shimoju",
                 "icon_url" : "http://example.com/image/icon2.png",
                 "following_count": 100,

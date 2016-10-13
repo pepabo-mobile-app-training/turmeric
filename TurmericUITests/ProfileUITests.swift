@@ -12,6 +12,8 @@ class ProfileUITests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        continueAfterFailure = false
+        XCUIApplication().launch()
     }
     
     override func tearDown() {
@@ -21,7 +23,6 @@ class ProfileUITests: XCTestCase {
     func testProfileLayout() {
         //プロフィールページへ
         let app = XCUIApplication()
-        app.launch()
         app.tabBars.buttons["プロフィール"].tap()
         
         let profileFollowingCountButton = app.buttons["profileFollowingCountButton"]
@@ -44,20 +45,19 @@ class ProfileUITests: XCTestCase {
     func testMyFollowers(){
         // ページに移動
         let app = XCUIApplication()
-        app.launch()
         app.tabBars.buttons["プロフィール"].tap()
         app.buttons["profileFollowersCountButton"].tap()
         
         // ユーザ名とフォロー/アンフォローボタンを確認
-        XCTAssert(app.staticTexts["ry023"].exists)
-        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
+        XCTAssert(app.staticTexts["Other User"].exists)
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"Other User").buttons["アンフォロー"].exists)
         
         XCTAssert(app.staticTexts["shimoju"].exists)
         XCTAssert(app.tables.cells.containing(.staticText, identifier:"shimoju").buttons["フォロー"].exists)
         
         //アンフォローしたらフォローボタンに変わる
-        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].tap()
-        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].exists)
+        app.tables.cells.containing(.staticText, identifier:"Other User").buttons["アンフォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"Other User").buttons["フォロー"].exists)
         
         //フォローしたらアンフォローボタンに変わる
         app.tables.cells.containing(.staticText, identifier:"shimoju").buttons["フォロー"].tap()
@@ -67,22 +67,21 @@ class ProfileUITests: XCTestCase {
     func testMyFollowing(){
         // ページに移動
         let app = XCUIApplication()
-        app.launch()
         app.tabBars.buttons["プロフィール"].tap()
         app.buttons["profileFollowingCountButton"].tap()
         
         // ユーザ名とアンフォローボタンを確認
-        XCTAssert(app.staticTexts["ry023"].exists)
-        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
+        XCTAssert(app.staticTexts["Other User"].exists)
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"Other User").buttons["アンフォロー"].exists)
         
         XCTAssert(!app.staticTexts["shimoju"].exists)   // フォローしていないユーザは表示されない
         
         //アンフォローしたらフォローボタンに変わる
-        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].tap()
-        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].exists)
+        app.tables.cells.containing(.staticText, identifier:"Other User").buttons["アンフォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"Other User").buttons["フォロー"].exists)
         
         //フォローしたらアンフォローボタンに変わる
-        app.tables.cells.containing(.staticText, identifier:"ry023").buttons["フォロー"].tap()
-        XCTAssert(app.tables.cells.containing(.staticText, identifier:"ry023").buttons["アンフォロー"].exists)
+        app.tables.cells.containing(.staticText, identifier:"Other User").buttons["フォロー"].tap()
+        XCTAssert(app.tables.cells.containing(.staticText, identifier:"Other User").buttons["アンフォロー"].exists)
     }
 }
