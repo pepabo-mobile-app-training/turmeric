@@ -42,6 +42,7 @@ class MicropostTests: XCTestCase {
                     XCTAssertEqual("I just ate an orange!", micropost.content)
                     XCTAssertNil(micropost.picture)
                     XCTAssertEqual("Example User", micropost.user.name)
+                    XCTAssertEqual("2016-09-30 09:41:24 +0000", micropost.createdAt.description)
                     done()
                 default: break
                 }
