@@ -28,11 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // for test setting
             print("launch test mode")
             enableHTTPStubs()
-            loginDispatch.enter()
-            User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
-                print("logged in")
-                self.loginDispatch.leave()
-            }
         #endif
         return true
     }
