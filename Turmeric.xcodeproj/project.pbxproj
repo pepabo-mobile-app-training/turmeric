@@ -37,7 +37,6 @@
 		5232599F1D9A0D8100476111 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5232599E1D9A0D8100476111 /* User.swift */; };
 		523D86B41DAC7CFB00F5D1F2 /* MicropostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */; };
 		523D86B51DAC7CFB00F5D1F2 /* MicropostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */; };
-		5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242ABF71D98F1BE0095D4F4 /* ViewController.swift */; };
 		5242ABFB1D98F1CB0095D4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */; };
 		5242ABFC1D98F1CB0095D4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */; };
 		525B707B1D98F985004D72BD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B70781D98F985004D72BD /* Alamofire.framework */; };
@@ -152,7 +151,6 @@
 		5232599E1D9A0D8100476111 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicropostCell.swift; sourceTree = "<group>"; };
 		523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MicropostCell.xib; sourceTree = "<group>"; };
-		5242ABF71D98F1BE0095D4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		525B70781D98F985004D72BD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 				72C0D6ED1D9D106000D47723 /* ProfileViewController.swift */,
 				72B150101DA5FE10005E7523 /* UsersViewController.swift */,
 				72B14FF81DA3B11D005E7523 /* TabBarController.swift */,
-				5242ABF71D98F1BE0095D4F4 /* ViewController.swift */,
 				52A8F6251DA656CE00354999 /* ListAddMemberViewController.swift */,
 				5208BBDD1DA782AA0098DBC6 /* ListManagementViewController.swift */,
 				72B150251DAC8A8B005E7523 /* OthersProfileViewController.swift */,
@@ -710,7 +707,6 @@
 				52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */,
 				526B149F1DA4A21F00BDAAFA /* MembersDeleteCell.swift in Sources */,
 				5232599F1D9A0D8100476111 /* User.swift in Sources */,
-				5242ABF81D98F1BE0095D4F4 /* ViewController.swift in Sources */,
 				72C0D6EE1D9D106000D47723 /* ProfileViewController.swift in Sources */,
 				72B14FF71DA39D79005E7523 /* PostViewController.swift in Sources */,
 				521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */,
