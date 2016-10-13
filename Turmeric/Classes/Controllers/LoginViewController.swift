@@ -15,6 +15,7 @@ class LoginViewController: FormViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         if (APIClient.token != nil) {
+            //すでにログインしていればhomeに遷移
             self.performSegue(withIdentifier: "mainView", sender: self)
         }
         
