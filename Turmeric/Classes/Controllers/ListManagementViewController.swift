@@ -75,7 +75,7 @@ class ListManagementViewController: UITableViewController{
     override func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
         let cell = self.tableView.cellForRow(at: indexPath)!
         // セル内で削除ボタン以外がタッチされても背景を変えない
-        cell.selectionStyle = .none
+        cell.setSelected(false, animated: false)
     }
     
     func deleteButtonTap(sender: UIButton, event: UIEvent) {
@@ -85,13 +85,20 @@ class ListManagementViewController: UITableViewController{
             let indexPath = self.tableView.indexPathForRow(at: point)
             let cell = self.tableView.cellForRow(at: indexPath!) as! ListDeleteCell
             
-            // 削除ボタンの該当リストをdeleteListsとして保持する
-            self.deleteLists.append(self.myLists[(indexPath?.row)!])
+            // ボタンが押された時の処理
+            if (cell.deleteButton.title(for: .normal) == "削除"){
+                // 削除ボタンの該当リストをdeleteListsとして保持する
+                self.deleteLists.append(self.myLists[(indexPath?.row)!])
+                
+                cell.selectionStyle = .none
+                cell.backgroundColor = UIColor.lightGray
+                cell.deleteButton.setTitle("キャンセル", for: .normal)
+            } else {
+                cell.selectionStyle = .default
+                cell.backgroundColor = UIColor.white
+                cell.deleteButton.setTitle("削除", for: .normal)
+            }
             
-            // 該当セルの背景をグレイにし、削除ボタンを非表示にする
-            cell.selectionStyle = .none
-            cell.backgroundColor = UIColor.lightGray
-            cell.deleteButton.setTitle("キャンセル", for: .normal)
         }
     }
     
