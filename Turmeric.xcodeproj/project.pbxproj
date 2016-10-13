@@ -43,6 +43,7 @@
 		525B707B1D98F985004D72BD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B70781D98F985004D72BD /* Alamofire.framework */; };
 		525B707C1D98F985004D72BD /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B70791D98F985004D72BD /* AlamofireImage.framework */; };
 		525B707D1D98F985004D72BD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525B707A1D98F985004D72BD /* SwiftyJSON.framework */; };
+		526055661DAF1AAF003E07BB /* UsersMicroposts_otherUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 526055651DAF1AAF003E07BB /* UsersMicroposts_otherUser.json */; };
 		526437141DAC8F6B0034F7F2 /* ListDeleteUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526437131DAC8F6B0034F7F2 /* ListDeleteUITest.swift */; };
 		526437161DAC9ADF0034F7F2 /* ListCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526437151DAC9ADF0034F7F2 /* ListCreate.storyboard */; };
 		526437181DAC9B3C0034F7F2 /* ListCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526437171DAC9B3C0034F7F2 /* ListCreateViewController.swift */; };
@@ -159,6 +160,7 @@
 		525B70781D98F985004D72BD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		525B70791D98F985004D72BD /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		525B707A1D98F985004D72BD /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		526055651DAF1AAF003E07BB /* UsersMicroposts_otherUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersMicroposts_otherUser.json; sourceTree = "<group>"; };
 		526437131DAC8F6B0034F7F2 /* ListDeleteUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDeleteUITest.swift; sourceTree = "<group>"; };
 		526437151DAC9ADF0034F7F2 /* ListCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListCreate.storyboard; sourceTree = "<group>"; };
 		526437171DAC9B3C0034F7F2 /* ListCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCreateViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				5222F5AB1DA34A0F00990E8E /* UsersCreate.json */,
 				72B150191DA6576A005E7523 /* UsersFollowers.json */,
 				72B1501B1DA6577C005E7523 /* UsersFollowing.json */,
+				526055651DAF1AAF003E07BB /* UsersMicroposts_otherUser.json */,
 				528B8A151DADE3F400CEB1B4 /* UsersMicroposts.json */,
 			);
 			path = Fixtures;
@@ -615,6 +618,7 @@
 				7231C3D91D9A0BA90086D60F /* Mention.storyboard in Resources */,
 				52A44A871D9E465800DE76FD /* ListDetail.storyboard in Resources */,
 				526437161DAC9ADF0034F7F2 /* ListCreate.storyboard in Resources */,
+				526055661DAF1AAF003E07BB /* UsersMicroposts_otherUser.json in Resources */,
 				526B14A21DA4E43B00BDAAFA /* ListsUpdate.json in Resources */,
 				528B8A141DADE3DF00CEB1B4 /* ListFeed.json in Resources */,
 				5222F5AD1DA34A0F00990E8E /* ListsShow.json in Resources */,
