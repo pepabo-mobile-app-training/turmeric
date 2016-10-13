@@ -47,6 +47,26 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
         // buttonBarViewはスーパークラスで定義されている
         buttonBarView.removeFromSuperview()
         navigationController?.navigationBar.addSubview(buttonBarView)
+        
+        // タブ切り替え時の処理
+        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+            
+            oldCell?.label.textColor = .gray    // 非アクティブタグはグレー
+            newCell?.label.textColor = .black   // アクティブタグは黒
+            
+            // アクティブの文字は大きく、非アクティブは小さく表示する
+            if animated {
+                UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                    newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                })
+            }
+            else {
+                newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
