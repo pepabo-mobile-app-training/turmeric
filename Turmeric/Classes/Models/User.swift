@@ -40,7 +40,8 @@ class User {
             case .Success(let json):
                 handler(APIResponse.Success(User(json: json["user"])))
             default:
-                break
+                let error = response.error(type: User.self)
+                handler(error)
             }
         }
     }
@@ -53,7 +54,8 @@ class User {
             case .Success(let json):
                 handler(APIResponse.Success(User(json: json["user"])))
             default:
-                break
+                let error = response.error(type: User.self)
+                handler(error)
             }
 
         }
@@ -64,7 +66,9 @@ class User {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(User(json: json["user"])))
-            default: break
+            default:
+                let error = response.error(type: User.self)
+                handler(error)
             }
         }
     }
@@ -76,7 +80,8 @@ class User {
                 APIClient.token = json["token"].string!
                 handler(APIResponse.Success(nil))
             default:
-                break
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
         }
     }
@@ -89,7 +94,9 @@ class User {
                     Micropost(json: $0)
                     })
                 handler(APIResponse.Success(microposts))
-            default: break
+            default:
+                let error = response.error(type: ([Micropost]?.self)!)
+                handler(error)
             }
         }
     }
@@ -103,7 +110,8 @@ class User {
                     })
                 handler(APIResponse.Success(lists))
             default:
-                break
+                let error = response.error(type: ([List]?.self)!)
+                handler(error)
             }
         }
     }
@@ -114,7 +122,9 @@ class User {
             case .Success(let json):
                 let users: [User]? = (json["following"]["users"].array?.map { User(json: $0) })
                 handler(APIResponse.Success(users))
-            default: break
+            default:
+                let error = response.error(type: ([User]?.self)!)
+                handler(error)
             }
         }
     }
@@ -125,7 +135,9 @@ class User {
             case .Success(let json):
                 let users: [User]? = (json["followers"]["users"].array?.map { User(json: $0) })
                 handler(APIResponse.Success(users))
-            default: break
+            default:
+                let error = response.error(type: ([User]?.self)!)
+                handler(error)
             }
         }
     }

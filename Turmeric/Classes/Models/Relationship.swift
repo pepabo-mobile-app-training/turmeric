@@ -14,7 +14,9 @@ class Relationship {
             switch response {
             case .Success:
                 handler(APIResponse.Success(nil))
-            default: break
+            default:
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
         }
     }
@@ -30,7 +32,9 @@ class Relationship {
             switch response {
             case .Success:
                 handler(APIResponse.Success(nil))
-            default: break
+            default:
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
             
         }
