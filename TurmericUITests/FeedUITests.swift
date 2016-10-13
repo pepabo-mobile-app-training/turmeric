@@ -68,8 +68,8 @@ class FeedUITests: XCTestCase {
         let app = XCUIApplication()
 
         // 投稿をタップしたらその人のプロフィールに移動
-        let otherUser = app.tables.cells.element(boundBy: 9)
-        otherUser.staticTexts["Michael"].tap()
+        let otherUser = app.tables.cells.element(boundBy: 1)
+        otherUser.staticTexts["Other User"].tap()
         XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
 
         // プロフィールにフィードが表示されていること
