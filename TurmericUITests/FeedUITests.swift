@@ -21,10 +21,12 @@ class FeedUITests: XCTestCase {
         let firstCell = micropostCells.element(boundBy: 0)
         XCTAssert(firstCell.staticTexts["Example User"].exists)
         XCTAssert(firstCell.staticTexts["Writing a short test"].exists)
+        XCTAssert(firstCell.staticTexts["2016年10月04日 17:18"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
         XCTAssert(lastCell.staticTexts["Michael"].exists)
         XCTAssert(lastCell.staticTexts["Rerum ut laborum at ab in itaque quos."].exists)
+        XCTAssert(lastCell.staticTexts["2016年07月23日 17:18"].exists)
     }
 
     // リストフィード(リストに追加されたユーザーの投稿)
@@ -40,10 +42,12 @@ class FeedUITests: XCTestCase {
         let firstCell = micropostCells.element(boundBy: 0)
         XCTAssert(firstCell.staticTexts["ListFeed Test User"].exists)
         XCTAssert(firstCell.staticTexts["ListFeed desu."].exists)
+        XCTAssert(firstCell.staticTexts["2016年10月04日 17:18"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
         XCTAssert(lastCell.staticTexts["Michael List"].exists)
         XCTAssert(lastCell.staticTexts["リストフィードです"].exists)
+        XCTAssert(lastCell.staticTexts["2016年07月23日 17:18"].exists)
     }
 
     // プロフィールフィード(プロフィールページの自分の投稿)
@@ -56,10 +60,12 @@ class FeedUITests: XCTestCase {
         let firstCell = micropostCells.element(boundBy: 0)
         XCTAssert(firstCell.staticTexts["Profile Test User"].exists)
         XCTAssert(firstCell.staticTexts["投稿8"].exists)
+        XCTAssert(firstCell.staticTexts["2016年12月20日 11:57"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
         XCTAssert(lastCell.staticTexts["Profile Test User"].exists)
         XCTAssert(lastCell.staticTexts["投稿1"].exists)
+        XCTAssert(lastCell.staticTexts["2016年10月09日 11:57"].exists)
     }
 
     // 他人のプロフィールフィード
@@ -79,9 +85,11 @@ class FeedUITests: XCTestCase {
         let firstCell = micropostCells.element(boundBy: 0)
         XCTAssert(firstCell.staticTexts["Other User"].exists)
         XCTAssert(firstCell.staticTexts["わたしは他人です"].exists)
+        XCTAssert(firstCell.staticTexts["2016年12月20日 11:57"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
         XCTAssert(lastCell.staticTexts["Other User"].exists)
         XCTAssert(lastCell.staticTexts["OtherOtherOther"].exists)
+        XCTAssert(lastCell.staticTexts["2016年10月09日 11:57"].exists)
     }
 }
