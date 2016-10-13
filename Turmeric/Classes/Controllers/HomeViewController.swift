@@ -1,9 +1,11 @@
 import UIKit
 import XLPagerTabStrip
 
-class HomeViewController: ButtonBarPagerTabStripViewController {
+class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToProfileDelegate {
     var lists: [List] = []
 
+    var selectedUser: User! = nil;
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // AppDelegateからログイン完了の通知を受けたらリストを取得する
@@ -18,6 +20,16 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
                 }
             }
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // ナビから戻ってきたらタブを復活させる
+        let subviews = navigationController?.navigationBar.subviews
+        for subview in subviews! {
+            subview.isHidden = false
+        }
     }
     
     override func viewDidLoad() {
@@ -66,5 +78,23 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         feed.itemInfo = IndicatorInfo(title: title)
         feed.isHome = true
         return feed
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "profile"){
+            // navbarをナビに使うのでタブを退場させる
+            let subviews = navigationController?.navigationBar.subviews
+            for subview in subviews! {
+                subview.isHidden = true
+            }
+            
+            let vc = segue.destination as! OthersProfileViewController
+            vc.user = self.selectedUser
+        }
+    }
+    
+    func performSegueToProfile(user: User) {
+        self.selectedUser = user
+        performSegue(withIdentifier: "profile", sender: self)
     }
 }

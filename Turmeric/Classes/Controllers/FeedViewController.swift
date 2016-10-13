@@ -52,7 +52,14 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
 
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = self.microposts[indexPath.row].user
+        let parent = self.parent as! PerformSegueToProfileDelegate
+        
+        parent.performSegueToProfile(user: selectedUser)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return isHome ? 20 : 0
     }

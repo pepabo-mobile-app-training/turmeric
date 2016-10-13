@@ -61,4 +61,15 @@ class FeedUITests: XCTestCase {
         XCTAssert(lastCell.staticTexts["Profile Test User"].exists)
         XCTAssert(lastCell.staticTexts["投稿1"].exists)
     }
+    
+    func testPerformSegueToProfile() {
+        let app = XCUIApplication()
+        let micropostCells = app.tables.cells
+        
+        // 最初のセル
+        let firstCell = micropostCells.element(boundBy: 0)
+        firstCell.staticTexts["Example User"].tap()
+        XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
+        
+    }
 }
