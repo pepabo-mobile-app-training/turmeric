@@ -21,53 +21,7 @@ class OthersProfileViewController: UIViewController, PerformSegueToProfileDelega
     var isFollowedByMe: Bool! = nil
     
     override func viewWillAppear(_ animated: Bool) {
-        self.usernameLabel.text = self.user?.name
-        
-        if let micropostCount = user?.micropostsCount, let followersCount = user?.followersCount, let followingCount = user?.followingCount {
-            self.micropostsLabel.text = micropostCount.description
-            
-            self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
-            self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
-        }
-        
-        do {
-            let data = try Data(contentsOf: (user?.iconURL)! )
-            self.profileImage.image = UIImage(data: data)
-        } catch {
-            //画像がダウンロードできなかった
-        }
-        
-        
-        // 自分がフォローしてるか取得してボタンを変更
-        User.getMyUser(){ getMyUserResponse in
-            switch getMyUserResponse {
-            case .Success(let me):
-                User.getFollowing(id: me.id){ getFollowingResponse in
-                    switch getFollowingResponse {
-                    case .Success(let following):
-                        self.followButton.isHidden = false    // レスポンスが来たので隠すのをやめる
-                        
-                        self.isFollowedByMe = false
-                        
-                        var title = "フォロー"
-                        
-                        following?.forEach() { followedByMe in
-                            if(followedByMe.id == self.user?.id){
-                                self.isFollowedByMe = true
-                                title = "アンフォロー"
-                                return
-                            }
-                        }
-                        
-                        self.followButton.setTitle(title, for: UIControlState.normal)
-                    default: break
-
-                    }
-                }
-
-            default: break
-            }
-        }
+        self.reloadUser(userID: user!.id)
     }
     
     override func viewDidLoad() {
@@ -112,7 +66,7 @@ class OthersProfileViewController: UIViewController, PerformSegueToProfileDelega
                 switch response {
                 case .Success:
                     self.isFollowedByMe = false
-                    self.followButton.setTitle("フォロー", for: UIControlState.normal)
+                    self.reloadUser(userID: self.user!.id)
                 default: break
                 }
             }
@@ -121,18 +75,73 @@ class OthersProfileViewController: UIViewController, PerformSegueToProfileDelega
                 switch response {
                 case .Success:
                     self.isFollowedByMe = true
-                    self.followButton.setTitle("アンフォロー", for: UIControlState.normal)
+                    self.reloadUser(userID: self.user!.id)
                 default: break
                 }
-                
             }
         }
-
     }
     
     func performSegueToProfile(user: User) {
         //プロフィールからプロフィールに遷移しても仕方ないので遷移しない
         return
+    }
+    
+    func reloadUser(userID: Int){
+        //ユーザ読み直し
+        User.getUser(userID: userID) { response in
+            switch response {
+            case .Success(let user):
+                self.usernameLabel.text = user.name
+        
+                if let micropostCount = user.micropostsCount, let followersCount = user.followersCount, let followingCount = user.followingCount {
+                    self.micropostsLabel.text = micropostCount.description
+            
+                    self.followersButton.setTitle(followersCount.description, for: UIControlState.normal)
+                    self.followingButton.setTitle(followingCount.description, for: UIControlState.normal)
+                }
+        
+                do {
+                    let data = try Data(contentsOf: user.iconURL )
+                    self.profileImage.image = UIImage(data: data)
+                } catch {
+                    //画像がダウンロードできなかった
+                }
+                
+            default: break
+            }
+        }
+        
+        // 自分がフォローしてるか取得してボタンを変更
+        User.getMyUser(){ getMyUserResponse in
+            switch getMyUserResponse {
+            case .Success(let me):
+                User.getFollowing(id: me.id){ getFollowingResponse in
+                    switch getFollowingResponse {
+                    case .Success(let following):
+                        self.followButton.isHidden = false    // レスポンスが来たので隠すのをやめる
+                        
+                        self.isFollowedByMe = false
+                        
+                        var title = "フォロー"
+                        
+                        following?.forEach() { followedByMe in
+                            if(followedByMe.id == self.user?.id){
+                                self.isFollowedByMe = true
+                                title = "アンフォロー"
+                                return
+                            }
+                        }
+                        
+                        self.followButton.setTitle(title, for: UIControlState.normal)
+                    default: break
+                        
+                    }
+                }
+                
+            default: break
+            }
+        }
     }
 
 }
