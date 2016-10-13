@@ -94,6 +94,9 @@ class ListManagementViewController: UITableViewController{
                 cell.backgroundColor = UIColor.lightGray
                 cell.deleteButton.setTitle("キャンセル", for: .normal)
             } else {
+                let removeIndex = self.deleteLists.index(where: {$0.id == self.myLists[(indexPath?.row)!].id})
+                self.deleteLists.remove(at: removeIndex!)
+                
                 cell.selectionStyle = .default
                 cell.backgroundColor = UIColor.white
                 cell.deleteButton.setTitle("削除", for: .normal)
