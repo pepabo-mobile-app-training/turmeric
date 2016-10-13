@@ -6,13 +6,15 @@ class Micropost {
     let id: Int
     let userId: Int
     let content: String
+    let createdAt: Date
     let picture: URL?
     let user: User
 
-    init(id: Int, userId: Int, content: String, picture: URL?, user: User) {
+    init(id: Int, userId: Int, content: String, createdAt: Date, picture: URL?, user: User) {
         self.id = id
         self.userId = userId
         self.content = content
+        self.createdAt = createdAt
         self.picture = picture
         self.user = user
     }
@@ -21,6 +23,7 @@ class Micropost {
         self.id = json["id"].int!
         self.userId = json["user_id"].int!
         self.content = json["content"].string!
+        self.createdAt = json["created_at"].string!.dateFromISO8601!
         if let picture = json["picture"].string {
             self.picture = URL(string: picture)
         } else {

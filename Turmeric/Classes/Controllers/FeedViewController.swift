@@ -49,6 +49,10 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         cell.name.text = micropost.user.name
         cell.content.text = micropost.content
         cell.profileImage.af_setImage(withURL: micropost.user.iconURL)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy年MM月dd日 HH:mm"
+        cell.date.text = formatter.string(for: micropost.createdAt)
 
         return cell
     }
