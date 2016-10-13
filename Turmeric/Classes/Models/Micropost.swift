@@ -34,7 +34,9 @@ class Micropost {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(Micropost(json: json["micropost"])))
-            default: break
+            default:
+                let error = response.error(type: Micropost.self)
+                handler(error)
             }
             
         }
@@ -45,7 +47,9 @@ class Micropost {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(Micropost(json: json["micropost"])))
-            default: break
+            default:
+                let error = response.error(type: Micropost.self)
+                handler(error)
             }
         }
     }
@@ -63,7 +67,9 @@ class Micropost {
                     microposts = (json["feed"].array?.map { Micropost(json: $0) })
                 }
                 handler(APIResponse.Success(microposts))
-            default: break
+            default:
+                let error = response.error(type: ([Micropost]?.self)!)
+                handler(error)
             }
         }
     }

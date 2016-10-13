@@ -21,7 +21,9 @@ class List {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(List(json: json["list"])))
-            default: break
+            default:
+                let error = response.error(type: List.self)
+                handler(error)
             }
             
         }
@@ -35,7 +37,9 @@ class List {
                     User(json: $0)
                 }
                 handler(APIResponse.Success(members))
-            default: break
+            default:
+                let error = response.error(type: [User].self)
+                handler(error)
             }
             
         }
@@ -46,7 +50,9 @@ class List {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(List(json: json["list"])))
-            default: break
+            default:
+                let error = response.error(type: List.self)
+                handler(error)
             }
             
         }
@@ -57,7 +63,9 @@ class List {
             switch response {
             case .Success:
                 handler(APIResponse.Success(nil))
-            default: break
+            default:
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
             
         }
@@ -68,7 +76,9 @@ class List {
             switch response {
             case .Success:
                 handler(APIResponse.Success(nil))
-            default: break
+            default:
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
         }
     }
@@ -78,7 +88,9 @@ class List {
             switch response {
             case .Success:
                 handler(APIResponse.Success(nil))
-            default: break
+            default:
+                let error = response.error(type: (Any?.self)!)
+                handler(error)
             }
         }
     }
@@ -88,7 +100,9 @@ class List {
             switch response {
             case .Success(let json):
                 handler(APIResponse.Success(List(json: json["list"])))
-            default: break
+            default:
+                let error = response.error(type: List.self)
+                handler(error)
             }
         }
     }
