@@ -30,16 +30,14 @@ class LoginViewController: FormViewController{
         }.onCellSelection({cell, row in
             let emailRow: EmailRow? = self.form.rowBy(tag: "email")
             let passwordRow: PasswordRow? = self.form.rowBy(tag: "password")
-            print ("tapped button")
+            
             if let email = emailRow?.value, let password = passwordRow?.value {
                 let parameters = ["user": ["email": email, "password": password]]
                 User.authenticate(parameters: parameters){ response in
                     switch response {
                     case .Success:
-                        print("logged in")
                         self.performSegue(withIdentifier: "mainView", sender: self)
-                    case .ValidationError(let json):
-                        print(json)
+                    case .ValidationError(let json): break
                     default: break
                     }
                 }
