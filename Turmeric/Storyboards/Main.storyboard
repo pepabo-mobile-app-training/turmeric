@@ -20,10 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="ログイン" id="3DH-b0-RF6"/>
+                    <connections>
+                        <segue destination="Zvd-9n-caL" kind="showDetail" identifier="mainView" id="p2o-Xt-n2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIE-ol-lkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1783.2" y="-32.833583208395808"/>
+            <point key="canvasLocation" x="-1778" y="-54"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jTJ-PE-qgF">
@@ -110,7 +113,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vw6-Kd-egm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2722.4000000000001" y="-32.833583208395808"/>
+            <point key="canvasLocation" x="-2722" y="-54"/>
         </scene>
     </scenes>
     <resources>
