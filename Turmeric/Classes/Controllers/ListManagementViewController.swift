@@ -67,7 +67,7 @@ class ListManagementViewController: UITableViewController{
         
         let deleteButton = cell.deleteButton!
         //削除ボタンタップ時のコールバック設定
-        deleteButton.addTarget(self, action: #selector(ListManagementViewController.deleteButtonTap), for: .touchDown)
+        deleteButton.addTarget(self, action: #selector(ListManagementViewController.deleteButtonTap), for: .touchUpInside)
         
         return cell
     }
@@ -91,7 +91,7 @@ class ListManagementViewController: UITableViewController{
             // 該当セルの背景をグレイにし、削除ボタンを非表示にする
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.lightGray
-            cell.deleteButton.isHidden = true
+            cell.deleteButton.setTitle("キャンセル", for: .normal)
         }
     }
     
