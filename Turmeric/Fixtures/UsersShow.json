@@ -1,0 +1,10 @@
+{
+    "user": {
+        "id"       : 101,
+        "name"     : "ry023",
+        "icon_url" : "http://example.com/image/icon1.png",
+        "following_count": 100,
+        "followers_count": 200,
+        "microposts_count": 1000
+    }
+}
