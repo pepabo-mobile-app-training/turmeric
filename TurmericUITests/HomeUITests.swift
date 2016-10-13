@@ -5,6 +5,8 @@ class HomeUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
+        
+        login()
     }
 
     override func tearDown() {
@@ -13,6 +15,8 @@ class HomeUITests: XCTestCase {
 
     func testHomeTabLayout() {
         let app = XCUIApplication()
+        login()
+        
         // ホーム画面が初期状態で選択されていることをテスト
         XCTAssert(app.tabBars.buttons["ホーム"].exists)
         XCTAssert(app.tabBars.buttons["ホーム"].isSelected)

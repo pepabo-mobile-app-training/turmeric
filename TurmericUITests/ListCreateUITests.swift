@@ -15,6 +15,8 @@ class ListCreateUITests: XCTestCase {
 
         continueAfterFailure = false
         XCUIApplication().launch()
+        
+        login()
     }
     
     override func tearDown() {
