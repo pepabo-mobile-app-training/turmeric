@@ -22,6 +22,18 @@ class LoginUITest: XCTestCase {
     
     func testLogin() {
         let app = XCUIApplication()
+        login()
+        
+        let homeTab = app.tabBars.buttons["ホーム"]
+        expectation(for: NSPredicate(format: "exists == true"), evaluatedWith: homeTab, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+}
+
+extension XCTestCase {
+    func login() {
+        let app = XCUIApplication()
         let emailField = app.tables.cells.element(boundBy: 0)
         let passwordField = app.tables.cells.element(boundBy: 1)
         let loginButton = app.tables.cells.element(boundBy: 2)
@@ -35,5 +47,4 @@ class LoginUITest: XCTestCase {
         
         loginButton.tap()
     }
-    
 }
