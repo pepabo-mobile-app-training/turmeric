@@ -20,10 +20,8 @@ class LoginUITest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testLogin() {
         let app = XCUIApplication()
-        let tables = app.tables
-        
         let emailField = app.tables.cells.element(boundBy: 0)
         let passwordField = app.tables.cells.element(boundBy: 1)
         let loginButton = app.tables.cells.element(boundBy: 2)
