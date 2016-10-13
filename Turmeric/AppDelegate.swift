@@ -19,11 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
             // for debug setting
             print("launch debug mode")
-            loginDispatch.enter()
-            User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
-                print("logged in")
-                self.loginDispatch.leave()
-            }
+           
         #elseif TEST
             // for test setting
             print("launch test mode")
