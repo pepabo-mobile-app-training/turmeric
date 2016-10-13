@@ -23,11 +23,10 @@ class OthersProfileUITest: XCTestCase {
     func testOthersProfileLayout() {
         //他人プロフィールページへ
         let app = XCUIApplication()
-        app.launch()
         app.tabBars.buttons["プロフィール"].tap()
         app.buttons["profileFollowingCountButton"].tap()
         
-        app.tables.staticTexts["ry023"].tap()
+        app.tables.staticTexts["Other User"].tap()
         
         let profileFollowingCountButton = app.buttons["profileFollowingCountButton"]
         let profileFollowersCountButton = app.buttons["profileFollowersCountButton"]

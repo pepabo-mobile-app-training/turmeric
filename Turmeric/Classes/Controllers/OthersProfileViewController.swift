@@ -29,6 +29,7 @@ class OthersProfileViewController: UIViewController, PerformSegueToProfileDelega
 
         let profileFeed = self.childViewControllers[0] as! FeedViewController
         profileFeed.endpoint = Endpoint.UsersMicroposts(self.user!.id)
+        profileFeed.reloadFeed()
     }
 
     override func didReceiveMemoryWarning() {

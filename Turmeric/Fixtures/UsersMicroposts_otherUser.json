@@ -3,113 +3,113 @@
         {
             "id": 201,
             "content": "わたしは他人です",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-12-20T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 191,
             "content": "投稿6",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-11-16T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 121,
             "content": "投稿5",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-11-10T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 110,
             "content": "投稿4",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-11-09T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 31,
             "content": "投稿3",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-10-20T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 21,
             "content": "投稿2",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-10-12T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         },
         {
             "id": 5,
             "content": "OtherOtherOther",
-            "user_id": 3,
+            "user_id": 101,
             "created_at": "2016-10-09T02:57:38.000Z",
             "picture": null,
             "user": {
-                "id": 3,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
-                "icon_url": "https://secure.gravatar.com/avatar/d08d4b6a8f375370ad3b1423dca85da8?s=80",
-                "following_count": 5,
-                "followers_count": 7,
-                "microposts_count": 8
+                "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
+                "following_count": 100,
+                "followers_count": 200,
+                "microposts_count": 1000
             }
         }
     ]

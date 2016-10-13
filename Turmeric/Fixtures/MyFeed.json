@@ -19,11 +19,11 @@
         {
             "id": 7,
             "content": "吾輩は猫である。名前はまだない。どこで生れたか頓と見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々140文字",
-            "user_id": 6,
+            "user_id": 101,
             "created_at": "2016-10-02T08:08:33.000Z",
             "picture": null,
             "user": {
-                "id": 6,
+                "id": 101,
                 "name": "Other User",
                 "activated": true,
                 "icon_url": "https://secure.gravatar.com/avatar/de9a58df9617af487e8b28dbb3aa50de?s=80",
