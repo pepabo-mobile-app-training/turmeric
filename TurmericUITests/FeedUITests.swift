@@ -66,11 +66,22 @@ class FeedUITests: XCTestCase {
     // 投稿をタップしたらその人のプロフィールに飛ぶこともテストする
     func testOtherProfileFeed() {
         let app = XCUIApplication()
-        let micropostCells = app.tables.cells
 
+        // 投稿をタップしたらその人のプロフィールに移動
+        let otherUser = app.tables.cells.element(boundBy: 9)
+        otherUser.staticTexts["Michael"].tap()
+        XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
+
+        // プロフィールにフィードが表示されていること
+        let micropostCells = app.tables.cells
+        XCTAssertEqual(7, micropostCells.count)
+        // 最初のセル
+        let firstCell = micropostCells.element(boundBy: 0)
+        XCTAssert(firstCell.staticTexts["Other User"].exists)
+        XCTAssert(firstCell.staticTexts["わたしは他人です"].exists)
         // 最後のセル
         let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
-        lastCell.staticTexts["Michael"].tap()
-        XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
+        XCTAssert(lastCell.staticTexts["Other User"].exists)
+        XCTAssert(lastCell.staticTexts["OtherOtherOther"].exists)
     }
 }
