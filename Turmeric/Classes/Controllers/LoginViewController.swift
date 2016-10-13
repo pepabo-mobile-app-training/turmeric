@@ -14,6 +14,10 @@ class LoginViewController: FormViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (APIClient.token != nil) {
+            self.performSegue(withIdentifier: "mainView", sender: self)
+        }
+        
         form +++ EmailRow("email") { row in
             row.title = "メールアドレス"
         }
