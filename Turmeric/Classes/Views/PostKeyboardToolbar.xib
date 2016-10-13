@@ -12,7 +12,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
             <items>
-                <barButtonItem title="画像" id="TNz-4U-2Ng"/>
                 <barButtonItem style="plain" systemItem="flexibleSpace" id="ZGp-Yc-JI1"/>
                 <barButtonItem title="投稿" id="Kv1-uj-A0g"/>
             </items>

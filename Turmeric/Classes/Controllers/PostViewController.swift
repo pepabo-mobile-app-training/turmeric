@@ -47,7 +47,7 @@ class PostViewController: UIViewController {
         self.postTextView.inputAccessoryView = toolbar
 
 
-        let postButton: UIBarButtonItem = toolbar.items![2]
+        let postButton: UIBarButtonItem = toolbar.items![1]
 
         postButton.target = self;
         postButton.action = #selector(PostViewController.postButtonDidTap)
