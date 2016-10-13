@@ -61,15 +61,27 @@ class FeedUITests: XCTestCase {
         XCTAssert(lastCell.staticTexts["Profile Test User"].exists)
         XCTAssert(lastCell.staticTexts["投稿1"].exists)
     }
-    
-    func testPerformSegueToProfile() {
+
+    // 他人のプロフィールフィード
+    // 投稿をタップしたらその人のプロフィールに飛ぶこともテストする
+    func testOtherProfileFeed() {
         let app = XCUIApplication()
+
+        // 投稿をタップしたらその人のプロフィールに移動
+        let otherUser = app.tables.cells.element(boundBy: 1)
+        otherUser.staticTexts["Other User"].tap()
+        XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
+
+        // プロフィールにフィードが表示されていること
         let micropostCells = app.tables.cells
-        
+        XCTAssertEqual(7, micropostCells.count)
         // 最初のセル
         let firstCell = micropostCells.element(boundBy: 0)
-        firstCell.staticTexts["Example User"].tap()
-        XCTAssert(app.staticTexts["プロフィール"].exists) // プロフ画面タイトル
-        
+        XCTAssert(firstCell.staticTexts["Other User"].exists)
+        XCTAssert(firstCell.staticTexts["わたしは他人です"].exists)
+        // 最後のセル
+        let lastCell = micropostCells.element(boundBy: micropostCells.count - 1)
+        XCTAssert(lastCell.staticTexts["Other User"].exists)
+        XCTAssert(lastCell.staticTexts["OtherOtherOther"].exists)
     }
 }

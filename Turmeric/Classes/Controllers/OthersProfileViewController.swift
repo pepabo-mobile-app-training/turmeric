@@ -72,6 +72,9 @@ class OthersProfileViewController: UIViewController, PerformSegueToProfileDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let profileFeed = self.childViewControllers[0] as! FeedViewController
+        profileFeed.endpoint = Endpoint.UsersMicroposts(self.user!.id)
     }
 
     override func didReceiveMemoryWarning() {
