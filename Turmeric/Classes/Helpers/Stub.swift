@@ -32,7 +32,7 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    stub(condition: isHost("currry.xyz") && isPath("/api/users/6/microposts") && isMethodGET()){_ in
+    stub(condition: isHost("currry.xyz") && isPath("/api/users/101/microposts") && isMethodGET()){_ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "UsersMicroposts_otherUser.json"),
             statusCode: 200,
@@ -114,7 +114,7 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
+
     //List
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1") && isMethodGET()){ _ in
         return OHHTTPStubsResponse(
@@ -130,7 +130,7 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
+
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1") && isMethodPATCH()) { _ in
         return OHHTTPStubsResponse(
             fileAtPath: stubFilePath(name: "ListsUpdate.json"),
@@ -138,11 +138,11 @@ func enableHTTPStubs() {
             headers: ["Content-Type": "application/json"]
         )
     }
-    
+
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1/members/101") && isMethodDELETE()) { _ in
         return OHHTTPStubsResponse(jsonObject : [], statusCode: 200, headers: nil)
     }
-    
+
     stub(condition: isHost("currry.xyz") && isPath("/api/lists/1/members") && isMethodPOST()) { _ in
         return OHHTTPStubsResponse(jsonObject : [], statusCode: 201, headers: nil)
     }
