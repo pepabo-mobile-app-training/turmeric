@@ -75,19 +75,16 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
     func reloadFeed() {
         // endpointが指定されていなければ何もしない
         guard let endpoint = self.endpoint else { return }
-        // AppDelegateからログイン完了の通知を受けたらフィードを取得する
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            Micropost.getFeed(endpoint: endpoint) { response in
-                switch response {
-                case .Success(let feed):
-                    self.microposts = feed!
-                    self.tableView.reloadData()
-                    // endRefreshingしないとローディングアイコンが回り続ける
-                    self.refreshControl?.endRefreshing()
-                default: break
-                }
+        
+        Micropost.getFeed(endpoint: endpoint) { response in
+            switch response {
+            case .Success(let feed):
+                self.microposts = feed!
+                self.tableView.reloadData()
+                // endRefreshingしないとローディングアイコンが回り続ける
+                self.refreshControl?.endRefreshing()
+            default: break
             }
-        })
+        }
     }
 }

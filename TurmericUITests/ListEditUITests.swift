@@ -14,6 +14,8 @@ class ListEditUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
+        
+        login()
     }
     
     override func tearDown() {

@@ -13,26 +13,16 @@ import OHHTTPStubs
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let loginDispatch = DispatchGroup.init()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
             // for debug setting
             print("launch debug mode")
-            loginDispatch.enter()
-            User.authenticate(parameters: ["user": ["email": "syuta_ogido@yahoo.co.jp", "password": "testtest"]]) { response in
-                print("logged in")
-                self.loginDispatch.leave()
-            }
+           
         #elseif TEST
             // for test setting
             print("launch test mode")
             enableHTTPStubs()
-            loginDispatch.enter()
-            User.authenticate(parameters: ["user": ["email": "test@example.com", "password": "F0oB@rbaz"]]) { response in
-                print("logged in")
-                self.loginDispatch.leave()
-            }
         #endif
         return true
     }

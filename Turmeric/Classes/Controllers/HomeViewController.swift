@@ -8,18 +8,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // AppDelegateからログイン完了の通知を受けたらリストを取得する
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.loginDispatch.notify(queue: DispatchQueue.main, execute: {
-            User.getMyLists() { response in
-                switch response {
-                case .Success(let lists):
-                    self.lists = lists!
-                    self.reloadPagerTabStripView()
-                default: break
-                }
+        
+        User.getMyLists() { response in
+            switch response {
+            case .Success(let lists):
+                self.lists = lists!
+                self.reloadPagerTabStripView()
+            default: break
             }
-        })
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
