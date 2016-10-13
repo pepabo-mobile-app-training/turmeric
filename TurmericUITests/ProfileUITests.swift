@@ -24,13 +24,11 @@ class ProfileUITests: XCTestCase {
         app.launch()
         app.tabBars.buttons["プロフィール"].tap()
         
-        let profileEditButton           = app.buttons["profileEditButton"]
         let profileFollowingCountButton = app.buttons["profileFollowingCountButton"]
         let profileFollowersCountButton = app.buttons["profileFollowersCountButton"]
         let profileImage                = app.images["profileImage"]
         let profileMicropostsCountLabel = app.staticTexts["profileMicropostsCountLabel"]
         
-        XCTAssert(profileEditButton.exists)
         XCTAssert(profileFollowersCountButton.exists)
         XCTAssertEqual(profileFollowersCountButton.label, "200")
         

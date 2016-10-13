@@ -23,25 +23,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-NO-a0K" userLabel="IconAndEdit">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-cd-McX" customClass="LinedButton" customModule="Turmeric" customModuleProvider="target">
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="profileEditButton"/>
-                                        <state key="normal" title="編集"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="Sgg-uN-ULc" kind="modal" id="PIL-83-mV2"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xnf-Iu-OEq">
                                         <accessibility key="accessibilityConfiguration" identifier="profileImage"/>
                                         <constraints>
@@ -51,14 +32,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Qnu-cd-McX" firstAttribute="centerX" secondItem="xnf-Iu-OEq" secondAttribute="centerX" id="AeJ-oE-XCw"/>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="leading" secondItem="cnX-NO-a0K" secondAttribute="leading" id="D5P-Ox-bEb"/>
-                                    <constraint firstItem="Qnu-cd-McX" firstAttribute="top" secondItem="xnf-Iu-OEq" secondAttribute="bottom" id="GL0-Eo-2RU"/>
-                                    <constraint firstItem="Qnu-cd-McX" firstAttribute="width" secondItem="xnf-Iu-OEq" secondAttribute="width" id="HuL-PR-gUY"/>
-                                    <constraint firstAttribute="bottom" secondItem="Qnu-cd-McX" secondAttribute="bottom" id="OLr-rQ-EnS"/>
+                                    <constraint firstAttribute="bottom" secondItem="xnf-Iu-OEq" secondAttribute="bottom" constant="30" id="URp-62-s8L"/>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="width" secondItem="cnX-NO-a0K" secondAttribute="width" id="WMT-kJ-hIw"/>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="top" secondItem="cnX-NO-a0K" secondAttribute="top" id="aTP-39-EAH"/>
-                                    <constraint firstItem="Qnu-cd-McX" firstAttribute="leading" secondItem="cnX-NO-a0K" secondAttribute="leading" id="fCz-Ml-Vnj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8V-ir-COL" userLabel="Stat">
