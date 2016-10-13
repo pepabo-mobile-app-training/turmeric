@@ -12,8 +12,15 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
         User.getMyLists() { response in
             switch response {
             case .Success(let lists):
-                self.lists = lists!
-                self.reloadPagerTabStripView()
+                // リストが新旧で変化しているときのみリロードする
+                // FIXME: 当座の対策としてもあまりにもどうかと思いますが、idだけでは名前が変わったのを検出できないのでこうしています
+                let oldList = self.lists.map { String($0.id) + $0.name }
+                let newList = lists!.map { String($0.id) + $0.name }
+
+                if newList != oldList {
+                    self.lists = lists!
+                    self.reloadPagerTabStripView()
+                }
             default: break
             }
         }
