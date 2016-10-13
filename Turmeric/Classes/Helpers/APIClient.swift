@@ -155,4 +155,13 @@ enum APIResponse<ResultType> {
     case ValidationError(JSON) //バリデーションエラー
     case Unauthorized          //認証エラー
     case RequestFailure        //その他のエラー
+    
+    //エラーは型を変換して返す
+    func error<T>(type: T.Type) -> APIResponse<T> {
+        switch self {
+        case .ValidationError(let json): return APIResponse<T>.ValidationError(json)
+        case .Unauthorized: return APIResponse<T>.Unauthorized
+        default: return APIResponse<T>.RequestFailure
+        }
+    }
 }
