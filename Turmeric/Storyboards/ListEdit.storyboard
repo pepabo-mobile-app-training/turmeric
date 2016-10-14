@@ -16,12 +16,12 @@
                         <viewControllerLayoutGuide type="bottom" id="kHP-Jr-dPC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jlp-k5-XuQ">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リスト名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7T-OI-gT1">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101.5" id="s3n-9A-eKC"/>
+                                    <constraint firstAttribute="width" constant="110" id="1yN-ZV-zw8"/>
                                     <constraint firstAttribute="height" constant="30" id="xhL-lq-gCC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -32,7 +32,6 @@
                                 <accessibility key="accessibilityConfiguration" identifier="listNameField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="rSY-He-jXg"/>
-                                    <constraint firstAttribute="width" constant="120" id="tn5-Wf-2vJ"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -61,19 +60,27 @@
                                     <segue destination="aA3-X5-anM" kind="presentation" identifier="goAddMember" id="QBo-OS-07f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザ追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0C-uj-k7J">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WOw-Zo-hUx" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leading" id="7z0-Di-3Ji"/>
                             <constraint firstItem="seq-kd-q7h" firstAttribute="leading" secondItem="L7T-OI-gT1" secondAttribute="trailing" constant="20" id="Ca9-b7-mG4"/>
-                            <constraint firstItem="WOw-Zo-hUx" firstAttribute="top" secondItem="seq-kd-q7h" secondAttribute="bottom" constant="77" id="K0c-7Z-1CR"/>
+                            <constraint firstItem="kSB-AZ-1FJ" firstAttribute="centerY" secondItem="n0C-uj-k7J" secondAttribute="centerY" id="Cqs-VI-yLW"/>
+                            <constraint firstItem="seq-kd-q7h" firstAttribute="centerY" secondItem="L7T-OI-gT1" secondAttribute="centerY" id="Kq7-te-wuL"/>
                             <constraint firstItem="WOw-Zo-hUx" firstAttribute="top" secondItem="kSB-AZ-1FJ" secondAttribute="bottom" constant="5" id="OS3-PM-Hfd"/>
                             <constraint firstAttribute="trailing" secondItem="WOw-Zo-hUx" secondAttribute="trailing" id="SCC-yf-FIg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kSB-AZ-1FJ" secondAttribute="trailing" constant="5" id="SQx-jo-Z5x"/>
-                            <constraint firstItem="seq-kd-q7h" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="Zuq-DZ-YBg"/>
                             <constraint firstItem="kHP-Jr-dPC" firstAttribute="top" secondItem="WOw-Zo-hUx" secondAttribute="bottom" id="aqI-go-TkA"/>
                             <constraint firstItem="L7T-OI-gT1" firstAttribute="top" secondItem="eYe-1C-6h2" secondAttribute="bottom" constant="20" id="c2G-Ng-9Yq"/>
-                            <constraint firstItem="L7T-OI-gT1" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leadingMargin" constant="20" id="qWi-0p-Klt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="seq-kd-q7h" secondAttribute="trailing" id="iwH-SG-Wvd"/>
+                            <constraint firstItem="L7T-OI-gT1" firstAttribute="leading" secondItem="jlp-k5-XuQ" secondAttribute="leadingMargin" id="qWi-0p-Klt"/>
+                            <constraint firstItem="kSB-AZ-1FJ" firstAttribute="top" secondItem="seq-kd-q7h" secondAttribute="bottom" constant="10" id="sBm-b3-SQX"/>
+                            <constraint firstItem="kSB-AZ-1FJ" firstAttribute="leading" secondItem="n0C-uj-k7J" secondAttribute="trailing" constant="5" id="w2l-vg-WaN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OAM-lP-6ud">
