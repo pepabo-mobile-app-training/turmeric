@@ -13,5 +13,5 @@ func login(){
 }
 
 func logout() {
-    APIClient.token = nil
+    User.logout()
 }
