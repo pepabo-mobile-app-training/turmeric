@@ -50,11 +50,16 @@ class LoginViewController: FormViewController{
                     case .Success:
                         self.performSegue(withIdentifier: "mainView", sender: self)
                     case .ValidationError(let err):
-                        print(err)
-                        
-                        print(err["message"].string)
                         let section = self.form.first
-                        section! <<< LabelRow() {row in
+                        
+                        //すでにメッセージが表示されていれば削除
+                        if let validationRow : LabelRow = section?.rowBy(tag: "validationMessage") {
+                            let rowIndex = validationRow.indexPath!.row
+                            validationRow.section?.remove(at: rowIndex)
+                        }
+                        
+                        // サーバ側のバリデーションメッセージを表示する
+                        section! <<< LabelRow("validationMessage") {row in
                             row.title = err["message"].string
                             
                         }
