@@ -174,9 +174,10 @@
                 <navigationController id="AhQ-rM-qjU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="プロフィール" image="Profile" id="YtW-gu-rE6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fy8-IM-aRG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fy8-IM-aRG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="s0U-2F-OaN" kind="relationship" relationship="rootViewController" id="6T8-se-30e"/>

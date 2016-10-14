@@ -57,9 +57,10 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="Home" id="igk-77-jwG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPj-3u-kHg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dPj-3u-kHg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
