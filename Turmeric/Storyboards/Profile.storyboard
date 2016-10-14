@@ -29,13 +29,19 @@
                                             <constraint firstAttribute="width" secondItem="xnf-Iu-OEq" secondAttribute="height" multiplier="1:1" id="MYE-u1-DWU"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-Ny-2Rz" customClass="LinedButton" customModule="Turmeric" customModuleProvider="target">
+                                        <state key="normal" title="ログアウト"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="leading" secondItem="cnX-NO-a0K" secondAttribute="leading" id="D5P-Ox-bEb"/>
+                                    <constraint firstItem="aDn-Ny-2Rz" firstAttribute="centerX" secondItem="cnX-NO-a0K" secondAttribute="centerX" id="DJc-rB-MEQ"/>
                                     <constraint firstAttribute="bottom" secondItem="xnf-Iu-OEq" secondAttribute="bottom" constant="30" id="URp-62-s8L"/>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="width" secondItem="cnX-NO-a0K" secondAttribute="width" id="WMT-kJ-hIw"/>
                                     <constraint firstItem="xnf-Iu-OEq" firstAttribute="top" secondItem="cnX-NO-a0K" secondAttribute="top" id="aTP-39-EAH"/>
+                                    <constraint firstItem="aDn-Ny-2Rz" firstAttribute="top" secondItem="cnX-NO-a0K" secondAttribute="top" constant="112" id="nM7-gT-5yP"/>
+                                    <constraint firstItem="aDn-Ny-2Rz" firstAttribute="width" secondItem="xnf-Iu-OEq" secondAttribute="width" id="wIl-QC-lGf"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8V-ir-COL" userLabel="Stat">
@@ -136,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271.875" y="-124.64788732394366"/>
+            <point key="canvasLocation" x="271.19999999999999" y="-125.4872563718141"/>
         </scene>
         <!--Users-->
         <scene sceneID="zZf-6R-EpN">
@@ -174,7 +180,7 @@
                 <navigationController id="AhQ-rM-qjU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="プロフィール" image="Profile" id="YtW-gu-rE6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fy8-IM-aRG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fy8-IM-aRG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
