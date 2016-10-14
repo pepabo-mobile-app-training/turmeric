@@ -40,7 +40,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.selectedBarBackgroundColor = UIColor(red: 37/255.0, green: 111/255.0, blue: 206/255.0, alpha: 1.0)
+        settings.style.selectedBarBackgroundColor = UIColor(red: 1.0, green: 160/255.0, blue: 0.0, alpha: 1.0)
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
