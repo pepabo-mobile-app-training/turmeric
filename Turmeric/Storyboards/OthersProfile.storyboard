@@ -12,7 +12,6 @@
         <!--プロフィール-->
         <scene sceneID="G3C-m0-anD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="s0U-2F-OaN" customClass="OthersProfileViewController" customModule="Turmeric" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Cw-4b-JHm"/>
@@ -159,36 +158,38 @@
                         <outlet property="usernameLabel" destination="ngK-ft-fVb" id="yOr-Qu-Zfm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Vj-pQ-VNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="271.875" y="-124.64788732394366"/>
         </scene>
         <!--Users-->
         <scene sceneID="zZf-6R-EpN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-Lh-A90" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Users" id="6U7-mI-ayN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tTG-lt-jMe"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezO-Lh-A90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="-326"/>
         </scene>
         <!--Users-->
         <scene sceneID="5u5-Ek-KdT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-w4-EwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Users" id="3df-Ct-SUt" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4ag-Dd-iFD"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFE-w4-EwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="12"/>
         </scene>
         <!--Feed-->
         <scene sceneID="DFI-Se-g9U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j6C-c8-zmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Feed" id="vdx-5Z-HXO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6C-c8-zmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="272" y="288"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

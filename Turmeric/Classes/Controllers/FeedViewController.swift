@@ -53,7 +53,7 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日 HH:mm"
         cell.date.text = formatter.string(for: micropost.createdAt)
-
+        
         return cell
     }
     
@@ -64,12 +64,20 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         parent.performSegueToProfile(user: selectedUser)
     }
     
+    // ヘッダフッタを作ってリストタブ・タブバーにめり込むのを防ぐ
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return isHome ? 20 : 0
     }
-
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return isHome ? 49 : 0
+    }
+    
+    // デフォルトだとヘッダ・フッタに色が入るので透明にしておく
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .clear
+    }
+    override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        view.tintColor = .clear
     }
 
     func reloadFeed() {

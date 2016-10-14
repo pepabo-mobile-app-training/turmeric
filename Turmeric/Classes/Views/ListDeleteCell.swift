@@ -15,6 +15,10 @@ class ListDeleteCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(red: 1.0, green: 236/255.0, blue: 179/255.0, alpha: 1.0)
+        self.selectedBackgroundView = bgView
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

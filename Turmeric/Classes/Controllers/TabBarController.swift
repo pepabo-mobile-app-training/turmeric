@@ -13,6 +13,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        
+        let tabbar = UITabBar.appearance()
+        
+        tabbar.tintColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        tabbar.barTintColor = UIColor(red: 1.0, green: 160/255.0, blue: 0.0, alpha: 1.0)
+        tabbar.unselectedItemTintColor = UIColor(red: 255/255.0, green: 236/255.0, blue: 179/255.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

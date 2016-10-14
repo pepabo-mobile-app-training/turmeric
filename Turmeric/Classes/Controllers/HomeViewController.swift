@@ -24,6 +24,8 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
             default: break
             }
         }
+        
+        self.navigationController?.navigationBar.barTintColor = .white
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +42,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
         // タブのデザイン
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
-        settings.style.selectedBarBackgroundColor = UIColor(red: 37/255.0, green: 111/255.0, blue: 206/255.0, alpha: 1.0)
+        settings.style.selectedBarBackgroundColor = UIColor(red: 1.0, green: 160/255.0, blue: 0.0, alpha: 1.0)
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -108,9 +110,14 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
         if(segue.identifier == "profile"){
             // navbarをナビに使うのでタブを退場させる
             let subviews = navigationController?.navigationBar.subviews
+            
             for subview in subviews! {
-                subview.isHidden = true
+                if subview is ButtonBarView{
+                    subview.isHidden = true
+                }
             }
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 160.0/255.0, blue: 0.0, alpha: 1.0)
+
             
             let vc = segue.destination as! OthersProfileViewController
             vc.user = self.selectedUser

@@ -49,6 +49,11 @@ class ListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath as IndexPath)
         cell.textLabel?.text = self.lists?[indexPath.row].name
+
+        let bgView = UIView()
+        bgView.backgroundColor = UIColor(red: 1.0, green: 236/255.0, blue: 179/255.0, alpha: 1.0)
+        cell.selectedBackgroundView = bgView
+        
         return cell
     }
     
