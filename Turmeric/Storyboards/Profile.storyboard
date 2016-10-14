@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main-->
+        <scene sceneID="bGE-pi-6pR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="CWH-QE-7N3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4i8-me-Vma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="293"/>
+        </scene>
         <!--プロフィール-->
         <scene sceneID="G3C-m0-anD">
             <objects>
@@ -31,6 +39,10 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-Ny-2Rz" customClass="LinedButton" customModule="Turmeric" customModuleProvider="target">
                                         <state key="normal" title="ログアウト"/>
+                                        <connections>
+                                            <action selector="logoutButtonTapped:" destination="s0U-2F-OaN" eventType="touchUpInside" id="Pe9-mY-Mk4"/>
+                                            <segue destination="CWH-QE-7N3" kind="presentation" identifier="login" id="Cjf-GX-qaM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
