@@ -81,9 +81,15 @@ class LoginViewController: FormViewController{
         <<< ButtonRow("loginButton") {row in
             row.title = "ログイン"
         }.onCellSelection({cell, row in
+            
             let emailRow: EmailRow? = self.form.rowBy(tag: "email")
             let passwordRow: PasswordRow? = self.form.rowBy(tag: "password")
-            row.section?.form?.validate()
+            let errors: [ValidationError] = (row.section?.form?.validate())!
+            
+            //クライアントのバリデートで引っかかったらAPIにリクエストは送らない
+            if !errors.isEmpty {
+                return
+            }
             
             if let email = emailRow?.value, let password = passwordRow?.value {
                 let parameters = ["user": ["email": email, "password": password]]
