@@ -143,6 +143,19 @@ class User {
         }
     }
 
+    static func logout() {
+        APIClient.token = nil
+        let keychain = Keychain(service: "com.pepabo.training.Turmeric")
+        do {
+            try keychain.remove("token")
+        }
+        catch let error {
+            // TODO: エラー処理する
+            print("Error: can't remove token")
+            print(error)
+        }
+    }
+
     private static func saveToken(_ token: String) {
         APIClient.token = token
         // Keychainにトークンを保存する
@@ -151,6 +164,7 @@ class User {
             try keychain.set(token, key: "token")
         }
         catch let error {
+            // TODO: エラー処理する
             print("Error: can't save token")
             print(error)
         }
