@@ -23,6 +23,7 @@
 		521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0A61DA3971200A83893 /* ListDetailUITests.swift */; };
 		521BC0A91DA3B05300A83893 /* ListEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521BC0A81DA3B05300A83893 /* ListEdit.storyboard */; };
 		521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */; };
+		521CD7681DB07A000081F9A7 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521CD7671DB07A000081F9A7 /* KeychainAccess.framework */; };
 		5221F3551DA35B9100719B90 /* Auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5221F3541DA35B9100719B90 /* Auth.json */; };
 		52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D231DA4E83700AA6DD4 /* HomeViewController.swift */; };
 		52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */; };
@@ -143,6 +144,7 @@
 		521BC0A61DA3971200A83893 /* ListDetailUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailUITests.swift; sourceTree = "<group>"; };
 		521BC0A81DA3B05300A83893 /* ListEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEdit.storyboard; sourceTree = "<group>"; };
 		521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditViewController.swift; sourceTree = "<group>"; };
+		521CD7671DB07A000081F9A7 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		5221F3541DA35B9100719B90 /* Auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Auth.json; sourceTree = "<group>"; };
 		52221D231DA4E83700AA6DD4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		5232599E1D9A0D8100476111 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		523D86B21DAC7CFB00F5D1F2 /* MicropostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicropostCell.swift; sourceTree = "<group>"; };
 		523D86B31DAC7CFB00F5D1F2 /* MicropostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MicropostCell.xib; sourceTree = "<group>"; };
+		52409BA01DB083E000604D18 /* Turmeric.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Turmeric.entitlements; sourceTree = "<group>"; };
 		5242ABF91D98F1CB0095D4F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5242ABFA1D98F1CB0095D4F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		525B70781D98F985004D72BD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -241,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521CD7681DB07A000081F9A7 /* KeychainAccess.framework in Frameworks */,
 				5264371A1DACB66F0034F7F2 /* Eureka.framework in Frameworks */,
 				52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */,
 				525B707B1D98F985004D72BD /* Alamofire.framework in Frameworks */,
@@ -418,6 +422,7 @@
 		525B70771D98F985004D72BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				521CD7671DB07A000081F9A7 /* KeychainAccess.framework */,
 				526437191DACB66F0034F7F2 /* Eureka.framework */,
 				52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */,
 				521173B81D9A79AB00DDA29E /* Nimble.framework */,
@@ -453,6 +458,7 @@
 		52B1C6DB1D98EFD2002AB83B /* Turmeric */ = {
 			isa = PBXGroup;
 			children = (
+				52409BA01DB083E000604D18 /* Turmeric.entitlements */,
 				5222F5A51DA34A0F00990E8E /* Fixtures */,
 				5242ABF01D98F16A0095D4F4 /* Classes */,
 				5242ABF61D98F16A0095D4F4 /* Storyboards */,
@@ -565,6 +571,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PQPZJ6RSNZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					52B1C6EC1D98EFD2002AB83B = {
 						CreatedOnToolsVersion = 8.0;
@@ -679,6 +690,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			outputPaths = (
 			);
@@ -889,6 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Turmeric/Turmeric.entitlements;
 				DEVELOPMENT_TEAM = PQPZJ6RSNZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -906,6 +919,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Turmeric/Turmeric.entitlements;
 				DEVELOPMENT_TEAM = PQPZJ6RSNZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1034,6 +1048,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Turmeric/Turmeric.entitlements;
 				DEVELOPMENT_TEAM = PQPZJ6RSNZ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

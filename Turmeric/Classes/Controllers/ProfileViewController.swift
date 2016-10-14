@@ -17,7 +17,12 @@ class ProfileViewController: UIViewController, PerformSegueToProfileDelegate {
     @IBOutlet weak var profileImage: UIImageView!
 
     var me: User? = nil
-    
+
+    @IBAction func logoutButtonTapped(_ sender: AnyObject) {
+        User.logout()
+        self.performSegue(withIdentifier: "login", sender: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
