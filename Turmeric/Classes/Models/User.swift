@@ -1,6 +1,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import KeychainAccess
 
 class User {
 
@@ -77,7 +78,7 @@ class User {
         APIClient.request(endpoint: Endpoint.Auth, parameters: parameters) { response in
             switch response {
             case .Success(let json):
-                APIClient.token = json["token"].string!
+                saveToken(json["token"].string!)
                 handler(APIResponse.Success(nil))
             default:
                 let error = response.error(type: (Any?.self)!)
@@ -139,6 +140,19 @@ class User {
                 let error = response.error(type: ([User]?.self)!)
                 handler(error)
             }
+        }
+    }
+
+    private static func saveToken(_ token: String) {
+        APIClient.token = token
+        // Keychainにトークンを保存する
+        let keychain = Keychain(service: "com.pepabo.training.Turmeric")
+        do {
+            try keychain.set(token, key: "token")
+        }
+        catch let error {
+            print("Error: can't save token")
+            print(error)
         }
     }
 }
