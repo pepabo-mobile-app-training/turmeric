@@ -155,4 +155,12 @@ class User {
             print(error)
         }
     }
+
+    static func loadToken() {
+        // Keychainからトークンを読み出す
+        let keychain = Keychain(service: "com.pepabo.training.Turmeric")
+        if let token = keychain["token"] {
+            APIClient.token = token
+        }
+    }
 }
