@@ -53,7 +53,7 @@ class FeedViewController: UITableViewController, IndicatorInfoProvider {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日 HH:mm"
         cell.date.text = formatter.string(for: micropost.createdAt)
-
+        
         return cell
     }
     
