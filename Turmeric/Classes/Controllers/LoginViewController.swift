@@ -31,8 +31,32 @@ class LoginViewController: FormViewController{
         form +++ Section()
         <<< EmailRow("email") { row in
                 row.title = "メールアドレス"
-                row.add(rule: RuleRequired())
-                row.add(rule: RuleEmail())
+                let emailClosure: ((String?) -> ValidationError?)  = { value in
+                    let error = ValidationError(msg: "有効なメールアドレスを入力してください。")
+                    if let value = value, !value.isEmpty{
+                        let predicate = NSPredicate(format: "SELF MATCHES %@", "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$")
+                        guard predicate.evaluate(with: value) else {
+                            return error
+                        }
+                        return nil
+                    }
+                
+                    return error
+                }
+            
+                let requiredClosure: ((String?) -> ValidationError?) = {value in
+                    let error = ValidationError(msg: "メールアドレスを入力してください。")
+                    if let str = value {
+                        return str.isEmpty ? error : nil
+                    }
+                    return value != nil ? nil : error
+                }
+            
+                let emailRule = RuleClosure(closure: emailClosure)
+                let requiredRule = RuleClosure(closure: requiredClosure)
+ 
+                row.add(rule: requiredRule)
+                row.add(rule: emailRule)
                 row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { cell, row in
                 if !row.isValid {
@@ -56,7 +80,18 @@ class LoginViewController: FormViewController{
             
         <<< PasswordRow("password") { row in
             row.title = "パスワード"
-            row.add(rule: RuleRequired())
+            
+            let requiredClosure: ((String?) -> ValidationError?) = {value in
+                let error = ValidationError(msg: "パスワードを入力してください。")
+                if let str = value {
+                    return str.isEmpty ? error : nil
+                }
+                return value != nil ? nil : error
+            }
+            
+            let requiredRule = RuleClosure(closure: requiredClosure)
+            row.add(rule: requiredRule)
+            
             }.cellUpdate { cell, row in
                 if !row.isValid {
                     cell.titleLabel?.textColor = .red
