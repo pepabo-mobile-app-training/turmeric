@@ -119,4 +119,5 @@
     <resources>
         <image name="Post" width="30" height="30"/>
     </resources>
+    <color key="tintColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
