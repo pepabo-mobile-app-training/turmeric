@@ -116,7 +116,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController, PerformSegueToPr
                     subview.isHidden = true
                 }
             }
-            self.navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 160/255.0, blue: 0.0, alpha: 1.0)
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 160.0/255.0, blue: 0.0, alpha: 1.0)
 
             
             let vc = segue.destination as! OthersProfileViewController
