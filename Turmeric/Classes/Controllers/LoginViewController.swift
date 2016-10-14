@@ -31,8 +31,23 @@ class LoginViewController: FormViewController{
         form +++ Section()
         <<< EmailRow("email") { row in
                 row.title = "メールアドレス"
+                let emailClosure: ((String?) -> ValidationError?)  = { value in
+                    let errorMessage = "有効なメールアドレスを入力してください。"
+                    if let value = value, !value.isEmpty{
+                        let predicate = NSPredicate(format: "SELF MATCHES %@", "^[_A-Za-z0-9-+]+(\\.[_A-Za-z0-9-+]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z‌​]{2,})$")
+                        guard predicate.evaluate(with: value) else {
+                            return ValidationError(msg: errorMessage)
+                        }
+                        return nil
+                    }
+                
+                    return ValidationError(msg: errorMessage)
+                }
+            
+                let emailRule = RuleClosure(validationError: ValidationError(msg: ""), closure: emailClosure)
                 row.add(rule: RuleRequired())
-                row.add(rule: RuleEmail())
+                row.add(rule: emailRule)
+            
                 row.validationOptions = .validatesOnChangeAfterBlurred
             }.cellUpdate { cell, row in
                 if !row.isValid {
