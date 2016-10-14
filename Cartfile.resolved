@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.0.1"
-github "xmartlabs/Eureka" "26c48ae5835de438c037b194597792ee6777196f"
+github "xmartlabs/Eureka" "75831c6efbb03ad31ffbe8fe3a1bd5db8ebf357b"
+github "kishikawakatsumi/KeychainAccess" "v3.0.0"
 github "Quick/Nimble" "v5.0.0"
 github "AliSoftware/OHHTTPStubs" "624d51619bc88144015c2b275e761b359ae5ecb3"
 github "SwiftyJSON/SwiftyJSON" "v3.1.1"

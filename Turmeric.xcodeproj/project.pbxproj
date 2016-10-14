@@ -23,6 +23,7 @@
 		521BC0A71DA3971200A83893 /* ListDetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0A61DA3971200A83893 /* ListDetailUITests.swift */; };
 		521BC0A91DA3B05300A83893 /* ListEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521BC0A81DA3B05300A83893 /* ListEdit.storyboard */; };
 		521BC0AB1DA3B0D600A83893 /* ListEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */; };
+		521CD7681DB07A000081F9A7 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521CD7671DB07A000081F9A7 /* KeychainAccess.framework */; };
 		5221F3551DA35B9100719B90 /* Auth.json in Resources */ = {isa = PBXBuildFile; fileRef = 5221F3541DA35B9100719B90 /* Auth.json */; };
 		52221D241DA4E83700AA6DD4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D231DA4E83700AA6DD4 /* HomeViewController.swift */; };
 		52221D261DA4E95E00AA6DD4 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */; };
@@ -143,6 +144,7 @@
 		521BC0A61DA3971200A83893 /* ListDetailUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailUITests.swift; sourceTree = "<group>"; };
 		521BC0A81DA3B05300A83893 /* ListEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListEdit.storyboard; sourceTree = "<group>"; };
 		521BC0AA1DA3B0D600A83893 /* ListEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEditViewController.swift; sourceTree = "<group>"; };
+		521CD7671DB07A000081F9A7 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		5221F3541DA35B9100719B90 /* Auth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Auth.json; sourceTree = "<group>"; };
 		52221D231DA4E83700AA6DD4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52221D251DA4E95E00AA6DD4 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521CD7681DB07A000081F9A7 /* KeychainAccess.framework in Frameworks */,
 				5264371A1DACB66F0034F7F2 /* Eureka.framework in Frameworks */,
 				52D1FEF11DA4EAC20025FCD4 /* XLPagerTabStrip.framework in Frameworks */,
 				525B707B1D98F985004D72BD /* Alamofire.framework in Frameworks */,
@@ -418,6 +421,7 @@
 		525B70771D98F985004D72BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				521CD7671DB07A000081F9A7 /* KeychainAccess.framework */,
 				526437191DACB66F0034F7F2 /* Eureka.framework */,
 				52D1FEF01DA4EAC20025FCD4 /* XLPagerTabStrip.framework */,
 				521173B81D9A79AB00DDA29E /* Nimble.framework */,
@@ -679,6 +683,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/OHHTTPStubs.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			outputPaths = (
 			);
