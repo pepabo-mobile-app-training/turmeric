@@ -12,7 +12,15 @@ import SwiftyJSON
 
 class LoginViewController: FormViewController{
     let messageDisplay: Bool = false
-    
+
+    override func viewDidAppear(_ animated: Bool) {
+        User.loadToken()
+        if (APIClient.token != nil) {
+            // すでにログインしていればホーム画面に遷移
+            self.performSegue(withIdentifier: "mainView", sender: self)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         LabelRow.defaultCellUpdate = { cell, row in
@@ -22,12 +30,7 @@ class LoginViewController: FormViewController{
             cell.textLabel?.textAlignment = .right
             
         }
-        
-        if (APIClient.token != nil) {
-            //すでにログインしていればhomeに遷移
-            self.performSegue(withIdentifier: "mainView", sender: self)
-        }
-        
+
         form +++ Section()
         <<< EmailRow("email") { row in
                 row.title = "メールアドレス"
