@@ -22,8 +22,6 @@ class APIClient {
                 case .responseValidationFailed:
                     print(response.response!.statusCode)
                     if (response.response!.statusCode == 422){
-                        
-                        //let responseData = JSON(NSString(data: response.data!, encoding: String.Encoding.utf8.rawValue) as! String)
                         let responseData = JSON(data: response.data!)
                         handler(APIResponse.ValidationError(responseData))
                     } else if (response.response!.statusCode == 401) {
